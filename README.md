@@ -2,7 +2,7 @@
 
 Data analyst with an MSc in Data and Artificial Intelligence (UWTSD Birmingham) and two years of backend development spent cleaning, validating and querying production data. Based in Birmingham, UK.
 
-**🌐 Website:** [d3vxc.github.io/data-analysis-portfolio](https://d3vxc.github.io/data-analysis-portfolio/) · **📄 Resume:** [online resume](https://d3vxc.github.io/data-analysis-portfolio/resume.html) · [LinkedIn](https://www.linkedin.com/in/dev-mistri-) · [GitHub](https://github.com/D3vxc)
+**🌐 Website:** [devmistri.co.uk](https://devmistri.co.uk/) · **📄 Resume:** [online resume](https://devmistri.co.uk/resume.html) · [LinkedIn](https://www.linkedin.com/in/dev-mistri-) · [GitHub](https://github.com/D3vxc)
 
 ![Portfolio website](screenshots/website-hero.png)
 
