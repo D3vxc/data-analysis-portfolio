@@ -1,0 +1,256 @@
+{
+ "checks": {
+  "orders": 99441,
+  "delivered orders": 96478,
+  "delivered but no delivery date": 8,
+  "reviews": 99224,
+  "orders with more than one review": 547,
+  "duplicate customer IDs": 0
+ },
+ "headline": {
+  "delivered_orders": 96470,
+  "late_orders": 6534,
+  "late_pct": 6.8,
+  "median_days_to_deliver": 10.2,
+  "median_days_early_vs_estimate": 12,
+  "avg_review_on_time": 4.29,
+  "avg_review_late": 2.27,
+  "one_star_on_time_pct": 6.6,
+  "one_star_late_pct": 53.8,
+  "avg_review_all": 4.16,
+  "avg_review_if_never_late": 4.29,
+  "share_of_one_star_from_late_pct": 36.7
+ },
+ "by_band": [
+  {
+   "band": "On time or early",
+   "orders": 89443,
+   "avg_review": 4.29,
+   "one_star_pct": 6.62
+  },
+  {
+   "band": "1-3 days late",
+   "orders": 1852,
+   "avg_review": 3.29,
+   "one_star_pct": 25.11
+  },
+  {
+   "band": "4-7 days late",
+   "orders": 1748,
+   "avg_review": 2.1,
+   "one_star_pct": 58.58
+  },
+  {
+   "band": "8+ days late",
+   "orders": 2781,
+   "avg_review": 1.7,
+   "one_star_pct": 69.83
+  }
+ ],
+ "monthly": [
+  {
+   "month": "2017-01",
+   "orders": 750,
+   "late_pct": 2.9
+  },
+  {
+   "month": "2017-02",
+   "orders": 1653,
+   "late_pct": 3.0
+  },
+  {
+   "month": "2017-03",
+   "orders": 2546,
+   "late_pct": 4.6
+  },
+  {
+   "month": "2017-04",
+   "orders": 2303,
+   "late_pct": 6.6
+  },
+  {
+   "month": "2017-05",
+   "orders": 3545,
+   "late_pct": 3.0
+  },
+  {
+   "month": "2017-06",
+   "orders": 3135,
+   "late_pct": 3.0
+  },
+  {
+   "month": "2017-07",
+   "orders": 3872,
+   "late_pct": 2.8
+  },
+  {
+   "month": "2017-08",
+   "orders": 4193,
+   "late_pct": 2.9
+  },
+  {
+   "month": "2017-09",
+   "orders": 4150,
+   "late_pct": 4.4
+  },
+  {
+   "month": "2017-10",
+   "orders": 4478,
+   "late_pct": 4.2
+  },
+  {
+   "month": "2017-11",
+   "orders": 7288,
+   "late_pct": 12.4
+  },
+  {
+   "month": "2017-12",
+   "orders": 5513,
+   "late_pct": 7.5
+  },
+  {
+   "month": "2018-01",
+   "orders": 7069,
+   "late_pct": 5.7
+  },
+  {
+   "month": "2018-02",
+   "orders": 6555,
+   "late_pct": 14.1
+  },
+  {
+   "month": "2018-03",
+   "orders": 7003,
+   "late_pct": 19.0
+  },
+  {
+   "month": "2018-04",
+   "orders": 6798,
+   "late_pct": 4.5
+  },
+  {
+   "month": "2018-05",
+   "orders": 6749,
+   "late_pct": 6.6
+  },
+  {
+   "month": "2018-06",
+   "orders": 6096,
+   "late_pct": 1.2
+  },
+  {
+   "month": "2018-07",
+   "orders": 6156,
+   "late_pct": 3.4
+  },
+  {
+   "month": "2018-08",
+   "orders": 6351,
+   "late_pct": 6.2
+  }
+ ],
+ "states": [
+  {
+   "customer_state": "MA",
+   "orders": 717,
+   "late_pct": 17.4,
+   "avg_days_to_deliver": 21.6
+  },
+  {
+   "customer_state": "CE",
+   "orders": 1279,
+   "late_pct": 13.8,
+   "avg_days_to_deliver": 21.3
+  },
+  {
+   "customer_state": "BA",
+   "orders": 3256,
+   "late_pct": 12.2,
+   "avg_days_to_deliver": 19.3
+  },
+  {
+   "customer_state": "RJ",
+   "orders": 12350,
+   "late_pct": 12.1,
+   "avg_days_to_deliver": 15.3
+  },
+  {
+   "customer_state": "PA",
+   "orders": 946,
+   "late_pct": 11.2,
+   "avg_days_to_deliver": 23.8
+  },
+  {
+   "customer_state": "ES",
+   "orders": 1995,
+   "late_pct": 10.7,
+   "avg_days_to_deliver": 15.8
+  },
+  {
+   "customer_state": "PB",
+   "orders": 517,
+   "late_pct": 10.4,
+   "avg_days_to_deliver": 20.4
+  },
+  {
+   "customer_state": "MS",
+   "orders": 701,
+   "late_pct": 9.7,
+   "avg_days_to_deliver": 15.6
+  },
+  {
+   "customer_state": "PE",
+   "orders": 1593,
+   "late_pct": 9.6,
+   "avg_days_to_deliver": 18.4
+  },
+  {
+   "customer_state": "SC",
+   "orders": 3546,
+   "late_pct": 8.2,
+   "avg_days_to_deliver": 15.0
+  },
+  {
+   "customer_state": "GO",
+   "orders": 1957,
+   "late_pct": 6.5,
+   "avg_days_to_deliver": 15.6
+  },
+  {
+   "customer_state": "RS",
+   "orders": 5344,
+   "late_pct": 6.1,
+   "avg_days_to_deliver": 15.3
+  },
+  {
+   "customer_state": "MT",
+   "orders": 886,
+   "late_pct": 6.0,
+   "avg_days_to_deliver": 18.1
+  },
+  {
+   "customer_state": "DF",
+   "orders": 2080,
+   "late_pct": 5.7,
+   "avg_days_to_deliver": 13.0
+  },
+  {
+   "customer_state": "MG",
+   "orders": 11354,
+   "late_pct": 4.6,
+   "avg_days_to_deliver": 12.0
+  },
+  {
+   "customer_state": "SP",
+   "orders": 40494,
+   "late_pct": 4.5,
+   "avg_days_to_deliver": 8.8
+  },
+  {
+   "customer_state": "PR",
+   "orders": 4923,
+   "late_pct": 4.0,
+   "avg_days_to_deliver": 12.0
+  }
+ ]
+}

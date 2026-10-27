@@ -1,0 +1,215 @@
+{
+ "quality": {
+  "rows": 7043,
+  "duplicate customer IDs": 0,
+  "TotalCharges not numeric (blank)": 11,
+  "...of which tenure is 0 months": 11,
+  "other missing values": 0
+ },
+ "kpis": {
+  "customers": 7043,
+  "churned": 1869,
+  "churn_rate_pct": 26.5,
+  "monthly_revenue_lost": 139130.85,
+  "monthly_revenue_lost_pct": 30.5,
+  "annualised_revenue_lost": 1669570.2,
+  "avg_monthly_charge_churned": 74.44,
+  "avg_monthly_charge_stayed": 61.27
+ },
+ "by_contract": [
+  {
+   "group": "Month-to-month",
+   "customers": 3875.0,
+   "churn_rate": 42.7,
+   "monthly_revenue_lost": 120847.1
+  },
+  {
+   "group": "One year",
+   "customers": 1473.0,
+   "churn_rate": 11.3,
+   "monthly_revenue_lost": 14118.45
+  },
+  {
+   "group": "Two year",
+   "customers": 1695.0,
+   "churn_rate": 2.8,
+   "monthly_revenue_lost": 4165.3
+  }
+ ],
+ "by_tenure": [
+  {
+   "group": "0-6 months",
+   "customers": 1481.0,
+   "churn_rate": 52.9,
+   "monthly_revenue_lost": 49896.1
+  },
+  {
+   "group": "7-12 months",
+   "customers": 705.0,
+   "churn_rate": 35.9,
+   "monthly_revenue_lost": 19058.15
+  },
+  {
+   "group": "1-2 years",
+   "customers": 1024.0,
+   "churn_rate": 28.7,
+   "monthly_revenue_lost": 23081.65
+  },
+  {
+   "group": "2-4 years",
+   "customers": 1594.0,
+   "churn_rate": 20.4,
+   "monthly_revenue_lost": 27462.5
+  },
+  {
+   "group": "4-6 years",
+   "customers": 2239.0,
+   "churn_rate": 9.5,
+   "monthly_revenue_lost": 19632.450000000004
+  }
+ ],
+ "by_payment": [
+  {
+   "group": "Bank transfer (automatic)",
+   "customers": 1544.0,
+   "churn_rate": 16.7,
+   "monthly_revenue_lost": 20091.899999999998
+  },
+  {
+   "group": "Credit card (automatic)",
+   "customers": 1522.0,
+   "churn_rate": 15.2,
+   "monthly_revenue_lost": 17946.6
+  },
+  {
+   "group": "Electronic check",
+   "customers": 2365.0,
+   "churn_rate": 45.3,
+   "monthly_revenue_lost": 84288.75
+  },
+  {
+   "group": "Mailed check",
+   "customers": 1612.0,
+   "churn_rate": 19.1,
+   "monthly_revenue_lost": 16803.6
+  }
+ ],
+ "by_internet": [
+  {
+   "group": "DSL",
+   "customers": 2421.0,
+   "churn_rate": 19.0,
+   "monthly_revenue_lost": 22529.199999999997
+  },
+  {
+   "group": "Fiber optic",
+   "customers": 3096.0,
+   "churn_rate": 41.9,
+   "monthly_revenue_lost": 114300.05
+  },
+  {
+   "group": "No",
+   "customers": 1526.0,
+   "churn_rate": 7.4,
+   "monthly_revenue_lost": 2301.6
+  }
+ ],
+ "by_techsupport": [
+  {
+   "group": "No",
+   "customers": 3473.0,
+   "churn_rate": 41.6,
+   "monthly_revenue_lost": 110709.8
+  },
+  {
+   "group": "No internet service",
+   "customers": 1526.0,
+   "churn_rate": 7.4,
+   "monthly_revenue_lost": 2301.6
+  },
+  {
+   "group": "Yes",
+   "customers": 2044.0,
+   "churn_rate": 15.2,
+   "monthly_revenue_lost": 26119.45
+  }
+ ],
+ "segment": {
+  "customers": 916,
+  "share_of_customers_pct": 13.0,
+  "churn_rate_pct": 70.2,
+  "share_of_all_churners_pct": 34.4
+ },
+ "targeting": {
+  "test_customers": 1761,
+  "auc": 0.844,
+  "top20_share_of_churners_pct": 49.9,
+  "top20_churn_rate_pct": 66.2,
+  "base_churn_rate_pct": 26.5,
+  "top20_monthly_revenue_of_churners": 18932.8
+ },
+ "deciles": [
+  {
+   "decile": 1,
+   "churn_rate": 72.9,
+   "cum_share": 27.6
+  },
+  {
+   "decile": 2,
+   "churn_rate": 59.1,
+   "cum_share": 49.9
+  },
+  {
+   "decile": 3,
+   "churn_rate": 43.8,
+   "cum_share": 66.4
+  },
+  {
+   "decile": 4,
+   "churn_rate": 33.0,
+   "cum_share": 78.8
+  },
+  {
+   "decile": 5,
+   "churn_rate": 23.3,
+   "cum_share": 87.6
+  },
+  {
+   "decile": 6,
+   "churn_rate": 17.6,
+   "cum_share": 94.2
+  },
+  {
+   "decile": 7,
+   "churn_rate": 9.7,
+   "cum_share": 97.9
+  },
+  {
+   "decile": 8,
+   "churn_rate": 4.0,
+   "cum_share": 99.4
+  },
+  {
+   "decile": 9,
+   "churn_rate": 0.6,
+   "cum_share": 99.6
+  },
+  {
+   "decile": 10,
+   "churn_rate": 1.1,
+   "cum_share": 100.0
+  }
+ ],
+ "drivers": {
+  "MonthlyCharges": -0.816,
+  "tenure": -0.787,
+  "Contract_Two year": -0.553,
+  "Contract_One year": -0.285,
+  "OnlineSecurity_Yes": -0.123,
+  "PaperlessBilling_Yes": 0.198,
+  "MultipleLines_Yes": 0.221,
+  "StreamingTV_Yes": 0.256,
+  "StreamingMovies_Yes": 0.284,
+  "InternetService_Fiber optic": 0.775
+ }
+}

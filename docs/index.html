@@ -1,0 +1,564 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Dev Mistri · Data Analyst</title>
+<meta name="description" content="Dev Mistri, data analyst in Birmingham, UK. Six analyses of real business problems: customer churn, A/B testing, late deliveries, retail customers, intrusion detection and house prices.">
+<meta property="og:title" content="Dev Mistri · Data Analyst">
+<meta property="og:description" content="Six analyses of real business problems, with the SQL and Python behind them.">
+<meta name="theme-color" content="#0b1c1c">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="Dev Mistri, back to top">
+      <svg class="brand-mark" viewBox="0 0 26 26" aria-hidden="true"><rect width="26" height="26" rx="6" fill="#f2b33d"/><rect x="6" y="13" width="3" height="7" rx="1" fill="#0b1c1c"/><rect x="11.5" y="9" width="3" height="11" rx="1" fill="#0b1c1c"/><rect x="17" y="5" width="3" height="15" rx="1" fill="#0b1c1c"/></svg>
+      Dev Mistri
+    </a>
+    <nav class="topnav" aria-label="Sections">
+      <a href="#work">Work</a>
+      <a href="#about" class="hide-sm">About</a>
+      <a href="resume.html">Resume</a>
+      <a href="#contact" class="cta">Email me</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <!-- ===================== HERO ===================== -->
+  <section class="hero">
+    <div class="wrap hero-inner">
+      <div>
+        <span class="status"><i aria-hidden="true"></i>Open to data analyst roles · UK</span>
+        <p class="hero-name">Dev Mistri, Data Analyst, Birmingham</p>
+        <h1>I find the number that <em>changes the decision.</em></h1>
+        <p class="lede">Six analyses of problems real companies pay to solve: customers leaving, experiments that mislead, deliveries that wreck reviews. <strong>MSc Data and Artificial Intelligence</strong>, plus two years as a developer cleaning and querying production data.</p>
+        <div class="hero-actions">
+          <a class="btn btn-saffron" href="#work">See the analyses</a>
+          <a class="btn btn-ghost" href="resume.html">View resume</a>
+          <a class="btn btn-ghost" href="https://github.com/D3vxc/data-analysis-portfolio" target="_blank" rel="noopener">Code on GitHub</a>
+        </div>
+      </div>
+      <div class="hero-card" aria-label="Profile summary">
+        <span class="cap">dev_mistri=# SELECT * FROM profile;</span>
+        <div class="row"><span class="k">role</span><span class="v">Data Analyst</span></div>
+        <div class="row"><span class="k">based_in</span><span class="v">Birmingham, UK</span></div>
+        <div class="row"><span class="k">education</span><span class="v">MSc Data &amp; AI, UWTSD</span></div>
+        <div class="row"><span class="k">stack</span><span class="v">Python · SQL · Power BI</span></div>
+        <div class="row"><span class="k">analyses</span><span class="v"><b>6</b> published</span></div>
+        <div class="row"><span class="k">rows_analysed</span><span class="v"><b>887,389</b></span></div>
+      </div>
+    </div>
+    <div class="ticker" aria-label="Headline results">
+      <div class="ticker-track">
+        <ul>
+          <li><b>49.9%</b>of churners found in the riskiest 20% of customers</li>
+          <li><b>−0.82pp</b>7-day retention when the game gate moved to level 40</li>
+          <li><b>36.7%</b>of one-star reviews come from late deliveries</li>
+          <li><b>45.3%</b>of retail revenue from 14.1% of customers</li>
+          <li><b>99.9% → 76.5%</b>model accuracy once attacks are new</li>
+          <li><b>8.5 years</b>for UK house prices to recover from the 1990s crash</li>
+        </ul>
+        <ul aria-hidden="true">
+          <li><b>49.9%</b>of churners found in the riskiest 20% of customers</li>
+          <li><b>−0.82pp</b>7-day retention when the game gate moved to level 40</li>
+          <li><b>36.7%</b>of one-star reviews come from late deliveries</li>
+          <li><b>45.3%</b>of retail revenue from 14.1% of customers</li>
+          <li><b>99.9% → 76.5%</b>model accuracy once attacks are new</li>
+          <li><b>8.5 years</b>for UK house prices to recover from the 1990s crash</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== INDEX ===================== -->
+  <section class="section" id="work">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <h2>Six business problems, six answers</h2>
+          <p>Each one starts from a question a manager would ask, uses real public data, and ends with a recommendation. Filter by the skill you're hiring for.</p>
+        </div>
+      </div>
+      <div class="filters" role="group" aria-label="Filter analyses by skill">
+        <button class="chip" type="button" data-filter="all" aria-pressed="true">All six</button>
+        <button class="chip" type="button" data-filter="sql" aria-pressed="false">SQL</button>
+        <button class="chip" type="button" data-filter="stats" aria-pressed="false">Statistics</button>
+        <button class="chip" type="button" data-filter="ml" aria-pressed="false">Machine learning</button>
+        <button class="chip" type="button" data-filter="segment" aria-pressed="false">Segmentation</button>
+        <button class="chip" type="button" data-filter="time" aria-pressed="false">Time series</button>
+      </div>
+      <div class="case-index" id="case-index">
+        <a class="case-card" href="#churn" data-tags="ml segment">
+          <div class="top"><span class="ind">Telecom</span><span class="no">01</span></div>
+          <h3>Who is about to cancel, and who to call first</h3>
+          <div class="stat"><b>49.9%</b><span>of churners sit in the riskiest fifth of customers</span></div>
+          <div class="tags"><span>Python</span><span>Logistic regression</span><span>Segmentation</span></div>
+        </a>
+        <a class="case-card" href="#abtest" data-tags="stats">
+          <div class="top"><span class="ind">Mobile gaming</span><span class="no">02</span></div>
+          <h3>Did moving the paywall gate hurt retention?</h3>
+          <div class="stat"><b>−0.82pp</b><span>7-day retention, p = 0.002. Keep the gate at level 30.</span></div>
+          <div class="tags"><span>A/B testing</span><span>Bootstrap</span><span>SRM check</span></div>
+        </a>
+        <a class="case-card" href="#deliveries" data-tags="sql time">
+          <div class="top"><span class="ind">E-commerce</span><span class="no">03</span></div>
+          <h3>What late deliveries cost in customer reviews</h3>
+          <div class="stat"><b>4.29 → 2.27</b><span>average stars, on time vs late</span></div>
+          <div class="tags"><span>SQL joins</span><span>Window functions</span><span>Operations</span></div>
+        </a>
+        <a class="case-card" href="#retail" data-tags="sql segment time">
+          <div class="top"><span class="ind">Retail</span><span class="no">04</span></div>
+          <h3>Where a UK retailer's revenue really comes from</h3>
+          <div class="stat"><b>45.3%</b><span>of revenue from 14.1% of customers</span></div>
+          <div class="tags"><span>SQL</span><span>RFM</span><span>Cohorts</span></div>
+        </a>
+        <a class="case-card" href="#security" data-tags="ml stats">
+          <div class="top"><span class="ind">Cybersecurity</span><span class="no">05</span></div>
+          <h3>What a 99.9% accurate model is hiding</h3>
+          <div class="stat"><b>22%</b><span>of never-seen attacks caught</span></div>
+          <div class="tags"><span>scikit-learn</span><span>EDA</span><span>Evaluation</span></div>
+        </a>
+        <a class="case-card" href="#housing" data-tags="time">
+          <div class="top"><span class="ind">Property</span><span class="no">06</span></div>
+          <h3>UK house prices: 70 years of crashes and recoveries</h3>
+          <div class="stat"><b>8.5 yrs</b><span>to recover from the early-1990s crash</span></div>
+          <div class="tags"><span>Time series</span><span>Validation</span><span>Drawdowns</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 01 CHURN ===================== -->
+  <section class="case" id="churn" data-tags="ml segment">
+    <div class="wrap">
+      <div class="case-head">
+        <div>
+          <span class="ind">Telecom · Customer retention</span>
+          <h2>Who is about to cancel, and who to call first</h2>
+          <p class="q">Which customers are likely to leave, why, how much revenue is at stake, and where should a retention team spend its time?</p>
+        </div>
+        <span class="no">01 / 06</span>
+      </div>
+      <div class="case-grid">
+        <div>
+          <p class="problem"><b>Why it matters</b>Subscription businesses lose customers every month, and winning one back costs far more than keeping them.</p>
+          <dl class="meta">
+            <dt>Data</dt><dd>IBM Telco Customer Churn sample: a fictional US provider</dd>
+            <dt>Size</dt><dd class="num">7,043 customers · 21 columns</dd>
+            <dt>Methods</dt><dd>Churn breakdowns, risk profile, logistic regression, decile lift</dd>
+          </dl>
+          <ol class="findings">
+            <li><strong>Churn takes more revenue than customers.</strong> <span class="num">26.5%</span> left, taking <span class="num">30.5%</span> of monthly revenue (<span class="num">$1.67m</span> a year).</li>
+            <li><strong>Contract is the biggest signal.</strong> Month-to-month churn is <span class="num">42.7%</span>; two-year is <span class="num">2.8%</span>.</li>
+            <li><strong>The first six months are the danger zone:</strong> <span class="num">52.9%</span> churn, against <span class="num">9.5%</span> after four years.</li>
+            <li><strong>One profile holds a third of the problem.</strong> Month-to-month fibre customers in year one are <span class="num">13%</span> of customers and <span class="num">34%</span> of churners.</li>
+            <li><strong>The model focuses the team.</strong> The riskiest 20% it flags contain <span class="num">49.9%</span> of the people who actually left (ROC AUC <span class="num">0.844</span>).</li>
+          </ol>
+          <div class="reco"><b>Recommendation</b>Offer contract upgrades in the first six months, reward moving to automatic payment, and bundle tech support with fibre.</div>
+          <p class="limits">Fictional sample, single snapshot: associations, not proven causes.</p>
+          <a class="repo-link" href="https://github.com/D3vxc/data-analysis-portfolio/tree/main/04-telecom-customer-churn" target="_blank" rel="noopener">Read the notebook →</a>
+        </div>
+        <div>
+          <div class="kpis three" id="churn-kpis"></div>
+          <div class="panel">
+            <p class="panel-title">Churn rate by time as a customer</p>
+            <p class="panel-note">Share of each group that left in the last month.</p>
+            <div class="chart" id="chart-churn-tenure" role="img" aria-label="Churn rate falls from 53% in the first six months to 10% after four years"></div>
+          </div>
+          <div class="panel">
+            <p class="panel-title">Actual churn by predicted risk decile</p>
+            <p class="panel-note">Held-out test customers, ranked by the model. Line shows the 26.5% average.</p>
+            <div class="chart" id="chart-churn-deciles" role="img" aria-label="Churn rate is 73% in the riskiest decile and near zero in the safest deciles"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 02 A/B TEST ===================== -->
+  <section class="case" id="abtest" data-tags="stats">
+    <div class="wrap">
+      <div class="case-head">
+        <div>
+          <span class="ind">Mobile gaming · Product experiment</span>
+          <h2>Did moving the paywall gate hurt retention?</h2>
+          <p class="q"><em>Cookie Cats</em> tested moving its first gate from level 30 to level 40. Should the change ship?</p>
+        </div>
+        <span class="no">02 / 06</span>
+      </div>
+      <div class="case-grid">
+        <div>
+          <p class="problem"><b>Why it matters</b>Product teams ship changes every week. A test read wrongly can roll out a change that quietly loses players for months.</p>
+          <dl class="meta">
+            <dt>Data</dt><dd>Cookie Cats A/B test (Tactile Entertainment, via DataCamp)</dd>
+            <dt>Size</dt><dd class="num">90,189 players · 2 groups</dd>
+            <dt>Methods</dt><dd>Sample ratio check, two-proportion z-test, confidence intervals, bootstrap</dd>
+          </dl>
+          <ol class="findings">
+            <li><strong>Level 40 lost players.</strong> 7-day retention fell from <span class="num">19.02%</span> to <span class="num">18.20%</span> (−0.82 points, p = 0.002). The bootstrap gives level 30 a <span class="num">99.9%</span> chance of being better.</li>
+            <li><strong>Day 1 points the same way</strong> but isn't conclusive (p = 0.074).</li>
+            <li><strong>The split wasn't clean.</strong> 49.56 / 50.44 fails a chi-square check (p = 0.009): a sample ratio mismatch worth fixing before the next test.</li>
+            <li><strong>Data quality:</strong> one account logged 49,854 rounds in 14 days (likely a bot) and 4.4% of players never played.</li>
+          </ol>
+          <div class="reco"><b>Recommendation</b>Keep the gate at level 30, and audit the assignment pipeline before trusting the next experiment.</div>
+          <a class="repo-link" href="https://github.com/D3vxc/data-analysis-portfolio/tree/main/05-mobile-game-ab-test" target="_blank" rel="noopener">Read the notebook →</a>
+        </div>
+        <div>
+          <div class="verdict"><span class="badge">Don't ship</span><p>About 820 fewer players still playing after a week for every 100,000 installs.</p></div>
+          <div class="panel">
+            <p class="panel-title">Retention by group, with 95% confidence intervals</p>
+            <div class="legend"><span><i style="background:var(--series-1)"></i>Gate at level 30</span><span><i style="background:var(--series-2)"></i>Gate at level 40</span></div>
+            <div class="chart" id="chart-ab" role="img" aria-label="1-day retention 44.8% vs 44.2%; 7-day retention 19.0% vs 18.2%"></div>
+          </div>
+          <div class="panel">
+            <p class="panel-title">Test results</p>
+            <div class="table-scroll"><table class="data" id="ab-table"></table></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 03 DELIVERIES ===================== -->
+  <section class="case" id="deliveries" data-tags="sql time">
+    <div class="wrap">
+      <div class="case-head">
+        <div>
+          <span class="ind">E-commerce · Operations</span>
+          <h2>What late deliveries cost in customer reviews</h2>
+          <p class="q">How often do marketplace orders miss the promised date, how much does it hurt reviews, and where and when does it happen?</p>
+        </div>
+        <span class="no">03 / 06</span>
+      </div>
+      <div class="case-grid">
+        <div>
+          <p class="problem"><b>Why it matters</b>Customers blame the marketplace, not the courier, and review scores drive future sales.</p>
+          <dl class="meta">
+            <dt>Data</dt><dd>Olist: Brazil's largest department-store marketplace, 2016–2018</dd>
+            <dt>Size</dt><dd class="num">99,441 orders · 3 joined tables</dd>
+            <dt>Methods</dt><dd>SQL joins, CTEs, ROW_NUMBER(), lateness bands, trend and regional analysis</dd>
+          </dl>
+          <ol class="findings">
+            <li><strong>Lateness wrecks reviews.</strong> Even 1–3 days late drops the average from <span class="num">4.29</span> to <span class="num">3.29</span> stars; 8+ days late averages <span class="num">1.70</span>.</li>
+            <li><strong>Small share, big damage.</strong> Late orders are <span class="num">6.8%</span> of deliveries but <span class="num">36.7%</span> of all one-star reviews.</li>
+            <li><strong>Estimates are padded and still missed.</strong> The typical order arrives <span class="num">12 days</span> early; the problem is the slow tail.</li>
+            <li><strong>Peaks break the network.</strong> Late rate hit <span class="num">12.4%</span> in Black Friday month and <span class="num">19.0%</span> in March 2018.</li>
+            <li><strong>Region matters.</strong> Maranhão is late <span class="num">17.4%</span> of the time; São Paulo <span class="num">4.5%</span>.</li>
+          </ol>
+          <div class="reco"><b>Recommendation</b>Set promised dates by state and season, add courier capacity before peaks, and warn customers proactively when an order is running late.</div>
+          <a class="repo-link" href="https://github.com/D3vxc/data-analysis-portfolio/tree/main/06-ecommerce-late-deliveries" target="_blank" rel="noopener">Read the notebook and SQL →</a>
+        </div>
+        <div>
+          <div class="panel">
+            <p class="panel-title">Average review by how late the order arrived</p>
+            <p class="panel-note">1 to 5 stars. Hover for the share of one-star reviews.</p>
+            <div class="chart" id="chart-del-band" role="img" aria-label="Average review 4.29 on time, 3.29 when 1-3 days late, 2.10 when 4-7 days late, 1.70 when 8 or more days late"></div>
+          </div>
+          <div class="panel">
+            <p class="panel-title">Share of orders arriving late, by month of purchase</p>
+            <div class="chart" id="chart-del-month" role="img" aria-label="Late rate around 3% in mid-2017, spiking to 12.4% in November 2017 and 19% in March 2018"></div>
+            <details class="sql">
+              <summary>Show the SQL: one row per delivered order</summary>
+              <div class="code-scroll"><pre><span class="k">WITH</span> latest_review <span class="k">AS</span> (
+    <span class="k">SELECT</span> order_id, review_score,
+           <span class="k">ROW_NUMBER</span>() <span class="k">OVER</span> (<span class="k">PARTITION BY</span> order_id
+                              <span class="k">ORDER BY</span> review_answer_timestamp <span class="k">DESC</span>) <span class="k">AS</span> rn
+    <span class="k">FROM</span> reviews
+)
+<span class="k">SELECT</span> o.order_id, c.customer_state,
+       <span class="k">JULIANDAY</span>(<span class="k">DATE</span>(o.order_delivered_customer_date))
+         - <span class="k">JULIANDAY</span>(<span class="k">DATE</span>(o.order_estimated_delivery_date)) <span class="k">AS</span> days_vs_estimate,
+       r.review_score
+<span class="k">FROM</span> orders o
+<span class="k">JOIN</span> customers c          <span class="k">ON</span> c.customer_id = o.customer_id
+<span class="k">LEFT JOIN</span> latest_review r  <span class="k">ON</span> r.order_id = o.order_id <span class="k">AND</span> r.rn = 1
+<span class="k">WHERE</span> o.order_status = <span class="c">'delivered'</span>
+  <span class="k">AND</span> o.order_delivered_customer_date <span class="k">IS NOT NULL</span>;</pre></div>
+            </details>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 04 RETAIL ===================== -->
+  <section class="case" id="retail" data-tags="sql segment time">
+    <div class="wrap">
+      <div class="case-head">
+        <div>
+          <span class="ind">Retail · Customer analytics</span>
+          <h2>Where a UK retailer's revenue really comes from</h2>
+          <p class="q">How seasonal is the business, and which customers keep coming back?</p>
+        </div>
+        <span class="no">04 / 06</span>
+      </div>
+      <div class="case-grid">
+        <div>
+          <dl class="meta">
+            <dt>Data</dt><dd>UCI <em>Online Retail</em>: a UK online gift retailer, Dec 2010 to Dec 2011</dd>
+            <dt>Size</dt><dd class="num">541,909 invoice lines</dd>
+            <dt>Methods</dt><dd>Cleaning log, SQL aggregation, RFM segmentation, cohort retention</dd>
+          </dl>
+          <ol class="findings">
+            <li><strong>Strongly seasonal.</strong> September to November brought in <span class="num">37.2%</span> of the year's revenue.</li>
+            <li><strong>Weekday trade only.</strong> No Saturday revenue at all; the peak is 10:00 to 16:00, Tuesday to Thursday.</li>
+            <li><strong>A small core carries it.</strong> Champions are <span class="num">14.1%</span> of customers and <span class="num">45.3%</span> of revenue.</li>
+            <li><strong>Win-back target:</strong> <span class="num">602</span> at-risk customers spent <span class="num">£625k</span> last year but haven't ordered for ~140 days.</li>
+          </ol>
+          <a class="repo-link" href="https://github.com/D3vxc/data-analysis-portfolio/tree/main/01-uk-online-retail" target="_blank" rel="noopener">Read the notebook and SQL →</a>
+        </div>
+        <div>
+          <div class="kpis" id="retail-kpis"></div>
+          <div class="panel">
+            <p class="panel-title">Monthly revenue</p>
+            <p class="panel-note">Dec 2010 to Nov 2011. Hover a bar for orders.</p>
+            <div class="chart" id="chart-retail-monthly" role="img" aria-label="Monthly revenue rising from about £500k in February to £1.45m in November 2011"></div>
+          </div>
+          <div class="panel">
+            <p class="panel-title">RFM segments: share of customers vs share of revenue</p>
+            <div class="legend"><span><i style="background:var(--series-2)"></i>Customers</span><span><i style="background:var(--series-1)"></i>Revenue</span></div>
+            <div class="chart" id="chart-retail-rfm" role="img" aria-label="Paired bars comparing each segment's share of customers and of revenue"></div>
+            <details class="sql">
+              <summary>Show the cleaning log</summary>
+              <table class="cleanlog" id="cleanlog"></table>
+            </details>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 05 SECURITY ===================== -->
+  <section class="case" id="security" data-tags="ml stats">
+    <div class="wrap">
+      <div class="case-head">
+        <div>
+          <span class="ind">Cybersecurity · Model evaluation</span>
+          <h2>What a 99.9% accurate model is hiding</h2>
+          <p class="q">Which features reveal a network attack, and how well does a model catch attacks it has never seen?</p>
+        </div>
+        <span class="no">05 / 06</span>
+      </div>
+      <div class="case-grid">
+        <div>
+          <dl class="meta">
+            <dt>Data</dt><dd>NSL-KDD benchmark (Canadian Institute for Cybersecurity)</dd>
+            <dt>Size</dt><dd class="num">148,517 connections · 41 features</dd>
+            <dt>Methods</dt><dd>EDA, mutual information, random forest baseline, evaluation design</dd>
+          </dl>
+          <ol class="findings">
+            <li><strong>The test set is a different problem.</strong> <span class="num">16.6%</span> of test traffic is attack types never seen in training.</li>
+            <li><strong>Accuracy misleads.</strong> <span class="num">99.88%</span> in cross-validation becomes <span class="num">76.5%</span> on the real test set.</li>
+            <li><strong>New attacks slip through.</strong> <span class="num">76.8%</span> of known attack types are caught, but only <span class="num">22.0%</span> of new ones.</li>
+          </ol>
+          <p class="limits">Related to my MSc dissertation topic (hybrid intrusion detection), but a separate analysis. NSL-KDD is 1998 simulated traffic.</p>
+          <a class="repo-link" href="https://github.com/D3vxc/data-analysis-portfolio/tree/main/03-network-traffic-eda" target="_blank" rel="noopener">Read the notebook →</a>
+        </div>
+        <div>
+          <div class="versus">
+            <div class="side"><b>99.88%</b><span>accuracy in 5-fold cross-validation</span></div>
+            <span class="arrow" aria-hidden="true">→</span>
+            <div class="side drop"><b>76.5%</b><span>accuracy on the official test set</span></div>
+          </div>
+          <div class="panel">
+            <p class="panel-title">Share of test-set attacks detected</p>
+            <div class="chart" id="chart-nsl" role="img" aria-label="Detection: DoS 79%, Probe 73%, R2L 5%, U2R 12%, seen types 77%, unseen types 22%"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 06 HOUSING ===================== -->
+  <section class="case" id="housing" data-tags="time">
+    <div class="wrap">
+      <div class="case-head">
+        <div>
+          <span class="ind">Property · Time series</span>
+          <h2>UK house prices: 70 years of crashes and recoveries</h2>
+          <p class="q">How deep were past downturns, and how long did prices take to get back to their peak?</p>
+        </div>
+        <span class="no">06 / 06</span>
+      </div>
+      <div class="case-grid">
+        <div>
+          <dl class="meta">
+            <dt>Data</dt><dd>Nationwide House Price Index, UK average, quarterly (open data)</dd>
+            <dt>Size</dt><dd class="num">290 quarters · 1953 to 2025</dd>
+            <dt>Methods</dt><dd>Validation, drawdown detection, compound growth</dd>
+          </dl>
+          <ol class="findings">
+            <li><strong>Validated first.</strong> Every published annual change matches a recalculation to within 0.1 points.</li>
+            <li><strong>Three downturns over 5%.</strong> Early 1990s: <span class="num">−20.2%</span>, 8.5 years to recover. 2007–09: <span class="num">−18.7%</span>, 6.8 years.</li>
+            <li><strong>The 2022 peak is still not regained</strong> as of mid-2025.</li>
+          </ol>
+          <p class="limits">Nominal prices; deflating by CPI is the next step.</p>
+          <a class="repo-link" href="https://github.com/D3vxc/data-analysis-portfolio/tree/main/02-uk-house-prices" target="_blank" rel="noopener">Read the notebook →</a>
+        </div>
+        <div>
+          <div class="panel">
+            <p class="panel-title">UK average house price (log scale)</p>
+            <p class="panel-note">Shaded: more than 5% below a previous peak, until recovered.</p>
+            <div class="chart" id="chart-house" role="img" aria-label="UK average house price from £1,891 in 1953 to £272,751 in 2025 with three shaded downturns"></div>
+          </div>
+          <div class="panel">
+            <p class="panel-title">Downturns found by the drawdown algorithm</p>
+            <div class="table-scroll"><table class="data" id="downturns"></table></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== ABOUT ===================== -->
+  <section class="section about" id="about" style="border-top:1px solid var(--rule)">
+    <div class="wrap about-grid">
+      <div>
+        <h3>About me</h3>
+        <p>I started as a developer, building APIs and data pipelines in Node.js, MongoDB and SQL for live client applications. Most of that work was about data: cleaning it, validating it and getting it to the people who needed it.</p>
+        <p>My MSc in Data and Artificial Intelligence at UWTSD Birmingham added statistics and machine learning. My dissertation focused on hybrid intrusion detection.</p>
+        <p>I want a data analyst role where I own a dataset end to end, from the raw export to the recommendation.</p>
+      </div>
+      <div>
+        <h3>Skills</h3>
+        <div class="skillset">
+          <div><span class="label">Analysis</span><div class="chips-static"><span>Python</span><span>pandas</span><span>SQL</span><span>Statistics</span><span>A/B testing</span></div></div>
+          <div><span class="label">Visualisation</span><div class="chips-static"><span>Power BI</span><span>Tableau</span><span>matplotlib</span></div></div>
+          <div><span class="label">Machine learning</span><div class="chips-static"><span>scikit-learn</span><span>Model evaluation</span><span>Anomaly detection</span></div></div>
+          <div><span class="label">Engineering</span><div class="chips-static"><span>Data cleaning</span><span>MongoDB</span><span>REST APIs</span><span>Git</span></div></div>
+        </div>
+      </div>
+      <div>
+        <h3>Experience</h3>
+        <ul class="timeline">
+          <li><span class="when">2025 – 2026</span><span class="what">MSc Data and Artificial Intelligence</span><span class="where">University of Wales Trinity Saint David, Birmingham</span></li>
+          <li><span class="when">Dec 2025 – Apr 2026</span><span class="what">Office Administrator</span><span class="where">Cornerstone Professional Care</span><span class="how">Kept staff files and client care plans accurate and confidential.</span></li>
+          <li><span class="when">Dec 2023 – Dec 2024</span><span class="what">Web Developer</span><span class="where">Impeto Technologies</span><span class="how">Cleaned, validated and transformed client data; optimised SQL behind reporting.</span></li>
+          <li><span class="when">Dec 2022 – Nov 2023</span><span class="what">Junior Full-Stack Developer</span><span class="where">Unada Labs</span><span class="how">Built REST APIs and optimised MongoDB queries for live applications.</span></li>
+          <li><span class="when">2021 – 2024</span><span class="what">BE Computer Engineering</span><span class="where">Silver Oak University, Ahmedabad</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== RESUME ===================== -->
+  <section class="section resume-band" id="resume">
+    <div class="wrap resume-grid">
+      <div>
+        <span class="label">Resume</span>
+        <h2>My resume, in one place</h2>
+        <p>Experience, education, skills and the six analyses. Open it to read, call or email me, or save it as a PDF.</p>
+        <div class="resume-actions">
+          <a class="btn btn-accent" href="resume.html">Open my resume →</a>
+          <a class="btn btn-outline" href="tel:+447887180583">Call 07887 180583</a>
+        </div>
+      </div>
+      <a class="resume-peek" href="resume.html" aria-label="Open resume">
+        <span class="peek-name">Dev Mistri</span>
+        <span class="peek-role">Data Analyst · Birmingham, UK</span>
+        <span class="peek-rule"></span>
+        <span class="peek-row"><b>MSc Data and Artificial Intelligence</b><i>2025 – 2026</i></span>
+        <span class="peek-row"><b>Office Administrator, Cornerstone</b><i>2025 – 2026</i></span>
+        <span class="peek-row"><b>Web Developer, Impeto Technologies</b><i>2023 – 2024</i></span>
+        <span class="peek-row"><b>Junior Full-Stack Developer, Unada Labs</b><i>2022 – 2023</i></span>
+        <span class="peek-more">Read the full resume →</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section class="section contact" id="contact">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <h2>Email me with one query</h2>
+          <p>Fill in the blanks and run it. Your message goes straight into my inbox table, and I get an email the moment it lands.</p>
+        </div>
+      </div>
+      <div class="contact-grid">
+        <form class="console" id="contact-form" novalidate>
+          <div class="console-bar"><i></i><i></i><i></i><span>dev_mistri — inbox</span></div>
+          <div class="console-body">
+            <div class="line"><span class="prompt">dev_mistri=#</span><span><span class="kw">INSERT INTO</span> inbox (name, email, topic, message)</span></div>
+            <div class="line indent"><span class="kw">VALUES</span> <span class="punc">(</span></div>
+            <div class="line indent2">
+              <label class="sr-only" for="f-name">Your name</label>
+              <span class="field"><span class="q">'</span><input id="f-name" name="name" type="text" autocomplete="name" placeholder="your name" maxlength="100" required><span class="q">'</span></span><span class="punc">,</span>
+            </div>
+            <div class="line indent2">
+              <label class="sr-only" for="f-email">Your email address</label>
+              <span class="field"><span class="q">'</span><input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="you@company.com" maxlength="200" required><span class="q">'</span></span><span class="punc">,</span>
+            </div>
+            <div class="line indent2">
+              <label class="sr-only" for="f-topic">Topic</label>
+              <span class="field"><span class="q">'</span><select id="f-topic" name="topic">
+                <option>Job opportunity</option>
+                <option>Internship or placement</option>
+                <option>Freelance data project</option>
+                <option>Question about an analysis</option>
+                <option>Just saying hello</option>
+              </select><span class="q">'</span></span><span class="punc">,</span>
+            </div>
+            <div class="line indent2"><span class="q">'</span><span class="cm">-- your message</span></div>
+            <div class="msg-wrap">
+              <label class="sr-only" for="f-message">Your message</label>
+              <textarea id="f-message" name="message" rows="4" maxlength="5000" placeholder="Hi Dev, we're hiring a junior data analyst in Birmingham and..." required></textarea>
+            </div>
+            <div class="line indent2"><span class="q">'</span></div>
+            <div class="line indent"><span class="punc">);</span></div>
+            <div class="hp" aria-hidden="true"><label for="f-website">Leave this empty</label><input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+          </div>
+          <div class="console-actions">
+            <button class="run" type="submit" id="run-btn">▶ Run query</button>
+            <span class="hint">or press Ctrl / ⌘ + Enter</span>
+          </div>
+          <div class="output" id="output" role="status" aria-live="polite">-- Waiting for your query.</div>
+        </form>
+        <aside class="contact-side">
+          <div class="side-card">
+            <h3>What happens when you run it</h3>
+            <ol>
+              <li>Your message is saved as a new row in my inbox table.</li>
+              <li>I get an email straight away.</li>
+              <li>I reply to the address you entered, usually within two days.</li>
+            </ol>
+          </div>
+          <div class="side-card">
+            <h3>Prefer something else?</h3>
+            <p><a href="https://www.linkedin.com/in/dev-mistri-" target="_blank" rel="noopener">Message me on LinkedIn</a> or browse the code on <a href="https://github.com/D3vxc" target="_blank" rel="noopener">GitHub</a>.</p>
+          </div>
+          <div class="side-card">
+            <h3>Your details</h3>
+            <p>I use what you send only to reply to you. It is never shared or added to a mailing list.</p>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© <span id="year">2026</span> Dev Mistri · Birmingham, UK</span>
+    <span>Data: IBM · Tactile/DataCamp · Olist · UCI · CIC NSL-KDD · Nationwide HPI</span>
+    <span><a href="https://github.com/D3vxc/data-analysis-portfolio" target="_blank" rel="noopener">Source code</a></span>
+  </div>
+</footer>
+
+<div class="tip" id="tip" role="tooltip"></div>
+
+<script src="data/site-data.js"></script>
+<script src="assets/js/config.js"></script>
+<script src="assets/js/charts.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/contact.js"></script>
+</body>
+</html>

@@ -1,0 +1,628 @@
+{
+ "kpis": {
+  "period": "Dec 2010 to Nov 2011 (12 full months)",
+  "revenue": 9632728.4,
+  "orders": 18957,
+  "customers": 4293,
+  "countries": 38,
+  "products": 3904,
+  "avg_order_value": 508.14,
+  "median_order_value": 302.31,
+  "uk_revenue_share_pct": 84.6,
+  "guest_revenue_share_pct": 14.6,
+  "cancelled_value_pct_of_sales": 7.2
+ },
+ "cleaning_log": [
+  {
+   "step": "Raw data",
+   "rows_remaining": 541909,
+   "rows_removed": 0
+  },
+  {
+   "step": "Remove exact duplicate rows",
+   "rows_remaining": 536641,
+   "rows_removed": 5268
+  },
+  {
+   "step": "Set aside cancellations",
+   "rows_remaining": 527390,
+   "rows_removed": 9251
+  },
+  {
+   "step": "Remove postage, fees and manual adjustments",
+   "rows_remaining": 525029,
+   "rows_removed": 2361
+  },
+  {
+   "step": "Remove zero/negative quantity or price",
+   "rows_remaining": 522537,
+   "rows_removed": 2492
+  }
+ ],
+ "monthly": [
+  {
+   "month": "2010-12",
+   "revenue": 775638.36,
+   "orders": 1550
+  },
+  {
+   "month": "2011-01",
+   "revenue": 670380.24,
+   "orders": 1081
+  },
+  {
+   "month": "2011-02",
+   "revenue": 507799.87,
+   "orders": 1093
+  },
+  {
+   "month": "2011-03",
+   "revenue": 689833.51,
+   "orders": 1440
+  },
+  {
+   "month": "2011-04",
+   "revenue": 515377.99,
+   "orders": 1235
+  },
+  {
+   "month": "2011-05",
+   "revenue": 739953.0,
+   "orders": 1668
+  },
+  {
+   "month": "2011-06",
+   "revenue": 737558.98,
+   "orders": 1525
+  },
+  {
+   "month": "2011-07",
+   "revenue": 688219.34,
+   "orders": 1452
+  },
+  {
+   "month": "2011-08",
+   "revenue": 724216.5,
+   "orders": 1339
+  },
+  {
+   "month": "2011-09",
+   "revenue": 1028320.38,
+   "orders": 1818
+  },
+  {
+   "month": "2011-10",
+   "revenue": 1103314.25,
+   "orders": 2005
+  },
+  {
+   "month": "2011-11",
+   "revenue": 1452115.98,
+   "orders": 2751
+  }
+ ],
+ "sep_nov_share_pct": 37.2,
+ "saturday_revenue": 0.0,
+ "day_hour": {
+  "days": [
+   "Monday",
+   "Tuesday",
+   "Wednesday",
+   "Thursday",
+   "Friday",
+   "Saturday",
+   "Sunday"
+  ],
+  "hours": [
+   6,
+   7,
+   8,
+   9,
+   10,
+   11,
+   12,
+   13,
+   14,
+   15,
+   16,
+   17,
+   18,
+   19,
+   20
+  ],
+  "values": [
+   [
+    0.0,
+    1.44,
+    43.29,
+    148.9,
+    210.0,
+    160.55,
+    184.42,
+    219.24,
+    191.62,
+    179.33,
+    107.28,
+    154.56,
+    2.22,
+    0.0,
+    0.0
+   ],
+   [
+    0.0,
+    1.96,
+    70.05,
+    179.55,
+    325.33,
+    274.59,
+    248.6,
+    227.44,
+    187.6,
+    287.01,
+    161.32,
+    50.73,
+    15.58,
+    0.0,
+    0.0
+   ],
+   [
+    0.0,
+    3.34,
+    40.23,
+    133.18,
+    247.52,
+    212.66,
+    266.0,
+    225.68,
+    191.2,
+    213.92,
+    119.92,
+    39.98,
+    0.0,
+    2.89,
+    13.03
+   ],
+   [
+    0.0,
+    6.88,
+    64.6,
+    140.73,
+    286.27,
+    167.16,
+    271.81,
+    185.41,
+    199.79,
+    245.02,
+    167.64,
+    114.22,
+    104.89,
+    43.28,
+    5.72
+   ],
+   [
+    0.0,
+    16.83,
+    48.03,
+    151.44,
+    192.34,
+    193.67,
+    225.53,
+    178.52,
+    206.44,
+    183.78,
+    64.89,
+    51.13,
+    0.08,
+    0.37,
+    0.02
+   ],
+   [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   [
+    0.0,
+    0.0,
+    0.0,
+    0.78,
+    78.74,
+    142.28,
+    148.04,
+    139.87,
+    101.44,
+    124.54,
+    38.39,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ]
+  ]
+ },
+ "top_export": [
+  {
+   "country": "Netherlands",
+   "revenue": 272161.32
+  },
+  {
+   "country": "EIRE",
+   "revenue": 263709.97
+  },
+  {
+   "country": "Germany",
+   "revenue": 198356.98
+  },
+  {
+   "country": "France",
+   "revenue": 177954.08
+  },
+  {
+   "country": "Australia",
+   "revenue": 138103.81
+  },
+  {
+   "country": "Spain",
+   "revenue": 55418.35
+  },
+  {
+   "country": "Switzerland",
+   "revenue": 53065.6
+  },
+  {
+   "country": "Japan",
+   "revenue": 37416.37
+  }
+ ],
+ "uk_revenue": 8153163.34,
+ "pareto": {
+  "products": 3904,
+  "products_for_80pct": 833,
+  "pct_products_for_80pct": 21.3
+ },
+ "top_products": [
+  {
+   "description": "REGENCY CAKESTAND 3 TIER",
+   "revenue": 168162.42
+  },
+  {
+   "description": "WHITE HANGING HEART T-LIGHT HOLDER",
+   "revenue": 102236.34
+  },
+  {
+   "description": "PARTY BUNTING",
+   "revenue": 98526.75
+  },
+  {
+   "description": "JUMBO BAG RED RETROSPOT",
+   "revenue": 91932.91
+  },
+  {
+   "description": "MEDIUM CERAMIC TOP STORAGE JAR",
+   "revenue": 81448.21
+  }
+ ],
+ "rfm_segments": [
+  {
+   "segment": "Champions",
+   "customers": 605.0,
+   "revenue": 3727216.4,
+   "median_recency_days": 6.0,
+   "median_orders": 7.0,
+   "customer_share_pct": 14.1,
+   "revenue_share_pct": 45.3
+  },
+  {
+   "segment": "Loyal",
+   "customers": 815.0,
+   "revenue": 2523843.8,
+   "median_recency_days": 27.0,
+   "median_orders": 5.0,
+   "customer_share_pct": 19.0,
+   "revenue_share_pct": 30.7
+  },
+  {
+   "segment": "At risk",
+   "customers": 602.0,
+   "revenue": 625327.4,
+   "median_recency_days": 140.5,
+   "median_orders": 3.0,
+   "customer_share_pct": 14.0,
+   "revenue_share_pct": 7.6
+  },
+  {
+   "segment": "Hibernating",
+   "customers": 1040.0,
+   "revenue": 487046.1,
+   "median_recency_days": 223.0,
+   "median_orders": 1.0,
+   "customer_share_pct": 24.2,
+   "revenue_share_pct": 5.9
+  },
+  {
+   "segment": "Potential loyalists",
+   "customers": 480.0,
+   "revenue": 309711.0,
+   "median_recency_days": 14.0,
+   "median_orders": 2.0,
+   "customer_share_pct": 11.2,
+   "revenue_share_pct": 3.8
+  },
+  {
+   "segment": "Can't lose them",
+   "customers": 74.0,
+   "revenue": 192122.9,
+   "median_recency_days": 104.5,
+   "median_orders": 6.0,
+   "customer_share_pct": 1.7,
+   "revenue_share_pct": 2.3
+  },
+  {
+   "segment": "About to sleep",
+   "customers": 337.0,
+   "revenue": 153993.0,
+   "median_recency_days": 51.0,
+   "median_orders": 1.0,
+   "customer_share_pct": 7.8,
+   "revenue_share_pct": 1.9
+  },
+  {
+   "segment": "Need attention",
+   "customers": 184.0,
+   "revenue": 152846.9,
+   "median_recency_days": 49.0,
+   "median_orders": 2.0,
+   "customer_share_pct": 4.3,
+   "revenue_share_pct": 1.9
+  },
+  {
+   "segment": "Promising",
+   "customers": 99.0,
+   "revenue": 36194.7,
+   "median_recency_days": 21.0,
+   "median_orders": 1.0,
+   "customer_share_pct": 2.3,
+   "revenue_share_pct": 0.4
+  },
+  {
+   "segment": "New",
+   "customers": 57.0,
+   "revenue": 16697.2,
+   "median_recency_days": 7.0,
+   "median_orders": 1.0,
+   "customer_share_pct": 1.3,
+   "revenue_share_pct": 0.2
+  }
+ ],
+ "repeat": {
+  "customers": 4293.0,
+  "repeat_customers": 2742.0,
+  "repeat_rate_pct": 63.9
+ },
+ "aov_by_type": [
+  {
+   "customer_type": "Guest",
+   "orders": 1331,
+   "avg_order_value": 1057.65
+  },
+  {
+   "customer_type": "Identified",
+   "orders": 17626,
+   "avg_order_value": 466.64
+  }
+ ],
+ "cohort": {
+  "cohorts": [
+   "2010-12",
+   "2011-01",
+   "2011-02",
+   "2011-03",
+   "2011-04",
+   "2011-05",
+   "2011-06",
+   "2011-07",
+   "2011-08",
+   "2011-09",
+   "2011-10",
+   "2011-11"
+  ],
+  "sizes": [
+   884,
+   416,
+   380,
+   452,
+   300,
+   284,
+   242,
+   187,
+   169,
+   299,
+   357,
+   323
+  ],
+  "values": [
+   [
+    100.0,
+    36.5,
+    32.4,
+    38.3,
+    36.2,
+    39.8,
+    36.2,
+    34.8,
+    35.3,
+    39.5,
+    37.3,
+    50.2
+   ],
+   [
+    100.0,
+    21.9,
+    26.7,
+    22.8,
+    31.7,
+    28.8,
+    24.8,
+    24.0,
+    29.6,
+    32.7,
+    36.5,
+    null
+   ],
+   [
+    100.0,
+    18.7,
+    18.7,
+    28.7,
+    27.1,
+    24.5,
+    25.5,
+    27.4,
+    24.7,
+    30.5,
+    null,
+    null
+   ],
+   [
+    100.0,
+    14.8,
+    25.2,
+    19.9,
+    22.3,
+    16.8,
+    26.8,
+    23.0,
+    27.9,
+    null,
+    null,
+    null
+   ],
+   [
+    100.0,
+    21.0,
+    20.3,
+    21.0,
+    19.7,
+    22.7,
+    21.7,
+    26.0,
+    null,
+    null,
+    null,
+    null
+   ],
+   [
+    100.0,
+    19.0,
+    17.3,
+    17.3,
+    20.8,
+    23.2,
+    26.4,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   [
+    100.0,
+    17.4,
+    15.7,
+    26.4,
+    23.1,
+    33.1,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   [
+    100.0,
+    17.6,
+    20.3,
+    22.5,
+    27.3,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   [
+    100.0,
+    20.1,
+    24.3,
+    24.3,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   [
+    100.0,
+    23.4,
+    30.1,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   [
+    100.0,
+    23.5,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ],
+   [
+    100.0,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null,
+    null
+   ]
+  ]
+ },
+ "dec2010_month1": 36.5,
+ "later_month1_avg": 19.7
+}
