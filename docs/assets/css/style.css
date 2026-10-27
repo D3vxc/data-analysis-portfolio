@@ -331,3 +331,30 @@ pre .c { color: var(--ink-3); }
 footer { background: var(--night); color: var(--night-ink-2); border-top: 1px solid rgba(255,255,255,.08); padding-block: 26px 36px; font-size: 13.5px; }
 footer .wrap { display: flex; flex-wrap: wrap; gap: 10px 24px; justify-content: space-between; }
 footer a { color: var(--night-ink); }
+
+/* ---------- resume teaser ---------- */
+.resume-band { border-top: 1px solid var(--rule); }
+.resume-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 40px; align-items: center; }
+.resume-grid > * { min-width: 0; }
+@media (max-width: 860px) { .resume-grid { grid-template-columns: minmax(0, 1fr); gap: 28px; } }
+.resume-band h2 { font-size: clamp(28px, 4vw, 44px); font-weight: 800; font-stretch: 112%; line-height: 1.04; margin-top: 8px; }
+.resume-band p { color: var(--ink-2); margin: 12px 0 0; max-width: 32em; }
+.resume-actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+.btn-accent { background: var(--accent); color: var(--accent-ink); font-weight: 600; }
+.btn-accent:hover { filter: brightness(1.08); }
+.btn-outline { border-color: var(--rule); color: var(--ink); background: var(--panel); }
+.btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+.resume-peek {
+  display: grid; gap: 8px; padding: 26px 26px 20px; background: var(--panel); border: 1px solid var(--rule); border-radius: 10px;
+  color: var(--ink); text-decoration: none; transform: rotate(-1.2deg); box-shadow: 0 14px 40px rgba(16, 33, 32, .10);
+  transition: transform .2s, box-shadow .2s;
+}
+.resume-peek:hover { transform: rotate(0deg) translateY(-3px); box-shadow: 0 18px 50px rgba(16, 33, 32, .16); }
+@media (prefers-reduced-motion: reduce) { .resume-peek, .resume-peek:hover { transform: none; transition: none; } }
+.peek-name { font-family: var(--f-display); font-weight: 800; font-stretch: 114%; font-size: 28px; line-height: 1; }
+.peek-role { font-family: var(--f-mono); font-size: 13px; color: var(--accent); }
+.peek-rule { height: 3px; background: var(--ink); margin: 6px 0 4px; }
+.peek-row { display: flex; justify-content: space-between; gap: 12px; font-size: 14px; padding: 4px 0; border-bottom: 1px dashed var(--rule); }
+.peek-row b { font-weight: 500; min-width: 0; }
+.peek-row i { font-style: normal; font-family: var(--f-mono); font-size: 12px; color: var(--ink-3); white-space: nowrap; }
+.peek-more { margin-top: 6px; font-weight: 600; font-size: 14px; color: var(--accent); }

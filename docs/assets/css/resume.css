@@ -1,0 +1,61 @@
+/* Resume page: a paper sheet on the site background, printable to A4. Uses tokens from style.css. */
+.resume-page main { padding-block: 32px 64px; }
+.back { display: inline-flex; align-items: center; gap: 8px; color: var(--night-ink); text-decoration: none; font-weight: 600; font-size: 15px; padding: 6px 12px 6px 8px; border-radius: 6px; border: 1px solid rgba(255,255,255,.18); }
+.back:hover { border-color: var(--saffron); color: var(--saffron); }
+.btn-plain { font: 500 14px/1 var(--f-body); color: var(--night-ink-2); background: none; border: 0; cursor: pointer; padding: 6px 4px; }
+.btn-plain:hover { color: var(--saffron); }
+.resume-page .topnav { align-items: center; }
+.resume-page .topnav .cta { white-space: nowrap; }
+.back { white-space: nowrap; }
+@media (max-width: 520px) { .btn-plain { display: none; } .back .long { display: none; } }
+
+.paper { max-width: 860px; margin: 0 auto; background: var(--panel); border: 1px solid var(--rule); border-radius: 12px; padding: clamp(22px, 5vw, 52px); box-shadow: 0 10px 40px rgba(16, 33, 32, .06); }
+.cv-head { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 20px 32px; align-items: start; padding-bottom: 22px; border-bottom: 3px solid var(--ink); }
+.cv-head > * { min-width: 0; }
+.cv-head h1 { font-size: clamp(34px, 6vw, 52px); font-weight: 800; font-stretch: 114%; line-height: 1; }
+.cv-role { margin: 10px 0 0; font-family: var(--f-mono); font-size: 14px; color: var(--accent); }
+.cv-contact { list-style: none; margin: 0; padding: 0; display: grid; gap: 5px; font-size: 14px; }
+.cv-contact li { display: grid; grid-template-columns: 74px minmax(0, 1fr); gap: 8px; align-items: baseline; }
+.cv-contact .label { font-size: 11px; }
+.cv-contact a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--rule); text-underline-offset: 3px; overflow-wrap: anywhere; }
+.cv-contact a:hover { color: var(--accent); text-decoration-color: var(--accent); }
+@media (max-width: 640px) { .cv-head { grid-template-columns: minmax(0, 1fr); } }
+
+.cv-section { padding-top: 24px; }
+.cv-section h2 { font-family: var(--f-mono); font-size: 12.5px; font-weight: 600; text-transform: uppercase; letter-spacing: .12em; color: var(--accent); margin-bottom: 10px; }
+.cv-section p { margin: 0; color: var(--ink-2); font-size: 15px; line-height: 1.65; }
+.cv-note { margin-bottom: 10px !important; font-size: 14px !important; }
+.cv-skills { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 6px 16px; margin: 0; font-size: 14.5px; }
+.cv-skills dt { font-weight: 600; }
+.cv-skills dd { margin: 0; color: var(--ink-2); }
+@media (max-width: 560px) { .cv-skills { grid-template-columns: minmax(0, 1fr); gap: 2px; } .cv-skills dd { margin-bottom: 8px; } }
+
+.cv-item + .cv-item { margin-top: 16px; }
+.cv-item-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2px 16px; align-items: baseline; }
+.cv-item-head h3 { font-family: var(--f-body); font-size: 16px; font-weight: 600; letter-spacing: 0; }
+.cv-item .when { font-family: var(--f-mono); font-size: 12.5px; color: var(--ink-3); }
+.cv-item .where { font-size: 14px !important; color: var(--accent) !important; font-weight: 500; margin: 1px 0 6px !important; }
+.cv-item ul, .cv-projects { margin: 0; padding-left: 18px; font-size: 14.5px; color: var(--ink-2); display: grid; gap: 4px; }
+.cv-projects { padding-left: 0; list-style: none; gap: 8px; }
+.cv-projects li { display: grid; grid-template-columns: 210px minmax(0, 1fr); gap: 4px 16px; }
+.cv-projects a { font-weight: 600; color: var(--ink); }
+.cv-projects a:hover { color: var(--accent); }
+@media (max-width: 640px) { .cv-projects li { grid-template-columns: minmax(0, 1fr); } }
+
+@media print {
+  @page { size: A4; margin: 14mm; }
+  :root { --bg: #fff; --panel: #fff; --ink: #000; --ink-2: #222; --ink-3: #555; --rule: #ccc; --accent: #0e6e73; }
+  body { background: #fff; font-size: 10pt; line-height: 1.45; }
+  .cv-head { padding-bottom: 12px; }
+  .cv-head h1 { font-size: 30pt; }
+  .cv-section { padding-top: 12px; }
+  .cv-section p, .cv-item ul, .cv-projects, .cv-skills, .cv-contact { font-size: 9.5pt; line-height: 1.45; }
+  .cv-item + .cv-item { margin-top: 8px; }
+  .cv-item ul, .cv-projects { gap: 2px; }
+  body::before, .topbar { display: none; }
+  .resume-page main { padding: 0; }
+  .paper { border: 0; box-shadow: none; padding: 0; max-width: none; }
+  .cv-contact a, .cv-projects a { color: #000; }
+  .cv-section { break-inside: avoid-page; }
+  .cv-item { break-inside: avoid; }
+}
