@@ -1,0 +1,5 @@
+# Raw data is downloaded by each notebook on first run
+*/data/*.csv
+*/data/*.txt
+.ipynb_checkpoints/
+__pycache__/

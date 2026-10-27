@@ -1,0 +1,143 @@
+{
+ "train_rows": 125973,
+ "test_rows": 22544,
+ "features": 41,
+ "unseen_types": [
+  "apache2",
+  "httptunnel",
+  "mailbomb",
+  "mscan",
+  "named",
+  "processtable",
+  "ps",
+  "saint",
+  "sendmail",
+  "snmpgetattack",
+  "snmpguess",
+  "sqlattack",
+  "udpstorm",
+  "worm",
+  "xlock",
+  "xsnoop",
+  "xterm"
+ ],
+ "unseen_share_pct": 16.6,
+ "quality": {
+  "missing values (train)": "0",
+  "missing values (test)": "0",
+  "duplicate rows (train)": "0",
+  "constant columns (train)": "num_outbound_cmds",
+  "services in test not in train": "none"
+ },
+ "balance": [
+  {
+   "category": "Normal",
+   "train_pct": 53.5,
+   "test_pct": 43.1,
+   "train_n": 67343,
+   "test_n": 9711
+  },
+  {
+   "category": "DoS",
+   "train_pct": 36.5,
+   "test_pct": 33.1,
+   "train_n": 45927,
+   "test_n": 7460
+  },
+  {
+   "category": "Probe",
+   "train_pct": 9.3,
+   "test_pct": 10.7,
+   "train_n": 11656,
+   "test_n": 2421
+  },
+  {
+   "category": "R2L",
+   "train_pct": 0.8,
+   "test_pct": 12.8,
+   "train_n": 995,
+   "test_n": 2885
+  },
+  {
+   "category": "U2R",
+   "train_pct": 0.0,
+   "test_pct": 0.3,
+   "train_n": 52,
+   "test_n": 67
+  }
+ ],
+ "attack_rate_by_protocol": {
+  "icmp": 84.2,
+  "tcp": 47.8,
+  "udp": 17.1
+ },
+ "s0": {
+  "connections": 34851,
+  "attack_rate_pct": 99.0
+ },
+ "top_mi": [
+  {
+   "feature": "src_bytes",
+   "mi": 0.565
+  },
+  {
+   "feature": "dst_bytes",
+   "mi": 0.439
+  },
+  {
+   "feature": "diff_srv_rate",
+   "mi": 0.359
+  },
+  {
+   "feature": "same_srv_rate",
+   "mi": 0.358
+  },
+  {
+   "feature": "dst_host_srv_count",
+   "mi": 0.33
+  },
+  {
+   "feature": "dst_host_same_srv_rate",
+   "mi": 0.3
+  },
+  {
+   "feature": "dst_host_diff_srv_rate",
+   "mi": 0.281
+  },
+  {
+   "feature": "logged_in",
+   "mi": 0.279
+  },
+  {
+   "feature": "dst_host_srv_serror_rate",
+   "mi": 0.278
+  },
+  {
+   "feature": "serror_rate",
+   "mi": 0.278
+  }
+ ],
+ "scores": {
+  "cv_accuracy_pct": 99.88,
+  "test_accuracy_pct": 76.5,
+  "test_attack_recall_pct": 60.8,
+  "test_attack_precision_pct": 96.7,
+  "test_false_alarm_rate_pct": 2.74
+ },
+ "confusion": {
+  "tn": 9445,
+  "fp": 266,
+  "fn": 5031,
+  "tp": 7802
+ },
+ "recall_by_category_pct": {
+  "DoS": 78.8,
+  "Probe": 72.7,
+  "R2L": 5.2,
+  "U2R": 11.9
+ },
+ "recall_seen_pct": 76.8,
+ "recall_unseen_pct": 22.0,
+ "attack_share_train_pct": 46.5,
+ "attack_share_test_pct": 56.9
+}
