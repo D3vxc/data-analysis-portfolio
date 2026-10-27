@@ -80,7 +80,8 @@ body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-a
 .topnav a:hover { color: var(--saffron); }
 .topnav .cta { color: var(--night); background: var(--saffron); padding: 4px 12px; border-radius: 99px; font-weight: 600; }
 .topnav .cta:hover { color: var(--night); filter: brightness(1.05); }
-@media (max-width: 520px) { .topnav .hide-sm { display: none; } }
+.brand, .topnav a { white-space: nowrap; }
+@media (max-width: 520px) { .topnav { gap: 14px; } .topnav .hide-sm { display: none; } }
 
 /* ---------- hero ---------- */
 .hero {
