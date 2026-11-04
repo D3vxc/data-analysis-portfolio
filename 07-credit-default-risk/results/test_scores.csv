@@ -1,0 +1,6001 @@
+score,defaulted,sex,age_band
+0.1181,0,Male,40-49
+0.1047,0,Male,30-39
+0.173,0,Male,Under 30
+0.1903,1,Female,Under 30
+0.0284,0,Female,Under 30
+0.505,0,Male,Under 30
+0.1108,0,Male,30-39
+0.0239,0,Male,30-39
+0.0758,0,Female,40-49
+0.0639,0,Male,30-39
+0.3499,0,Female,30-39
+0.2981,0,Male,50+
+0.2715,1,Male,40-49
+0.0842,0,Male,50+
+0.0655,0,Female,30-39
+0.5174,0,Female,40-49
+0.026,0,Male,30-39
+0.2531,1,Male,50+
+0.0694,0,Male,30-39
+0.2026,0,Male,Under 30
+0.0338,0,Female,30-39
+0.2028,1,Male,50+
+0.0996,0,Female,Under 30
+0.1815,0,Male,50+
+0.1972,1,Female,50+
+0.1555,0,Male,30-39
+0.1251,0,Female,Under 30
+0.0648,0,Male,30-39
+0.8086,1,Male,50+
+0.4181,0,Male,30-39
+0.1486,1,Male,50+
+0.1496,0,Female,Under 30
+0.8232,1,Male,30-39
+0.18,0,Male,Under 30
+0.1115,0,Female,Under 30
+0.0835,0,Male,30-39
+0.0958,0,Male,30-39
+0.1308,1,Female,30-39
+0.0853,0,Female,Under 30
+0.4676,1,Male,30-39
+0.1441,0,Male,Under 30
+0.6735,0,Male,Under 30
+0.1793,0,Female,40-49
+0.1487,0,Female,50+
+0.0777,0,Male,50+
+0.0585,0,Male,Under 30
+0.1187,0,Female,40-49
+0.6754,0,Female,30-39
+0.0658,0,Male,30-39
+0.3179,0,Female,Under 30
+0.2643,0,Male,40-49
+0.0601,0,Female,40-49
+0.7604,1,Female,Under 30
+0.6413,1,Male,30-39
+0.1839,1,Male,30-39
+0.0423,0,Female,50+
+0.1114,0,Female,50+
+0.0338,0,Female,30-39
+0.0463,0,Male,40-49
+0.7503,1,Female,50+
+0.1356,0,Male,30-39
+0.617,1,Female,40-49
+0.3249,1,Male,Under 30
+0.2101,0,Female,30-39
+0.1635,0,Female,Under 30
+0.0737,0,Male,50+
+0.3726,1,Male,Under 30
+0.4583,0,Female,50+
+0.054,1,Female,30-39
+0.1212,1,Female,40-49
+0.1124,1,Male,30-39
+0.1087,0,Female,Under 30
+0.0281,0,Female,30-39
+0.4667,1,Male,30-39
+0.1417,0,Male,30-39
+0.2009,0,Female,40-49
+0.0738,0,Female,Under 30
+0.0674,0,Female,30-39
+0.188,1,Male,30-39
+0.0883,0,Female,40-49
+0.6697,1,Female,40-49
+0.0462,0,Male,30-39
+0.2536,0,Male,30-39
+0.1896,0,Male,40-49
+0.2784,1,Male,50+
+0.2714,1,Male,Under 30
+0.6674,0,Male,40-49
+0.1313,0,Female,Under 30
+0.1109,0,Female,30-39
+0.2186,0,Male,Under 30
+0.1427,0,Female,30-39
+0.1237,0,Female,Under 30
+0.0753,0,Female,40-49
+0.8021,1,Female,30-39
+0.3886,1,Female,Under 30
+0.2359,0,Male,Under 30
+0.1979,0,Male,Under 30
+0.4396,0,Female,30-39
+0.3735,1,Male,Under 30
+0.0308,0,Female,Under 30
+0.1661,0,Female,50+
+0.1953,0,Female,30-39
+0.1452,0,Female,40-49
+0.0845,0,Female,30-39
+0.255,1,Female,30-39
+0.1785,0,Female,40-49
+0.2626,1,Female,30-39
+0.0438,0,Male,40-49
+0.0947,0,Female,Under 30
+0.113,0,Female,30-39
+0.4325,0,Female,30-39
+0.2715,0,Male,30-39
+0.1932,0,Male,30-39
+0.0905,0,Male,40-49
+0.0862,0,Male,40-49
+0.1476,1,Female,30-39
+0.2322,0,Female,30-39
+0.2533,0,Male,30-39
+0.1161,0,Female,40-49
+0.7182,1,Female,40-49
+0.0503,0,Male,40-49
+0.2448,0,Female,40-49
+0.6215,1,Female,Under 30
+0.154,0,Male,Under 30
+0.0482,0,Female,Under 30
+0.1248,0,Male,Under 30
+0.1142,0,Female,30-39
+0.6678,0,Male,30-39
+0.1647,0,Female,Under 30
+0.3916,0,Female,40-49
+0.5885,1,Male,30-39
+0.4793,1,Female,30-39
+0.0546,0,Female,Under 30
+0.0778,0,Female,30-39
+0.8394,1,Male,50+
+0.1091,0,Female,50+
+0.3041,0,Female,30-39
+0.0787,0,Female,Under 30
+0.0625,0,Male,30-39
+0.0517,0,Male,30-39
+0.0337,0,Female,40-49
+0.1287,0,Male,30-39
+0.7636,1,Female,30-39
+0.1579,0,Male,40-49
+0.0515,0,Female,30-39
+0.1852,0,Female,Under 30
+0.7526,1,Female,40-49
+0.0445,0,Female,Under 30
+0.1006,1,Male,30-39
+0.3351,0,Male,Under 30
+0.6369,1,Female,40-49
+0.174,0,Female,Under 30
+0.1938,0,Female,30-39
+0.1299,0,Female,40-49
+0.7672,1,Female,30-39
+0.0272,0,Male,30-39
+0.056,0,Female,30-39
+0.0813,0,Female,30-39
+0.193,0,Female,30-39
+0.2539,0,Female,Under 30
+0.3821,0,Female,30-39
+0.8195,1,Female,30-39
+0.0992,0,Female,30-39
+0.0965,0,Female,Under 30
+0.093,0,Female,30-39
+0.2233,0,Female,30-39
+0.0442,0,Male,30-39
+0.0713,0,Female,Under 30
+0.156,0,Female,30-39
+0.1015,0,Female,30-39
+0.1128,0,Female,Under 30
+0.3438,0,Male,Under 30
+0.1924,0,Male,30-39
+0.0506,0,Female,30-39
+0.1586,0,Female,30-39
+0.7658,1,Male,Under 30
+0.3301,0,Male,Under 30
+0.2884,1,Male,40-49
+0.0902,0,Male,Under 30
+0.3039,0,Female,50+
+0.4152,1,Female,30-39
+0.233,0,Male,50+
+0.2061,1,Male,Under 30
+0.7378,1,Female,40-49
+0.1319,0,Male,50+
+0.1536,0,Male,Under 30
+0.0575,0,Female,30-39
+0.634,1,Female,40-49
+0.1098,0,Male,50+
+0.1326,0,Female,Under 30
+0.4543,1,Female,Under 30
+0.0343,0,Female,30-39
+0.0333,0,Female,30-39
+0.2096,0,Male,30-39
+0.3596,1,Female,Under 30
+0.3652,0,Female,30-39
+0.0868,0,Female,40-49
+0.0263,0,Female,50+
+0.1381,0,Female,Under 30
+0.1125,0,Female,Under 30
+0.0822,0,Female,40-49
+0.5234,1,Male,Under 30
+0.1613,0,Female,30-39
+0.0579,0,Male,Under 30
+0.7916,1,Female,Under 30
+0.1454,0,Male,50+
+0.199,1,Female,30-39
+0.1989,0,Female,40-49
+0.1233,0,Female,40-49
+0.483,0,Male,30-39
+0.7848,1,Male,30-39
+0.3289,1,Male,30-39
+0.45,0,Male,40-49
+0.3865,0,Female,Under 30
+0.0688,0,Male,50+
+0.2906,0,Female,30-39
+0.7453,1,Female,40-49
+0.6631,1,Female,Under 30
+0.063,0,Female,30-39
+0.1648,0,Female,Under 30
+0.1367,0,Female,30-39
+0.1448,0,Female,30-39
+0.1259,0,Female,Under 30
+0.2794,0,Female,30-39
+0.1299,0,Female,50+
+0.1417,0,Male,30-39
+0.2715,0,Female,40-49
+0.6809,1,Female,Under 30
+0.0761,0,Male,30-39
+0.3524,1,Female,30-39
+0.4117,0,Male,30-39
+0.061,0,Female,40-49
+0.0326,0,Male,50+
+0.1879,1,Female,Under 30
+0.0217,0,Male,30-39
+0.1417,1,Male,Under 30
+0.6757,1,Male,30-39
+0.1369,0,Female,40-49
+0.0733,0,Male,30-39
+0.09,0,Female,30-39
+0.1508,0,Male,50+
+0.2194,0,Male,40-49
+0.3212,1,Female,50+
+0.0682,0,Male,30-39
+0.0661,0,Female,30-39
+0.3689,0,Male,40-49
+0.0801,0,Male,50+
+0.0786,0,Female,40-49
+0.1155,1,Female,40-49
+0.0897,0,Female,Under 30
+0.0411,0,Female,Under 30
+0.2559,0,Female,40-49
+0.0382,0,Female,Under 30
+0.0569,0,Female,30-39
+0.1769,1,Male,40-49
+0.702,0,Female,30-39
+0.4432,0,Male,Under 30
+0.0821,0,Male,30-39
+0.1186,0,Female,Under 30
+0.0832,0,Male,30-39
+0.1501,1,Female,40-49
+0.1218,0,Female,Under 30
+0.5165,0,Male,Under 30
+0.1131,0,Male,30-39
+0.6631,1,Female,30-39
+0.3125,0,Male,40-49
+0.0849,0,Female,30-39
+0.0933,0,Female,Under 30
+0.2504,0,Male,50+
+0.0844,0,Female,Under 30
+0.1751,0,Female,30-39
+0.5408,0,Male,40-49
+0.1664,0,Female,40-49
+0.1501,0,Female,Under 30
+0.0572,0,Female,40-49
+0.075,0,Female,30-39
+0.4299,0,Female,40-49
+0.319,0,Male,Under 30
+0.1312,0,Male,30-39
+0.0665,0,Female,40-49
+0.7057,1,Female,Under 30
+0.1485,1,Male,40-49
+0.704,1,Male,40-49
+0.1359,0,Female,30-39
+0.7671,1,Female,Under 30
+0.1287,0,Male,50+
+0.1292,0,Female,30-39
+0.2128,1,Male,Under 30
+0.2977,0,Female,30-39
+0.1624,0,Female,30-39
+0.0559,0,Male,30-39
+0.6983,1,Female,40-49
+0.3639,0,Female,Under 30
+0.5825,0,Female,50+
+0.0799,0,Female,30-39
+0.1768,0,Female,Under 30
+0.1628,0,Female,30-39
+0.4772,0,Female,30-39
+0.1826,0,Female,Under 30
+0.2088,0,Female,Under 30
+0.0739,0,Male,30-39
+0.5712,1,Male,40-49
+0.1381,0,Male,50+
+0.59,1,Male,30-39
+0.1675,0,Male,Under 30
+0.1343,0,Female,40-49
+0.0846,0,Male,30-39
+0.1851,0,Female,Under 30
+0.0866,0,Female,Under 30
+0.475,1,Female,40-49
+0.1297,0,Female,30-39
+0.3836,0,Female,Under 30
+0.1454,1,Male,50+
+0.0246,0,Female,Under 30
+0.6457,0,Female,30-39
+0.0583,1,Female,Under 30
+0.0256,0,Male,30-39
+0.1149,0,Male,30-39
+0.5793,1,Male,40-49
+0.4076,0,Male,40-49
+0.2718,0,Female,30-39
+0.7092,0,Female,Under 30
+0.3025,1,Female,40-49
+0.0614,0,Male,40-49
+0.131,0,Female,50+
+0.2308,0,Female,30-39
+0.1089,0,Male,40-49
+0.2843,1,Female,Under 30
+0.4357,0,Male,40-49
+0.0355,0,Female,30-39
+0.2449,0,Male,40-49
+0.1209,0,Female,30-39
+0.0567,0,Female,Under 30
+0.4152,1,Female,30-39
+0.0603,0,Female,Under 30
+0.7557,0,Female,30-39
+0.6215,0,Female,Under 30
+0.1669,0,Female,Under 30
+0.0735,0,Female,Under 30
+0.0525,0,Male,30-39
+0.6864,1,Female,30-39
+0.0483,0,Female,30-39
+0.1249,0,Female,40-49
+0.3317,0,Female,40-49
+0.0338,0,Female,40-49
+0.0929,0,Female,30-39
+0.1779,0,Male,40-49
+0.0488,0,Male,40-49
+0.0457,0,Male,30-39
+0.4211,0,Female,Under 30
+0.1254,0,Female,30-39
+0.095,1,Female,Under 30
+0.0593,0,Female,Under 30
+0.1141,0,Female,50+
+0.1241,0,Female,30-39
+0.7119,1,Female,Under 30
+0.1667,0,Female,30-39
+0.0848,0,Male,30-39
+0.3569,0,Male,Under 30
+0.0977,0,Female,30-39
+0.744,1,Male,30-39
+0.3623,0,Male,Under 30
+0.4657,1,Female,Under 30
+0.6649,1,Female,50+
+0.0564,0,Male,40-49
+0.182,1,Male,40-49
+0.7557,0,Female,30-39
+0.0458,1,Male,50+
+0.1138,0,Female,30-39
+0.0586,0,Female,40-49
+0.0983,0,Male,Under 30
+0.7352,0,Male,30-39
+0.6541,1,Male,30-39
+0.0423,0,Female,Under 30
+0.1501,0,Male,50+
+0.0274,0,Female,30-39
+0.0975,1,Female,30-39
+0.1768,0,Female,Under 30
+0.169,1,Female,40-49
+0.0836,0,Female,40-49
+0.2219,0,Female,Under 30
+0.1352,0,Female,Under 30
+0.0393,0,Female,30-39
+0.1514,0,Female,Under 30
+0.1048,0,Male,40-49
+0.8126,1,Female,40-49
+0.242,0,Male,30-39
+0.4929,1,Female,Under 30
+0.2254,0,Female,30-39
+0.0375,0,Male,30-39
+0.0751,1,Female,Under 30
+0.4677,0,Female,Under 30
+0.0371,0,Male,40-49
+0.0364,0,Female,30-39
+0.2841,1,Male,30-39
+0.1323,0,Female,30-39
+0.1482,0,Female,Under 30
+0.5213,1,Male,40-49
+0.7758,1,Male,Under 30
+0.0972,0,Female,Under 30
+0.1643,1,Female,30-39
+0.0817,0,Female,30-39
+0.1573,0,Female,Under 30
+0.6048,1,Female,40-49
+0.0981,0,Female,Under 30
+0.1506,0,Female,30-39
+0.1037,0,Female,30-39
+0.1243,1,Female,30-39
+0.4468,0,Female,50+
+0.1175,0,Female,Under 30
+0.1046,0,Female,40-49
+0.1665,0,Female,30-39
+0.4062,1,Female,40-49
+0.1282,0,Female,Under 30
+0.1086,0,Female,Under 30
+0.778,1,Male,30-39
+0.1677,0,Female,Under 30
+0.2733,0,Male,Under 30
+0.2636,0,Male,Under 30
+0.1106,0,Female,Under 30
+0.1349,0,Female,Under 30
+0.7282,1,Female,Under 30
+0.1139,0,Female,Under 30
+0.1347,0,Female,40-49
+0.3114,0,Female,Under 30
+0.1199,0,Female,Under 30
+0.1695,0,Female,Under 30
+0.1299,0,Female,40-49
+0.0357,1,Female,30-39
+0.1243,0,Female,Under 30
+0.1821,0,Female,30-39
+0.0929,1,Male,30-39
+0.6582,1,Male,30-39
+0.0555,0,Male,40-49
+0.0478,0,Female,40-49
+0.0589,0,Female,50+
+0.1595,1,Female,30-39
+0.3158,0,Female,30-39
+0.0985,0,Female,Under 30
+0.2785,1,Female,40-49
+0.1014,0,Female,40-49
+0.7938,0,Female,30-39
+0.0948,0,Male,30-39
+0.0473,0,Male,Under 30
+0.1321,0,Male,40-49
+0.6735,1,Male,Under 30
+0.7212,1,Male,30-39
+0.0368,0,Female,30-39
+0.5365,0,Female,40-49
+0.2183,0,Male,30-39
+0.3762,1,Male,30-39
+0.5408,0,Male,40-49
+0.1033,0,Male,50+
+0.2477,0,Female,Under 30
+0.7208,0,Female,40-49
+0.3024,0,Female,30-39
+0.039,0,Female,Under 30
+0.1343,0,Female,Under 30
+0.0695,0,Male,50+
+0.1881,0,Female,30-39
+0.5497,1,Female,Under 30
+0.1108,0,Female,40-49
+0.0867,0,Male,40-49
+0.1063,0,Male,30-39
+0.1296,0,Female,40-49
+0.1199,0,Female,40-49
+0.1045,0,Female,50+
+0.1488,0,Male,40-49
+0.1591,0,Female,Under 30
+0.8839,1,Male,30-39
+0.0749,0,Male,30-39
+0.1755,0,Female,50+
+0.3371,0,Female,30-39
+0.0572,0,Female,Under 30
+0.5061,1,Female,Under 30
+0.0454,0,Male,40-49
+0.0564,0,Male,30-39
+0.3329,1,Male,Under 30
+0.1503,1,Male,30-39
+0.1492,0,Female,40-49
+0.5409,0,Female,Under 30
+0.0527,0,Female,Under 30
+0.1192,0,Female,Under 30
+0.0482,0,Female,30-39
+0.1633,1,Female,30-39
+0.041,0,Male,Under 30
+0.16,0,Female,Under 30
+0.1408,0,Male,30-39
+0.6597,0,Female,Under 30
+0.1699,1,Male,30-39
+0.048,0,Female,Under 30
+0.0546,1,Female,30-39
+0.1187,0,Female,Under 30
+0.6365,1,Female,30-39
+0.1446,1,Female,Under 30
+0.1393,0,Female,50+
+0.0493,0,Female,Under 30
+0.0716,0,Male,40-49
+0.247,0,Male,50+
+0.351,0,Female,40-49
+0.271,0,Female,50+
+0.1073,0,Male,50+
+0.0458,0,Female,Under 30
+0.052,0,Female,30-39
+0.6014,0,Female,40-49
+0.1114,0,Female,30-39
+0.3643,0,Female,Under 30
+0.0591,1,Female,40-49
+0.1024,0,Female,30-39
+0.1365,0,Female,Under 30
+0.5432,1,Male,Under 30
+0.1754,0,Female,50+
+0.0642,0,Female,30-39
+0.1655,0,Female,40-49
+0.0578,0,Male,30-39
+0.3877,0,Male,30-39
+0.3233,0,Female,30-39
+0.0382,0,Female,30-39
+0.1879,0,Female,50+
+0.1558,1,Female,50+
+0.0787,0,Female,30-39
+0.3762,0,Female,Under 30
+0.1847,0,Female,40-49
+0.0372,0,Female,Under 30
+0.2916,0,Female,Under 30
+0.2142,1,Female,40-49
+0.1361,0,Male,50+
+0.7855,1,Female,40-49
+0.0467,0,Male,Under 30
+0.2745,0,Male,40-49
+0.04,0,Female,Under 30
+0.1077,0,Male,30-39
+0.0294,0,Female,50+
+0.4904,1,Male,40-49
+0.5349,1,Female,30-39
+0.4693,1,Male,Under 30
+0.107,0,Female,30-39
+0.6575,1,Male,30-39
+0.3314,0,Female,40-49
+0.1261,1,Male,Under 30
+0.5037,1,Male,30-39
+0.0681,1,Female,30-39
+0.0463,0,Male,Under 30
+0.0209,0,Female,30-39
+0.3498,1,Female,Under 30
+0.2302,0,Male,50+
+0.0717,0,Female,40-49
+0.0472,0,Male,30-39
+0.1449,1,Female,Under 30
+0.0869,0,Female,30-39
+0.7543,1,Male,Under 30
+0.3711,0,Female,40-49
+0.1112,0,Female,30-39
+0.0803,0,Female,40-49
+0.1654,0,Female,40-49
+0.6198,1,Male,Under 30
+0.2332,0,Female,30-39
+0.098,0,Male,50+
+0.1604,0,Male,Under 30
+0.02,0,Female,40-49
+0.6726,1,Female,Under 30
+0.1352,0,Male,50+
+0.5548,1,Male,40-49
+0.1429,1,Male,40-49
+0.805,1,Female,Under 30
+0.0992,0,Female,Under 30
+0.1367,0,Female,40-49
+0.1117,0,Male,40-49
+0.2176,1,Female,40-49
+0.0797,0,Female,30-39
+0.1392,0,Female,30-39
+0.1854,0,Male,30-39
+0.1874,1,Male,Under 30
+0.0312,0,Female,30-39
+0.0966,0,Male,30-39
+0.4385,1,Male,Under 30
+0.1165,0,Female,Under 30
+0.1013,0,Male,Under 30
+0.2384,0,Female,Under 30
+0.1004,0,Female,30-39
+0.2078,0,Male,30-39
+0.0908,0,Male,Under 30
+0.7282,1,Female,Under 30
+0.6569,1,Male,40-49
+0.0988,0,Male,Under 30
+0.5393,0,Male,Under 30
+0.1159,0,Male,30-39
+0.3319,0,Male,30-39
+0.7025,1,Male,30-39
+0.7496,0,Male,Under 30
+0.1325,0,Female,40-49
+0.3803,1,Female,30-39
+0.7735,1,Female,Under 30
+0.2498,0,Male,30-39
+0.0403,0,Male,40-49
+0.1752,0,Female,Under 30
+0.1715,0,Female,30-39
+0.1474,1,Female,Under 30
+0.114,0,Female,Under 30
+0.1197,0,Male,Under 30
+0.0743,0,Male,Under 30
+0.3898,0,Male,30-39
+0.0328,0,Male,30-39
+0.0569,0,Female,Under 30
+0.207,0,Female,50+
+0.229,0,Female,Under 30
+0.2606,0,Female,40-49
+0.0883,0,Female,30-39
+0.0627,0,Female,40-49
+0.1245,1,Female,40-49
+0.5573,1,Male,Under 30
+0.7829,1,Female,Under 30
+0.7328,1,Female,Under 30
+0.0669,0,Male,40-49
+0.1412,1,Male,Under 30
+0.0433,0,Female,40-49
+0.4239,1,Female,40-49
+0.0947,1,Male,30-39
+0.4286,1,Male,30-39
+0.0615,0,Male,30-39
+0.1763,0,Female,50+
+0.1732,1,Female,30-39
+0.2775,0,Male,Under 30
+0.1025,0,Female,40-49
+0.1736,0,Female,30-39
+0.0418,0,Female,40-49
+0.1439,0,Male,Under 30
+0.0549,0,Female,Under 30
+0.0646,0,Female,40-49
+0.1659,1,Female,40-49
+0.136,1,Male,30-39
+0.0393,0,Female,30-39
+0.147,0,Female,Under 30
+0.668,1,Female,Under 30
+0.1957,0,Female,Under 30
+0.0369,0,Female,Under 30
+0.7781,1,Female,40-49
+0.737,1,Female,30-39
+0.2248,0,Male,30-39
+0.2694,0,Female,40-49
+0.056,0,Male,40-49
+0.0872,0,Male,Under 30
+0.062,1,Female,Under 30
+0.0723,0,Female,30-39
+0.1424,0,Male,Under 30
+0.3195,1,Female,Under 30
+0.1568,0,Male,40-49
+0.1895,1,Male,50+
+0.6546,1,Female,Under 30
+0.2636,0,Female,40-49
+0.7146,0,Female,50+
+0.4141,0,Female,40-49
+0.6771,1,Male,Under 30
+0.1748,0,Male,Under 30
+0.0924,0,Male,30-39
+0.1078,0,Female,30-39
+0.0512,0,Male,30-39
+0.062,0,Female,50+
+0.1794,0,Male,Under 30
+0.0925,1,Male,50+
+0.1738,0,Female,40-49
+0.6438,0,Female,50+
+0.2079,0,Female,Under 30
+0.036,0,Male,30-39
+0.2447,0,Female,Under 30
+0.0868,0,Male,30-39
+0.1013,0,Female,40-49
+0.1519,0,Male,30-39
+0.1165,0,Female,Under 30
+0.0563,0,Female,Under 30
+0.133,0,Male,40-49
+0.0613,0,Female,30-39
+0.2715,0,Male,50+
+0.1217,1,Female,Under 30
+0.1375,0,Female,30-39
+0.1752,0,Male,50+
+0.3694,0,Male,Under 30
+0.2527,0,Male,Under 30
+0.1102,1,Female,40-49
+0.1524,0,Female,Under 30
+0.1581,0,Male,Under 30
+0.7087,1,Male,Under 30
+0.0615,0,Female,40-49
+0.1319,0,Female,30-39
+0.1927,0,Female,30-39
+0.1799,0,Female,Under 30
+0.0433,0,Female,Under 30
+0.1166,0,Male,50+
+0.0584,0,Female,Under 30
+0.4013,0,Female,30-39
+0.1562,0,Female,40-49
+0.029,0,Male,30-39
+0.0454,0,Female,30-39
+0.0626,1,Female,Under 30
+0.3215,0,Female,Under 30
+0.044,0,Female,50+
+0.0521,0,Male,Under 30
+0.2187,0,Female,40-49
+0.7245,1,Female,30-39
+0.0334,0,Male,40-49
+0.1631,0,Male,Under 30
+0.3999,0,Female,40-49
+0.1038,0,Male,30-39
+0.0412,0,Male,40-49
+0.214,0,Female,40-49
+0.1389,0,Male,Under 30
+0.0651,0,Female,30-39
+0.4599,0,Male,Under 30
+0.0611,0,Female,40-49
+0.1054,0,Male,Under 30
+0.0924,0,Female,Under 30
+0.1493,1,Male,40-49
+0.3083,0,Female,50+
+0.0483,0,Female,40-49
+0.0403,1,Male,30-39
+0.6044,1,Female,40-49
+0.0799,0,Female,Under 30
+0.1235,0,Male,40-49
+0.1011,0,Female,30-39
+0.0811,0,Male,30-39
+0.7409,0,Male,40-49
+0.1627,0,Female,Under 30
+0.0326,0,Male,Under 30
+0.058,0,Female,Under 30
+0.0314,0,Female,40-49
+0.0571,0,Female,Under 30
+0.1047,1,Male,Under 30
+0.0716,0,Female,30-39
+0.097,0,Female,30-39
+0.1424,1,Male,30-39
+0.0727,0,Female,Under 30
+0.1009,0,Female,30-39
+0.2242,0,Female,50+
+0.2497,0,Female,30-39
+0.1122,0,Male,40-49
+0.7584,1,Female,Under 30
+0.2334,1,Female,30-39
+0.0936,0,Male,30-39
+0.024,0,Female,Under 30
+0.1175,0,Male,Under 30
+0.0246,1,Male,30-39
+0.0915,0,Female,Under 30
+0.054,0,Male,40-49
+0.5096,0,Male,50+
+0.0801,0,Male,40-49
+0.5416,1,Female,Under 30
+0.1249,0,Female,50+
+0.1581,0,Female,50+
+0.1424,0,Female,40-49
+0.1721,0,Male,30-39
+0.1679,0,Male,40-49
+0.138,0,Female,40-49
+0.0536,0,Female,Under 30
+0.1517,0,Female,30-39
+0.1354,0,Female,Under 30
+0.0456,0,Male,40-49
+0.347,0,Female,40-49
+0.1447,0,Male,Under 30
+0.1243,0,Male,Under 30
+0.1412,0,Female,Under 30
+0.041,0,Female,40-49
+0.3873,1,Female,Under 30
+0.023,0,Female,30-39
+0.3912,0,Male,Under 30
+0.7303,1,Female,30-39
+0.0404,0,Female,30-39
+0.1059,0,Female,30-39
+0.2125,0,Male,50+
+0.3286,0,Female,Under 30
+0.5684,1,Female,40-49
+0.1984,0,Male,30-39
+0.09,0,Male,40-49
+0.4605,0,Female,Under 30
+0.1176,1,Female,30-39
+0.1017,0,Female,30-39
+0.2006,0,Female,Under 30
+0.2318,0,Male,40-49
+0.1062,0,Female,30-39
+0.2081,0,Male,40-49
+0.0736,0,Male,Under 30
+0.0551,0,Male,Under 30
+0.7759,1,Female,Under 30
+0.1565,0,Female,40-49
+0.2051,0,Female,30-39
+0.1289,0,Male,30-39
+0.1027,0,Male,40-49
+0.2662,0,Female,30-39
+0.3239,0,Male,Under 30
+0.219,0,Female,Under 30
+0.1737,0,Female,30-39
+0.1771,0,Male,30-39
+0.0932,0,Female,30-39
+0.0681,0,Female,Under 30
+0.0905,0,Female,Under 30
+0.8559,1,Male,40-49
+0.1413,0,Female,Under 30
+0.1373,0,Male,Under 30
+0.4418,0,Female,30-39
+0.1293,0,Male,40-49
+0.0567,0,Female,30-39
+0.8012,1,Male,30-39
+0.2584,0,Female,Under 30
+0.6714,1,Female,30-39
+0.0527,0,Male,Under 30
+0.1274,0,Male,40-49
+0.0829,0,Female,Under 30
+0.0533,0,Female,30-39
+0.0692,0,Female,40-49
+0.4212,1,Male,30-39
+0.164,1,Male,Under 30
+0.4205,1,Male,Under 30
+0.7462,1,Female,30-39
+0.0768,0,Female,30-39
+0.1363,0,Female,30-39
+0.1159,0,Male,Under 30
+0.1452,0,Female,30-39
+0.0633,0,Female,30-39
+0.0228,0,Male,30-39
+0.1878,1,Male,Under 30
+0.1888,1,Male,30-39
+0.0773,0,Male,40-49
+0.0973,0,Female,Under 30
+0.053,0,Male,30-39
+0.2784,1,Male,30-39
+0.7814,0,Male,Under 30
+0.4152,1,Male,40-49
+0.6725,1,Female,40-49
+0.2586,0,Female,40-49
+0.1631,0,Male,50+
+0.6496,1,Male,30-39
+0.7406,0,Female,40-49
+0.238,0,Male,40-49
+0.538,0,Female,Under 30
+0.0994,0,Female,40-49
+0.1324,1,Male,50+
+0.1117,0,Male,Under 30
+0.1123,0,Male,30-39
+0.2655,0,Female,Under 30
+0.3899,0,Female,30-39
+0.0645,0,Female,Under 30
+0.0517,0,Female,40-49
+0.0665,0,Male,30-39
+0.6162,1,Female,Under 30
+0.1469,0,Female,40-49
+0.1425,0,Male,Under 30
+0.0542,0,Female,30-39
+0.2876,0,Male,40-49
+0.0521,0,Male,40-49
+0.0294,0,Male,Under 30
+0.0572,0,Female,50+
+0.5763,0,Male,40-49
+0.0729,0,Female,Under 30
+0.0502,0,Female,30-39
+0.4905,0,Male,50+
+0.0495,0,Male,40-49
+0.1206,0,Male,30-39
+0.0793,0,Male,30-39
+0.1435,0,Female,Under 30
+0.8882,1,Female,30-39
+0.0439,1,Male,30-39
+0.2438,0,Female,Under 30
+0.6947,0,Male,30-39
+0.0932,0,Female,30-39
+0.0481,1,Male,Under 30
+0.0782,0,Female,40-49
+0.1553,0,Male,40-49
+0.0811,0,Female,Under 30
+0.6297,1,Female,Under 30
+0.2226,1,Female,30-39
+0.0832,0,Male,Under 30
+0.3168,1,Male,30-39
+0.2968,0,Male,40-49
+0.1796,0,Female,30-39
+0.1489,0,Female,40-49
+0.1563,0,Male,30-39
+0.651,1,Female,40-49
+0.2991,1,Female,40-49
+0.176,0,Male,Under 30
+0.0585,0,Male,30-39
+0.0884,0,Male,30-39
+0.7093,0,Male,40-49
+0.3098,1,Female,30-39
+0.0901,0,Female,Under 30
+0.1902,0,Female,Under 30
+0.0518,0,Female,30-39
+0.2487,0,Male,50+
+0.7082,0,Male,Under 30
+0.2662,0,Female,50+
+0.1778,0,Female,40-49
+0.1114,0,Male,40-49
+0.7047,1,Male,50+
+0.7338,1,Female,30-39
+0.3218,0,Male,Under 30
+0.1639,0,Male,50+
+0.1369,0,Female,Under 30
+0.3017,1,Female,50+
+0.291,1,Female,40-49
+0.3959,0,Female,Under 30
+0.1843,0,Male,Under 30
+0.0359,0,Male,50+
+0.6431,1,Female,Under 30
+0.2856,0,Female,30-39
+0.1704,0,Female,50+
+0.0444,0,Male,30-39
+0.6868,1,Male,30-39
+0.2025,1,Female,40-49
+0.107,0,Female,40-49
+0.0587,0,Female,30-39
+0.2165,1,Male,Under 30
+0.1116,0,Male,40-49
+0.1325,0,Female,Under 30
+0.1537,0,Female,40-49
+0.7578,1,Female,Under 30
+0.1958,0,Male,30-39
+0.6858,0,Female,Under 30
+0.3172,0,Female,40-49
+0.2009,0,Female,30-39
+0.1593,1,Female,40-49
+0.0826,0,Female,30-39
+0.1795,0,Female,40-49
+0.3993,0,Female,40-49
+0.0318,0,Female,50+
+0.1924,0,Female,40-49
+0.1542,0,Female,30-39
+0.1451,0,Female,30-39
+0.2141,1,Male,40-49
+0.2591,0,Female,40-49
+0.1193,0,Male,30-39
+0.3274,1,Male,Under 30
+0.0617,0,Female,30-39
+0.096,0,Female,30-39
+0.132,0,Female,30-39
+0.0882,0,Female,Under 30
+0.1661,0,Male,50+
+0.1838,1,Female,30-39
+0.1663,0,Male,30-39
+0.0492,0,Female,30-39
+0.1939,0,Male,50+
+0.7348,0,Female,Under 30
+0.116,0,Female,40-49
+0.6577,1,Female,Under 30
+0.1715,0,Female,Under 30
+0.0577,0,Male,30-39
+0.3689,0,Male,50+
+0.161,0,Male,50+
+0.1085,0,Male,30-39
+0.1152,0,Male,30-39
+0.3652,1,Female,30-39
+0.1358,0,Female,40-49
+0.1121,1,Female,30-39
+0.0405,0,Female,30-39
+0.0564,0,Female,30-39
+0.26,0,Female,30-39
+0.1441,1,Female,50+
+0.1966,0,Female,40-49
+0.1471,1,Female,Under 30
+0.0732,0,Female,30-39
+0.1286,0,Male,Under 30
+0.1483,0,Female,30-39
+0.4219,0,Male,30-39
+0.2135,0,Female,30-39
+0.0418,0,Female,50+
+0.1483,0,Male,30-39
+0.1618,0,Female,Under 30
+0.087,1,Female,30-39
+0.0837,0,Female,30-39
+0.7393,1,Male,Under 30
+0.0722,0,Male,40-49
+0.1988,0,Male,Under 30
+0.2705,0,Male,30-39
+0.3133,0,Male,30-39
+0.1919,0,Female,Under 30
+0.5002,0,Female,Under 30
+0.1433,0,Male,30-39
+0.0808,0,Female,40-49
+0.0899,0,Male,30-39
+0.267,0,Female,50+
+0.0485,0,Male,40-49
+0.0988,0,Female,Under 30
+0.1823,0,Female,30-39
+0.0443,1,Male,40-49
+0.5161,1,Male,30-39
+0.1365,0,Female,Under 30
+0.0544,0,Female,30-39
+0.1048,0,Female,Under 30
+0.1326,0,Male,30-39
+0.0526,0,Male,Under 30
+0.0578,0,Female,Under 30
+0.7706,0,Female,30-39
+0.0613,0,Male,30-39
+0.1909,0,Female,Under 30
+0.0371,0,Female,Under 30
+0.1767,0,Female,40-49
+0.195,0,Male,30-39
+0.0533,0,Female,40-49
+0.0599,0,Male,40-49
+0.4222,1,Female,30-39
+0.1336,0,Female,50+
+0.1023,0,Female,Under 30
+0.3554,0,Male,30-39
+0.3572,0,Female,30-39
+0.629,1,Female,50+
+0.0679,1,Female,40-49
+0.3346,1,Female,30-39
+0.09,0,Male,40-49
+0.0624,0,Female,30-39
+0.5113,1,Male,30-39
+0.0966,0,Female,50+
+0.0494,0,Male,40-49
+0.5292,1,Female,Under 30
+0.1936,0,Female,40-49
+0.1432,0,Female,Under 30
+0.0389,0,Female,Under 30
+0.4224,1,Male,30-39
+0.1314,1,Female,30-39
+0.2204,0,Female,50+
+0.127,0,Female,40-49
+0.1512,0,Female,Under 30
+0.2166,0,Female,Under 30
+0.8222,1,Female,40-49
+0.2423,0,Female,30-39
+0.2062,0,Female,40-49
+0.1002,1,Male,Under 30
+0.1528,0,Male,40-49
+0.6498,0,Female,30-39
+0.1531,0,Male,Under 30
+0.1117,0,Female,30-39
+0.1485,0,Male,Under 30
+0.0478,0,Female,Under 30
+0.0914,0,Male,30-39
+0.0639,0,Female,30-39
+0.1495,0,Female,40-49
+0.18,0,Male,30-39
+0.1198,0,Male,40-49
+0.0767,0,Female,40-49
+0.0531,1,Female,Under 30
+0.1169,0,Female,40-49
+0.0379,0,Female,40-49
+0.0922,0,Male,50+
+0.1996,0,Male,30-39
+0.0966,0,Female,50+
+0.1094,0,Female,Under 30
+0.2726,0,Female,50+
+0.0348,0,Male,Under 30
+0.1883,0,Female,30-39
+0.0305,0,Female,30-39
+0.8104,1,Male,40-49
+0.0739,0,Male,Under 30
+0.1646,0,Male,Under 30
+0.1563,0,Female,Under 30
+0.0962,0,Female,30-39
+0.0866,0,Female,Under 30
+0.091,0,Male,Under 30
+0.1229,0,Female,30-39
+0.34,0,Female,30-39
+0.1004,0,Female,Under 30
+0.2749,0,Male,Under 30
+0.2737,0,Male,50+
+0.6,1,Male,50+
+0.6807,0,Male,30-39
+0.24,0,Female,30-39
+0.1304,0,Male,50+
+0.1909,0,Female,Under 30
+0.1654,0,Female,Under 30
+0.1532,0,Male,50+
+0.1061,0,Female,Under 30
+0.2748,0,Male,40-49
+0.0665,0,Male,40-49
+0.1539,0,Female,40-49
+0.1649,0,Female,40-49
+0.1326,0,Male,Under 30
+0.0886,0,Male,30-39
+0.1358,0,Female,30-39
+0.3714,0,Female,Under 30
+0.0273,0,Female,Under 30
+0.044,0,Male,Under 30
+0.3986,1,Male,30-39
+0.561,0,Male,Under 30
+0.7223,0,Female,Under 30
+0.0429,1,Male,40-49
+0.33,0,Female,30-39
+0.0664,1,Female,30-39
+0.1534,1,Male,40-49
+0.0481,0,Female,40-49
+0.0674,0,Female,30-39
+0.0534,0,Male,30-39
+0.7894,1,Male,Under 30
+0.165,0,Female,50+
+0.351,1,Female,30-39
+0.6597,0,Female,Under 30
+0.1351,0,Male,Under 30
+0.129,0,Male,30-39
+0.129,0,Female,40-49
+0.0831,0,Male,Under 30
+0.057,0,Female,40-49
+0.1442,0,Male,Under 30
+0.0594,0,Female,Under 30
+0.0739,0,Female,Under 30
+0.0636,0,Female,40-49
+0.337,0,Male,30-39
+0.0904,0,Male,40-49
+0.7697,1,Female,40-49
+0.0297,0,Male,30-39
+0.2359,0,Male,Under 30
+0.2543,0,Male,Under 30
+0.0841,0,Female,30-39
+0.079,0,Male,Under 30
+0.1602,1,Female,40-49
+0.2784,0,Female,30-39
+0.0701,0,Female,30-39
+0.0614,1,Female,Under 30
+0.2199,0,Male,Under 30
+0.147,0,Female,40-49
+0.5076,1,Female,30-39
+0.0322,0,Female,50+
+0.0767,1,Male,Under 30
+0.125,0,Male,30-39
+0.2362,0,Male,50+
+0.1493,0,Male,Under 30
+0.3298,0,Male,30-39
+0.0961,0,Female,40-49
+0.4643,1,Female,40-49
+0.3382,0,Male,50+
+0.6116,0,Female,Under 30
+0.2196,0,Male,50+
+0.2777,0,Male,30-39
+0.6917,1,Male,40-49
+0.7416,1,Female,Under 30
+0.1001,0,Female,Under 30
+0.233,0,Female,Under 30
+0.5191,1,Female,40-49
+0.1126,0,Male,Under 30
+0.3053,0,Female,40-49
+0.1403,0,Female,Under 30
+0.14,0,Female,40-49
+0.169,0,Female,Under 30
+0.1634,0,Male,30-39
+0.7029,1,Female,Under 30
+0.4507,0,Male,30-39
+0.1645,0,Female,Under 30
+0.1678,0,Female,40-49
+0.1597,0,Female,Under 30
+0.0691,0,Female,Under 30
+0.0537,0,Female,Under 30
+0.2127,1,Female,Under 30
+0.0359,0,Female,30-39
+0.2102,0,Male,Under 30
+0.1778,0,Male,Under 30
+0.0398,0,Female,30-39
+0.1295,0,Female,Under 30
+0.3542,0,Female,30-39
+0.1386,0,Male,30-39
+0.3003,1,Male,Under 30
+0.1774,0,Female,40-49
+0.1013,0,Male,50+
+0.1049,0,Male,Under 30
+0.0977,0,Male,Under 30
+0.2749,1,Male,40-49
+0.5155,1,Female,Under 30
+0.6262,1,Male,40-49
+0.2421,0,Male,30-39
+0.0711,0,Female,Under 30
+0.3432,0,Female,Under 30
+0.0756,0,Male,50+
+0.756,0,Male,30-39
+0.133,0,Male,Under 30
+0.1459,0,Female,40-49
+0.2176,1,Female,Under 30
+0.3292,0,Male,30-39
+0.0527,0,Male,30-39
+0.1389,0,Male,Under 30
+0.0346,0,Female,30-39
+0.0795,0,Male,30-39
+0.1808,1,Female,Under 30
+0.1549,0,Female,Under 30
+0.1689,1,Male,30-39
+0.2279,0,Male,30-39
+0.1623,0,Male,40-49
+0.1796,0,Female,40-49
+0.117,0,Male,40-49
+0.3776,1,Female,40-49
+0.4248,0,Female,Under 30
+0.1161,0,Female,Under 30
+0.0704,0,Female,40-49
+0.0659,0,Male,40-49
+0.1054,1,Female,30-39
+0.0654,0,Female,Under 30
+0.5641,1,Male,40-49
+0.376,1,Male,30-39
+0.0406,0,Female,Under 30
+0.2436,0,Male,40-49
+0.8098,1,Female,30-39
+0.5146,1,Female,Under 30
+0.1082,1,Male,40-49
+0.4355,1,Male,Under 30
+0.2372,0,Male,30-39
+0.1845,0,Female,30-39
+0.1439,1,Male,50+
+0.1256,1,Female,Under 30
+0.1507,1,Male,50+
+0.351,0,Female,Under 30
+0.1176,0,Female,Under 30
+0.1669,0,Female,Under 30
+0.0973,0,Male,30-39
+0.2343,0,Female,Under 30
+0.1008,0,Female,30-39
+0.0861,0,Female,50+
+0.0248,0,Female,40-49
+0.0614,0,Male,30-39
+0.1281,0,Female,40-49
+0.0758,0,Female,40-49
+0.1724,0,Female,Under 30
+0.3419,0,Male,Under 30
+0.7745,0,Female,40-49
+0.1639,1,Male,50+
+0.673,1,Female,30-39
+0.3868,0,Male,Under 30
+0.1473,0,Male,30-39
+0.1068,0,Male,50+
+0.0639,0,Male,30-39
+0.1364,0,Female,30-39
+0.7627,0,Female,30-39
+0.0388,0,Male,30-39
+0.21,0,Female,30-39
+0.1157,0,Female,Under 30
+0.5581,1,Female,Under 30
+0.7156,0,Female,40-49
+0.7027,1,Male,30-39
+0.1032,0,Male,Under 30
+0.0884,0,Female,40-49
+0.019,0,Female,30-39
+0.0744,0,Female,40-49
+0.1158,0,Female,30-39
+0.5222,0,Female,Under 30
+0.1266,0,Female,30-39
+0.613,0,Male,Under 30
+0.0478,0,Female,Under 30
+0.2178,0,Male,30-39
+0.0807,0,Female,30-39
+0.104,1,Female,40-49
+0.1558,0,Female,40-49
+0.0779,0,Male,30-39
+0.4144,1,Female,30-39
+0.1222,0,Female,Under 30
+0.5336,0,Female,40-49
+0.3892,1,Male,30-39
+0.1076,0,Male,Under 30
+0.3318,1,Male,40-49
+0.3724,1,Male,50+
+0.1789,0,Female,30-39
+0.8128,1,Female,Under 30
+0.0336,0,Male,30-39
+0.4586,0,Male,50+
+0.2744,1,Female,40-49
+0.4514,0,Female,Under 30
+0.6152,1,Female,Under 30
+0.238,0,Male,Under 30
+0.1317,0,Male,Under 30
+0.2977,1,Female,30-39
+0.0733,0,Male,Under 30
+0.1013,0,Female,30-39
+0.0698,0,Female,30-39
+0.0284,0,Male,30-39
+0.1482,0,Male,50+
+0.133,0,Female,30-39
+0.1851,0,Male,40-49
+0.3589,0,Male,Under 30
+0.3904,0,Female,30-39
+0.1661,0,Female,Under 30
+0.0821,0,Female,Under 30
+0.1751,0,Female,30-39
+0.084,0,Male,Under 30
+0.1739,0,Male,Under 30
+0.1444,0,Male,30-39
+0.7092,0,Female,30-39
+0.019,0,Male,50+
+0.7599,1,Female,Under 30
+0.1701,0,Female,30-39
+0.1494,0,Female,30-39
+0.115,0,Female,Under 30
+0.0499,0,Female,30-39
+0.1764,0,Male,Under 30
+0.2786,1,Female,30-39
+0.0313,1,Female,30-39
+0.2157,0,Female,30-39
+0.1666,1,Male,40-49
+0.0632,0,Male,40-49
+0.0483,0,Female,30-39
+0.0598,0,Female,30-39
+0.3296,1,Male,30-39
+0.0868,0,Female,50+
+0.0466,0,Female,30-39
+0.0469,0,Female,30-39
+0.1304,0,Male,30-39
+0.596,1,Female,Under 30
+0.0728,0,Male,40-49
+0.0953,1,Female,30-39
+0.2763,0,Male,30-39
+0.0649,0,Female,Under 30
+0.2021,0,Male,30-39
+0.2252,0,Male,40-49
+0.1039,0,Male,40-49
+0.2196,0,Female,40-49
+0.1804,0,Male,Under 30
+0.1423,1,Female,Under 30
+0.2385,0,Male,50+
+0.4763,0,Male,50+
+0.2134,0,Female,40-49
+0.4693,1,Male,30-39
+0.1569,0,Female,30-39
+0.0232,0,Female,40-49
+0.2518,0,Female,30-39
+0.2706,0,Female,40-49
+0.1096,0,Female,30-39
+0.0749,0,Female,Under 30
+0.0262,0,Female,30-39
+0.0471,1,Female,40-49
+0.7547,1,Female,30-39
+0.15,0,Female,50+
+0.1766,0,Male,30-39
+0.4068,0,Female,40-49
+0.2292,0,Male,50+
+0.0274,0,Male,40-49
+0.165,0,Female,40-49
+0.0403,0,Female,Under 30
+0.0734,0,Male,Under 30
+0.1021,1,Female,40-49
+0.1983,0,Male,Under 30
+0.0847,1,Male,30-39
+0.1831,1,Female,Under 30
+0.1571,0,Male,30-39
+0.1125,0,Male,30-39
+0.1998,0,Male,40-49
+0.0765,0,Male,Under 30
+0.664,1,Female,Under 30
+0.0609,0,Male,30-39
+0.0204,0,Male,50+
+0.5859,1,Female,40-49
+0.2374,1,Female,40-49
+0.3117,0,Female,30-39
+0.1507,0,Male,Under 30
+0.4306,1,Female,Under 30
+0.3269,0,Female,Under 30
+0.0414,0,Male,30-39
+0.0646,0,Male,40-49
+0.1565,0,Female,30-39
+0.3836,0,Male,50+
+0.1263,0,Female,Under 30
+0.1586,0,Male,Under 30
+0.0693,0,Female,Under 30
+0.0685,0,Female,30-39
+0.8247,1,Male,40-49
+0.0762,0,Male,30-39
+0.3061,0,Female,30-39
+0.0742,0,Male,40-49
+0.1273,0,Male,Under 30
+0.7799,1,Male,40-49
+0.0391,0,Male,30-39
+0.1978,0,Female,30-39
+0.2369,1,Female,40-49
+0.7347,0,Female,Under 30
+0.0802,0,Female,Under 30
+0.7978,1,Female,30-39
+0.1267,0,Male,Under 30
+0.1148,1,Female,30-39
+0.1628,0,Male,50+
+0.0401,0,Female,30-39
+0.1972,1,Male,30-39
+0.2894,1,Male,30-39
+0.0539,0,Female,Under 30
+0.0441,0,Female,30-39
+0.4502,0,Female,50+
+0.1433,0,Female,40-49
+0.7815,1,Female,30-39
+0.463,1,Male,30-39
+0.3172,0,Female,30-39
+0.0526,0,Female,Under 30
+0.5463,0,Male,30-39
+0.16,0,Female,40-49
+0.5858,0,Male,30-39
+0.1395,0,Female,30-39
+0.1111,0,Female,30-39
+0.1432,0,Female,30-39
+0.177,0,Female,Under 30
+0.4273,0,Female,30-39
+0.4409,1,Male,Under 30
+0.3671,0,Male,Under 30
+0.1466,0,Female,Under 30
+0.1867,0,Male,30-39
+0.055,0,Female,40-49
+0.7431,1,Female,Under 30
+0.0776,0,Female,30-39
+0.3495,0,Female,40-49
+0.0359,0,Female,30-39
+0.7339,1,Female,30-39
+0.0384,0,Female,30-39
+0.1955,0,Female,Under 30
+0.151,1,Female,30-39
+0.1603,0,Male,40-49
+0.0978,0,Male,30-39
+0.0605,0,Male,30-39
+0.6836,1,Female,Under 30
+0.6807,0,Female,50+
+0.0921,0,Female,30-39
+0.1957,1,Female,40-49
+0.1523,0,Female,40-49
+0.1278,0,Female,40-49
+0.3916,0,Male,30-39
+0.1792,0,Female,50+
+0.0284,0,Male,30-39
+0.0871,0,Male,50+
+0.1209,1,Male,30-39
+0.0823,0,Male,40-49
+0.1844,0,Male,40-49
+0.0624,0,Male,50+
+0.1821,0,Female,50+
+0.056,0,Male,Under 30
+0.0939,0,Male,Under 30
+0.5348,0,Female,Under 30
+0.2874,0,Male,40-49
+0.0801,0,Male,30-39
+0.144,0,Female,Under 30
+0.0334,0,Female,30-39
+0.6559,1,Male,30-39
+0.7999,1,Female,30-39
+0.7439,1,Male,Under 30
+0.7097,1,Female,30-39
+0.0435,0,Female,30-39
+0.1134,0,Female,Under 30
+0.0377,0,Female,30-39
+0.1513,0,Female,Under 30
+0.2221,0,Female,Under 30
+0.0962,0,Female,30-39
+0.0331,0,Female,Under 30
+0.2193,0,Male,40-49
+0.1731,0,Male,Under 30
+0.2192,1,Female,40-49
+0.2974,0,Male,40-49
+0.1144,0,Female,Under 30
+0.1188,0,Female,40-49
+0.0341,0,Female,30-39
+0.154,0,Female,Under 30
+0.1106,0,Female,30-39
+0.1674,0,Female,Under 30
+0.0945,0,Female,30-39
+0.0591,0,Female,30-39
+0.0481,0,Female,30-39
+0.0729,0,Female,Under 30
+0.1669,0,Female,Under 30
+0.1268,1,Female,30-39
+0.1453,0,Male,40-49
+0.1139,0,Male,40-49
+0.1246,1,Male,50+
+0.1655,0,Male,Under 30
+0.1739,0,Female,40-49
+0.043,0,Male,Under 30
+0.0901,0,Female,Under 30
+0.2564,1,Female,30-39
+0.1314,1,Female,50+
+0.6192,0,Female,Under 30
+0.7134,0,Male,30-39
+0.0864,0,Female,30-39
+0.0255,0,Female,Under 30
+0.131,0,Female,30-39
+0.7648,1,Female,Under 30
+0.0628,0,Male,Under 30
+0.1396,0,Female,30-39
+0.1763,1,Female,30-39
+0.2383,0,Male,40-49
+0.0639,1,Female,40-49
+0.3839,0,Male,Under 30
+0.1067,0,Female,30-39
+0.6667,0,Female,50+
+0.0438,0,Male,Under 30
+0.0339,0,Female,Under 30
+0.0484,0,Male,30-39
+0.7686,1,Male,30-39
+0.1447,0,Male,30-39
+0.1054,0,Female,30-39
+0.0683,0,Male,30-39
+0.1476,0,Male,30-39
+0.7639,1,Female,50+
+0.1634,0,Male,50+
+0.4965,0,Male,40-49
+0.0432,0,Male,30-39
+0.6508,0,Male,30-39
+0.0785,0,Male,30-39
+0.0856,0,Male,40-49
+0.1648,0,Female,40-49
+0.1529,0,Female,30-39
+0.4574,1,Female,40-49
+0.4437,0,Female,40-49
+0.1648,1,Male,30-39
+0.3572,1,Male,30-39
+0.0691,0,Female,50+
+0.1511,0,Male,30-39
+0.3151,0,Female,30-39
+0.2629,0,Female,30-39
+0.1632,0,Female,Under 30
+0.218,0,Male,30-39
+0.1759,0,Male,40-49
+0.266,0,Female,Under 30
+0.2501,0,Female,Under 30
+0.3175,1,Male,50+
+0.346,0,Female,Under 30
+0.0819,0,Female,40-49
+0.1598,1,Female,30-39
+0.195,1,Female,Under 30
+0.1859,0,Male,30-39
+0.1932,0,Male,Under 30
+0.0687,0,Female,40-49
+0.1375,0,Male,Under 30
+0.0956,0,Male,30-39
+0.6474,1,Female,40-49
+0.0783,0,Female,30-39
+0.2052,0,Male,Under 30
+0.7355,0,Male,40-49
+0.1819,0,Female,Under 30
+0.194,0,Female,50+
+0.1,0,Male,30-39
+0.7543,1,Female,Under 30
+0.1175,0,Female,30-39
+0.0247,0,Female,40-49
+0.3937,0,Female,30-39
+0.043,0,Male,30-39
+0.0538,0,Female,50+
+0.0462,0,Female,30-39
+0.7471,1,Male,50+
+0.8003,1,Male,Under 30
+0.1475,0,Male,30-39
+0.3063,1,Female,Under 30
+0.6343,0,Female,Under 30
+0.5326,1,Female,40-49
+0.165,0,Female,30-39
+0.2612,0,Female,40-49
+0.085,0,Male,50+
+0.1127,0,Female,Under 30
+0.6251,1,Male,Under 30
+0.0802,0,Female,Under 30
+0.1506,1,Female,Under 30
+0.2173,0,Male,30-39
+0.0576,0,Female,50+
+0.1879,0,Female,Under 30
+0.1173,0,Female,30-39
+0.2592,0,Female,Under 30
+0.0383,0,Female,Under 30
+0.082,0,Female,30-39
+0.4438,1,Male,Under 30
+0.1266,0,Female,30-39
+0.4633,0,Female,30-39
+0.1726,0,Female,30-39
+0.1215,0,Male,Under 30
+0.6759,0,Female,Under 30
+0.5428,0,Male,50+
+0.131,0,Male,40-49
+0.7148,0,Female,Under 30
+0.1245,0,Female,30-39
+0.141,0,Male,30-39
+0.8589,0,Male,40-49
+0.0589,0,Female,30-39
+0.2309,0,Male,30-39
+0.1478,0,Female,Under 30
+0.0482,0,Male,30-39
+0.0349,0,Female,40-49
+0.1713,1,Male,30-39
+0.1913,0,Female,30-39
+0.0525,0,Male,30-39
+0.0455,0,Male,30-39
+0.1029,0,Female,Under 30
+0.7359,1,Female,Under 30
+0.0727,0,Female,40-49
+0.6632,0,Male,30-39
+0.1726,0,Male,40-49
+0.1655,0,Male,Under 30
+0.0887,0,Female,30-39
+0.3532,0,Female,Under 30
+0.0334,1,Female,Under 30
+0.7702,1,Female,40-49
+0.2144,0,Female,Under 30
+0.0669,0,Male,40-49
+0.3601,1,Female,Under 30
+0.1794,1,Female,Under 30
+0.253,0,Female,40-49
+0.0634,0,Female,Under 30
+0.2061,0,Male,50+
+0.2706,0,Male,30-39
+0.1589,0,Female,40-49
+0.4053,0,Male,40-49
+0.6698,0,Male,40-49
+0.1382,0,Female,Under 30
+0.0739,0,Male,50+
+0.0417,0,Female,Under 30
+0.5179,0,Male,30-39
+0.1392,0,Female,30-39
+0.0974,0,Male,30-39
+0.1101,0,Female,Under 30
+0.3579,1,Male,30-39
+0.0178,0,Female,30-39
+0.2277,0,Female,40-49
+0.4234,0,Female,Under 30
+0.0688,0,Female,Under 30
+0.0928,0,Male,30-39
+0.0345,0,Female,40-49
+0.1455,0,Female,Under 30
+0.0971,0,Male,30-39
+0.7964,1,Male,Under 30
+0.2166,0,Female,50+
+0.1532,0,Female,30-39
+0.0812,0,Female,50+
+0.7788,1,Female,30-39
+0.3741,0,Male,30-39
+0.3342,1,Male,40-49
+0.2747,0,Female,30-39
+0.4036,1,Female,50+
+0.0441,0,Male,40-49
+0.5437,0,Female,30-39
+0.1751,1,Female,Under 30
+0.0316,0,Female,30-39
+0.1518,0,Female,30-39
+0.0496,0,Male,30-39
+0.1828,1,Female,40-49
+0.1106,0,Male,40-49
+0.2862,0,Male,40-49
+0.1223,0,Female,Under 30
+0.7039,0,Female,Under 30
+0.1682,0,Female,Under 30
+0.3224,0,Female,40-49
+0.075,0,Male,40-49
+0.0703,0,Female,30-39
+0.5654,0,Male,30-39
+0.1267,0,Female,Under 30
+0.5265,0,Female,30-39
+0.2045,0,Female,Under 30
+0.0536,0,Female,30-39
+0.3273,0,Male,Under 30
+0.1945,0,Female,Under 30
+0.086,0,Male,40-49
+0.068,1,Female,30-39
+0.1431,0,Female,30-39
+0.1481,1,Female,30-39
+0.0357,0,Female,30-39
+0.1257,0,Male,30-39
+0.1906,0,Female,Under 30
+0.0497,0,Female,Under 30
+0.2119,0,Male,30-39
+0.2043,0,Male,Under 30
+0.1124,0,Male,Under 30
+0.1422,0,Female,Under 30
+0.0934,0,Female,30-39
+0.7155,1,Female,Under 30
+0.0974,0,Male,30-39
+0.1811,0,Female,30-39
+0.0246,0,Male,30-39
+0.1591,0,Male,50+
+0.0152,0,Male,Under 30
+0.156,0,Female,Under 30
+0.7886,1,Male,40-49
+0.1364,0,Female,30-39
+0.0581,0,Female,30-39
+0.0756,0,Male,50+
+0.114,0,Male,Under 30
+0.023,0,Male,40-49
+0.1095,0,Female,Under 30
+0.2817,0,Female,40-49
+0.1404,0,Male,50+
+0.1877,0,Male,40-49
+0.6077,1,Female,Under 30
+0.2219,0,Male,30-39
+0.1669,0,Female,50+
+0.0609,1,Male,40-49
+0.2973,0,Male,30-39
+0.0487,0,Male,40-49
+0.1812,0,Female,30-39
+0.3717,0,Male,50+
+0.1433,0,Female,30-39
+0.7107,1,Female,Under 30
+0.7064,1,Female,Under 30
+0.1392,1,Male,40-49
+0.2586,0,Female,30-39
+0.0584,0,Male,40-49
+0.0466,0,Male,40-49
+0.6435,0,Male,40-49
+0.0856,0,Male,30-39
+0.8346,1,Male,40-49
+0.1169,0,Female,30-39
+0.6204,1,Male,50+
+0.1383,0,Female,30-39
+0.1058,0,Male,40-49
+0.46,1,Male,30-39
+0.0758,0,Male,Under 30
+0.2657,1,Female,Under 30
+0.7064,1,Female,Under 30
+0.2861,0,Male,30-39
+0.451,0,Male,30-39
+0.119,0,Female,40-49
+0.0666,0,Female,Under 30
+0.1815,0,Male,30-39
+0.0316,0,Female,Under 30
+0.2129,0,Female,40-49
+0.0668,0,Female,40-49
+0.0889,0,Female,30-39
+0.4659,0,Female,40-49
+0.1272,0,Male,30-39
+0.0823,0,Female,Under 30
+0.45,1,Female,40-49
+0.0774,0,Female,40-49
+0.2338,0,Female,30-39
+0.0556,0,Male,30-39
+0.0894,0,Male,Under 30
+0.044,0,Male,30-39
+0.0705,0,Male,30-39
+0.1107,0,Female,30-39
+0.7911,1,Female,Under 30
+0.1324,1,Female,40-49
+0.2586,0,Female,Under 30
+0.0564,0,Male,30-39
+0.1642,0,Female,40-49
+0.0305,0,Female,30-39
+0.2466,0,Female,30-39
+0.3652,1,Male,30-39
+0.1138,0,Male,Under 30
+0.1342,0,Male,40-49
+0.1,0,Male,50+
+0.096,0,Female,50+
+0.1091,1,Female,30-39
+0.0488,0,Female,40-49
+0.0193,0,Female,30-39
+0.3554,0,Female,50+
+0.1496,0,Female,30-39
+0.1642,1,Male,30-39
+0.1734,0,Male,40-49
+0.1509,0,Female,40-49
+0.0513,0,Male,40-49
+0.7775,0,Male,30-39
+0.3482,0,Male,30-39
+0.0997,0,Male,Under 30
+0.115,0,Female,40-49
+0.2023,0,Female,30-39
+0.0877,0,Male,Under 30
+0.0758,0,Female,30-39
+0.0878,0,Male,30-39
+0.7771,1,Male,40-49
+0.0758,0,Male,30-39
+0.0875,0,Female,Under 30
+0.1312,0,Male,30-39
+0.0414,0,Female,Under 30
+0.7657,1,Female,30-39
+0.2707,0,Female,Under 30
+0.1318,0,Female,30-39
+0.0204,0,Female,40-49
+0.0855,0,Female,40-49
+0.7948,1,Female,40-49
+0.8206,1,Male,30-39
+0.0667,0,Male,40-49
+0.3483,1,Male,30-39
+0.1645,0,Male,30-39
+0.1201,0,Male,30-39
+0.4343,0,Male,30-39
+0.067,0,Male,Under 30
+0.1318,0,Female,Under 30
+0.0797,0,Female,Under 30
+0.0455,0,Male,30-39
+0.0748,0,Female,30-39
+0.5672,1,Female,40-49
+0.0849,0,Female,Under 30
+0.0412,0,Female,30-39
+0.2582,0,Male,30-39
+0.0887,0,Female,Under 30
+0.0294,0,Male,30-39
+0.2715,0,Female,30-39
+0.0336,0,Female,50+
+0.0784,0,Female,30-39
+0.2538,0,Female,40-49
+0.0745,0,Male,30-39
+0.1433,0,Female,30-39
+0.1637,1,Female,Under 30
+0.0736,0,Female,30-39
+0.1024,1,Female,40-49
+0.0452,0,Male,30-39
+0.1954,0,Female,40-49
+0.1756,0,Female,50+
+0.1552,0,Male,30-39
+0.4295,1,Male,30-39
+0.0303,0,Female,50+
+0.157,0,Male,40-49
+0.354,0,Male,Under 30
+0.4707,0,Male,30-39
+0.3061,0,Female,50+
+0.1711,1,Female,Under 30
+0.303,0,Female,Under 30
+0.2,0,Male,Under 30
+0.1568,0,Male,30-39
+0.5194,0,Female,30-39
+0.1929,1,Male,30-39
+0.3709,0,Male,Under 30
+0.0427,0,Male,Under 30
+0.0672,1,Female,30-39
+0.7682,0,Female,50+
+0.1257,1,Female,40-49
+0.4185,0,Male,Under 30
+0.0469,0,Male,40-49
+0.0468,0,Female,Under 30
+0.0441,0,Female,30-39
+0.0194,0,Female,30-39
+0.3408,0,Male,30-39
+0.0552,0,Male,40-49
+0.3582,0,Female,Under 30
+0.1611,0,Male,30-39
+0.3195,0,Male,30-39
+0.2794,0,Female,30-39
+0.4682,0,Female,50+
+0.0466,0,Male,30-39
+0.1986,0,Female,30-39
+0.0736,0,Female,40-49
+0.0761,0,Female,Under 30
+0.047,0,Female,Under 30
+0.1233,0,Male,Under 30
+0.504,1,Female,30-39
+0.3589,0,Female,40-49
+0.1602,0,Male,30-39
+0.2391,0,Male,50+
+0.1448,0,Male,40-49
+0.1847,0,Female,30-39
+0.7926,1,Female,Under 30
+0.2108,0,Female,30-39
+0.1242,0,Male,40-49
+0.1544,0,Male,50+
+0.1669,0,Male,Under 30
+0.1897,0,Female,30-39
+0.3808,0,Female,Under 30
+0.0981,0,Female,30-39
+0.0648,1,Female,Under 30
+0.1482,0,Female,30-39
+0.1537,0,Female,30-39
+0.2519,0,Female,Under 30
+0.2282,0,Female,30-39
+0.2918,0,Female,Under 30
+0.0194,0,Male,40-49
+0.0593,0,Male,Under 30
+0.1065,0,Male,Under 30
+0.3044,0,Male,40-49
+0.0546,0,Female,30-39
+0.1177,0,Female,Under 30
+0.2096,0,Female,Under 30
+0.1488,0,Male,30-39
+0.1592,0,Female,Under 30
+0.4235,1,Male,40-49
+0.1391,0,Female,50+
+0.178,0,Female,30-39
+0.1628,0,Male,40-49
+0.1462,0,Female,50+
+0.6967,1,Female,40-49
+0.1293,0,Female,Under 30
+0.2385,1,Male,50+
+0.2997,0,Male,Under 30
+0.2926,0,Male,30-39
+0.13,0,Female,Under 30
+0.6525,0,Male,40-49
+0.2365,0,Female,40-49
+0.1815,0,Male,30-39
+0.1116,0,Female,40-49
+0.0756,0,Male,30-39
+0.1419,0,Male,30-39
+0.2497,1,Female,Under 30
+0.0568,0,Female,40-49
+0.0597,1,Male,40-49
+0.1242,0,Female,Under 30
+0.0507,0,Male,Under 30
+0.0603,0,Female,Under 30
+0.059,0,Female,Under 30
+0.1118,0,Female,Under 30
+0.2466,0,Female,Under 30
+0.1963,0,Female,30-39
+0.0411,0,Female,40-49
+0.1108,0,Male,40-49
+0.1029,1,Male,30-39
+0.0841,0,Female,30-39
+0.2578,0,Female,40-49
+0.0804,0,Female,Under 30
+0.0252,0,Male,30-39
+0.6416,0,Female,Under 30
+0.8148,1,Male,40-49
+0.1305,0,Male,30-39
+0.1146,0,Female,40-49
+0.2852,0,Female,Under 30
+0.6372,1,Male,Under 30
+0.172,0,Female,30-39
+0.1223,0,Female,Under 30
+0.035,0,Female,Under 30
+0.1677,0,Female,40-49
+0.1362,0,Male,50+
+0.087,0,Female,Under 30
+0.0871,0,Female,40-49
+0.0895,0,Female,Under 30
+0.1228,0,Male,40-49
+0.1551,0,Female,40-49
+0.6777,1,Female,40-49
+0.0316,0,Female,30-39
+0.1943,1,Male,30-39
+0.1492,0,Male,30-39
+0.0614,0,Female,40-49
+0.3467,1,Female,40-49
+0.1076,0,Male,Under 30
+0.3554,0,Female,30-39
+0.0909,0,Male,40-49
+0.4822,0,Female,30-39
+0.1347,0,Female,50+
+0.1229,0,Female,50+
+0.1046,0,Female,30-39
+0.3278,0,Male,Under 30
+0.0728,0,Male,30-39
+0.2202,0,Female,30-39
+0.057,0,Female,Under 30
+0.0789,0,Female,30-39
+0.1446,0,Female,40-49
+0.0749,0,Female,Under 30
+0.5795,1,Female,40-49
+0.0499,0,Female,Under 30
+0.1795,0,Female,Under 30
+0.267,0,Female,30-39
+0.105,0,Male,40-49
+0.7886,0,Female,30-39
+0.2152,0,Male,Under 30
+0.2426,0,Male,Under 30
+0.0848,0,Male,40-49
+0.5668,0,Male,Under 30
+0.3666,0,Female,30-39
+0.6414,1,Female,30-39
+0.0684,0,Female,30-39
+0.0732,0,Female,Under 30
+0.269,1,Female,30-39
+0.7622,1,Female,40-49
+0.1269,0,Female,50+
+0.0865,0,Female,Under 30
+0.3004,1,Female,30-39
+0.0787,0,Male,Under 30
+0.5451,1,Male,50+
+0.1775,0,Male,40-49
+0.124,0,Female,40-49
+0.0539,0,Male,40-49
+0.0582,0,Female,30-39
+0.2745,0,Male,50+
+0.1812,0,Male,40-49
+0.7728,1,Male,Under 30
+0.1692,0,Male,50+
+0.24,1,Male,Under 30
+0.163,1,Male,30-39
+0.7645,1,Female,30-39
+0.0415,0,Female,30-39
+0.1417,0,Male,Under 30
+0.4693,0,Male,30-39
+0.343,0,Female,50+
+0.3626,0,Female,40-49
+0.0346,0,Male,30-39
+0.0232,0,Female,40-49
+0.0935,0,Female,30-39
+0.067,0,Female,30-39
+0.272,0,Female,40-49
+0.1028,0,Female,Under 30
+0.051,0,Male,40-49
+0.6797,1,Female,Under 30
+0.0477,0,Female,40-49
+0.1587,0,Male,30-39
+0.1345,0,Female,Under 30
+0.1294,0,Female,30-39
+0.1745,0,Female,30-39
+0.0968,0,Female,30-39
+0.7282,1,Male,Under 30
+0.0916,0,Female,Under 30
+0.1251,0,Female,50+
+0.6982,0,Male,40-49
+0.315,1,Female,Under 30
+0.1851,0,Female,40-49
+0.0671,0,Female,40-49
+0.1769,1,Male,40-49
+0.1292,0,Male,30-39
+0.3563,1,Male,40-49
+0.3135,0,Male,30-39
+0.3723,1,Female,30-39
+0.0502,0,Female,30-39
+0.0709,0,Female,Under 30
+0.0522,0,Female,30-39
+0.056,0,Female,40-49
+0.1671,0,Female,30-39
+0.2296,0,Female,30-39
+0.7623,1,Male,Under 30
+0.0608,1,Female,Under 30
+0.1296,0,Female,40-49
+0.1902,0,Female,Under 30
+0.1156,0,Female,Under 30
+0.0988,0,Female,Under 30
+0.0714,0,Male,30-39
+0.7777,1,Female,50+
+0.262,0,Female,Under 30
+0.0364,0,Male,40-49
+0.0368,1,Female,30-39
+0.3063,1,Male,40-49
+0.0893,0,Female,30-39
+0.0636,0,Male,30-39
+0.2478,0,Female,Under 30
+0.1038,0,Male,Under 30
+0.085,0,Female,40-49
+0.1792,1,Female,Under 30
+0.0529,0,Female,30-39
+0.1953,0,Female,30-39
+0.0591,0,Female,30-39
+0.3381,0,Female,50+
+0.1506,0,Male,30-39
+0.0514,0,Female,40-49
+0.1509,0,Female,Under 30
+0.1173,1,Male,Under 30
+0.6177,1,Female,30-39
+0.0811,0,Female,30-39
+0.1464,0,Female,50+
+0.1535,1,Female,40-49
+0.096,0,Male,50+
+0.1132,0,Male,30-39
+0.1309,0,Male,Under 30
+0.1619,0,Female,30-39
+0.1862,0,Female,40-49
+0.033,0,Female,30-39
+0.1639,0,Male,30-39
+0.0842,0,Female,50+
+0.0507,0,Male,30-39
+0.1204,0,Female,Under 30
+0.2522,0,Female,40-49
+0.4481,1,Female,30-39
+0.6499,0,Female,40-49
+0.1017,0,Female,40-49
+0.1255,1,Female,30-39
+0.0817,0,Female,Under 30
+0.1856,0,Female,Under 30
+0.072,0,Male,40-49
+0.1947,0,Male,50+
+0.1659,0,Female,50+
+0.1264,0,Female,Under 30
+0.2306,1,Female,Under 30
+0.1209,0,Male,40-49
+0.5652,0,Male,50+
+0.142,1,Female,30-39
+0.1614,0,Male,Under 30
+0.2194,0,Male,30-39
+0.1568,0,Male,30-39
+0.8327,1,Female,40-49
+0.0383,1,Female,Under 30
+0.7996,1,Female,40-49
+0.0968,0,Male,50+
+0.1337,1,Male,50+
+0.125,1,Female,30-39
+0.1169,0,Female,Under 30
+0.4607,0,Female,40-49
+0.112,1,Female,30-39
+0.1416,0,Male,50+
+0.1377,0,Male,40-49
+0.0344,0,Female,30-39
+0.1114,0,Male,30-39
+0.021,0,Male,40-49
+0.2208,0,Female,30-39
+0.3113,1,Male,Under 30
+0.0324,0,Male,Under 30
+0.0445,0,Female,30-39
+0.1451,0,Female,40-49
+0.1328,0,Female,50+
+0.1785,0,Female,40-49
+0.3744,0,Female,Under 30
+0.1463,0,Female,50+
+0.8159,1,Female,30-39
+0.1515,0,Male,Under 30
+0.7717,1,Female,Under 30
+0.0632,0,Female,30-39
+0.1042,1,Female,30-39
+0.1696,0,Female,Under 30
+0.2715,0,Female,Under 30
+0.5139,0,Male,Under 30
+0.5666,0,Male,30-39
+0.282,0,Female,40-49
+0.3457,1,Female,40-49
+0.1502,0,Male,40-49
+0.2351,0,Male,30-39
+0.3983,0,Male,30-39
+0.0714,0,Male,Under 30
+0.3479,1,Male,40-49
+0.2517,0,Female,40-49
+0.0425,0,Female,40-49
+0.0626,1,Female,Under 30
+0.1205,0,Female,Under 30
+0.0537,0,Female,30-39
+0.168,0,Female,30-39
+0.1821,0,Male,40-49
+0.6488,1,Female,Under 30
+0.0479,0,Female,30-39
+0.4253,1,Male,30-39
+0.1395,1,Male,Under 30
+0.176,0,Female,40-49
+0.6875,1,Female,Under 30
+0.1209,0,Female,30-39
+0.142,1,Male,30-39
+0.1225,0,Female,40-49
+0.142,0,Female,Under 30
+0.3415,0,Male,30-39
+0.1107,0,Female,Under 30
+0.0362,0,Male,30-39
+0.2817,0,Female,30-39
+0.3875,1,Female,40-49
+0.3284,0,Female,Under 30
+0.039,0,Male,40-49
+0.108,0,Female,30-39
+0.0624,0,Female,30-39
+0.264,0,Female,Under 30
+0.1677,0,Male,50+
+0.1958,0,Female,30-39
+0.1097,1,Female,30-39
+0.1728,1,Female,30-39
+0.1156,0,Female,Under 30
+0.0839,0,Female,Under 30
+0.1547,0,Female,30-39
+0.1274,0,Male,Under 30
+0.1811,0,Male,30-39
+0.0365,0,Male,Under 30
+0.0952,0,Male,50+
+0.0773,0,Male,Under 30
+0.197,0,Male,40-49
+0.1395,0,Female,30-39
+0.1005,0,Female,30-39
+0.1573,0,Male,30-39
+0.3015,0,Female,Under 30
+0.1372,1,Female,30-39
+0.0482,0,Male,50+
+0.2977,1,Male,30-39
+0.333,0,Female,30-39
+0.1812,1,Male,50+
+0.1443,0,Female,40-49
+0.4157,0,Female,40-49
+0.0693,0,Male,Under 30
+0.0856,0,Female,30-39
+0.6426,0,Female,Under 30
+0.2927,1,Male,40-49
+0.6815,1,Female,50+
+0.1752,0,Female,30-39
+0.4137,0,Female,Under 30
+0.0796,0,Male,30-39
+0.3571,0,Female,Under 30
+0.755,1,Female,30-39
+0.1322,0,Female,Under 30
+0.0869,0,Female,30-39
+0.2193,0,Female,30-39
+0.071,0,Female,40-49
+0.0425,0,Male,50+
+0.0911,0,Female,Under 30
+0.1278,0,Female,40-49
+0.1336,0,Female,Under 30
+0.0842,0,Male,40-49
+0.2164,0,Male,40-49
+0.3173,0,Female,Under 30
+0.36,1,Male,Under 30
+0.7358,1,Female,Under 30
+0.0774,0,Male,50+
+0.0389,0,Female,30-39
+0.1596,0,Female,Under 30
+0.4526,0,Female,50+
+0.2619,1,Male,Under 30
+0.0853,0,Female,30-39
+0.1054,0,Female,30-39
+0.1035,1,Male,40-49
+0.3842,1,Male,Under 30
+0.0238,0,Female,30-39
+0.0553,0,Male,40-49
+0.1607,0,Female,50+
+0.0695,0,Male,30-39
+0.0911,0,Male,40-49
+0.0436,0,Female,30-39
+0.7732,0,Female,Under 30
+0.6735,1,Female,50+
+0.229,0,Female,Under 30
+0.7791,1,Female,30-39
+0.123,0,Male,Under 30
+0.0258,0,Female,Under 30
+0.0324,0,Female,40-49
+0.1703,0,Male,30-39
+0.1097,0,Female,40-49
+0.694,1,Male,Under 30
+0.0336,0,Male,30-39
+0.2631,1,Male,40-49
+0.2804,0,Female,30-39
+0.0342,1,Male,40-49
+0.1995,0,Female,Under 30
+0.1548,0,Male,30-39
+0.0322,0,Female,Under 30
+0.7608,1,Male,50+
+0.067,0,Female,Under 30
+0.0879,0,Male,40-49
+0.0508,0,Male,Under 30
+0.031,0,Female,40-49
+0.0811,0,Female,Under 30
+0.104,0,Female,30-39
+0.0409,0,Female,Under 30
+0.2513,0,Female,30-39
+0.2446,0,Female,30-39
+0.3393,0,Male,30-39
+0.0689,0,Female,Under 30
+0.0634,0,Female,40-49
+0.6817,1,Male,50+
+0.2784,1,Male,Under 30
+0.1644,0,Female,Under 30
+0.107,0,Male,50+
+0.1022,0,Female,40-49
+0.0634,0,Male,Under 30
+0.0758,0,Female,30-39
+0.1209,1,Female,Under 30
+0.8192,1,Female,40-49
+0.1449,1,Female,Under 30
+0.0613,0,Female,40-49
+0.6849,0,Female,40-49
+0.1491,0,Female,30-39
+0.0934,0,Female,30-39
+0.0726,0,Female,30-39
+0.5937,0,Male,Under 30
+0.0605,0,Female,Under 30
+0.1188,0,Female,40-49
+0.2982,0,Female,Under 30
+0.0935,0,Male,Under 30
+0.1249,0,Male,40-49
+0.0858,0,Female,30-39
+0.0426,0,Female,Under 30
+0.0513,0,Female,50+
+0.6779,0,Female,50+
+0.0689,1,Female,Under 30
+0.2444,0,Female,Under 30
+0.6717,0,Female,Under 30
+0.0358,0,Female,30-39
+0.056,1,Male,30-39
+0.1323,1,Male,40-49
+0.1196,0,Female,Under 30
+0.1781,0,Female,40-49
+0.0528,0,Female,40-49
+0.4429,1,Male,30-39
+0.0825,0,Female,30-39
+0.1812,0,Female,Under 30
+0.1102,1,Male,Under 30
+0.0806,1,Female,Under 30
+0.1073,0,Female,Under 30
+0.0595,0,Female,Under 30
+0.0824,0,Female,30-39
+0.4283,0,Male,30-39
+0.177,0,Female,Under 30
+0.1658,0,Female,30-39
+0.2267,0,Female,Under 30
+0.1967,0,Female,30-39
+0.3913,1,Female,40-49
+0.1991,0,Male,30-39
+0.3516,1,Male,30-39
+0.1153,0,Female,40-49
+0.1012,0,Male,Under 30
+0.0975,0,Female,30-39
+0.1081,0,Female,30-39
+0.6636,0,Female,30-39
+0.3498,0,Female,50+
+0.067,0,Male,Under 30
+0.0686,0,Female,30-39
+0.4594,0,Male,30-39
+0.0759,0,Male,40-49
+0.0512,1,Female,30-39
+0.0983,0,Female,Under 30
+0.2339,1,Male,Under 30
+0.1596,1,Male,40-49
+0.056,0,Male,30-39
+0.0354,0,Male,40-49
+0.1096,0,Female,30-39
+0.0803,0,Female,50+
+0.119,0,Female,Under 30
+0.1798,1,Female,40-49
+0.3904,1,Female,Under 30
+0.3576,0,Female,40-49
+0.4207,1,Male,40-49
+0.1678,0,Male,Under 30
+0.1827,0,Female,40-49
+0.2663,0,Male,50+
+0.0816,0,Female,30-39
+0.303,0,Male,30-39
+0.1031,0,Female,30-39
+0.2037,0,Female,40-49
+0.1567,0,Female,40-49
+0.1266,0,Male,30-39
+0.0884,1,Male,30-39
+0.3872,1,Male,30-39
+0.1838,0,Male,Under 30
+0.1239,1,Female,Under 30
+0.3283,0,Female,Under 30
+0.5973,1,Female,Under 30
+0.0445,0,Female,30-39
+0.1099,1,Female,30-39
+0.1182,0,Female,Under 30
+0.0993,0,Female,Under 30
+0.7262,1,Male,30-39
+0.2411,0,Female,Under 30
+0.0987,0,Female,30-39
+0.0945,0,Male,40-49
+0.1273,0,Female,Under 30
+0.0911,0,Female,40-49
+0.1046,0,Female,50+
+0.4394,0,Female,30-39
+0.1798,0,Female,Under 30
+0.0538,0,Male,30-39
+0.1409,0,Female,Under 30
+0.0663,0,Male,30-39
+0.0802,0,Female,Under 30
+0.1542,0,Female,Under 30
+0.1204,1,Female,Under 30
+0.1856,0,Male,Under 30
+0.1195,0,Male,50+
+0.0449,1,Male,50+
+0.6718,0,Male,Under 30
+0.1829,0,Male,30-39
+0.1561,0,Male,50+
+0.2614,1,Female,Under 30
+0.1407,0,Female,Under 30
+0.2402,0,Male,40-49
+0.0761,0,Female,30-39
+0.6195,0,Female,40-49
+0.1421,0,Female,30-39
+0.6249,0,Male,30-39
+0.6781,1,Male,50+
+0.054,0,Male,Under 30
+0.0248,0,Female,40-49
+0.2128,0,Female,50+
+0.0675,0,Female,30-39
+0.1973,1,Female,40-49
+0.3506,1,Male,Under 30
+0.1003,0,Female,40-49
+0.1771,0,Male,Under 30
+0.1727,0,Female,Under 30
+0.0598,0,Male,Under 30
+0.2982,1,Female,40-49
+0.2268,0,Male,30-39
+0.1876,0,Female,Under 30
+0.1516,0,Female,Under 30
+0.7714,0,Male,30-39
+0.2366,0,Male,Under 30
+0.168,0,Female,Under 30
+0.0428,0,Male,40-49
+0.2062,1,Female,40-49
+0.5268,1,Male,30-39
+0.4627,1,Female,50+
+0.2221,0,Male,Under 30
+0.0788,0,Male,30-39
+0.7103,0,Female,30-39
+0.2491,0,Female,30-39
+0.3451,0,Male,30-39
+0.7266,1,Male,50+
+0.1195,0,Male,30-39
+0.1185,0,Female,30-39
+0.2991,0,Female,Under 30
+0.0732,0,Male,30-39
+0.0718,0,Female,40-49
+0.1001,0,Female,Under 30
+0.2729,0,Female,Under 30
+0.0725,0,Female,40-49
+0.1389,0,Male,40-49
+0.539,1,Female,30-39
+0.1439,1,Female,40-49
+0.5037,0,Male,50+
+0.0908,0,Female,Under 30
+0.0697,0,Female,Under 30
+0.1669,1,Female,50+
+0.1473,0,Female,Under 30
+0.595,0,Female,30-39
+0.3538,1,Male,40-49
+0.137,1,Female,Under 30
+0.0856,0,Male,30-39
+0.2315,1,Male,Under 30
+0.6563,0,Female,Under 30
+0.6709,1,Female,40-49
+0.1452,0,Male,Under 30
+0.2027,0,Male,30-39
+0.2031,0,Female,Under 30
+0.1915,0,Female,40-49
+0.6732,0,Male,40-49
+0.6649,0,Male,30-39
+0.1016,0,Male,40-49
+0.0583,0,Male,30-39
+0.0563,0,Female,40-49
+0.0418,0,Female,Under 30
+0.2762,1,Female,30-39
+0.0523,0,Male,Under 30
+0.3524,1,Female,Under 30
+0.672,0,Male,Under 30
+0.6705,1,Male,Under 30
+0.4894,0,Male,30-39
+0.0455,0,Female,Under 30
+0.2057,0,Female,Under 30
+0.2683,1,Female,40-49
+0.1264,0,Female,40-49
+0.1124,0,Female,50+
+0.1125,0,Male,40-49
+0.6837,1,Male,30-39
+0.4995,0,Female,30-39
+0.1162,0,Male,Under 30
+0.0436,0,Female,Under 30
+0.0541,0,Male,30-39
+0.0542,0,Male,40-49
+0.0779,0,Female,30-39
+0.0668,0,Male,30-39
+0.2108,0,Female,30-39
+0.0753,0,Male,40-49
+0.1695,1,Female,Under 30
+0.5723,0,Female,Under 30
+0.1136,0,Female,Under 30
+0.3147,1,Female,40-49
+0.1769,0,Female,30-39
+0.8706,1,Male,Under 30
+0.6205,0,Female,Under 30
+0.5903,0,Female,30-39
+0.2978,1,Female,50+
+0.0357,0,Female,40-49
+0.3293,0,Male,Under 30
+0.1036,0,Male,40-49
+0.0576,0,Female,30-39
+0.1196,1,Female,Under 30
+0.0774,0,Female,Under 30
+0.7937,0,Female,40-49
+0.1602,0,Male,50+
+0.3223,1,Male,50+
+0.1489,0,Female,30-39
+0.0603,0,Female,30-39
+0.0642,0,Female,Under 30
+0.1314,0,Female,50+
+0.1808,0,Female,Under 30
+0.4835,0,Male,Under 30
+0.053,0,Male,50+
+0.0798,0,Female,Under 30
+0.1541,0,Female,30-39
+0.0305,0,Female,Under 30
+0.1214,1,Female,50+
+0.0868,0,Female,Under 30
+0.1823,0,Female,Under 30
+0.1442,0,Female,40-49
+0.0936,0,Female,Under 30
+0.1574,0,Female,30-39
+0.1105,0,Female,30-39
+0.0853,0,Male,40-49
+0.0389,0,Female,40-49
+0.1606,0,Female,30-39
+0.1356,0,Male,50+
+0.7645,1,Male,30-39
+0.3576,0,Female,Under 30
+0.1153,0,Male,40-49
+0.0388,0,Male,30-39
+0.2137,0,Female,50+
+0.1022,0,Male,30-39
+0.2954,0,Female,40-49
+0.1394,0,Male,40-49
+0.3351,1,Female,Under 30
+0.1136,0,Female,30-39
+0.1611,1,Female,30-39
+0.1843,0,Male,30-39
+0.2248,0,Male,30-39
+0.111,0,Female,Under 30
+0.2238,0,Male,30-39
+0.1186,0,Female,40-49
+0.131,0,Female,Under 30
+0.5276,1,Female,Under 30
+0.0797,1,Female,40-49
+0.3652,0,Male,Under 30
+0.0751,0,Male,40-49
+0.4848,1,Male,Under 30
+0.085,0,Male,50+
+0.1355,1,Male,Under 30
+0.0639,0,Female,Under 30
+0.3672,1,Female,40-49
+0.645,1,Female,30-39
+0.1118,0,Female,Under 30
+0.0352,0,Female,30-39
+0.0528,0,Female,50+
+0.3863,0,Female,40-49
+0.2004,1,Male,Under 30
+0.0736,0,Female,40-49
+0.1475,0,Female,30-39
+0.0823,0,Female,30-39
+0.2004,1,Female,40-49
+0.1266,1,Female,40-49
+0.3603,1,Male,50+
+0.1044,0,Female,40-49
+0.1403,0,Male,Under 30
+0.2855,1,Male,40-49
+0.6062,1,Female,40-49
+0.0785,0,Female,Under 30
+0.2509,0,Female,40-49
+0.1529,0,Female,30-39
+0.1805,0,Male,Under 30
+0.1995,0,Female,30-39
+0.7372,1,Female,40-49
+0.1805,0,Male,Under 30
+0.136,0,Female,Under 30
+0.0936,0,Female,30-39
+0.2107,0,Male,50+
+0.0616,0,Female,40-49
+0.3535,1,Female,40-49
+0.0626,0,Female,Under 30
+0.8033,0,Male,Under 30
+0.1157,0,Male,40-49
+0.0425,0,Male,Under 30
+0.239,1,Male,30-39
+0.1233,0,Male,Under 30
+0.0319,0,Female,40-49
+0.3337,1,Female,Under 30
+0.0251,0,Female,50+
+0.098,0,Female,Under 30
+0.3054,0,Female,50+
+0.2133,1,Female,30-39
+0.5797,1,Female,Under 30
+0.2661,0,Female,40-49
+0.0533,0,Male,Under 30
+0.0413,0,Male,50+
+0.2023,0,Female,30-39
+0.0896,0,Female,30-39
+0.242,1,Male,Under 30
+0.3582,0,Female,Under 30
+0.0832,0,Male,50+
+0.1652,1,Female,30-39
+0.0511,0,Male,30-39
+0.1265,0,Female,30-39
+0.4897,1,Male,Under 30
+0.1338,0,Male,30-39
+0.3862,1,Male,40-49
+0.4308,1,Female,50+
+0.0559,0,Female,Under 30
+0.7837,1,Male,40-49
+0.375,0,Female,Under 30
+0.0888,0,Female,30-39
+0.6763,0,Male,30-39
+0.1207,1,Female,Under 30
+0.1647,0,Male,30-39
+0.0951,0,Female,40-49
+0.1038,0,Female,Under 30
+0.1209,0,Female,50+
+0.0853,0,Female,50+
+0.1183,0,Female,30-39
+0.1307,0,Female,Under 30
+0.2176,0,Female,50+
+0.7875,1,Female,Under 30
+0.171,0,Male,40-49
+0.5013,0,Female,30-39
+0.0919,0,Male,30-39
+0.0583,0,Male,Under 30
+0.1557,0,Female,Under 30
+0.2362,0,Female,30-39
+0.6793,0,Male,40-49
+0.1309,1,Male,40-49
+0.1672,0,Female,40-49
+0.0838,0,Female,30-39
+0.0637,0,Female,30-39
+0.0835,0,Male,Under 30
+0.114,0,Female,50+
+0.0925,0,Male,30-39
+0.0633,0,Female,30-39
+0.1623,0,Male,30-39
+0.6695,0,Female,30-39
+0.1781,0,Female,Under 30
+0.0293,0,Female,40-49
+0.1902,0,Female,30-39
+0.1103,1,Female,40-49
+0.1714,0,Female,Under 30
+0.0803,0,Male,30-39
+0.1276,0,Male,Under 30
+0.0688,0,Male,30-39
+0.1064,1,Female,Under 30
+0.0514,0,Male,Under 30
+0.3582,0,Female,30-39
+0.1076,0,Male,40-49
+0.0704,0,Male,Under 30
+0.3103,1,Male,30-39
+0.1637,0,Female,Under 30
+0.3769,0,Male,Under 30
+0.0364,0,Female,30-39
+0.0591,0,Female,40-49
+0.0589,0,Female,Under 30
+0.1806,0,Female,Under 30
+0.0806,0,Male,Under 30
+0.1212,0,Male,40-49
+0.0428,0,Male,30-39
+0.0729,0,Female,30-39
+0.0376,0,Male,30-39
+0.0873,0,Male,Under 30
+0.1949,0,Male,Under 30
+0.1058,0,Male,40-49
+0.1016,0,Male,30-39
+0.2154,0,Male,40-49
+0.7496,1,Male,Under 30
+0.0796,0,Female,Under 30
+0.1789,0,Male,40-49
+0.1059,0,Male,Under 30
+0.164,0,Male,40-49
+0.0604,1,Male,40-49
+0.0846,0,Female,40-49
+0.0856,1,Female,40-49
+0.0655,0,Female,30-39
+0.3188,0,Female,30-39
+0.3467,1,Female,30-39
+0.1304,0,Male,30-39
+0.104,0,Female,30-39
+0.1113,0,Female,40-49
+0.1488,0,Male,30-39
+0.0695,0,Male,40-49
+0.0482,0,Male,40-49
+0.0236,0,Female,30-39
+0.0459,0,Female,Under 30
+0.0617,0,Female,Under 30
+0.1954,0,Female,Under 30
+0.151,0,Female,50+
+0.0745,0,Male,Under 30
+0.0646,0,Male,Under 30
+0.2572,0,Female,40-49
+0.1677,0,Female,30-39
+0.275,0,Female,Under 30
+0.1115,0,Male,30-39
+0.177,0,Female,30-39
+0.3722,0,Male,40-49
+0.1554,0,Female,Under 30
+0.1752,0,Female,40-49
+0.1818,0,Female,30-39
+0.4081,0,Male,30-39
+0.1167,0,Male,50+
+0.1503,0,Male,Under 30
+0.2749,0,Male,50+
+0.6599,1,Male,30-39
+0.0561,0,Female,50+
+0.7108,1,Female,30-39
+0.752,1,Male,50+
+0.1179,0,Female,30-39
+0.1398,0,Female,Under 30
+0.1409,1,Female,40-49
+0.7768,1,Male,30-39
+0.3355,0,Female,Under 30
+0.0982,0,Male,Under 30
+0.1611,0,Male,Under 30
+0.6722,1,Female,Under 30
+0.1204,0,Female,50+
+0.0432,0,Female,30-39
+0.0585,0,Male,30-39
+0.1296,0,Female,30-39
+0.1569,0,Female,Under 30
+0.3741,1,Male,30-39
+0.2007,0,Female,Under 30
+0.238,0,Male,30-39
+0.0425,0,Female,40-49
+0.5233,0,Female,Under 30
+0.3707,0,Female,Under 30
+0.1689,0,Male,40-49
+0.2405,0,Female,Under 30
+0.1781,0,Male,30-39
+0.2906,1,Female,30-39
+0.3165,1,Female,30-39
+0.0231,0,Female,Under 30
+0.1459,0,Female,Under 30
+0.3034,0,Female,30-39
+0.0751,0,Male,30-39
+0.4667,1,Female,Under 30
+0.711,1,Male,50+
+0.0479,0,Female,30-39
+0.1739,1,Female,Under 30
+0.0889,0,Male,30-39
+0.0938,0,Female,Under 30
+0.8867,1,Female,Under 30
+0.0456,0,Female,Under 30
+0.0618,0,Female,Under 30
+0.2351,0,Male,30-39
+0.0873,0,Female,30-39
+0.7807,1,Female,Under 30
+0.113,1,Male,Under 30
+0.0294,0,Male,40-49
+0.1353,0,Female,Under 30
+0.1005,0,Female,30-39
+0.0667,0,Female,40-49
+0.2576,0,Female,30-39
+0.1216,0,Male,Under 30
+0.044,0,Female,Under 30
+0.3582,0,Male,Under 30
+0.0443,0,Female,Under 30
+0.023,0,Female,40-49
+0.1384,0,Female,Under 30
+0.0438,0,Female,30-39
+0.1499,1,Female,30-39
+0.0798,0,Male,50+
+0.7832,1,Male,40-49
+0.412,1,Female,40-49
+0.1058,0,Female,Under 30
+0.0481,0,Male,30-39
+0.2364,0,Female,30-39
+0.3499,0,Female,Under 30
+0.0802,0,Female,40-49
+0.4185,0,Female,40-49
+0.1077,0,Female,30-39
+0.0242,0,Male,30-39
+0.045,0,Female,30-39
+0.0302,0,Female,Under 30
+0.8855,1,Female,40-49
+0.188,0,Female,40-49
+0.1067,0,Female,30-39
+0.4002,0,Male,Under 30
+0.0724,0,Male,30-39
+0.1166,0,Female,40-49
+0.1463,1,Male,Under 30
+0.1522,0,Female,Under 30
+0.1647,0,Male,30-39
+0.3764,0,Female,Under 30
+0.2395,1,Female,Under 30
+0.2183,0,Male,Under 30
+0.2579,0,Female,Under 30
+0.1702,0,Female,Under 30
+0.0954,0,Female,30-39
+0.1147,0,Male,30-39
+0.0662,0,Female,30-39
+0.0765,0,Male,Under 30
+0.1076,0,Male,Under 30
+0.1325,0,Male,30-39
+0.0176,0,Male,50+
+0.12,0,Female,30-39
+0.0976,0,Male,Under 30
+0.1374,0,Male,Under 30
+0.1328,1,Female,50+
+0.2312,0,Male,Under 30
+0.1043,0,Female,30-39
+0.0715,0,Female,30-39
+0.052,0,Female,30-39
+0.3899,0,Female,30-39
+0.0407,0,Male,30-39
+0.0422,0,Male,30-39
+0.0486,0,Female,30-39
+0.0414,0,Female,Under 30
+0.7025,1,Male,30-39
+0.3494,1,Male,30-39
+0.1211,1,Female,30-39
+0.1524,0,Male,50+
+0.1795,0,Female,40-49
+0.3001,0,Female,Under 30
+0.1075,1,Male,Under 30
+0.0585,0,Female,30-39
+0.1637,0,Female,30-39
+0.1212,1,Male,30-39
+0.0568,0,Female,Under 30
+0.1152,0,Female,40-49
+0.0667,0,Male,Under 30
+0.0299,0,Male,40-49
+0.0902,0,Female,30-39
+0.082,0,Female,50+
+0.6824,1,Female,Under 30
+0.1253,0,Female,Under 30
+0.0623,0,Female,40-49
+0.0652,0,Female,Under 30
+0.0999,0,Female,40-49
+0.0753,0,Male,30-39
+0.0917,1,Female,Under 30
+0.0327,0,Male,40-49
+0.1747,0,Male,Under 30
+0.077,0,Female,Under 30
+0.0308,0,Female,Under 30
+0.7131,0,Male,30-39
+0.2385,0,Female,50+
+0.5193,0,Male,40-49
+0.1858,0,Female,40-49
+0.042,0,Male,30-39
+0.0704,0,Male,Under 30
+0.7781,1,Male,30-39
+0.118,0,Female,30-39
+0.0542,0,Female,Under 30
+0.0566,1,Male,30-39
+0.2786,1,Female,30-39
+0.1519,0,Female,50+
+0.5723,0,Female,50+
+0.154,0,Female,30-39
+0.1686,0,Female,50+
+0.1341,0,Female,30-39
+0.2094,0,Female,50+
+0.7436,1,Female,50+
+0.0695,1,Female,30-39
+0.1142,0,Male,30-39
+0.1545,1,Female,50+
+0.0368,0,Female,Under 30
+0.1575,0,Female,40-49
+0.172,0,Female,Under 30
+0.183,0,Male,30-39
+0.6611,1,Male,40-49
+0.0338,0,Female,30-39
+0.0638,0,Female,40-49
+0.2471,0,Female,Under 30
+0.0638,0,Male,30-39
+0.0726,1,Female,40-49
+0.1498,0,Female,40-49
+0.743,0,Male,40-49
+0.2959,0,Female,Under 30
+0.0727,0,Male,30-39
+0.0585,0,Male,50+
+0.2597,0,Female,Under 30
+0.3274,0,Female,Under 30
+0.1984,0,Male,30-39
+0.0553,0,Female,Under 30
+0.7042,0,Female,40-49
+0.7469,0,Male,30-39
+0.0334,0,Female,Under 30
+0.1465,0,Female,30-39
+0.1413,0,Female,30-39
+0.0927,0,Female,30-39
+0.2049,0,Female,50+
+0.1344,0,Female,50+
+0.0691,0,Male,30-39
+0.1285,0,Male,40-49
+0.2675,1,Male,30-39
+0.0908,0,Female,30-39
+0.0746,0,Female,50+
+0.1103,0,Female,40-49
+0.203,0,Female,40-49
+0.132,0,Male,40-49
+0.258,0,Male,30-39
+0.0371,0,Male,30-39
+0.1105,0,Female,30-39
+0.7239,1,Male,50+
+0.1148,0,Female,30-39
+0.1121,0,Female,Under 30
+0.64,0,Female,30-39
+0.1418,0,Female,30-39
+0.0435,1,Female,40-49
+0.2336,0,Female,30-39
+0.1212,0,Female,30-39
+0.1024,0,Female,30-39
+0.0686,0,Female,30-39
+0.1496,0,Female,Under 30
+0.0281,0,Female,40-49
+0.3314,0,Male,Under 30
+0.062,0,Male,50+
+0.192,0,Female,50+
+0.1805,0,Female,50+
+0.3818,1,Male,30-39
+0.1504,0,Female,40-49
+0.1344,0,Female,50+
+0.2656,0,Female,30-39
+0.1018,0,Female,30-39
+0.142,0,Female,30-39
+0.5818,1,Female,30-39
+0.1526,0,Male,Under 30
+0.486,1,Male,50+
+0.1376,0,Male,Under 30
+0.1258,0,Female,30-39
+0.1223,1,Female,30-39
+0.2426,0,Female,Under 30
+0.033,0,Female,50+
+0.2688,1,Female,Under 30
+0.2811,0,Female,30-39
+0.15,0,Female,30-39
+0.1077,0,Male,Under 30
+0.6339,1,Female,Under 30
+0.7726,1,Female,40-49
+0.1387,0,Female,30-39
+0.3679,0,Male,30-39
+0.0717,0,Female,30-39
+0.1533,0,Male,30-39
+0.123,0,Male,40-49
+0.4465,0,Male,30-39
+0.0345,0,Male,30-39
+0.6107,0,Female,Under 30
+0.0865,0,Female,50+
+0.0473,0,Male,30-39
+0.2784,0,Female,30-39
+0.0983,0,Male,40-49
+0.4746,1,Male,50+
+0.1511,1,Female,Under 30
+0.2409,0,Male,Under 30
+0.1113,0,Female,40-49
+0.1187,0,Female,30-39
+0.0432,0,Male,40-49
+0.2235,0,Male,40-49
+0.7682,1,Male,Under 30
+0.1633,0,Female,Under 30
+0.1366,0,Male,40-49
+0.1714,1,Female,Under 30
+0.3192,1,Female,Under 30
+0.1972,0,Female,Under 30
+0.054,0,Male,Under 30
+0.0887,0,Male,40-49
+0.0844,0,Female,Under 30
+0.0702,0,Male,50+
+0.644,1,Female,30-39
+0.1689,0,Female,30-39
+0.6807,1,Male,40-49
+0.1221,0,Female,40-49
+0.1682,1,Female,Under 30
+0.2603,0,Male,50+
+0.73,1,Female,30-39
+0.2299,0,Female,30-39
+0.0755,1,Female,40-49
+0.0519,0,Male,30-39
+0.242,1,Female,50+
+0.0791,0,Male,40-49
+0.0777,0,Male,50+
+0.6084,1,Female,40-49
+0.5268,1,Female,40-49
+0.1342,0,Male,30-39
+0.1446,1,Female,Under 30
+0.165,0,Male,30-39
+0.8122,0,Female,Under 30
+0.2634,0,Male,30-39
+0.266,0,Male,Under 30
+0.7104,1,Male,Under 30
+0.7347,1,Male,Under 30
+0.2298,0,Male,Under 30
+0.0451,0,Male,30-39
+0.1949,0,Female,40-49
+0.0912,0,Female,50+
+0.2642,0,Female,50+
+0.0736,0,Female,40-49
+0.1806,0,Male,Under 30
+0.0233,0,Female,30-39
+0.7504,1,Female,Under 30
+0.0452,0,Female,30-39
+0.0577,1,Male,30-39
+0.0262,0,Male,50+
+0.1913,0,Female,30-39
+0.1031,0,Female,40-49
+0.1086,0,Female,30-39
+0.132,0,Female,Under 30
+0.0242,0,Male,Under 30
+0.1561,1,Female,30-39
+0.1227,0,Male,Under 30
+0.578,1,Female,Under 30
+0.157,0,Female,40-49
+0.3684,0,Male,40-49
+0.1007,0,Female,30-39
+0.1032,0,Female,30-39
+0.1743,0,Female,Under 30
+0.7556,1,Female,Under 30
+0.2159,0,Female,40-49
+0.5381,1,Male,30-39
+0.1934,0,Male,40-49
+0.4954,0,Male,40-49
+0.0889,1,Female,50+
+0.0976,0,Male,30-39
+0.0227,0,Female,Under 30
+0.047,0,Male,30-39
+0.0673,0,Female,40-49
+0.1492,0,Female,Under 30
+0.0772,0,Female,Under 30
+0.0391,0,Female,30-39
+0.0885,0,Female,40-49
+0.1415,0,Male,Under 30
+0.0875,0,Female,Under 30
+0.5969,1,Female,Under 30
+0.7282,1,Female,30-39
+0.1211,0,Male,30-39
+0.415,0,Male,30-39
+0.0632,0,Female,30-39
+0.1508,0,Male,Under 30
+0.1524,0,Male,Under 30
+0.5398,1,Female,Under 30
+0.2443,0,Female,40-49
+0.1713,0,Female,Under 30
+0.0685,0,Female,50+
+0.0609,0,Female,Under 30
+0.1473,0,Female,Under 30
+0.1682,0,Female,30-39
+0.388,1,Male,30-39
+0.1914,0,Female,30-39
+0.0923,1,Female,50+
+0.1457,0,Female,40-49
+0.1568,0,Female,Under 30
+0.2668,1,Female,30-39
+0.5914,0,Male,Under 30
+0.1828,0,Male,Under 30
+0.296,1,Male,40-49
+0.065,0,Male,Under 30
+0.1233,0,Male,30-39
+0.1627,0,Male,30-39
+0.0769,0,Male,50+
+0.0825,0,Male,40-49
+0.0741,0,Female,40-49
+0.1082,0,Male,50+
+0.0941,0,Male,Under 30
+0.1152,0,Male,Under 30
+0.3615,1,Female,40-49
+0.0295,0,Female,50+
+0.1333,0,Female,40-49
+0.0971,0,Male,Under 30
+0.1547,0,Female,Under 30
+0.7682,1,Female,Under 30
+0.115,0,Female,30-39
+0.1781,0,Male,Under 30
+0.0849,0,Female,40-49
+0.7377,1,Female,30-39
+0.2368,0,Male,50+
+0.1668,0,Male,Under 30
+0.7374,1,Female,Under 30
+0.2292,0,Female,Under 30
+0.4428,0,Female,Under 30
+0.1861,0,Female,40-49
+0.0545,0,Female,30-39
+0.0851,0,Female,30-39
+0.3594,0,Male,30-39
+0.1277,1,Female,30-39
+0.2396,1,Male,30-39
+0.1925,0,Male,Under 30
+0.1593,0,Female,Under 30
+0.1357,0,Female,40-49
+0.1014,0,Female,40-49
+0.0848,0,Male,30-39
+0.1428,0,Female,Under 30
+0.1349,0,Male,30-39
+0.1354,0,Female,50+
+0.1948,0,Female,50+
+0.1189,0,Female,50+
+0.1092,0,Male,30-39
+0.1888,0,Female,40-49
+0.1647,0,Male,40-49
+0.3621,0,Male,30-39
+0.0428,0,Female,40-49
+0.0776,0,Female,Under 30
+0.0977,0,Male,50+
+0.2085,1,Male,50+
+0.1867,1,Male,Under 30
+0.4295,0,Male,30-39
+0.1705,0,Male,40-49
+0.0708,0,Male,50+
+0.0672,0,Male,30-39
+0.0758,0,Female,40-49
+0.042,0,Male,30-39
+0.1231,0,Female,30-39
+0.0549,1,Male,40-49
+0.0793,0,Male,Under 30
+0.0743,0,Female,40-49
+0.1263,0,Male,40-49
+0.1636,0,Female,Under 30
+0.0882,0,Female,30-39
+0.16,0,Female,Under 30
+0.1306,0,Male,50+
+0.1753,0,Female,Under 30
+0.1975,1,Female,40-49
+0.2177,0,Female,Under 30
+0.1319,0,Male,Under 30
+0.6958,0,Male,50+
+0.0368,0,Female,30-39
+0.8102,1,Female,Under 30
+0.6578,1,Female,Under 30
+0.046,0,Female,Under 30
+0.1562,0,Male,Under 30
+0.192,1,Female,50+
+0.2733,0,Male,Under 30
+0.195,1,Male,40-49
+0.1215,0,Female,50+
+0.0736,0,Male,40-49
+0.364,0,Female,30-39
+0.5886,1,Male,40-49
+0.0754,0,Female,Under 30
+0.5343,1,Female,Under 30
+0.2038,1,Female,40-49
+0.2199,0,Female,40-49
+0.1425,0,Male,40-49
+0.3429,0,Male,Under 30
+0.0514,0,Female,Under 30
+0.0451,0,Female,30-39
+0.0649,0,Male,40-49
+0.2408,1,Female,30-39
+0.2201,0,Male,30-39
+0.048,0,Female,40-49
+0.1243,0,Female,50+
+0.1483,0,Male,Under 30
+0.1173,0,Female,30-39
+0.1219,0,Female,30-39
+0.2359,0,Female,40-49
+0.3652,1,Female,Under 30
+0.1032,0,Male,30-39
+0.4128,1,Female,30-39
+0.25,1,Male,30-39
+0.1499,1,Male,30-39
+0.2033,0,Male,30-39
+0.0284,0,Female,40-49
+0.1189,0,Female,30-39
+0.1841,0,Male,40-49
+0.156,0,Female,40-49
+0.1553,0,Male,Under 30
+0.3898,0,Female,40-49
+0.1714,0,Male,40-49
+0.4317,1,Male,40-49
+0.2075,1,Female,40-49
+0.041,0,Female,30-39
+0.1015,0,Female,Under 30
+0.1823,0,Female,30-39
+0.1199,0,Male,40-49
+0.8313,0,Female,30-39
+0.4252,0,Female,30-39
+0.1403,0,Female,Under 30
+0.0284,0,Male,30-39
+0.0616,1,Female,30-39
+0.1661,1,Female,30-39
+0.1701,0,Female,Under 30
+0.0931,0,Male,50+
+0.6571,1,Male,50+
+0.7257,0,Female,50+
+0.0381,0,Female,Under 30
+0.1278,0,Male,Under 30
+0.6058,0,Female,Under 30
+0.1876,0,Female,30-39
+0.6769,1,Male,30-39
+0.1837,0,Female,Under 30
+0.1876,0,Male,40-49
+0.4758,1,Male,50+
+0.0907,0,Female,Under 30
+0.0327,0,Female,30-39
+0.1786,0,Female,Under 30
+0.2419,0,Female,40-49
+0.054,0,Female,40-49
+0.1122,0,Female,Under 30
+0.0699,1,Male,50+
+0.1697,0,Female,40-49
+0.0453,0,Male,30-39
+0.3033,1,Female,50+
+0.037,0,Male,30-39
+0.1079,0,Female,30-39
+0.134,0,Female,Under 30
+0.113,0,Female,30-39
+0.0822,0,Male,Under 30
+0.0697,0,Male,Under 30
+0.4165,1,Female,30-39
+0.2804,1,Male,30-39
+0.1126,0,Male,Under 30
+0.0624,0,Female,30-39
+0.2237,0,Female,50+
+0.0258,0,Female,40-49
+0.0911,0,Male,30-39
+0.1515,0,Female,Under 30
+0.1122,0,Male,50+
+0.6721,1,Female,Under 30
+0.1686,0,Female,30-39
+0.104,0,Male,30-39
+0.0935,0,Female,Under 30
+0.2074,1,Female,Under 30
+0.1794,1,Male,Under 30
+0.0447,0,Male,30-39
+0.1548,1,Male,Under 30
+0.1697,0,Male,Under 30
+0.6956,1,Female,Under 30
+0.1407,0,Female,50+
+0.204,0,Male,40-49
+0.3576,1,Male,50+
+0.0416,0,Male,30-39
+0.7563,1,Female,30-39
+0.0202,0,Female,30-39
+0.1202,0,Female,40-49
+0.1191,0,Female,30-39
+0.6687,1,Female,Under 30
+0.1782,0,Female,30-39
+0.6613,0,Male,30-39
+0.0831,0,Male,Under 30
+0.3227,0,Male,40-49
+0.0699,0,Female,Under 30
+0.4293,1,Female,Under 30
+0.0601,0,Female,Under 30
+0.1733,0,Female,40-49
+0.1252,0,Female,30-39
+0.0435,0,Female,Under 30
+0.1583,0,Female,40-49
+0.1022,0,Female,Under 30
+0.0559,0,Female,40-49
+0.0681,1,Female,40-49
+0.3905,0,Male,Under 30
+0.0382,0,Female,30-39
+0.1462,0,Female,Under 30
+0.2433,0,Male,30-39
+0.0838,0,Female,30-39
+0.2089,0,Male,40-49
+0.1055,0,Female,30-39
+0.5155,1,Female,Under 30
+0.0941,0,Female,Under 30
+0.1256,0,Female,40-49
+0.4158,1,Female,30-39
+0.8735,1,Male,30-39
+0.1738,0,Female,40-49
+0.1375,0,Male,30-39
+0.0619,1,Female,Under 30
+0.0684,0,Male,30-39
+0.183,1,Female,50+
+0.2642,0,Female,30-39
+0.154,0,Male,30-39
+0.1937,0,Female,Under 30
+0.7063,1,Female,Under 30
+0.0952,1,Male,40-49
+0.4624,0,Male,Under 30
+0.1809,1,Female,30-39
+0.1517,0,Female,Under 30
+0.0557,0,Female,30-39
+0.063,0,Female,30-39
+0.1043,1,Female,30-39
+0.0995,0,Female,Under 30
+0.4603,1,Female,Under 30
+0.2085,0,Female,Under 30
+0.1157,0,Male,30-39
+0.0538,0,Male,Under 30
+0.1383,0,Female,Under 30
+0.3693,1,Female,Under 30
+0.1437,0,Female,40-49
+0.762,1,Female,30-39
+0.0496,0,Female,Under 30
+0.0172,0,Female,40-49
+0.1729,0,Female,30-39
+0.2923,0,Male,Under 30
+0.7518,1,Male,Under 30
+0.1536,0,Male,Under 30
+0.2348,0,Female,Under 30
+0.1383,1,Male,50+
+0.1162,0,Female,Under 30
+0.3268,0,Male,40-49
+0.0796,0,Female,50+
+0.1105,0,Male,40-49
+0.0835,0,Female,Under 30
+0.0307,0,Male,40-49
+0.078,0,Female,Under 30
+0.1157,0,Female,40-49
+0.1849,1,Male,30-39
+0.1457,0,Male,50+
+0.0661,0,Male,40-49
+0.3054,1,Female,Under 30
+0.1504,0,Female,30-39
+0.0528,0,Male,Under 30
+0.7488,0,Female,30-39
+0.115,0,Female,Under 30
+0.199,0,Male,30-39
+0.0728,0,Female,Under 30
+0.165,0,Female,40-49
+0.183,0,Female,30-39
+0.8066,1,Female,Under 30
+0.0357,0,Female,30-39
+0.1577,1,Male,50+
+0.6694,0,Female,Under 30
+0.038,0,Female,30-39
+0.2728,1,Female,40-49
+0.4158,1,Female,30-39
+0.0505,0,Female,30-39
+0.1484,0,Female,40-49
+0.1353,0,Male,Under 30
+0.2179,0,Male,Under 30
+0.0714,0,Female,30-39
+0.2481,1,Female,40-49
+0.2073,1,Female,50+
+0.2167,0,Female,40-49
+0.2391,0,Male,30-39
+0.4197,1,Male,40-49
+0.2423,0,Male,Under 30
+0.1562,0,Female,Under 30
+0.7211,0,Male,Under 30
+0.0331,0,Male,30-39
+0.1541,0,Male,30-39
+0.0376,0,Male,30-39
+0.1374,0,Female,40-49
+0.3582,0,Female,50+
+0.0714,0,Male,30-39
+0.7514,1,Male,Under 30
+0.1583,1,Female,30-39
+0.1396,0,Male,Under 30
+0.1293,1,Female,50+
+0.2287,0,Female,40-49
+0.1501,0,Female,30-39
+0.6587,0,Female,40-49
+0.2706,0,Female,Under 30
+0.1272,1,Male,30-39
+0.3937,0,Female,Under 30
+0.0468,0,Female,40-49
+0.076,0,Male,30-39
+0.062,0,Female,Under 30
+0.1309,0,Male,50+
+0.4714,1,Male,Under 30
+0.1749,0,Female,50+
+0.1025,0,Female,30-39
+0.2824,0,Male,40-49
+0.1904,0,Female,Under 30
+0.1164,0,Female,Under 30
+0.1,0,Male,Under 30
+0.0261,0,Male,30-39
+0.0832,0,Female,50+
+0.1637,0,Female,40-49
+0.0375,0,Female,30-39
+0.1237,0,Male,30-39
+0.0422,0,Female,Under 30
+0.4236,0,Female,30-39
+0.1813,0,Female,30-39
+0.4796,1,Female,Under 30
+0.1059,0,Male,40-49
+0.143,0,Male,Under 30
+0.4527,1,Female,50+
+0.0392,0,Female,50+
+0.7159,1,Female,Under 30
+0.0355,0,Female,Under 30
+0.1522,0,Female,40-49
+0.0905,0,Female,30-39
+0.095,0,Female,40-49
+0.1492,0,Female,50+
+0.3615,1,Male,50+
+0.1353,0,Female,50+
+0.3879,0,Female,Under 30
+0.4737,0,Male,Under 30
+0.7585,1,Female,50+
+0.15,0,Female,30-39
+0.0315,1,Male,40-49
+0.1782,0,Female,30-39
+0.1176,0,Female,Under 30
+0.1084,0,Female,30-39
+0.0651,0,Male,40-49
+0.034,0,Female,50+
+0.0996,0,Male,30-39
+0.3721,0,Female,40-49
+0.178,0,Female,30-39
+0.8343,1,Female,Under 30
+0.2246,0,Male,Under 30
+0.2484,1,Male,40-49
+0.1306,0,Female,30-39
+0.695,1,Male,30-39
+0.2184,0,Female,40-49
+0.1328,0,Male,Under 30
+0.0866,0,Male,50+
+0.3216,1,Male,Under 30
+0.2267,0,Female,Under 30
+0.1583,1,Female,30-39
+0.1595,0,Female,Under 30
+0.651,0,Male,30-39
+0.1288,0,Male,30-39
+0.0375,0,Female,Under 30
+0.0495,0,Female,30-39
+0.0656,0,Male,40-49
+0.0845,1,Female,Under 30
+0.078,0,Female,Under 30
+0.6575,1,Female,Under 30
+0.2057,0,Male,Under 30
+0.3702,0,Male,Under 30
+0.6251,0,Female,30-39
+0.0966,0,Female,40-49
+0.2558,0,Female,Under 30
+0.7285,1,Male,Under 30
+0.2347,0,Female,40-49
+0.1087,0,Female,40-49
+0.1158,0,Male,50+
+0.1689,0,Female,30-39
+0.1279,0,Female,30-39
+0.0446,0,Male,50+
+0.426,0,Female,30-39
+0.1418,0,Male,30-39
+0.351,0,Female,40-49
+0.6188,1,Male,Under 30
+0.0489,0,Male,30-39
+0.1162,0,Male,30-39
+0.0601,0,Female,50+
+0.1497,0,Female,30-39
+0.0885,0,Male,30-39
+0.0376,0,Female,30-39
+0.6298,1,Male,30-39
+0.4377,1,Female,30-39
+0.0519,0,Female,40-49
+0.256,0,Male,40-49
+0.6317,1,Female,Under 30
+0.1495,0,Female,Under 30
+0.4202,1,Female,30-39
+0.8415,1,Male,30-39
+0.1712,0,Female,40-49
+0.2576,1,Female,40-49
+0.0571,0,Male,30-39
+0.1808,0,Male,Under 30
+0.7109,1,Male,Under 30
+0.0729,0,Male,30-39
+0.1163,0,Male,40-49
+0.1913,0,Male,40-49
+0.037,0,Female,Under 30
+0.1147,0,Female,30-39
+0.1895,0,Female,30-39
+0.0561,0,Male,30-39
+0.0241,0,Male,30-39
+0.5479,0,Male,40-49
+0.553,0,Female,Under 30
+0.0535,0,Male,40-49
+0.0466,0,Female,30-39
+0.1867,0,Female,30-39
+0.1727,0,Female,50+
+0.0247,0,Male,30-39
+0.1605,1,Female,40-49
+0.0828,0,Male,40-49
+0.1042,0,Male,40-49
+0.1566,0,Female,30-39
+0.1265,0,Female,30-39
+0.1663,0,Female,50+
+0.2312,0,Female,30-39
+0.1924,0,Female,30-39
+0.1478,0,Female,50+
+0.0384,0,Female,40-49
+0.144,0,Male,40-49
+0.3615,1,Female,30-39
+0.5405,0,Male,30-39
+0.1341,0,Male,30-39
+0.1505,0,Male,30-39
+0.0601,0,Female,50+
+0.0374,0,Female,40-49
+0.1167,0,Female,50+
+0.7692,1,Female,Under 30
+0.1629,0,Female,Under 30
+0.1347,0,Male,Under 30
+0.1193,0,Female,Under 30
+0.3576,0,Female,30-39
+0.1433,0,Male,Under 30
+0.3073,0,Male,30-39
+0.1428,0,Female,40-49
+0.0397,0,Male,Under 30
+0.655,1,Female,30-39
+0.0988,0,Female,30-39
+0.2422,1,Male,40-49
+0.4756,0,Female,40-49
+0.4531,1,Female,Under 30
+0.2885,1,Female,30-39
+0.3684,0,Male,50+
+0.4272,0,Female,30-39
+0.5352,0,Female,Under 30
+0.043,0,Male,40-49
+0.7464,1,Male,40-49
+0.1949,1,Female,30-39
+0.1817,0,Male,Under 30
+0.6349,0,Female,Under 30
+0.1334,0,Male,40-49
+0.0797,0,Male,Under 30
+0.1706,1,Male,40-49
+0.1092,1,Female,30-39
+0.1941,0,Male,50+
+0.4206,0,Female,30-39
+0.0568,0,Male,30-39
+0.2093,0,Female,30-39
+0.0406,0,Male,Under 30
+0.081,0,Female,30-39
+0.0788,0,Male,40-49
+0.1392,0,Female,40-49
+0.0304,0,Female,30-39
+0.1842,0,Male,40-49
+0.2143,0,Male,30-39
+0.0528,0,Female,50+
+0.0382,0,Female,30-39
+0.5256,0,Female,Under 30
+0.0807,0,Male,30-39
+0.7406,1,Female,50+
+0.0425,1,Male,40-49
+0.0843,0,Male,Under 30
+0.0873,0,Female,Under 30
+0.0293,0,Male,30-39
+0.0738,0,Female,40-49
+0.2396,0,Male,Under 30
+0.1697,0,Female,40-49
+0.1184,0,Female,40-49
+0.1073,0,Female,30-39
+0.0399,0,Female,30-39
+0.1865,1,Female,30-39
+0.2455,0,Male,40-49
+0.2052,0,Male,30-39
+0.256,0,Male,30-39
+0.1422,1,Female,30-39
+0.3769,0,Male,30-39
+0.1203,0,Female,40-49
+0.6642,1,Male,40-49
+0.1064,0,Male,Under 30
+0.168,1,Female,30-39
+0.1557,1,Female,Under 30
+0.1113,1,Female,Under 30
+0.0738,0,Female,50+
+0.1622,0,Female,30-39
+0.1293,0,Female,30-39
+0.1792,0,Male,Under 30
+0.2055,0,Female,40-49
+0.1044,0,Female,Under 30
+0.1021,1,Female,Under 30
+0.1892,0,Male,30-39
+0.0995,0,Female,30-39
+0.1817,0,Female,40-49
+0.6084,1,Male,50+
+0.3078,0,Male,Under 30
+0.228,0,Female,30-39
+0.5762,0,Male,40-49
+0.1413,0,Male,40-49
+0.0678,0,Male,Under 30
+0.049,0,Male,30-39
+0.1644,0,Female,40-49
+0.0444,0,Female,30-39
+0.2016,0,Female,50+
+0.4585,0,Male,Under 30
+0.114,0,Male,30-39
+0.1688,0,Male,40-49
+0.8289,0,Male,Under 30
+0.0989,0,Female,40-49
+0.0386,0,Female,Under 30
+0.0299,0,Female,30-39
+0.2879,1,Male,Under 30
+0.4164,1,Female,Under 30
+0.1158,0,Female,30-39
+0.2804,0,Female,30-39
+0.2518,0,Female,Under 30
+0.2315,0,Female,Under 30
+0.0535,0,Female,30-39
+0.1348,0,Male,40-49
+0.263,0,Male,30-39
+0.1673,1,Male,40-49
+0.0583,0,Female,40-49
+0.3711,0,Female,40-49
+0.0739,0,Male,30-39
+0.1657,0,Male,40-49
+0.2269,0,Female,Under 30
+0.211,0,Female,30-39
+0.0313,0,Female,Under 30
+0.0918,0,Female,40-49
+0.052,0,Male,30-39
+0.2528,0,Female,30-39
+0.1697,0,Male,30-39
+0.1383,0,Female,Under 30
+0.0749,0,Female,Under 30
+0.0834,0,Female,Under 30
+0.1287,0,Male,30-39
+0.1002,0,Female,Under 30
+0.8121,0,Male,Under 30
+0.0615,0,Female,Under 30
+0.0686,0,Female,30-39
+0.1158,0,Female,30-39
+0.195,0,Male,Under 30
+0.0869,0,Male,40-49
+0.0672,1,Male,30-39
+0.055,0,Female,30-39
+0.2432,1,Male,Under 30
+0.1087,0,Female,Under 30
+0.2283,0,Female,30-39
+0.1107,1,Female,Under 30
+0.0614,0,Female,30-39
+0.1975,0,Female,Under 30
+0.3923,1,Male,30-39
+0.6671,1,Female,40-49
+0.7752,1,Female,Under 30
+0.0891,0,Male,Under 30
+0.2366,0,Female,Under 30
+0.0697,0,Female,Under 30
+0.1057,1,Female,Under 30
+0.7294,1,Female,30-39
+0.0617,0,Female,30-39
+0.1237,0,Female,50+
+0.7678,1,Female,Under 30
+0.1701,0,Female,30-39
+0.0741,0,Male,30-39
+0.1752,0,Female,30-39
+0.1753,1,Female,30-39
+0.11,0,Female,40-49
+0.0743,1,Male,30-39
+0.4868,0,Male,30-39
+0.0452,0,Female,30-39
+0.0773,0,Female,Under 30
+0.0188,0,Female,30-39
+0.1417,0,Male,30-39
+0.0787,0,Male,30-39
+0.091,0,Female,30-39
+0.2113,0,Female,30-39
+0.1576,0,Female,30-39
+0.2333,0,Female,40-49
+0.1692,1,Female,30-39
+0.0607,0,Male,Under 30
+0.1871,1,Female,40-49
+0.21,0,Female,40-49
+0.053,0,Female,Under 30
+0.1638,0,Male,30-39
+0.7627,1,Female,Under 30
+0.6602,1,Male,50+
+0.3551,0,Female,50+
+0.3762,0,Female,30-39
+0.079,0,Male,30-39
+0.081,0,Male,Under 30
+0.6385,1,Female,30-39
+0.3045,0,Male,40-49
+0.1559,0,Female,40-49
+0.0614,0,Male,40-49
+0.1291,0,Female,30-39
+0.1534,0,Male,30-39
+0.067,1,Male,30-39
+0.1855,0,Female,Under 30
+0.2232,0,Female,30-39
+0.0391,0,Female,Under 30
+0.1932,0,Female,30-39
+0.113,0,Female,Under 30
+0.0962,0,Female,Under 30
+0.1728,0,Female,Under 30
+0.1653,0,Male,30-39
+0.0501,0,Female,Under 30
+0.2579,0,Female,Under 30
+0.2022,0,Female,Under 30
+0.2576,0,Female,40-49
+0.1479,0,Female,Under 30
+0.0804,1,Female,50+
+0.1196,0,Female,30-39
+0.0604,0,Female,30-39
+0.0955,0,Male,30-39
+0.042,0,Male,30-39
+0.1875,0,Female,30-39
+0.7496,0,Male,30-39
+0.1097,0,Female,40-49
+0.3665,0,Male,40-49
+0.1154,0,Female,30-39
+0.1891,0,Male,30-39
+0.4367,0,Male,30-39
+0.0503,0,Male,30-39
+0.0645,0,Female,30-39
+0.1084,0,Female,30-39
+0.3315,0,Female,30-39
+0.7968,1,Female,Under 30
+0.0985,1,Male,40-49
+0.2309,1,Female,Under 30
+0.2671,0,Male,30-39
+0.4153,0,Male,30-39
+0.1099,0,Female,Under 30
+0.0558,1,Female,40-49
+0.0311,0,Female,Under 30
+0.3169,0,Female,40-49
+0.0913,0,Female,40-49
+0.1764,0,Female,40-49
+0.1789,0,Female,50+
+0.0375,0,Female,30-39
+0.0931,0,Female,Under 30
+0.2974,0,Female,30-39
+0.2934,0,Female,40-49
+0.6954,1,Female,40-49
+0.1414,1,Female,30-39
+0.0437,0,Female,Under 30
+0.3845,1,Male,Under 30
+0.1131,0,Female,Under 30
+0.1427,0,Female,30-39
+0.0724,0,Female,Under 30
+0.1191,0,Female,Under 30
+0.0531,0,Male,Under 30
+0.0362,0,Female,30-39
+0.1758,0,Male,30-39
+0.1236,0,Female,40-49
+0.15,0,Male,40-49
+0.0398,0,Female,30-39
+0.1283,0,Female,40-49
+0.1606,0,Female,Under 30
+0.0964,0,Female,40-49
+0.0494,0,Female,30-39
+0.8434,1,Male,40-49
+0.116,0,Female,30-39
+0.0467,0,Female,30-39
+0.153,0,Female,40-49
+0.1876,0,Female,30-39
+0.0305,0,Male,30-39
+0.0622,0,Female,Under 30
+0.0958,1,Male,30-39
+0.0623,0,Female,Under 30
+0.233,0,Female,Under 30
+0.1558,1,Female,30-39
+0.3578,1,Male,30-39
+0.7606,1,Female,Under 30
+0.5584,1,Female,Under 30
+0.1271,0,Female,30-39
+0.7107,0,Male,Under 30
+0.2037,0,Male,Under 30
+0.0202,0,Female,40-49
+0.4043,0,Female,Under 30
+0.088,0,Male,Under 30
+0.1121,0,Female,30-39
+0.1792,0,Female,40-49
+0.0631,0,Female,Under 30
+0.0914,0,Female,50+
+0.0316,0,Male,30-39
+0.1496,0,Male,Under 30
+0.1609,0,Female,Under 30
+0.1568,0,Female,30-39
+0.0165,0,Male,Under 30
+0.3575,1,Male,40-49
+0.1124,0,Female,50+
+0.6699,0,Female,30-39
+0.0753,0,Female,Under 30
+0.1657,0,Female,30-39
+0.1192,0,Male,30-39
+0.0773,0,Male,30-39
+0.6348,1,Male,40-49
+0.21,0,Male,40-49
+0.3576,0,Female,30-39
+0.1366,0,Male,30-39
+0.1013,0,Male,40-49
+0.36,1,Male,Under 30
+0.7965,1,Male,40-49
+0.4158,1,Female,Under 30
+0.0737,0,Female,40-49
+0.3562,1,Male,Under 30
+0.7334,0,Female,Under 30
+0.177,0,Male,Under 30
+0.041,0,Male,40-49
+0.5299,0,Female,30-39
+0.1588,0,Female,30-39
+0.369,0,Female,30-39
+0.1385,0,Female,40-49
+0.0598,0,Female,30-39
+0.1715,0,Female,30-39
+0.0806,1,Male,30-39
+0.1295,0,Female,40-49
+0.7249,1,Female,Under 30
+0.0408,0,Male,40-49
+0.1708,0,Male,30-39
+0.1307,0,Male,30-39
+0.1525,1,Female,Under 30
+0.0946,0,Female,30-39
+0.08,0,Male,Under 30
+0.2312,1,Male,40-49
+0.1508,1,Female,30-39
+0.1642,0,Female,50+
+0.0353,0,Female,40-49
+0.0831,0,Male,40-49
+0.324,1,Female,Under 30
+0.3541,1,Female,40-49
+0.1227,0,Female,40-49
+0.0925,0,Male,40-49
+0.0458,0,Female,Under 30
+0.0771,0,Female,30-39
+0.0455,0,Male,30-39
+0.0797,0,Female,40-49
+0.2784,0,Female,30-39
+0.32,0,Female,30-39
+0.2364,0,Male,50+
+0.3011,0,Female,40-49
+0.067,0,Male,30-39
+0.3302,0,Male,30-39
+0.0978,0,Male,30-39
+0.2639,0,Male,30-39
+0.028,0,Male,30-39
+0.2264,0,Female,Under 30
+0.5004,0,Female,40-49
+0.2568,0,Female,30-39
+0.5057,0,Female,40-49
+0.0368,0,Female,30-39
+0.0647,0,Male,40-49
+0.1114,1,Male,50+
+0.1876,0,Female,30-39
+0.1793,0,Male,30-39
+0.0948,0,Male,Under 30
+0.0601,0,Female,30-39
+0.1895,1,Male,30-39
+0.1598,1,Female,Under 30
+0.2024,1,Male,Under 30
+0.3499,0,Female,30-39
+0.1629,0,Female,40-49
+0.0828,0,Male,30-39
+0.8169,1,Female,30-39
+0.1536,1,Male,Under 30
+0.3567,0,Female,Under 30
+0.2107,0,Male,Under 30
+0.435,1,Male,Under 30
+0.0935,1,Male,Under 30
+0.7626,1,Female,40-49
+0.133,0,Male,Under 30
+0.0518,0,Female,50+
+0.1666,0,Female,40-49
+0.0983,0,Female,40-49
+0.6041,1,Male,30-39
+0.3562,0,Male,30-39
+0.1365,0,Female,Under 30
+0.0708,0,Female,30-39
+0.239,0,Female,Under 30
+0.2903,0,Female,30-39
+0.6855,1,Male,50+
+0.3139,0,Male,Under 30
+0.0729,0,Female,30-39
+0.0616,0,Male,Under 30
+0.1264,1,Female,Under 30
+0.2103,0,Female,30-39
+0.1593,0,Female,Under 30
+0.1379,0,Female,30-39
+0.1489,0,Male,30-39
+0.1104,0,Male,30-39
+0.1099,0,Female,30-39
+0.6365,1,Female,50+
+0.0885,0,Female,Under 30
+0.0984,0,Male,Under 30
+0.2524,0,Male,Under 30
+0.0327,0,Female,30-39
+0.1295,1,Male,30-39
+0.653,1,Male,40-49
+0.0739,0,Male,30-39
+0.0453,0,Female,30-39
+0.2452,0,Female,Under 30
+0.145,1,Male,30-39
+0.0455,0,Female,Under 30
+0.0993,0,Male,Under 30
+0.3781,0,Female,Under 30
+0.7816,1,Male,50+
+0.0671,1,Female,Under 30
+0.2765,1,Male,50+
+0.1851,0,Female,30-39
+0.0339,0,Male,30-39
+0.0386,0,Female,30-39
+0.3104,1,Male,50+
+0.3493,1,Female,30-39
+0.0342,0,Female,Under 30
+0.0625,0,Female,30-39
+0.0747,1,Female,Under 30
+0.107,0,Male,40-49
+0.0341,0,Male,30-39
+0.0606,0,Female,40-49
+0.1523,0,Male,Under 30
+0.1209,0,Male,40-49
+0.1999,0,Female,Under 30
+0.1774,1,Male,30-39
+0.6557,0,Male,50+
+0.1526,1,Female,40-49
+0.1058,0,Male,Under 30
+0.1124,0,Male,50+
+0.0802,1,Male,50+
+0.0911,0,Female,Under 30
+0.186,1,Male,Under 30
+0.4423,1,Female,30-39
+0.0842,0,Female,40-49
+0.7958,0,Male,40-49
+0.2491,1,Female,30-39
+0.1538,0,Male,30-39
+0.0314,0,Female,30-39
+0.031,1,Female,30-39
+0.1937,0,Female,50+
+0.2237,0,Female,Under 30
+0.5128,0,Male,Under 30
+0.5547,0,Female,40-49
+0.5918,1,Female,Under 30
+0.1034,0,Female,Under 30
+0.3652,1,Male,30-39
+0.0415,0,Male,30-39
+0.094,0,Female,Under 30
+0.1895,0,Male,Under 30
+0.3122,0,Male,Under 30
+0.1968,0,Female,30-39
+0.3785,0,Female,30-39
+0.0756,0,Female,50+
+0.545,1,Female,40-49
+0.0696,0,Female,40-49
+0.2168,0,Female,30-39
+0.1369,0,Female,30-39
+0.7437,0,Male,Under 30
+0.0863,0,Female,30-39
+0.0671,0,Female,30-39
+0.0493,0,Male,50+
+0.6328,0,Male,40-49
+0.046,0,Female,Under 30
+0.1374,0,Male,Under 30
+0.1569,1,Female,Under 30
+0.0634,0,Female,30-39
+0.0384,0,Female,40-49
+0.0549,0,Female,50+
+0.1691,0,Male,Under 30
+0.7577,1,Male,40-49
+0.0668,0,Female,Under 30
+0.1872,0,Female,50+
+0.2261,0,Male,30-39
+0.0532,0,Male,40-49
+0.1485,0,Female,Under 30
+0.1638,0,Male,40-49
+0.774,0,Male,Under 30
+0.036,0,Male,30-39
+0.0499,1,Female,Under 30
+0.224,1,Female,40-49
+0.4253,0,Female,30-39
+0.0488,0,Female,30-39
+0.0487,0,Female,Under 30
+0.0501,0,Male,Under 30
+0.2999,0,Female,30-39
+0.3011,0,Female,Under 30
+0.1662,1,Female,40-49
+0.3667,0,Male,30-39
+0.1243,0,Male,30-39
+0.3582,0,Female,30-39
+0.0884,0,Male,Under 30
+0.1986,0,Female,30-39
+0.6946,1,Female,30-39
+0.1496,1,Female,Under 30
+0.3567,0,Female,30-39
+0.4441,1,Male,30-39
+0.1443,0,Female,Under 30
+0.3554,1,Female,Under 30
+0.1721,0,Female,30-39
+0.4671,1,Male,Under 30
+0.0748,0,Male,Under 30
+0.1874,0,Female,Under 30
+0.28,0,Female,40-49
+0.0483,0,Male,30-39
+0.0635,0,Female,Under 30
+0.1951,0,Female,30-39
+0.5224,1,Female,Under 30
+0.4644,0,Female,30-39
+0.0743,0,Female,Under 30
+0.056,0,Female,30-39
+0.7046,1,Male,50+
+0.0629,0,Female,30-39
+0.2484,0,Female,Under 30
+0.2408,0,Male,Under 30
+0.1065,0,Female,Under 30
+0.1398,0,Female,30-39
+0.1609,0,Male,30-39
+0.2182,0,Female,40-49
+0.1397,0,Female,30-39
+0.7938,1,Female,30-39
+0.0398,0,Female,30-39
+0.4724,0,Male,30-39
+0.1083,0,Female,50+
+0.1307,0,Female,30-39
+0.1332,0,Male,50+
+0.1167,0,Female,30-39
+0.339,0,Female,40-49
+0.0488,0,Female,30-39
+0.1568,0,Female,40-49
+0.5591,1,Female,30-39
+0.8017,1,Female,50+
+0.0176,0,Female,Under 30
+0.3771,0,Female,Under 30
+0.3815,0,Male,30-39
+0.0529,0,Female,40-49
+0.6255,0,Female,Under 30
+0.8836,1,Male,50+
+0.148,0,Male,Under 30
+0.059,0,Male,30-39
+0.216,1,Male,40-49
+0.1083,0,Female,Under 30
+0.5289,1,Male,Under 30
+0.1081,0,Female,30-39
+0.3415,0,Male,40-49
+0.6915,1,Male,40-49
+0.1482,0,Male,50+
+0.1876,1,Female,40-49
+0.1335,0,Female,40-49
+0.1206,1,Female,40-49
+0.0822,0,Female,30-39
+0.2536,0,Female,30-39
+0.0886,0,Female,Under 30
+0.2918,0,Female,30-39
+0.0755,0,Female,Under 30
+0.3842,0,Female,30-39
+0.1575,0,Male,Under 30
+0.5646,0,Female,Under 30
+0.7292,1,Female,Under 30
+0.0996,0,Male,Under 30
+0.3728,0,Female,40-49
+0.0734,0,Female,Under 30
+0.1584,0,Male,40-49
+0.7734,1,Male,40-49
+0.351,0,Male,30-39
+0.1862,1,Male,30-39
+0.4073,0,Male,40-49
+0.089,0,Female,30-39
+0.1084,0,Male,40-49
+0.1665,0,Male,40-49
+0.1129,0,Male,30-39
+0.7578,0,Male,30-39
+0.2555,0,Female,Under 30
+0.7482,1,Male,40-49
+0.0606,0,Female,30-39
+0.1901,0,Female,30-39
+0.0594,0,Female,Under 30
+0.0992,0,Female,Under 30
+0.0705,0,Female,30-39
+0.1904,0,Male,Under 30
+0.2543,0,Male,Under 30
+0.0221,0,Male,Under 30
+0.0921,0,Male,30-39
+0.0828,0,Female,30-39
+0.2234,0,Female,50+
+0.1337,0,Female,Under 30
+0.1542,1,Male,30-39
+0.2427,0,Female,Under 30
+0.0381,0,Female,30-39
+0.151,0,Male,50+
+0.039,0,Female,30-39
+0.255,0,Male,Under 30
+0.164,0,Male,40-49
+0.1466,0,Female,Under 30
+0.1094,0,Female,40-49
+0.1114,0,Female,30-39
+0.0893,0,Female,30-39
+0.1853,0,Female,50+
+0.2987,1,Female,40-49
+0.1844,0,Male,50+
+0.0672,0,Female,40-49
+0.0762,0,Female,40-49
+0.0932,0,Male,Under 30
+0.2238,0,Female,40-49
+0.1474,0,Female,Under 30
+0.6336,1,Female,40-49
+0.1256,0,Female,40-49
+0.0511,0,Female,30-39
+0.8628,1,Female,30-39
+0.1253,0,Male,30-39
+0.056,0,Male,50+
+0.4507,0,Male,Under 30
+0.6115,1,Female,40-49
+0.0799,0,Female,30-39
+0.069,0,Female,40-49
+0.7995,1,Male,30-39
+0.7809,1,Male,30-39
+0.2513,1,Female,30-39
+0.1217,0,Female,40-49
+0.1603,0,Male,30-39
+0.0799,0,Male,Under 30
+0.0899,1,Female,Under 30
+0.3054,1,Female,40-49
+0.2329,0,Female,Under 30
+0.0905,0,Female,30-39
+0.5388,0,Female,Under 30
+0.46,0,Male,Under 30
+0.1035,0,Female,30-39
+0.1925,0,Male,40-49
+0.3576,0,Female,40-49
+0.0772,0,Female,30-39
+0.2237,0,Female,30-39
+0.2597,0,Female,Under 30
+0.1231,0,Female,40-49
+0.7937,1,Female,30-39
+0.1329,0,Male,50+
+0.0764,1,Male,40-49
+0.0383,0,Male,50+
+0.1066,0,Female,30-39
+0.3103,1,Male,30-39
+0.0909,0,Female,30-39
+0.1427,1,Female,Under 30
+0.4242,0,Female,40-49
+0.0553,0,Female,40-49
+0.3421,0,Female,Under 30
+0.0289,0,Male,30-39
+0.4429,0,Female,40-49
+0.1836,0,Female,Under 30
+0.12,0,Female,30-39
+0.0649,0,Female,30-39
+0.1419,0,Female,Under 30
+0.0498,0,Female,Under 30
+0.1732,0,Female,Under 30
+0.7521,0,Female,30-39
+0.0402,0,Female,40-49
+0.0321,0,Female,Under 30
+0.318,0,Female,40-49
+0.3184,1,Female,Under 30
+0.1651,0,Female,Under 30
+0.3407,1,Female,40-49
+0.123,0,Male,30-39
+0.1349,0,Male,40-49
+0.0373,0,Female,Under 30
+0.051,0,Female,30-39
+0.5006,0,Male,Under 30
+0.1158,0,Female,Under 30
+0.0625,0,Male,Under 30
+0.1936,0,Male,40-49
+0.1264,0,Female,40-49
+0.1199,0,Female,Under 30
+0.2019,0,Male,50+
+0.0326,0,Male,30-39
+0.1947,0,Female,Under 30
+0.0441,0,Female,30-39
+0.1835,0,Female,30-39
+0.1337,0,Female,50+
+0.2081,0,Female,40-49
+0.2038,1,Female,40-49
+0.7018,1,Female,30-39
+0.4101,0,Male,30-39
+0.2581,0,Male,Under 30
+0.5883,0,Female,Under 30
+0.0608,0,Female,30-39
+0.3522,1,Female,30-39
+0.0375,0,Female,40-49
+0.7773,1,Female,50+
+0.0304,0,Male,30-39
+0.5434,0,Male,Under 30
+0.0481,0,Female,Under 30
+0.1022,0,Female,30-39
+0.1752,1,Female,40-49
+0.0585,0,Male,30-39
+0.0343,0,Male,40-49
+0.0982,0,Female,30-39
+0.2096,0,Male,Under 30
+0.3493,0,Female,40-49
+0.1644,0,Female,Under 30
+0.2981,0,Male,30-39
+0.0894,0,Female,Under 30
+0.215,0,Female,Under 30
+0.145,0,Male,40-49
+0.249,1,Male,30-39
+0.0359,0,Male,40-49
+0.0875,1,Female,30-39
+0.0893,0,Male,40-49
+0.0831,0,Male,40-49
+0.0513,0,Female,30-39
+0.1499,0,Female,Under 30
+0.0981,0,Female,30-39
+0.2061,0,Female,Under 30
+0.1341,0,Female,40-49
+0.0854,0,Male,Under 30
+0.113,1,Female,40-49
+0.0878,0,Male,Under 30
+0.0603,0,Male,30-39
+0.0873,0,Male,40-49
+0.2762,1,Female,40-49
+0.0389,0,Male,40-49
+0.1535,0,Female,30-39
+0.0752,0,Male,30-39
+0.0647,0,Male,40-49
+0.2824,1,Female,30-39
+0.4105,0,Male,Under 30
+0.0283,0,Male,30-39
+0.3442,0,Male,40-49
+0.1363,0,Female,30-39
+0.072,0,Female,30-39
+0.7452,1,Female,50+
+0.1072,0,Female,40-49
+0.1303,1,Male,50+
+0.1048,0,Female,40-49
+0.2649,1,Male,30-39
+0.39,1,Female,Under 30
+0.0566,0,Male,30-39
+0.1146,0,Male,40-49
+0.0807,0,Female,Under 30
+0.0842,0,Male,30-39
+0.0464,0,Male,40-49
+0.0826,0,Female,40-49
+0.0627,0,Male,30-39
+0.049,0,Male,30-39
+0.1334,1,Male,50+
+0.3577,0,Male,50+
+0.0257,0,Male,30-39
+0.0719,0,Female,Under 30
+0.1598,0,Female,50+
+0.2084,0,Female,Under 30
+0.3346,1,Male,30-39
+0.0926,0,Male,40-49
+0.318,0,Male,40-49
+0.2052,1,Male,40-49
+0.5094,0,Female,30-39
+0.1243,0,Female,Under 30
+0.1906,0,Female,30-39
+0.0488,0,Female,40-49
+0.1148,0,Male,30-39
+0.0867,0,Male,40-49
+0.5323,1,Female,Under 30
+0.027,0,Female,30-39
+0.0458,0,Female,Under 30
+0.3392,0,Female,40-49
+0.0855,0,Female,30-39
+0.6331,1,Female,Under 30
+0.0933,0,Female,40-49
+0.0636,0,Female,40-49
+0.7549,1,Female,50+
+0.7081,1,Female,Under 30
+0.5518,0,Female,40-49
+0.5212,0,Female,30-39
+0.0774,0,Female,Under 30
+0.172,0,Female,30-39
+0.1747,0,Female,30-39
+0.1948,0,Female,30-39
+0.3958,1,Female,50+
+0.1046,0,Female,30-39
+0.1256,0,Female,30-39
+0.0696,0,Female,40-49
+0.084,0,Female,Under 30
+0.7401,0,Male,50+
+0.3168,1,Male,Under 30
+0.1111,0,Male,Under 30
+0.0695,0,Male,30-39
+0.6387,0,Female,40-49
+0.2947,0,Male,50+
+0.0314,0,Male,40-49
+0.1283,0,Female,Under 30
+0.1302,0,Female,Under 30
+0.159,0,Female,Under 30
+0.6764,1,Male,30-39
+0.7439,1,Female,40-49
+0.0508,0,Male,30-39
+0.3093,0,Male,30-39
+0.1597,0,Female,30-39
+0.0677,0,Female,40-49
+0.6699,1,Female,30-39
+0.5458,1,Male,40-49
+0.1718,0,Male,30-39
+0.3353,0,Female,30-39
+0.1624,1,Female,40-49
+0.1587,1,Male,40-49
+0.174,1,Female,40-49
+0.1153,0,Female,30-39
+0.3499,1,Female,30-39
+0.228,1,Male,40-49
+0.2741,0,Male,50+
+0.5489,1,Male,40-49
+0.0434,0,Female,Under 30
+0.576,0,Male,30-39
+0.0971,0,Male,Under 30
+0.1937,0,Female,Under 30
+0.6984,0,Female,Under 30
+0.1678,0,Male,40-49
+0.0984,0,Male,Under 30
+0.4192,0,Male,Under 30
+0.2043,0,Female,50+
+0.2092,1,Male,30-39
+0.1337,0,Male,Under 30
+0.1109,0,Female,40-49
+0.0565,1,Female,30-39
+0.596,1,Male,Under 30
+0.1708,1,Male,40-49
+0.0699,0,Male,50+
+0.154,0,Female,50+
+0.1308,0,Male,50+
+0.2528,1,Female,30-39
+0.2842,1,Male,30-39
+0.1738,0,Female,40-49
+0.0393,0,Male,40-49
+0.23,1,Female,Under 30
+0.0474,0,Female,40-49
+0.0444,0,Female,Under 30
+0.0624,0,Female,Under 30
+0.2542,0,Male,30-39
+0.117,1,Male,40-49
+0.5657,1,Male,30-39
+0.0479,0,Male,40-49
+0.0539,0,Female,Under 30
+0.3183,0,Male,50+
+0.323,0,Male,40-49
+0.0456,0,Female,40-49
+0.1145,0,Male,Under 30
+0.1028,0,Male,30-39
+0.1014,0,Male,30-39
+0.7199,0,Male,40-49
+0.2663,0,Female,Under 30
+0.0588,0,Female,30-39
+0.3384,0,Male,50+
+0.3556,1,Female,Under 30
+0.0784,0,Female,30-39
+0.1019,0,Male,Under 30
+0.1174,0,Female,30-39
+0.1404,0,Female,30-39
+0.1441,0,Female,40-49
+0.2368,1,Female,Under 30
+0.72,1,Female,Under 30
+0.1044,0,Female,Under 30
+0.0348,0,Female,Under 30
+0.0704,0,Male,30-39
+0.2758,0,Female,50+
+0.4219,1,Female,Under 30
+0.1202,1,Female,40-49
+0.0638,0,Male,40-49
+0.0614,0,Female,40-49
+0.0692,0,Female,30-39
+0.1042,0,Male,Under 30
+0.0456,0,Female,Under 30
+0.6869,1,Female,40-49
+0.0511,0,Female,Under 30
+0.0616,0,Female,30-39
+0.0995,0,Female,40-49
+0.2131,1,Female,30-39
+0.0457,0,Female,30-39
+0.3713,0,Male,40-49
+0.1341,0,Female,30-39
+0.1721,0,Female,30-39
+0.3992,0,Female,40-49
+0.184,0,Male,30-39
+0.0888,0,Male,40-49
+0.8304,1,Male,Under 30
+0.1817,0,Male,40-49
+0.0971,0,Female,40-49
+0.8236,1,Female,40-49
+0.3259,1,Female,40-49
+0.1094,0,Female,40-49
+0.1496,0,Female,30-39
+0.3638,1,Male,30-39
+0.2546,1,Male,40-49
+0.0865,0,Female,30-39
+0.1233,0,Female,30-39
+0.5252,1,Female,30-39
+0.7821,1,Female,Under 30
+0.1444,1,Female,30-39
+0.0299,0,Female,Under 30
+0.1954,0,Female,Under 30
+0.0797,0,Female,30-39
+0.1757,1,Male,40-49
+0.6453,0,Female,40-49
+0.2537,0,Female,Under 30
+0.0936,0,Female,30-39
+0.0581,0,Female,Under 30
+0.1434,1,Male,30-39
+0.3826,1,Male,30-39
+0.1647,0,Female,40-49
+0.1901,0,Male,30-39
+0.064,0,Female,30-39
+0.0262,0,Male,30-39
+0.1121,0,Female,40-49
+0.1082,0,Female,30-39
+0.3589,0,Female,30-39
+0.0932,0,Male,40-49
+0.0544,0,Female,30-39
+0.1459,0,Male,30-39
+0.2352,0,Female,Under 30
+0.2859,0,Female,40-49
+0.0869,0,Female,30-39
+0.2846,0,Male,40-49
+0.25,0,Female,30-39
+0.2033,0,Male,30-39
+0.1074,0,Male,Under 30
+0.0834,0,Female,50+
+0.4082,0,Male,40-49
+0.1894,0,Male,Under 30
+0.0486,0,Female,40-49
+0.2826,0,Male,50+
+0.2155,0,Male,Under 30
+0.1648,1,Male,40-49
+0.4158,0,Female,30-39
+0.313,0,Female,30-39
+0.0559,0,Female,30-39
+0.5642,1,Female,30-39
+0.5151,0,Female,30-39
+0.0404,0,Female,Under 30
+0.0554,0,Male,30-39
+0.0252,0,Female,30-39
+0.0173,0,Female,Under 30
+0.1872,1,Male,Under 30
+0.8037,1,Male,Under 30
+0.2729,0,Male,40-49
+0.0356,0,Female,Under 30
+0.3099,0,Male,Under 30
+0.3554,0,Male,Under 30
+0.0943,0,Female,Under 30
+0.4865,1,Male,40-49
+0.174,1,Female,Under 30
+0.03,0,Female,Under 30
+0.0316,0,Male,30-39
+0.1184,1,Male,Under 30
+0.0773,0,Female,Under 30
+0.2025,0,Female,30-39
+0.0672,0,Male,40-49
+0.4495,0,Male,40-49
+0.1053,0,Male,40-49
+0.8234,1,Female,40-49
+0.2033,0,Female,30-39
+0.3671,1,Male,Under 30
+0.2784,0,Female,30-39
+0.3582,1,Male,Under 30
+0.0814,0,Female,Under 30
+0.3088,0,Male,50+
+0.7355,1,Female,Under 30
+0.0244,0,Male,30-39
+0.1908,0,Male,30-39
+0.4361,0,Male,30-39
+0.2201,1,Female,Under 30
+0.3682,0,Male,Under 30
+0.1252,1,Female,40-49
+0.118,0,Female,30-39
+0.0871,0,Female,30-39
+0.1104,0,Male,40-49
+0.0837,0,Female,30-39
+0.0941,0,Male,40-49
+0.1114,0,Female,Under 30
+0.3008,0,Female,40-49
+0.7878,1,Male,Under 30
+0.4158,1,Female,30-39
+0.6635,1,Female,Under 30
+0.0485,0,Female,30-39
+0.3428,1,Male,30-39
+0.2234,0,Female,30-39
+0.3205,1,Female,30-39
+0.6188,1,Female,30-39
+0.2048,0,Male,Under 30
+0.1768,0,Female,Under 30
+0.0679,0,Male,30-39
+0.0589,0,Female,30-39
+0.0868,0,Female,30-39
+0.1495,0,Female,40-49
+0.2679,0,Female,30-39
+0.2515,0,Female,40-49
+0.4645,0,Female,Under 30
+0.0831,0,Female,40-49
+0.216,1,Male,50+
+0.0761,0,Female,30-39
+0.1703,0,Female,40-49
+0.1476,0,Female,Under 30
+0.3313,1,Male,40-49
+0.0953,0,Male,30-39
+0.6978,1,Female,30-39
+0.0878,0,Male,30-39
+0.0324,0,Female,40-49
+0.3057,0,Female,Under 30
+0.3615,1,Female,40-49
+0.1785,0,Female,40-49
+0.0504,0,Male,30-39
+0.5075,0,Female,Under 30
+0.0677,0,Female,30-39
+0.2423,0,Female,Under 30
+0.1181,0,Female,30-39
+0.2179,0,Male,30-39
+0.0774,0,Male,Under 30
+0.0519,0,Female,50+
+0.0706,0,Male,30-39
+0.6961,1,Female,30-39
+0.6425,0,Female,Under 30
+0.1972,0,Male,30-39
+0.1064,0,Female,30-39
+0.0786,0,Female,Under 30
+0.1131,0,Female,50+
+0.3289,0,Female,30-39
+0.1926,1,Female,30-39
+0.8054,1,Female,Under 30
+0.2252,1,Male,Under 30
+0.1195,0,Male,50+
+0.1954,0,Male,30-39
+0.4677,1,Male,30-39
+0.1151,0,Female,40-49
+0.0626,0,Male,30-39
+0.2029,0,Female,Under 30
+0.0459,0,Female,40-49
+0.4139,0,Female,Under 30
+0.4905,0,Female,30-39
+0.1051,0,Female,Under 30
+0.1075,0,Male,50+
+0.7149,1,Female,30-39
+0.0805,0,Female,40-49
+0.1803,0,Male,30-39
+0.0463,0,Female,30-39
+0.2409,0,Female,30-39
+0.2224,0,Male,40-49
+0.1146,0,Female,30-39
+0.8276,1,Female,30-39
+0.085,0,Male,Under 30
+0.0626,0,Male,30-39
+0.0852,0,Male,Under 30
+0.3174,0,Male,30-39
+0.2521,1,Female,40-49
+0.1513,1,Male,30-39
+0.1552,0,Female,Under 30
+0.4091,1,Female,40-49
+0.1524,0,Female,Under 30
+0.1186,0,Female,50+
+0.0316,0,Female,40-49
+0.0464,0,Male,40-49
+0.1126,0,Female,Under 30
+0.1183,1,Male,40-49
+0.1175,0,Female,30-39
+0.1594,1,Male,30-39
+0.1104,0,Female,Under 30
+0.0912,0,Female,30-39
+0.2422,0,Female,40-49
+0.6526,0,Female,Under 30
+0.1428,0,Female,30-39
+0.4433,0,Female,Under 30
+0.4895,1,Female,Under 30
+0.2107,0,Female,Under 30
+0.0327,0,Male,30-39
+0.0957,1,Male,Under 30
+0.1553,0,Female,Under 30
+0.3861,0,Female,40-49
+0.1574,0,Female,Under 30
+0.2116,1,Male,30-39
+0.7201,0,Male,Under 30
+0.0288,0,Female,30-39
+0.0732,0,Female,30-39
+0.1753,0,Female,Under 30
+0.0583,0,Female,Under 30
+0.1546,0,Female,50+
+0.1539,1,Female,Under 30
+0.1084,0,Female,30-39
+0.1104,0,Female,Under 30
+0.1941,0,Female,Under 30
+0.1508,0,Female,30-39
+0.0875,1,Female,40-49
+0.3554,1,Female,30-39
+0.1482,0,Female,30-39
+0.3596,0,Male,Under 30
+0.2141,0,Male,Under 30
+0.1655,1,Female,Under 30
+0.3314,1,Male,30-39
+0.1164,0,Male,30-39
+0.1803,0,Male,Under 30
+0.3623,0,Male,30-39
+0.7692,1,Female,30-39
+0.1845,1,Male,Under 30
+0.2653,0,Male,Under 30
+0.7026,1,Male,Under 30
+0.1239,0,Female,40-49
+0.0979,0,Female,30-39
+0.1354,1,Female,Under 30
+0.1068,1,Male,40-49
+0.4445,1,Male,40-49
+0.6989,1,Male,40-49
+0.0419,0,Female,Under 30
+0.6654,1,Male,30-39
+0.1594,0,Male,30-39
+0.3232,0,Female,Under 30
+0.2044,0,Female,40-49
+0.1345,0,Female,40-49
+0.097,0,Female,30-39
+0.1098,0,Male,50+
+0.4126,0,Male,Under 30
+0.2153,0,Male,30-39
+0.5284,1,Female,Under 30
+0.179,1,Female,30-39
+0.1043,0,Male,40-49
+0.1718,0,Female,30-39
+0.0846,0,Female,40-49
+0.1668,0,Female,30-39
+0.3985,0,Male,40-49
+0.4511,1,Male,40-49
+0.2059,0,Male,50+
+0.0277,0,Female,40-49
+0.0797,0,Female,40-49
+0.3953,1,Male,Under 30
+0.0572,0,Male,40-49
+0.0813,0,Female,30-39
+0.0644,0,Female,40-49
+0.0933,0,Male,50+
+0.1409,0,Male,40-49
+0.18,1,Female,Under 30
+0.7774,0,Female,30-39
+0.0802,0,Male,Under 30
+0.1544,0,Female,Under 30
+0.7547,0,Female,30-39
+0.1463,1,Female,30-39
+0.8756,1,Female,50+
+0.1491,0,Female,50+
+0.0974,0,Male,30-39
+0.2573,0,Female,Under 30
+0.1233,0,Male,Under 30
+0.1563,0,Male,30-39
+0.4093,0,Male,50+
+0.1695,0,Male,30-39
+0.0526,0,Female,Under 30
+0.0964,0,Female,30-39
+0.1212,0,Male,Under 30
+0.2536,0,Female,Under 30
+0.3112,1,Female,50+
+0.1219,0,Female,50+
+0.2028,0,Female,40-49
+0.1897,0,Male,40-49
+0.0782,0,Male,40-49
+0.1717,0,Male,40-49
+0.0678,0,Female,30-39
+0.8068,1,Male,30-39
+0.2114,0,Female,30-39
+0.1225,0,Female,30-39
+0.0781,0,Female,Under 30
+0.2946,0,Male,40-49
+0.1137,0,Male,50+
+0.2439,1,Male,40-49
+0.0489,0,Male,40-49
+0.45,0,Female,30-39
+0.6763,1,Female,Under 30
+0.0245,0,Male,40-49
+0.1912,0,Male,40-49
+0.0596,0,Female,30-39
+0.2679,0,Male,30-39
+0.0573,0,Male,30-39
+0.3523,0,Female,Under 30
+0.278,0,Female,Under 30
+0.704,0,Male,40-49
+0.1104,0,Male,Under 30
+0.2304,0,Female,30-39
+0.365,0,Male,30-39
+0.2499,0,Male,30-39
+0.5392,1,Female,30-39
+0.1118,0,Female,Under 30
+0.3541,0,Male,30-39
+0.2872,0,Female,50+
+0.2192,0,Female,40-49
+0.0497,0,Female,30-39
+0.4478,0,Male,30-39
+0.0506,0,Female,Under 30
+0.1745,0,Male,Under 30
+0.1904,1,Female,30-39
+0.2656,0,Female,Under 30
+0.7884,1,Male,40-49
+0.0383,0,Female,40-49
+0.0301,0,Female,Under 30
+0.0336,0,Male,50+
+0.108,0,Male,40-49
+0.1731,0,Female,30-39
+0.0429,0,Female,30-39
+0.439,1,Female,30-39
+0.1852,1,Male,30-39
+0.1559,0,Female,40-49
+0.0585,0,Female,Under 30
+0.5614,1,Female,30-39
+0.1598,0,Female,40-49
+0.0762,0,Female,Under 30
+0.1194,0,Male,30-39
+0.0483,0,Male,40-49
+0.3144,1,Female,30-39
+0.6942,1,Male,Under 30
+0.0812,0,Female,Under 30
+0.1413,0,Female,40-49
+0.1346,0,Female,Under 30
+0.0653,0,Male,40-49
+0.0371,0,Male,Under 30
+0.7158,0,Female,50+
+0.0437,0,Male,40-49
+0.1478,0,Male,Under 30
+0.122,0,Female,30-39
+0.0801,0,Female,40-49
+0.0772,0,Female,40-49
+0.4912,0,Female,30-39
+0.149,1,Female,30-39
+0.0206,0,Female,30-39
+0.2848,0,Female,Under 30
+0.6367,1,Female,40-49
+0.2807,1,Male,Under 30
+0.0735,0,Male,30-39
+0.1326,0,Female,Under 30
+0.0974,0,Female,40-49
+0.1426,0,Male,40-49
+0.0905,0,Male,40-49
+0.203,0,Female,Under 30
+0.1207,0,Male,Under 30
+0.2977,1,Female,30-39
+0.1194,0,Male,50+
+0.2392,0,Male,Under 30
+0.3457,0,Male,Under 30
+0.0573,0,Male,30-39
+0.1793,1,Male,Under 30
+0.064,0,Male,30-39
+0.2519,0,Male,40-49
+0.2548,0,Male,40-49
+0.1229,0,Female,Under 30
+0.1905,0,Male,30-39
+0.0424,0,Female,30-39
+0.215,0,Male,Under 30
+0.2309,1,Male,30-39
+0.0661,0,Female,30-39
+0.1411,0,Female,30-39
+0.718,0,Male,Under 30
+0.0607,0,Female,40-49
+0.1771,0,Male,Under 30
+0.0963,0,Female,40-49
+0.0694,0,Male,30-39
+0.4077,0,Male,Under 30
+0.6743,0,Female,Under 30
+0.1212,0,Female,30-39
+0.0666,0,Male,30-39
+0.2294,0,Female,30-39
+0.0724,0,Female,30-39
+0.2301,0,Female,30-39
+0.1117,0,Female,50+
+0.0694,0,Male,50+
+0.189,0,Male,30-39
+0.1731,0,Female,30-39
+0.0475,0,Male,30-39
+0.137,1,Male,Under 30
+0.6627,0,Female,30-39
+0.3499,0,Female,50+
+0.7688,1,Female,Under 30
+0.2676,1,Female,Under 30
+0.1124,0,Male,30-39
+0.1112,1,Female,Under 30
+0.4307,0,Female,30-39
+0.0419,0,Female,30-39
+0.0361,0,Female,30-39
+0.1004,0,Male,Under 30
+0.1092,0,Male,Under 30
+0.097,0,Male,30-39
+0.1886,1,Male,Under 30
+0.8643,1,Male,30-39
+0.163,1,Female,30-39
+0.1146,1,Male,40-49
+0.2034,0,Female,Under 30
+0.0911,0,Female,40-49
+0.6806,1,Male,50+
+0.0969,0,Female,30-39
+0.125,0,Male,Under 30
+0.1253,0,Female,Under 30
+0.1039,0,Female,30-39
+0.728,1,Male,40-49
+0.2784,0,Male,30-39
+0.0823,0,Female,40-49
+0.584,0,Male,Under 30
+0.1144,0,Female,Under 30
+0.671,1,Male,50+
+0.1044,0,Female,40-49
+0.1159,0,Male,Under 30
+0.1935,0,Female,30-39
+0.0827,0,Female,Under 30
+0.1462,0,Female,Under 30
+0.1177,0,Male,Under 30
+0.1392,0,Female,40-49
+0.1719,0,Male,40-49
+0.1353,1,Female,30-39
+0.3654,1,Female,30-39
+0.0598,0,Female,40-49
+0.0855,0,Female,Under 30
+0.0982,0,Female,30-39
+0.2864,0,Male,30-39
+0.0601,0,Male,40-49
+0.1038,0,Female,30-39
+0.1326,0,Female,30-39
+0.1354,0,Male,30-39
+0.0646,1,Female,30-39
+0.6455,1,Male,30-39
+0.093,1,Female,40-49
+0.115,0,Male,40-49
+0.0561,0,Female,30-39
+0.2353,0,Male,Under 30
+0.0342,0,Female,Under 30
+0.1495,0,Female,40-49
+0.37,1,Female,Under 30
+0.888,1,Male,30-39
+0.0358,0,Female,30-39
+0.073,0,Female,50+
+0.3428,0,Female,30-39
+0.1104,0,Male,Under 30
+0.26,0,Female,30-39
+0.1435,0,Male,Under 30
+0.3111,0,Male,40-49
+0.045,0,Female,50+
+0.0375,0,Female,30-39
+0.1029,0,Female,Under 30
+0.2186,0,Female,30-39
+0.1581,0,Male,40-49
+0.1638,0,Female,Under 30
+0.1626,0,Male,Under 30
+0.1852,1,Female,30-39
+0.2508,0,Male,30-39
+0.7902,0,Male,Under 30
+0.7614,1,Female,40-49
+0.0493,0,Female,Under 30
+0.3905,0,Male,40-49
+0.3447,0,Male,40-49
+0.1387,0,Female,30-39
+0.0559,0,Female,50+
+0.0497,0,Female,Under 30
+0.1363,0,Male,Under 30
+0.4928,1,Male,50+
+0.0439,0,Male,30-39
+0.2166,0,Male,Under 30
+0.1348,0,Female,30-39
+0.2269,0,Female,30-39
+0.0359,0,Male,30-39
+0.063,0,Female,30-39
+0.0736,0,Male,30-39
+0.0824,0,Male,40-49
+0.0697,0,Female,Under 30
+0.0667,0,Female,Under 30
+0.0477,0,Female,30-39
+0.1226,0,Female,40-49
+0.1357,1,Male,Under 30
+0.7683,0,Male,Under 30
+0.1198,1,Female,50+
+0.0521,0,Female,30-39
+0.1133,0,Female,30-39
+0.2659,1,Female,50+
+0.1326,0,Female,30-39
+0.0633,0,Male,30-39
+0.8108,0,Male,30-39
+0.1654,0,Male,40-49
+0.347,0,Female,30-39
+0.245,0,Female,40-49
+0.2576,0,Female,30-39
+0.4158,1,Female,40-49
+0.0397,0,Female,30-39
+0.0461,0,Male,50+
+0.1354,0,Male,30-39
+0.1521,0,Male,40-49
+0.7894,1,Male,30-39
+0.0571,0,Male,40-49
+0.1856,0,Male,40-49
+0.2734,1,Female,30-39
+0.0722,0,Female,Under 30
+0.7646,1,Male,30-39
+0.4756,0,Male,40-49
+0.0393,0,Male,30-39
+0.1685,0,Male,30-39
+0.1925,0,Female,30-39
+0.1507,0,Male,Under 30
+0.2527,0,Female,Under 30
+0.7242,1,Male,Under 30
+0.038,0,Female,Under 30
+0.0463,0,Male,40-49
+0.6229,1,Female,Under 30
+0.1202,0,Female,Under 30
+0.121,1,Male,30-39
+0.1353,0,Female,Under 30
+0.1999,0,Male,Under 30
+0.1763,0,Female,Under 30
+0.1393,0,Female,30-39
+0.2436,0,Female,30-39
+0.0427,0,Female,50+
+0.4152,1,Female,40-49
+0.1117,0,Female,Under 30
+0.0957,0,Male,30-39
+0.1121,1,Male,30-39
+0.1303,0,Male,30-39
+0.5153,1,Female,30-39
+0.0222,0,Female,Under 30
+0.052,1,Male,50+
+0.0223,0,Male,40-49
+0.2453,1,Female,30-39
+0.6319,0,Male,30-39
+0.5119,0,Male,Under 30
+0.1826,0,Male,30-39
+0.1393,0,Female,30-39
+0.181,0,Male,50+
+0.1761,0,Male,50+
+0.314,0,Male,50+
+0.0326,0,Male,30-39
+0.1497,0,Female,50+
+0.0505,0,Female,30-39
+0.1451,0,Female,50+
+0.1508,0,Male,Under 30
+0.1786,0,Female,30-39
+0.2145,0,Female,30-39
+0.21,1,Female,40-49
+0.6746,1,Female,40-49
+0.2112,0,Female,30-39
+0.1087,0,Male,30-39
+0.2401,0,Male,30-39
+0.094,1,Female,Under 30
+0.1137,0,Male,40-49
+0.048,0,Female,40-49
+0.043,0,Female,40-49
+0.2101,0,Female,50+
+0.1561,0,Female,Under 30
+0.1171,0,Male,50+
+0.0676,0,Male,Under 30
+0.3054,0,Male,30-39
+0.1621,0,Female,40-49
+0.6052,1,Male,40-49
+0.0351,0,Female,30-39
+0.4738,1,Male,Under 30
+0.1908,1,Male,30-39
+0.1098,0,Male,Under 30
+0.1861,0,Female,30-39
+0.1618,0,Female,40-49
+0.0741,0,Female,30-39
+0.284,1,Male,Under 30
+0.1597,1,Female,30-39
+0.0375,0,Male,30-39
+0.0805,0,Male,50+
+0.0261,0,Female,Under 30
+0.1334,0,Male,Under 30
+0.1658,0,Male,30-39
+0.1967,0,Male,Under 30
+0.1548,0,Male,40-49
+0.075,0,Female,Under 30
+0.1349,0,Female,Under 30
+0.1958,1,Male,Under 30
+0.2525,0,Female,40-49
+0.4188,1,Female,30-39
+0.0686,0,Female,Under 30
+0.297,1,Female,Under 30
+0.0178,0,Female,40-49
+0.0428,0,Male,30-39
+0.0595,0,Female,50+
+0.1427,0,Female,Under 30
+0.0951,0,Male,Under 30
+0.0666,0,Male,30-39
+0.1451,0,Female,30-39
+0.0636,0,Female,Under 30
+0.0449,0,Male,Under 30
+0.0468,0,Male,Under 30
+0.1583,0,Female,30-39
+0.2784,0,Male,30-39
+0.1876,0,Male,30-39
+0.148,0,Male,40-49
+0.213,0,Female,40-49
+0.057,0,Female,30-39
+0.1194,0,Female,30-39
+0.0988,0,Female,Under 30
+0.2499,0,Female,Under 30
+0.2354,1,Female,Under 30
+0.7063,0,Female,40-49
+0.0945,0,Male,30-39
+0.0948,0,Male,30-39
+0.0717,0,Male,40-49
+0.5416,1,Male,40-49
+0.704,1,Male,30-39
+0.0485,0,Male,30-39
+0.2347,0,Female,Under 30
+0.6466,0,Female,Under 30
+0.1129,0,Female,50+
+0.0503,0,Male,50+
+0.0426,0,Female,Under 30
+0.1848,1,Male,Under 30
+0.0606,0,Female,30-39
+0.4865,1,Female,40-49
+0.1074,0,Male,Under 30
+0.1946,0,Female,Under 30
+0.1551,1,Male,Under 30
+0.1545,1,Female,30-39
+0.14,0,Female,40-49
+0.3022,0,Female,Under 30
+0.1312,0,Female,Under 30
+0.4592,1,Female,Under 30
+0.3647,1,Female,30-39
+0.1594,0,Female,40-49
+0.0505,0,Female,40-49
+0.0346,0,Female,30-39
+0.1601,0,Male,50+
+0.1962,0,Male,40-49
+0.1551,1,Female,40-49
+0.1385,0,Male,30-39
+0.1303,0,Female,50+
+0.0506,0,Female,30-39
+0.7242,0,Male,Under 30
+0.1183,1,Male,30-39
+0.0583,0,Male,40-49
+0.6719,0,Male,Under 30
+0.4081,1,Female,30-39
+0.3942,1,Male,30-39
+0.5251,0,Male,40-49
+0.0304,0,Female,40-49
+0.2498,0,Female,30-39
+0.2071,0,Female,30-39
+0.3538,0,Female,30-39
+0.0982,0,Female,40-49
+0.7163,0,Female,40-49
+0.3493,1,Female,30-39
+0.0325,0,Male,Under 30
+0.0231,0,Female,40-49
+0.055,0,Female,Under 30
+0.0348,0,Male,Under 30
+0.3422,0,Male,Under 30
+0.1746,0,Male,Under 30
+0.122,0,Female,40-49
+0.0595,0,Male,Under 30
+0.1469,0,Male,50+
+0.0687,0,Female,30-39
+0.0244,0,Female,30-39
+0.2013,0,Male,Under 30
+0.0667,0,Female,Under 30
+0.1915,0,Female,30-39
+0.1021,1,Male,30-39
+0.8094,0,Male,30-39
+0.7399,1,Male,40-49
+0.1073,0,Female,50+
+0.1467,0,Female,Under 30
+0.1163,0,Female,Under 30
+0.3164,1,Female,30-39
+0.0976,0,Male,Under 30
+0.2507,0,Female,30-39
+0.3819,0,Male,40-49
+0.0201,0,Male,Under 30
+0.5996,0,Female,30-39
+0.7602,1,Male,40-49
+0.4056,0,Male,50+
+0.2862,0,Male,30-39
+0.1849,1,Female,Under 30
+0.6946,1,Female,30-39
+0.241,0,Female,Under 30
+0.1772,0,Female,Under 30
+0.2071,0,Female,Under 30
+0.0644,0,Male,Under 30
+0.2377,1,Male,Under 30
+0.0723,0,Female,Under 30
+0.2846,0,Male,50+
+0.1005,0,Female,40-49
+0.0711,0,Female,30-39
+0.7444,1,Female,30-39
+0.2114,0,Female,40-49
+0.7859,1,Male,30-39
+0.1389,1,Female,30-39
+0.74,1,Female,40-49
+0.1572,0,Male,30-39
+0.7094,1,Female,30-39
+0.1588,1,Male,30-39
+0.1058,0,Female,30-39
+0.2414,0,Male,Under 30
+0.0922,0,Female,30-39
+0.0908,0,Female,50+
+0.0476,0,Female,Under 30
+0.1443,0,Female,40-49
+0.0977,0,Male,30-39
+0.1947,1,Female,Under 30
+0.717,0,Female,Under 30
+0.086,0,Female,Under 30
+0.3977,1,Male,30-39
+0.3579,1,Female,40-49
+0.2496,0,Male,40-49
+0.3739,0,Male,Under 30
+0.1256,0,Female,40-49
+0.3548,0,Female,Under 30
+0.3726,0,Male,40-49
+0.1309,1,Female,30-39
+0.1583,0,Female,Under 30
+0.1373,0,Female,Under 30
+0.1422,0,Male,Under 30
+0.3582,0,Female,30-39
+0.0974,0,Male,50+
+0.7859,1,Male,30-39
+0.1469,0,Male,30-39
+0.0559,0,Male,30-39
+0.1183,0,Male,30-39
+0.0517,0,Male,30-39
+0.1024,0,Female,Under 30
+0.0463,0,Female,30-39
+0.4138,1,Male,Under 30
+0.4758,0,Male,40-49
+0.1921,0,Male,40-49
+0.0682,0,Female,30-39
+0.6904,0,Female,Under 30
+0.1598,0,Female,40-49
+0.0486,0,Female,Under 30
+0.1013,0,Female,50+
+0.3278,1,Male,50+
+0.1159,1,Female,30-39
+0.2125,0,Male,40-49
+0.1715,1,Male,30-39
+0.7969,1,Male,50+
+0.0824,0,Male,30-39
+0.2858,0,Female,Under 30
+0.1664,0,Male,Under 30
+0.0907,0,Female,50+
+0.7813,1,Male,30-39
+0.139,0,Male,30-39
+0.1358,0,Female,30-39
+0.2311,0,Female,40-49
+0.1982,0,Female,30-39
+0.0831,0,Female,Under 30
+0.1752,0,Female,Under 30
+0.0676,0,Female,Under 30
+0.0566,0,Female,Under 30
+0.4735,1,Male,30-39
+0.1255,1,Male,Under 30
+0.0214,0,Female,40-49
+0.0867,0,Female,Under 30
+0.5699,0,Male,Under 30
+0.5123,0,Male,40-49
+0.0962,0,Female,30-39
+0.2927,1,Male,Under 30
+0.3499,0,Female,30-39
+0.0276,0,Female,30-39
+0.173,0,Male,50+
+0.1333,1,Male,30-39
+0.6243,0,Female,Under 30
+0.1173,0,Female,30-39
+0.1813,0,Female,30-39
+0.1075,0,Female,Under 30
+0.6372,1,Female,Under 30
+0.0745,1,Male,Under 30
+0.5519,0,Female,Under 30
+0.1484,0,Female,30-39
+0.6433,1,Male,30-39
+0.3769,0,Male,30-39
+0.8761,0,Female,Under 30
+0.3126,0,Female,Under 30
+0.1205,0,Female,Under 30
+0.2137,0,Female,40-49
+0.1451,0,Male,30-39
+0.0987,0,Male,Under 30
+0.1935,1,Male,50+
+0.6383,0,Female,40-49
+0.0478,0,Female,Under 30
+0.0501,0,Female,30-39
+0.1455,0,Female,40-49
+0.0343,0,Male,Under 30
+0.0658,0,Male,Under 30
+0.45,1,Female,40-49
+0.0389,0,Male,Under 30
+0.0864,0,Female,30-39
+0.1096,1,Male,30-39
+0.4378,0,Female,50+
+0.1078,0,Male,30-39
+0.7161,0,Male,Under 30
+0.1811,0,Female,30-39
+0.0967,0,Female,30-39
+0.1265,0,Male,Under 30
+0.0863,0,Male,40-49
+0.1424,0,Male,30-39
+0.0905,0,Female,30-39
+0.2426,0,Female,Under 30
+0.1352,0,Female,Under 30
+0.2248,0,Male,40-49
+0.2506,0,Male,Under 30
+0.1486,0,Male,Under 30
+0.1333,0,Female,30-39
+0.0859,0,Male,40-49
+0.0648,0,Female,Under 30
+0.4241,0,Male,30-39
+0.024,0,Male,40-49
+0.6901,1,Male,30-39
+0.1851,0,Male,50+
+0.1424,1,Female,50+
+0.0655,0,Female,50+
+0.2447,0,Female,30-39
+0.212,1,Male,30-39
+0.2124,0,Male,Under 30
+0.0426,0,Male,50+
+0.1833,0,Male,40-49
+0.1379,0,Male,40-49
+0.1407,1,Male,Under 30
+0.1533,0,Male,30-39
+0.0546,0,Female,30-39
+0.068,0,Female,40-49
+0.11,0,Female,30-39
+0.1535,0,Male,30-39
+0.7122,1,Male,30-39
+0.4466,1,Female,50+
+0.1278,0,Male,40-49
+0.1178,0,Female,30-39
+0.0576,0,Male,50+
+0.1034,0,Female,Under 30
+0.2843,0,Female,Under 30
+0.0732,0,Female,Under 30
+0.1761,1,Female,30-39
+0.5464,0,Male,40-49
+0.0811,0,Female,Under 30
+0.0484,0,Female,40-49
+0.1602,1,Female,50+
+0.0657,0,Female,Under 30
+0.2752,0,Female,40-49
+0.1625,0,Female,Under 30
+0.1493,0,Female,40-49
+0.0951,0,Female,Under 30
+0.2948,1,Female,30-39
+0.0641,0,Female,30-39
+0.0864,0,Female,Under 30
+0.1326,0,Female,Under 30
+0.0337,0,Male,30-39
+0.1445,0,Female,40-49
+0.0597,0,Male,30-39
+0.2659,0,Male,30-39
+0.3064,0,Female,30-39
+0.6742,1,Female,30-39
+0.1169,0,Female,Under 30
+0.6726,0,Male,50+
+0.2626,0,Male,Under 30
+0.1516,0,Female,Under 30
+0.7343,1,Female,50+
+0.1388,0,Male,40-49
+0.4599,1,Female,40-49
+0.3914,1,Female,40-49
+0.1269,0,Female,40-49
+0.4152,1,Male,40-49
+0.1091,1,Female,40-49
+0.4047,0,Male,30-39
+0.0151,0,Female,40-49
+0.1166,0,Female,30-39
+0.2291,0,Female,30-39
+0.0938,0,Male,Under 30
+0.2778,0,Female,30-39
+0.0326,0,Female,30-39
+0.1328,1,Male,30-39
+0.0532,0,Male,30-39
+0.1584,0,Female,Under 30
+0.1351,0,Female,30-39
+0.0919,0,Female,40-49
+0.2353,0,Female,Under 30
+0.1554,0,Female,Under 30
+0.0668,0,Female,30-39
+0.0667,0,Female,Under 30
+0.1441,0,Male,40-49
+0.2403,0,Male,30-39
+0.0579,0,Female,40-49
+0.343,0,Female,40-49
+0.0722,0,Male,40-49
+0.0845,1,Female,30-39
+0.1613,0,Female,Under 30
+0.1149,0,Female,30-39
+0.0528,0,Female,40-49
+0.6821,1,Female,40-49
+0.2119,0,Female,40-49
+0.2469,1,Female,40-49
+0.0797,0,Female,30-39
+0.1702,0,Female,30-39
+0.1001,0,Male,40-49
+0.6258,1,Female,30-39
+0.1093,0,Male,Under 30
+0.3597,0,Female,40-49
+0.3598,0,Male,Under 30
+0.0854,0,Male,Under 30
+0.0475,0,Male,30-39
+0.182,1,Male,40-49
+0.3674,0,Female,30-39
+0.7914,0,Female,50+
+0.0502,1,Male,40-49
+0.0615,0,Female,30-39
+0.1022,0,Male,30-39
+0.7102,1,Male,40-49
+0.2705,0,Female,50+
+0.0558,0,Female,40-49
+0.167,1,Male,30-39
+0.0856,0,Female,40-49
+0.1395,0,Female,30-39
+0.0546,0,Female,Under 30
+0.0419,0,Female,30-39
+0.285,0,Male,30-39
+0.0907,0,Female,30-39
+0.8559,1,Female,50+
+0.739,1,Female,30-39
+0.1188,0,Female,40-49
+0.093,0,Female,50+
+0.2621,0,Female,Under 30
+0.0297,0,Female,Under 30
+0.0803,0,Female,Under 30
+0.094,1,Female,50+
+0.0598,0,Female,40-49
+0.0916,1,Female,Under 30
+0.0501,0,Male,30-39
+0.3762,0,Female,40-49
+0.107,0,Male,Under 30
+0.2636,0,Female,Under 30
+0.0524,0,Male,50+
+0.0892,0,Female,40-49
+0.8424,1,Female,50+
+0.1441,0,Male,Under 30
+0.2201,0,Male,40-49
+0.1875,0,Female,Under 30
+0.05,0,Female,Under 30
+0.0501,0,Male,30-39
+0.1712,0,Male,Under 30
+0.3015,0,Male,50+
+0.1116,0,Female,30-39
+0.1034,1,Male,50+
+0.0749,0,Female,40-49
+0.1407,0,Male,30-39
+0.1895,0,Male,Under 30
+0.094,1,Male,40-49
+0.1168,0,Female,40-49
+0.6307,0,Female,Under 30
+0.3074,1,Male,40-49
+0.0957,0,Female,Under 30
+0.3912,1,Male,30-39
+0.0685,0,Male,Under 30
+0.0485,0,Female,40-49
+0.0607,0,Female,30-39
+0.7746,1,Female,Under 30
+0.2745,0,Male,40-49
+0.2466,0,Female,Under 30
+0.033,0,Male,40-49
+0.218,0,Female,30-39
+0.6029,1,Female,30-39
+0.7216,0,Female,Under 30
+0.1602,0,Female,Under 30
+0.1149,0,Female,Under 30
+0.2576,0,Female,40-49
+0.1459,0,Female,30-39
+0.7107,1,Male,30-39
+0.2926,0,Male,30-39
+0.0712,0,Male,30-39
+0.107,0,Male,Under 30
+0.2089,1,Female,Under 30
+0.1706,0,Female,Under 30
+0.1124,0,Female,40-49
+0.0685,0,Female,40-49
+0.0966,0,Female,40-49
+0.3589,0,Female,Under 30
+0.0318,0,Female,30-39
+0.6293,1,Female,50+
+0.098,1,Female,40-49
+0.4827,1,Female,30-39
+0.429,1,Male,40-49
+0.1286,0,Male,Under 30
+0.4374,1,Male,Under 30
+0.3218,1,Female,Under 30
+0.1516,0,Female,50+
+0.1873,0,Male,50+
+0.306,0,Male,40-49
+0.1991,0,Female,40-49
+0.0658,0,Female,40-49
+0.1677,0,Female,40-49
+0.2129,1,Female,40-49
+0.1926,0,Male,Under 30
+0.394,0,Female,Under 30
+0.2745,0,Female,30-39
+0.0614,0,Male,50+
+0.0501,0,Female,30-39
+0.0706,0,Female,30-39
+0.1098,0,Female,30-39
+0.0343,0,Female,40-49
+0.7621,1,Male,30-39
+0.0926,0,Female,Under 30
+0.0278,0,Female,Under 30
+0.4666,0,Female,40-49
+0.0733,0,Female,30-39
+0.0349,0,Male,50+
+0.1663,0,Male,40-49
+0.6699,1,Male,40-49
+0.096,0,Male,30-39
+0.7138,1,Male,40-49
+0.1366,1,Female,40-49
+0.0664,0,Female,Under 30
+0.0473,0,Male,30-39
+0.0955,0,Female,30-39
+0.0484,0,Female,50+
+0.1207,0,Female,30-39
+0.1042,0,Male,30-39
+0.1545,0,Female,30-39
+0.0597,0,Male,30-39
+0.0412,0,Female,Under 30
+0.4142,0,Female,50+
+0.2057,0,Female,Under 30
+0.0288,0,Male,30-39
+0.1009,0,Male,30-39
+0.2048,0,Male,Under 30
+0.1615,0,Female,30-39
+0.2302,1,Female,50+
+0.0979,0,Male,40-49
+0.1848,0,Male,50+
+0.2161,0,Male,30-39
+0.0609,0,Female,50+
+0.0568,0,Female,Under 30
+0.331,1,Male,30-39
+0.136,1,Male,50+
+0.0616,0,Male,40-49
+0.1838,0,Female,Under 30
+0.1161,0,Male,50+
+0.5014,1,Female,Under 30
+0.2936,0,Female,Under 30
+0.4472,0,Female,Under 30
+0.0653,0,Female,30-39
+0.0489,0,Female,40-49
+0.1559,0,Female,Under 30
+0.0949,0,Female,40-49
+0.0609,0,Male,30-39
+0.0783,0,Male,30-39
+0.2103,0,Male,30-39
+0.0873,0,Male,40-49
+0.0854,0,Female,30-39
+0.1342,0,Female,40-49
+0.055,0,Male,40-49
+0.0502,0,Female,50+
+0.0381,0,Female,30-39
+0.1018,0,Female,30-39
+0.2608,0,Female,Under 30
+0.0618,0,Female,Under 30
+0.1906,0,Female,40-49
+0.3053,0,Female,30-39
+0.0449,1,Female,Under 30
+0.2442,0,Female,Under 30
+0.7284,0,Female,30-39
+0.7112,1,Female,30-39
+0.2572,1,Female,30-39
+0.3481,0,Male,50+
+0.0507,0,Female,Under 30
+0.6699,1,Female,Under 30
+0.026,0,Male,40-49
+0.0489,0,Male,30-39
+0.7464,0,Female,Under 30
+0.2243,1,Female,30-39
+0.3002,0,Female,40-49
+0.4166,1,Male,50+
+0.2174,0,Male,30-39
+0.0812,0,Female,30-39
+0.1144,0,Female,Under 30
+0.1959,0,Female,50+
+0.4727,0,Male,30-39
+0.123,0,Female,Under 30
+0.2139,1,Female,Under 30
+0.0775,0,Male,40-49
+0.1186,0,Female,Under 30
+0.0464,0,Male,50+
+0.0774,1,Female,30-39
+0.0823,0,Female,30-39
+0.2149,0,Male,30-39
+0.2124,0,Female,30-39
+0.4634,1,Male,30-39
+0.5608,0,Female,50+
+0.1207,0,Male,40-49
+0.2785,0,Female,40-49
+0.0913,0,Female,30-39
+0.0877,0,Female,40-49
+0.1505,0,Female,Under 30
+0.3653,0,Female,Under 30
+0.0976,0,Female,40-49
+0.1257,0,Male,30-39
+0.1867,0,Female,30-39
+0.7859,1,Male,Under 30
+0.5669,1,Female,30-39
+0.5358,0,Female,Under 30
+0.0852,0,Female,30-39
+0.3769,1,Female,30-39
+0.1715,0,Male,40-49
+0.0911,0,Female,30-39
+0.145,0,Female,30-39
+0.7853,1,Female,40-49
+0.2072,0,Female,Under 30
+0.094,0,Male,40-49
+0.6472,1,Female,Under 30
+0.0788,0,Male,30-39
+0.1694,0,Female,Under 30
+0.0476,0,Male,30-39
+0.2949,0,Male,Under 30
+0.0336,0,Female,40-49
+0.0261,0,Female,Under 30
+0.065,0,Male,30-39
+0.0459,1,Male,30-39
+0.0627,1,Male,40-49
+0.0884,0,Female,50+
+0.1663,0,Male,Under 30
+0.3071,0,Male,Under 30
+0.6341,1,Female,Under 30
+0.1342,1,Female,50+
+0.2639,1,Female,30-39
+0.1251,1,Female,Under 30
+0.1334,0,Female,Under 30
+0.0557,0,Male,30-39
+0.2636,0,Female,Under 30
+0.1204,0,Female,Under 30
+0.1926,1,Male,30-39
+0.6256,0,Female,Under 30
+0.2633,0,Female,30-39
+0.0744,0,Male,30-39
+0.0718,0,Female,Under 30
+0.0443,0,Female,40-49
+0.2722,0,Male,40-49
+0.3772,0,Female,40-49
+0.6581,1,Female,30-39
+0.0284,0,Male,40-49
+0.0931,0,Male,30-39
+0.2334,0,Male,30-39
+0.1124,0,Female,30-39
+0.0397,0,Female,40-49
+0.7273,1,Male,30-39
+0.2043,1,Female,40-49
+0.313,0,Male,30-39
+0.205,1,Male,40-49
+0.0739,0,Male,Under 30
+0.3417,0,Female,40-49
+0.1653,1,Female,40-49
+0.129,0,Male,30-39
+0.0614,0,Female,30-39
+0.0782,0,Female,Under 30
+0.1762,0,Male,Under 30
+0.3579,0,Female,30-39
+0.1779,0,Female,Under 30
+0.0541,0,Female,Under 30
+0.2689,0,Female,30-39
+0.0604,0,Male,Under 30
+0.8018,1,Female,30-39
+0.0438,0,Female,30-39
+0.1031,0,Male,30-39
+0.1958,0,Male,40-49
+0.1797,0,Female,40-49
+0.0924,0,Male,30-39
+0.0844,0,Female,30-39
+0.0923,1,Female,Under 30
+0.1145,0,Female,Under 30
+0.0342,0,Female,30-39
+0.0488,0,Female,Under 30
+0.075,0,Male,30-39
+0.4412,0,Female,Under 30
+0.1475,0,Male,30-39
+0.2461,0,Male,40-49
+0.1592,0,Female,30-39
+0.1835,0,Female,30-39
+0.1457,0,Male,40-49
+0.1358,0,Female,Under 30
+0.189,1,Female,Under 30
+0.2126,0,Female,40-49
+0.1604,0,Female,Under 30
+0.2948,0,Male,Under 30
+0.1398,0,Female,30-39
+0.6703,1,Female,Under 30
+0.386,1,Female,Under 30
+0.0816,0,Female,30-39
+0.1645,1,Female,40-49
+0.1291,0,Female,30-39
+0.1568,1,Female,40-49
+0.2096,0,Female,30-39
+0.8327,1,Male,Under 30
+0.1579,0,Female,40-49
+0.326,1,Male,Under 30
+0.4294,1,Female,Under 30
+0.1024,0,Male,Under 30
+0.0889,0,Female,50+
+0.1353,0,Female,50+
+0.1515,0,Male,30-39
+0.1303,0,Female,30-39
+0.1367,0,Female,40-49
+0.0758,1,Female,50+
+0.0561,0,Male,30-39
+0.3777,0,Female,30-39
+0.1026,1,Female,Under 30
+0.128,0,Female,30-39
+0.0872,0,Female,30-39
+0.1202,0,Female,40-49
+0.8882,1,Male,30-39
+0.2053,0,Male,30-39
+0.1289,0,Female,40-49
+0.0565,0,Male,30-39
+0.4579,0,Female,50+
+0.1255,0,Female,Under 30
+0.108,0,Female,30-39
+0.0599,1,Female,30-39
+0.07,0,Male,Under 30
+0.2177,1,Male,30-39
+0.414,1,Female,Under 30
+0.1673,0,Female,50+
+0.0469,0,Female,40-49
+0.0775,0,Female,40-49
+0.1622,0,Female,Under 30
+0.4771,0,Female,40-49
+0.2009,0,Male,Under 30
+0.0821,0,Male,30-39
+0.0648,0,Male,30-39
+0.0989,0,Male,40-49
+0.1266,0,Female,40-49
+0.7398,0,Female,40-49
+0.77,1,Male,30-39
+0.3734,1,Male,30-39
+0.0412,0,Male,30-39
+0.8153,1,Male,30-39
+0.7604,1,Female,Under 30
+0.0524,0,Male,30-39
+0.1651,0,Male,30-39
+0.1546,0,Male,Under 30
+0.1209,0,Female,Under 30
+0.1699,0,Female,30-39
+0.3548,1,Male,Under 30
+0.2454,0,Female,Under 30
+0.0749,0,Male,Under 30
+0.0744,0,Male,Under 30
+0.1403,0,Male,30-39
+0.1524,0,Female,30-39
+0.4113,0,Female,Under 30
+0.1063,1,Female,50+
+0.3497,0,Female,Under 30
+0.8149,1,Male,30-39
+0.0548,0,Male,Under 30
+0.2439,0,Female,40-49
+0.0495,0,Female,40-49
+0.0477,0,Male,40-49
+0.0946,0,Female,30-39
+0.0894,0,Female,Under 30
+0.0986,0,Male,Under 30
+0.1243,0,Female,30-39
+0.134,0,Female,40-49
+0.1571,0,Male,40-49
+0.3904,1,Male,30-39
+0.0707,0,Female,40-49
+0.5317,0,Female,Under 30
+0.0537,0,Female,40-49
+0.1167,0,Female,40-49
+0.0382,0,Male,40-49
+0.1177,0,Female,50+
+0.6986,1,Female,Under 30
+0.0804,0,Female,30-39
+0.3187,0,Male,40-49
+0.1076,0,Female,30-39
+0.1256,0,Female,50+
+0.079,0,Male,40-49
+0.2067,0,Female,30-39
+0.095,0,Female,30-39
+0.129,0,Male,40-49
+0.7266,0,Male,30-39
+0.0897,0,Female,30-39
+0.034,0,Female,Under 30
+0.772,0,Female,40-49
+0.0978,0,Male,30-39
+0.0243,0,Female,30-39
+0.0589,0,Female,Under 30
+0.5431,0,Female,30-39
+0.2763,0,Female,40-49
+0.2668,0,Male,Under 30
+0.352,1,Female,30-39
+0.2407,1,Female,40-49
+0.1656,0,Female,40-49
+0.7074,0,Male,50+
+0.0515,0,Female,30-39
+0.0802,0,Male,30-39
+0.0412,0,Female,Under 30
+0.266,0,Female,30-39
+0.1868,0,Male,Under 30
+0.1494,0,Female,30-39
+0.3396,0,Male,30-39
+0.1765,0,Female,30-39
+0.1719,1,Male,40-49
+0.1616,0,Female,50+
+0.2455,0,Female,40-49
+0.218,0,Male,30-39
+0.1561,0,Female,30-39
+0.837,1,Female,40-49
+0.3324,0,Female,Under 30
+0.0682,0,Female,30-39
+0.142,0,Female,30-39
+0.2185,0,Male,40-49
+0.0642,0,Female,30-39
+0.1025,0,Male,Under 30
+0.0646,0,Female,30-39
+0.6394,1,Male,50+
+0.747,1,Male,Under 30
+0.1682,1,Female,30-39
+0.036,0,Male,40-49
+0.1713,0,Male,Under 30
+0.7331,1,Female,Under 30
+0.149,0,Female,30-39
+0.7009,0,Male,Under 30
+0.3336,1,Male,Under 30
+0.1275,0,Male,Under 30
+0.2214,0,Male,30-39
+0.0542,0,Female,Under 30
+0.1692,1,Female,50+
+0.3371,0,Male,Under 30
+0.2773,1,Male,30-39
+0.4215,0,Male,Under 30
+0.6231,1,Male,Under 30
+0.2592,0,Female,Under 30
+0.1925,0,Female,40-49
+0.0263,0,Female,Under 30
+0.1112,0,Male,30-39
+0.7157,1,Female,Under 30
+0.1378,0,Female,40-49
+0.0835,0,Female,30-39
+0.454,1,Male,50+
+0.5903,1,Female,40-49
+0.3057,0,Male,30-39
+0.698,1,Female,40-49
+0.5818,1,Female,30-39
+0.0581,0,Female,30-39
+0.0838,0,Female,30-39
+0.1267,0,Female,Under 30
+0.1174,0,Female,30-39
+0.1032,0,Female,30-39
+0.1363,0,Female,30-39
+0.3044,0,Female,30-39
+0.0922,1,Male,40-49
+0.1608,1,Female,Under 30
+0.212,0,Female,Under 30
+0.1302,0,Female,40-49
+0.0471,0,Female,30-39
+0.2367,1,Male,30-39
+0.1521,0,Male,40-49
+0.1945,0,Male,30-39
+0.7169,1,Male,Under 30
+0.0404,0,Female,40-49
+0.0882,0,Female,30-39
+0.1995,0,Male,Under 30
+0.3334,1,Female,30-39
+0.0999,0,Male,30-39
+0.0973,0,Female,30-39
+0.1028,0,Female,30-39
+0.0292,0,Male,Under 30
+0.3812,1,Female,Under 30
+0.3584,1,Female,Under 30
+0.5891,1,Female,Under 30
+0.0762,0,Female,40-49
+0.3602,1,Female,Under 30
+0.1206,0,Male,30-39
+0.6735,0,Male,30-39
+0.3558,1,Female,30-39
+0.1369,0,Female,Under 30
+0.0757,0,Male,30-39
+0.0516,0,Male,Under 30
+0.5701,1,Male,40-49
+0.0642,0,Male,30-39
+0.135,0,Male,Under 30
+0.1739,1,Female,30-39
+0.022,0,Male,30-39
+0.4343,0,Female,Under 30
+0.6718,1,Male,Under 30
+0.1188,1,Female,30-39
+0.2321,0,Female,40-49
+0.6116,1,Male,Under 30
+0.0927,1,Female,Under 30
+0.1472,0,Male,40-49
+0.0935,0,Female,30-39
+0.0845,0,Male,40-49
+0.1066,0,Male,50+
+0.1322,0,Female,Under 30
+0.0425,0,Female,30-39
+0.1293,0,Female,40-49
+0.0639,0,Female,Under 30
+0.1759,0,Female,30-39
+0.1349,0,Male,30-39
+0.0918,0,Female,Under 30
+0.0655,0,Male,30-39
+0.2686,0,Male,40-49
+0.0607,0,Male,Under 30
+0.1948,0,Male,40-49
+0.3582,0,Female,50+
+0.1776,0,Male,30-39
+0.1932,0,Female,40-49
+0.1652,0,Female,30-39
+0.2269,0,Female,Under 30
+0.7186,1,Male,30-39
+0.0401,0,Male,Under 30
+0.2134,0,Female,Under 30
+0.101,0,Female,40-49
+0.322,1,Female,30-39
+0.1702,0,Female,30-39
+0.0895,0,Male,40-49
+0.0464,0,Female,30-39
+0.0538,0,Female,30-39
+0.4042,0,Female,50+
+0.0837,0,Male,30-39
+0.0375,0,Female,40-49
+0.1784,0,Male,30-39
+0.0372,0,Male,30-39
+0.2332,0,Male,30-39
+0.314,0,Female,Under 30
+0.1461,1,Male,30-39
+0.115,0,Female,30-39
+0.2071,0,Female,50+
+0.0901,0,Male,Under 30
+0.068,0,Male,30-39
+0.788,1,Male,40-49
+0.1044,0,Male,40-49
+0.0364,0,Male,Under 30
+0.549,0,Female,30-39
+0.3964,0,Female,50+
+0.1603,0,Female,30-39
+0.6331,1,Female,40-49
+0.0372,0,Female,40-49
+0.0313,0,Female,Under 30
+0.0988,0,Female,40-49
+0.1818,0,Female,Under 30
+0.1639,0,Male,Under 30
+0.3868,1,Female,50+
+0.1267,0,Female,30-39
+0.1044,0,Female,Under 30
+0.0692,0,Female,30-39
+0.1214,1,Female,50+
+0.0494,1,Male,40-49
+0.2817,0,Female,30-39
+0.6572,0,Female,Under 30
+0.1681,0,Female,40-49
+0.0803,0,Female,30-39
+0.3378,0,Female,30-39
+0.0924,0,Female,40-49
+0.1494,1,Male,30-39
+0.1743,0,Female,30-39
+0.1565,0,Male,40-49
+0.1862,0,Male,Under 30
+0.0526,0,Female,30-39
+0.1107,0,Male,40-49
+0.305,1,Female,Under 30
+0.2645,0,Male,Under 30
+0.1859,0,Female,Under 30
+0.0588,0,Male,30-39
+0.3589,0,Male,Under 30
+0.0683,1,Male,30-39
+0.1899,0,Female,Under 30
+0.7454,0,Male,30-39
+0.7783,1,Female,Under 30
+0.1516,0,Female,40-49
+0.2182,0,Male,Under 30
+0.48,1,Male,40-49
+0.0534,0,Female,40-49
+0.1089,0,Female,30-39
+0.0727,0,Male,50+
+0.0547,0,Female,30-39
+0.1365,0,Female,40-49
+0.0635,0,Male,50+
+0.776,1,Female,Under 30
+0.1098,0,Male,30-39
+0.0603,0,Male,Under 30
+0.0817,0,Male,30-39
+0.1206,1,Female,40-49
+0.2133,0,Female,30-39
+0.0632,0,Female,30-39
+0.1378,0,Female,Under 30
+0.0635,0,Female,30-39
+0.1452,0,Male,30-39
+0.4527,0,Female,Under 30
+0.7587,0,Female,Under 30
+0.0211,0,Male,30-39
+0.043,0,Female,30-39
+0.3801,0,Female,Under 30
+0.1788,1,Male,Under 30
+0.0807,0,Female,Under 30
+0.0671,1,Male,40-49
+0.495,1,Female,Under 30
+0.0991,0,Male,Under 30
+0.0567,0,Female,30-39
+0.6516,1,Female,50+
+0.0695,0,Male,40-49
+0.784,0,Male,30-39
+0.193,0,Female,40-49
+0.268,0,Male,40-49
+0.062,0,Female,Under 30
+0.1943,0,Male,30-39
+0.0896,0,Female,30-39
+0.02,1,Female,30-39
+0.1529,0,Female,Under 30
+0.781,1,Female,Under 30
+0.1212,0,Male,Under 30
+0.0281,0,Female,30-39
+0.1283,1,Female,30-39
+0.1143,0,Male,30-39
+0.0377,0,Male,40-49
+0.054,1,Male,40-49
+0.4573,1,Male,Under 30
+0.3728,1,Female,50+
+0.1212,0,Male,30-39
+0.0786,0,Male,40-49
+0.0523,0,Female,30-39
+0.0764,0,Male,30-39
+0.1139,0,Female,40-49
+0.2379,0,Female,30-39
+0.1386,0,Female,Under 30
+0.5229,1,Male,30-39
+0.0991,0,Male,30-39
+0.1337,0,Male,50+
+0.16,0,Male,30-39
+0.5692,1,Male,50+
+0.6905,1,Female,40-49
+0.1304,0,Female,50+
+0.0979,0,Female,30-39
+0.1396,0,Male,Under 30
+0.1494,1,Male,30-39
+0.1066,0,Female,30-39
+0.0815,0,Male,30-39
+0.1373,0,Male,30-39
+0.1974,1,Female,Under 30
+0.0902,0,Female,30-39
+0.0294,0,Male,30-39
+0.0317,0,Male,Under 30
+0.2307,0,Female,40-49
+0.1755,0,Female,Under 30
+0.0961,0,Female,30-39
+0.4403,1,Male,50+
+0.8351,1,Female,Under 30
+0.1521,0,Male,30-39
+0.5262,1,Male,30-39
+0.0839,1,Female,40-49
+0.1065,1,Male,30-39
+0.1271,0,Female,30-39
+0.091,0,Female,30-39
+0.2938,0,Male,Under 30
+0.1199,1,Female,Under 30
+0.1315,0,Female,50+
+0.0794,0,Female,30-39
+0.073,0,Male,40-49
+0.0361,0,Male,30-39
+0.1081,0,Female,30-39
+0.0901,0,Female,Under 30
+0.1881,0,Female,Under 30
+0.1878,0,Male,50+
+0.631,1,Female,Under 30
+0.0551,0,Female,40-49
+0.1737,0,Female,Under 30
+0.1458,0,Female,30-39
+0.0835,0,Male,40-49
+0.3614,0,Female,Under 30
+0.5099,0,Female,Under 30
+0.6818,0,Female,Under 30
+0.2634,0,Male,30-39
+0.0908,0,Male,30-39
+0.0649,0,Female,40-49
+0.0333,0,Male,40-49
+0.1469,0,Male,Under 30
+0.0777,0,Female,30-39
+0.259,1,Male,Under 30
+0.1152,0,Female,30-39
+0.1616,0,Female,Under 30
+0.3176,0,Male,Under 30
+0.1412,0,Female,Under 30
+0.1368,0,Female,Under 30
+0.6815,1,Female,50+
+0.1758,0,Male,30-39
+0.0955,0,Female,Under 30
+0.2543,0,Male,30-39
+0.101,0,Male,30-39
+0.2,0,Female,Under 30
+0.0629,0,Male,Under 30
+0.6695,1,Female,40-49
+0.1548,0,Female,40-49
+0.6121,1,Female,Under 30
+0.0675,0,Male,40-49
+0.2304,0,Female,40-49
+0.0675,0,Female,Under 30
+0.0606,0,Female,50+
+0.0844,0,Female,30-39
+0.3815,1,Female,30-39
+0.023,0,Female,30-39
+0.8358,1,Female,30-39
+0.1546,1,Female,Under 30
+0.0348,0,Female,30-39
+0.1281,0,Female,Under 30
+0.5982,0,Female,Under 30
+0.0562,0,Female,30-39
+0.1053,0,Female,Under 30
+0.1314,0,Female,50+
+0.6844,0,Female,Under 30
+0.0832,0,Male,30-39
+0.6698,0,Male,30-39
+0.0684,0,Female,30-39
+0.1808,0,Male,30-39
+0.6959,1,Male,Under 30
+0.1576,0,Female,30-39
+0.2337,0,Male,Under 30
+0.049,1,Female,30-39
+0.2315,0,Male,Under 30
+0.238,0,Male,30-39
+0.1635,1,Male,Under 30
+0.0413,0,Male,40-49
+0.1745,0,Female,40-49
+0.14,0,Male,40-49
+0.2011,0,Female,Under 30
+0.1388,0,Female,Under 30
+0.1111,0,Male,40-49
+0.1763,0,Male,30-39
+0.1906,0,Male,50+
+0.0585,0,Female,Under 30
+0.1478,0,Female,Under 30
+0.0786,1,Male,30-39
+0.247,0,Male,Under 30
+0.1549,0,Female,40-49
+0.0647,0,Female,40-49
+0.4969,0,Male,30-39
+0.0939,0,Female,Under 30
+0.0648,0,Female,Under 30
+0.1342,0,Female,40-49
+0.2428,0,Male,30-39
+0.1398,0,Female,Under 30
+0.1439,0,Male,Under 30
+0.6279,0,Male,Under 30
+0.0998,0,Female,30-39
+0.1783,1,Male,30-39
+0.098,0,Female,30-39
+0.3017,0,Male,Under 30
+0.1423,0,Female,Under 30
+0.0747,1,Male,Under 30
+0.3259,1,Female,30-39
+0.7292,1,Male,30-39
+0.6607,0,Female,40-49
+0.1507,0,Female,50+
+0.0389,0,Female,30-39
+0.1534,0,Female,30-39
+0.0763,0,Female,30-39
+0.7654,1,Female,30-39
+0.197,0,Male,30-39
+0.0386,0,Male,40-49
+0.0722,0,Female,30-39
+0.3809,0,Male,50+
+0.1249,0,Female,50+
+0.3567,0,Male,Under 30
+0.1063,0,Male,40-49
+0.1297,1,Female,Under 30
+0.1507,0,Male,Under 30
+0.2366,0,Female,Under 30
+0.0773,1,Female,30-39
+0.0515,0,Male,40-49
+0.4254,0,Male,50+
+0.0415,0,Male,Under 30
+0.1097,0,Female,Under 30
+0.1222,1,Male,50+
+0.2345,0,Female,Under 30
+0.0863,0,Male,30-39
+0.0972,0,Male,Under 30
+0.3784,0,Male,Under 30
+0.0729,0,Male,30-39
+0.0612,0,Female,Under 30
+0.1663,0,Male,50+
+0.1755,0,Male,50+
+0.2182,0,Female,50+
+0.3141,0,Male,40-49
+0.1838,0,Female,30-39
+0.154,0,Female,Under 30
+0.8046,1,Female,Under 30
+0.1381,0,Male,40-49
+0.0324,0,Female,30-39
+0.0762,0,Female,30-39
+0.1537,0,Male,50+
+0.1936,0,Male,30-39
+0.2486,1,Female,Under 30
+0.1428,1,Male,30-39
+0.0817,0,Male,30-39
+0.0631,0,Female,Under 30
+0.1628,0,Female,30-39
+0.0517,0,Female,Under 30
+0.2918,0,Male,40-49
+0.2968,1,Female,40-49
+0.0609,0,Male,40-49
+0.2998,0,Male,40-49
+0.1875,0,Female,30-39
+0.3694,0,Female,30-39
+0.1352,0,Female,40-49
+0.0794,1,Female,Under 30
+0.0355,0,Female,40-49
+0.1715,1,Male,Under 30
+0.097,0,Female,30-39
+0.1193,1,Male,30-39
+0.12,1,Male,40-49
+0.0641,0,Female,Under 30
+0.6827,1,Male,Under 30
+0.0364,0,Female,Under 30
+0.1293,0,Female,40-49
+0.1895,0,Female,Under 30
+0.1605,0,Female,Under 30
+0.0928,0,Male,Under 30
+0.6334,1,Male,Under 30
+0.76,0,Male,30-39
+0.1546,0,Male,40-49
+0.1272,0,Female,40-49
+0.1592,0,Male,30-39
+0.042,0,Male,40-49
+0.0699,0,Female,30-39
+0.0994,0,Male,Under 30
+0.1007,0,Male,40-49
+0.0762,0,Male,50+
+0.0847,0,Female,30-39
+0.225,0,Female,30-39
+0.0625,0,Female,30-39
+0.0756,0,Female,40-49
+0.219,0,Male,Under 30
+0.7425,1,Male,Under 30
+0.0627,0,Female,30-39
+0.1464,0,Female,Under 30
+0.1676,1,Male,Under 30
+0.1588,0,Female,Under 30
+0.0456,0,Female,30-39
+0.0174,0,Male,40-49
+0.2671,0,Male,30-39
+0.2552,0,Male,Under 30
+0.0895,0,Female,Under 30
+0.272,0,Female,Under 30
+0.6281,1,Male,Under 30
+0.2381,0,Female,Under 30
+0.1369,0,Male,30-39
+0.0294,0,Female,Under 30
+0.6627,0,Male,Under 30
+0.0658,0,Male,30-39
+0.1545,0,Male,Under 30
+0.071,0,Male,30-39
