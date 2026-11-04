@@ -13,6 +13,13 @@
   const fmtInt = (v) => Math.round(v).toLocaleString("en-GB");
   $("#year").textContent = new Date().getFullYear();
 
+  /* ---------- A note for anyone who opens the developer console ---------- */
+  console.log("%cHold on.", "font: 700 28px system-ui, sans-serif; color: #c98512;");
+  console.log("%cThis site and its analyses are © Dev Mistri. Please don't copy the design, code or write-ups into your own portfolio or application.",
+    "font: 15px system-ui, sans-serif; line-height: 1.5;");
+  console.log("%cIf you're here because you're hiring: hello! The notebooks are linked from each project, and I'd be glad to talk you through them: devmistri.co.uk/#contact",
+    "font: 15px system-ui, sans-serif; line-height: 1.5; color: #2547d0;");
+
   if (hasGsap) gsap.registerPlugin(ScrollTrigger);
 
   /* ---------- Smooth scrolling ---------- */
