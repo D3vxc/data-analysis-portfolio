@@ -1,6 +1,6 @@
-# Dev Mistri · Data Analysis Portfolio
+# Dev Mistri: Data Science Portfolio
 
-Data analyst with an MSc in Data and Artificial Intelligence (UWTSD Birmingham) and two years of backend development spent cleaning, validating and querying production data. Based in Birmingham, UK.
+Graduate data scientist with an MSc in Data and Artificial Intelligence (UWTSD Birmingham) and two years of backend development spent cleaning, validating and querying production data. I build models in Python and SQL and test them for accuracy, calibration, explainability and fairness. Based in Birmingham, UK.
 
 **🌐 Website:** [devmistri.co.uk](https://devmistri.co.uk/) · **📄 Resume:** [online resume](https://devmistri.co.uk/resume.html) · [LinkedIn](https://www.linkedin.com/in/dev-mistri-) · [GitHub](https://github.com/D3vxc)
 
@@ -8,16 +8,18 @@ Data analyst with an MSc in Data and Artificial Intelligence (UWTSD Birmingham) 
 
 ## Contents
 
-- [Six analyses at a glance](#six-analyses-at-a-glance)
+- [Projects at a glance](#projects-at-a-glance)
+- [Flagship: credit default risk](#flagship-credit-card-default-risk)
 - [The analyses, with charts](#the-analyses-with-charts)
 - [The website](#the-website)
 - [Repository layout](#repository-layout)
 - [Run it yourself](#run-it-yourself)
 
-## Six analyses at a glance
+## Projects at a glance
 
 | # | Business problem | Data | Skills | Headline result |
 |---|---|---|---|---|
+| ★ | [Who will miss next month's credit card payment?](07-credit-default-risk) | UCI credit card default · 30,000 customers | XGBoost, SHAP, calibration, fairness testing | Calling the riskiest 20% reaches **51%** of defaults (ROC AUC 0.781 vs 0.746 baseline) |
 | 01 | [Who is about to cancel, and who to call first](04-telecom-customer-churn) | IBM Telco churn · 7,043 customers | Python, logistic regression, segmentation | The riskiest 20% of customers by model score contain **49.9%** of actual churners |
 | 02 | [Did moving the paywall gate hurt retention?](05-mobile-game-ab-test) | Cookie Cats A/B test · 90,189 players | A/B testing, z-test, bootstrap, SRM check | 7-day retention fell **0.82 points** (p = 0.002): don't ship |
 | 03 | [What late deliveries cost in customer reviews](06-ecommerce-late-deliveries) | Olist marketplace · 99,441 orders | SQL joins, CTEs, window functions | Late orders are 6.8% of deliveries but **36.7%** of one-star reviews |
@@ -25,7 +27,26 @@ Data analyst with an MSc in Data and Artificial Intelligence (UWTSD Birmingham) 
 | 05 | [What a 99.9% accurate model is hiding](03-network-traffic-eda) | NSL-KDD · 148,517 connections | EDA, scikit-learn, evaluation design | Accuracy drops from **99.88%** to **76.5%** once attacks are new |
 | 06 | [UK house prices since 1953](02-uk-house-prices) | Nationwide HPI · 290 quarters | Time series, data validation | The early-1990s crash took **8.5 years** to recover |
 
-Every analysis starts from a question a manager would ask, uses real public data, checks data quality before drawing conclusions, and ends with a recommendation and its limitations.
+Every project starts from a question a manager would ask, uses real public data, checks data quality before drawing conclusions, and ends with a recommendation and its limitations.
+
+## Flagship: credit card default risk
+
+> A card issuer wants to contact customers before they miss a payment, but can only call one in five. Which customers, why, and is the model fair?
+
+- XGBoost reaches test ROC AUC **0.781** (5-fold CV 0.785 ± 0.005) against **0.746** for logistic regression. Calling the riskiest 20% reaches **51%** of next month's defaults; **56.5%** of those called default, 2.6× the average.
+- Calibrated to within 3 points in every score band, so scores can be used as probabilities.
+- SHAP reason codes for every flagged customer; repayment history carries 42% of the attribution.
+- Sex, age and marital status were left out of the model, and outcomes were still tested by group: men and women are caught at the same rate (51%), but the flag-rate ratio across age bands is **0.80**, right on the four-fifths screening line.
+
+| Cumulative gains | Outcomes by group |
+|---|---|
+| ![Gains](07-credit-default-risk/images/gains_curve.png) | ![Fairness](07-credit-default-risk/images/fairness_by_group.png) |
+
+| SHAP importance | Reason codes for one customer |
+|---|---|
+| ![SHAP](07-credit-default-risk/images/shap_importance.png) | ![Reasons](07-credit-default-risk/images/reason_codes.png) |
+
+→ [Notebook](07-credit-default-risk/analysis.ipynb) · [Write-up and limitations](07-credit-default-risk)
 
 ## The analyses, with charts
 
@@ -120,31 +141,39 @@ Every analysis starts from a question a manager would ask, uses real public data
 
 ## The website
 
-The portfolio site lives in [`docs/`](docs) and is served by GitHub Pages. It's plain HTML, CSS and JavaScript with no build step.
+The site lives in [`docs/`](docs) and is served by GitHub Pages at [devmistri.co.uk](https://devmistri.co.uk/). It is plain HTML, CSS and JavaScript with no build step, using [GSAP ScrollTrigger](https://gsap.com/docs/v3/Plugins/ScrollTrigger/) for scroll-driven animation, [Lenis](https://github.com/darkroomengineering/lenis) for smooth scrolling and [D3](https://d3js.org/) for charts. Library files are vendored in `docs/assets/vendor`.
 
-**Six case studies, filterable by skill.** Each card leads to a full write-up with interactive charts (hover any bar or line for the numbers).
+**A scroll-driven model walkthrough.** The 6,000 test customers are drawn as dots. As you scroll they are ranked by the model, the riskiest 20% are boxed, and then they split by age band to show who gets flagged.
 
-![Case study index](screenshots/website-work.png)
+| Ranked, top 20% marked | Split by age band |
+|---|---|
+| ![Ranked](screenshots/website-credit-ranked.png) | ![Fairness](screenshots/website-credit-fairness.png) |
 
-![Churn case study](screenshots/website-churn.png)
+**The evidence underneath:** gains curve (drawn as you scroll), model comparison, calibration, SHAP and a reason-code card.
 
-**A contact form written as an SQL query.** Visitors fill in the blanks of an `INSERT INTO inbox` statement and press *Run query*. A Google Apps Script saves each message to a Google Sheet and emails me straight away ([setup guide](contact-backend/SETUP.md)).
+![Evidence](screenshots/website-credit-evidence.png)
+
+**Six more analyses**, each with a small chart drawn from the notebook's results.
+
+![Other work](screenshots/website-work.png)
+
+**A contact form written as an SQL query.** A Google Apps Script saves each message to a Google Sheet and emails me ([setup guide](contact-backend/SETUP.md)).
 
 ![Contact form](screenshots/website-contact.png)
 
-**An online resume** with a back button, tap-to-call phone, email and profile links, and a *Save as PDF* button that prints a two-page A4 resume.
+**An online resume** with tap-to-call, email links and a *Save as PDF* button that prints a two-page A4 resume.
 
 ![Resume page](screenshots/resume-page.png)
 
-**Works on phones and in dark mode.**
+**Phones and dark mode**, and with reduced motion turned on, every animation is replaced by its final state.
 
 ![Mobile, dark mode](screenshots/website-mobile-dark.png)
 
 ## Repository layout
 
 ```
-01-…06-*/              one folder per analysis: analysis.ipynb, README.md, images/, results/summary.json
-docs/                  the website (index.html, resume.html, assets/, data/site-data.js)
+01-…07-*/              one folder per project: analysis.ipynb, README.md, images/, results/summary.json
+docs/                  the website (index.html, resume.html, assets/, assets/vendor/, data/)
 contact-backend/       Google Apps Script for the contact form, plus SETUP.md
 scripts/               build_site_data.py copies each analysis's results into the website
 screenshots/           the images used in this README
@@ -163,4 +192,4 @@ After re-running a notebook, refresh the website's numbers with `python scripts/
 
 ## Data sources
 
-IBM Telco Customer Churn sample · Cookie Cats A/B test (Tactile Entertainment, via DataCamp) · Olist Brazilian e-commerce public dataset (CC BY-NC-SA 4.0) · UCI Online Retail (Chen, Sain & Guo, 2012) · NSL-KDD (Canadian Institute for Cybersecurity) · Nationwide House Price Index (via datasets/house-prices-uk, ODC-PDDL).
+Default of Credit Card Clients (Yeh & Lien, 2009; UCI, CC BY 4.0) · IBM Telco Customer Churn sample · Cookie Cats A/B test (Tactile Entertainment, via DataCamp) · Olist Brazilian e-commerce public dataset (CC BY-NC-SA 4.0) · UCI Online Retail (Chen, Sain & Guo, 2012) · NSL-KDD (Canadian Institute for Cybersecurity) · Nationwide House Price Index (via datasets/house-prices-uk, ODC-PDDL).

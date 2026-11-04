@@ -4,23 +4,20 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Dev Mistri · Resume</title>
-<meta name="description" content="Resume of Dev Mistri, data analyst in Birmingham, UK.">
-<meta name="theme-color" content="#0b1c1c">
+<meta name="description" content="Resume of Dev Mistri, graduate data scientist in Birmingham, UK.">
+<meta name="theme-color" content="#f2f4f3">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@100..125,500..800&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 <link rel="stylesheet" href="assets/css/resume.css">
 </head>
 <body class="resume-page">
 
-<header class="topbar">
-  <div class="wrap">
-    <a class="back" href="index.html" id="back-link">← Back<span class="long">&nbsp;to portfolio</span></a>
-    <nav class="topnav" aria-label="Resume actions">
+<header class="top">
+  <div class="wrap top-inner">
+    <a class="back" href="index.html" id="back-link">← Back<span class="long"> to portfolio</span></a>
+    <nav aria-label="Resume actions">
       <button class="btn-plain" type="button" id="print-btn">Save as PDF</button>
-      <a href="index.html#contact" class="cta">Email me</a>
+      <a href="index.html#contact">Contact</a>
     </nav>
   </div>
 </header>
@@ -30,7 +27,7 @@
     <header class="cv-head">
       <div>
         <h1>Dev Mistri</h1>
-        <p class="cv-role">Data Analyst · Birmingham, UK</p>
+        <p class="cv-role">Graduate data scientist, Birmingham, UK</p>
       </div>
       <ul class="cv-contact">
         <li><span class="label">Phone</span><a href="tel:+447887180583">07887 180583</a></li>
@@ -43,17 +40,18 @@
 
     <section class="cv-section">
       <h2>Profile</h2>
-      <p>Data analyst with an MSc in Data and Artificial Intelligence from the University of Wales Trinity Saint David, Birmingham, and two years of professional software development spent cleaning, validating and querying production data. Skilled in Python, SQL, Power BI and Tableau, with six published analyses of real business problems: customer churn, A/B testing, delivery performance, customer segmentation, model evaluation and time series. Clear communicator who turns analysis into recommendations for non-technical colleagues.</p>
+      <p>Graduate data scientist with an MSc in Data and Artificial Intelligence from the University of Wales Trinity Saint David and two years of professional software development spent cleaning, validating and querying production data. I build models in Python and SQL and test them for accuracy, calibration, explainability and fairness: my flagship project is an explainable, fairness-checked credit default model built with XGBoost and SHAP. Clear communicator who turns analysis into recommendations for non-technical colleagues.</p>
     </section>
 
     <section class="cv-section">
       <h2>Skills</h2>
       <dl class="cv-skills">
-        <dt>Analysis</dt><dd>Python (pandas, NumPy, SciPy), SQL (joins, CTEs, window functions), statistics, hypothesis testing, A/B testing, exploratory data analysis</dd>
-        <dt>Visualisation</dt><dd>Power BI, Tableau, matplotlib, interactive web charts</dd>
-        <dt>Machine learning</dt><dd>scikit-learn, logistic regression, random forests, model evaluation, anomaly detection</dd>
-        <dt>Data and engineering</dt><dd>Data cleaning and validation, MongoDB, Node.js, Express.js, REST APIs, Git and GitHub, Postman</dd>
-        <dt>Professional</dt><dd>Report writing, stakeholder communication, confidential record-keeping, remote and independent working</dd>
+        <dt>Machine learning</dt><dd>scikit-learn, XGBoost, logistic regression, random forests, cross-validation, model evaluation and calibration</dd>
+        <dt>Responsible AI</dt><dd>SHAP explainability and reason codes, fairness testing by group, documenting limitations</dd>
+        <dt>Statistics</dt><dd>Hypothesis testing, A/B testing, bootstrap, statistical modelling, time series</dd>
+        <dt>Data</dt><dd>Python (pandas, NumPy, SciPy), SQL (joins, CTEs, window functions), data cleaning and validation</dd>
+        <dt>Engineering</dt><dd>Git and GitHub, REST APIs, Node.js, Express.js, MongoDB, Jupyter, Postman</dd>
+        <dt>Visualisation</dt><dd>matplotlib, D3, Power BI, Tableau</dd>
       </dl>
     </section>
 
@@ -90,9 +88,10 @@
     </section>
 
     <section class="cv-section">
-      <h2>Selected analyses</h2>
+      <h2>Selected projects</h2>
       <p class="cv-note">Full write-ups, charts and code: <a href="https://devmistri.co.uk/" target="_blank" rel="noopener">devmistri.co.uk</a></p>
       <ul class="cv-projects">
+        <li><a href="index.html#credit">Credit card default risk</a><span>XGBoost on 30,000 customers (ROC AUC 0.781 vs 0.746 baseline); calibrated, explained with SHAP reason codes and tested for fairness by sex and age.</span></li>
         <li><a href="index.html#churn">Telecom customer churn</a><span>Logistic regression ranks 7,043 customers by risk; the riskiest 20% contains 49.9% of those who left.</span></li>
         <li><a href="index.html#abtest">Mobile game A/B test</a><span>Showed a later paywall gate cut 7-day retention by 0.82 points (p = 0.002) and flagged a sample ratio mismatch.</span></li>
         <li><a href="index.html#deliveries">E-commerce late deliveries</a><span>SQL across 99,441 orders: late orders are 6.8% of deliveries but 36.7% of one-star reviews.</span></li>
