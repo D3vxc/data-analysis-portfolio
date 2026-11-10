@@ -14,6 +14,8 @@ Dev Mistri's data science portfolio: seven analyses of real public data plus a s
   - `assets/vendor/`: vendored gsap 3.12.5, lenis 1.1.13, d3 7.9.0 and fonts (see its README)
   - `data/site-data.js` and `data/credit-test.js` are generated; do not edit by hand
 - `scripts/build_site_data.py`: rebuilds `docs/data/*.js` from every `results/summary.json` (and the credit test scores). Run it after re-running any notebook.
+- `scripts/check_repo.py`: repo checks (executed notebooks, valid summary.json, no em dashes, no broken local links, CNAME). Run before pushing.
+- `.github/workflows/checks.yml`: CI on every PR and push to `main`; runs `check_repo.py` and fails if `docs/data` is out of date with the summaries.
 - `screenshots/`: images used in the README.
 
 ## Conventions
@@ -28,4 +30,4 @@ Dev Mistri's data science portfolio: seven analyses of real public data plus a s
 
 - `docs/assets/js/config.js`: `CONTACT_ENDPOINT` is empty until the Apps Script web app is deployed (see `contact-backend/SETUP.md`), so the contact form does not send yet.
 - The site and resume show a student email address that may expire after graduation; a custom-domain address (e.g. forwarding via ImprovMX) was being considered but is not set up.
-- Gaps against graduate data science and AI roles: Google Cloud, LLM/RAG with evaluation, MLOps/CI-CD.
+- Gaps against graduate data science and AI roles: Google Cloud, LLM/RAG with evaluation, MLOps (CI for the repo exists; model serving, tests and monitoring do not).

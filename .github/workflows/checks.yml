@@ -1,0 +1,27 @@
+name: checks
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  site:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Repository checks
+        run: python scripts/check_repo.py
+      - name: Generated site data matches results/summary.json
+        run: |
+          python scripts/build_site_data.py
+          git diff --exit-code docs/data || {
+            echo "::error::docs/data is out of date. Run python scripts/build_site_data.py and commit the result."
+            exit 1
+          }
