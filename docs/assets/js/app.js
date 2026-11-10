@@ -48,17 +48,17 @@
   /* A short, stepped camera shake for impact moments. */
   function hit(el, k = 1) {
     if (!motion || !el) return;
-    gsap.fromTo(el, { x: 0, y: 0 }, { keyframes: [{ x: -8 * k, y: 4 * k }, { x: 7 * k, y: -5 * k }, { x: -4 * k, y: 3 * k }, { x: 3 * k, y: -1 * k }, { x: 0, y: 0 }], duration: 0.3, ease: "steps(5)", overwrite: true });
+    gsap.fromTo(el, { x: 0, y: 0 }, { keyframes: { x: [0, -5 * k, 4 * k, -2 * k, 0], y: [0, 3 * k, -2 * k, 1 * k, 0], ease: "sine.inOut" }, duration: 0.5, ease: "none", overwrite: true });
   }
 
   /* ---------- Kinetic banners: fit every line to the full width ---------- */
   function fitLine(line, W, cap) {
     line.style.fontSize = cap + "px"; line.style.fontStretch = "100%";
-    let w = line.getBoundingClientRect().width; if (!w) return;
+    let w = line.offsetWidth; if (!w) return; // offsetWidth ignores the transform the line may be carrying
     let wd = Math.max(50, Math.min(150, (100 * W) / w));
-    line.style.fontStretch = wd + "%"; w = line.getBoundingClientRect().width;
+    line.style.fontStretch = wd + "%"; w = line.offsetWidth;
     wd = Math.max(50, Math.min(150, (wd * W) / w));
-    line.style.fontStretch = wd + "%"; w = line.getBoundingClientRect().width;
+    line.style.fontStretch = wd + "%"; w = line.offsetWidth;
     line.style.fontSize = Math.max(cap * 0.45, Math.min(cap * 1.4, (cap * W) / w)) + "px";
     line.dataset.wd = wd.toFixed(1);
   }
@@ -72,18 +72,21 @@
     const ct = $(".cut-title");
     if (ct) { const W = innerW(ct); if (W > 0) { const cap = Math.min(window.innerHeight * 0.3, W * 0.36); $$("span", ct).forEach((l) => fitLine(l, W, cap)); } }
   }
+  /* The line is squeezed sideways and released. A transform only, so the browser never re-lays out text while you scroll. */
   function setStretch(line, p) {
-    const wd = +line.dataset.wd || 100, from = Math.max(50, wd * 0.5);
-    line.style.fontStretch = (from + (wd - from) * p).toFixed(1) + "%";
-    line.style.setProperty("--reg", (1 - p).toFixed(3));
+    line.style.transform = `scaleX(${(0.5 + 0.5 * p).toFixed(4)})`;
   }
 
   /* ---------- The dots: 6,000 real test customers ---------- */
   const credit = S.credit || {};
   const Dots = (function () {
-    const canvas = $("#dots"), title = $("#hero-title"), frame = $("#dots-frame"), readout = $("#dots-readout"), visual = $(".story-visual");
+    let canvas = $("#dots");
+    const title = $("#hero-title"), frame = $("#dots-frame"), readout = $("#dots-readout"), visual = $(".story-visual");
     if (!T || !canvas || !title || !frame || !window.d3) return null;
-    const ctx = canvas.getContext("2d");
+    // The dots are drawn by the graphics card (WebGL) where possible, so 6,000 moving dots cost almost nothing per frame. A 2D canvas is the fallback.
+    let gl = null, ctx = null;
+    try { gl = canvas.getContext("webgl", { alpha: true, premultipliedAlpha: true, antialias: false, depth: false, stencil: false }); } catch (_) {}
+    if (!gl) ctx = canvas.getContext("2d");
     const n = T.score.length, COLS = 100, TAU = Math.PI * 2;
     const idx = d3.range(n);
     const ranked = idx.slice().sort((a, b) => T.score[b] - T.score[a]);
@@ -109,6 +112,10 @@
     for (let i = 0; i < n; i++) bucket[(ys[i] ? 2 : 0) + (flagged[i] ? 1 : 0)].push(i);
 
     const st = { intro: 1, fly: 0, t: 0, boil: 0, mx: -9999, my: -9999, tx: -9999, ty: -9999 };
+    let dpr = 1, nameDirty = true, frameDirty = true;
+    // The box around the riskiest 20% and the age-band labels are ordinary elements inside the chart frame.
+    const box = document.createElement("b"); box.className = "dots-box"; frame.appendChild(box);
+    const bands = groups.map((g) => { const el = document.createElement("span"); el.className = "dots-band"; el.textContent = `${g.label}: ${pct(g.flagRate)} flagged`; frame.appendChild(el); return el; });
     let VW = 0, VH = 0, nameD = 4, nameW = 0, nameReady = false, cell = 0, rowsTotal = 0, bandTops = [], offAB = 0, dirty = true, orange = "#ff5a1f", lastSay = "";
 
     /* Headline: two lines, each scaled to the full width; the width keywords are chosen so the block has the right height. */
@@ -154,7 +161,7 @@
       const m = pts.length / 2; if (!m) return;
       const order = d3.shuffler(d3.randomLcg(3))(d3.range(m));
       for (let i = 0; i < n; i++) { const j = order[i % m]; namePos[2 * i] = pts[2 * j]; namePos[2 * i + 1] = pts[2 * j + 1]; }
-      nameD = lo * 0.8;
+      nameD = lo * 0.8; nameDirty = true;
       root.style.setProperty("--name-h", H + "px");
       root.classList.add("dots-on");
       nameReady = true;
@@ -175,14 +182,19 @@
         row += bandRows[gi];
       });
       root.style.setProperty("--frame-h", (rowsTotal * cell).toFixed(1) + "px");
+      frameDirty = true;
+      const rows = Math.ceil(k / COLS), pad = 4;
+      box.style.cssText = `left:${-pad}px;top:${(offAB * cell - pad).toFixed(1)}px;width:${(W + pad * 2 - cell * 0.26).toFixed(1)}px;height:${(rows * cell + pad * 2 - cell * 0.26).toFixed(1)}px;opacity:${box.style.opacity || 0}`;
+      bands.forEach((el, gi) => { el.style.top = (bandTops[gi] * cell - 6).toFixed(1) + "px"; });
+      frame.classList.toggle("is-small", W < 480);
     }
 
     function size() {
-      const dpr = Math.min(window.devicePixelRatio || 1, 2);
       VW = window.innerWidth; VH = window.innerHeight;
+      dpr = Math.min(window.devicePixelRatio || 1, VW < 900 ? 1.5 : 2); // phones: fewer pixels to fill, and the dots' soft edges hide the difference
       canvas.style.width = VW + "px"; canvas.style.height = VH + "px";
       canvas.width = Math.round(VW * dpr); canvas.height = Math.round(VH * dpr);
-      ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+      if (gl) gl.viewport(0, 0, canvas.width, canvas.height); else ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
       orange = css("--orange") || orange;
     }
     function layout(force) {
@@ -192,8 +204,93 @@
       dirty = true;
     }
 
-    /* One pass draws every dot, lerping from the headline to its place in the chart. */
-    function pass(hr, fr, fly, intro, t) {
+    /* WebGL: each dot's whole journey (headline, shuffled grid, ranked grid, age bands) is worked out in the vertex shader. */
+    const GLR = gl ? (function () {
+      const order = bucket[0].concat(bucket[1], bucket[2], bucket[3]); // paid first, defaulters drawn on top
+      const VS = `precision highp float;
+        attribute vec2 aName, aScat, aJit, aA, aB, aD, aMisc;
+        uniform vec2 uView, uHero, uFrame, uMouse;
+        uniform float uDpr, uCell, uOff, uFly, uIntro, uAb, uHi, uCd, uNameD, uGs, uAmp, uRepel;
+        uniform vec3 uOrange;
+        varying vec4 vCol; varying float vSq, vHalf, vQ;
+        float sm(float v) { v = clamp(v, 0.0, 1.0); return v * v * (3.0 - 2.0 * v); }
+        void main() {
+          float delay = aMisc.x; float isDef = step(1.5, aMisc.y); float isFlag = mod(aMisc.y, 2.0);
+          vec2 p = uHero + aName + aJit * uAmp;
+          if (uIntro < 1.0) { float q = clamp(uIntro * 1.7 - delay * 0.7, 0.0, 1.0); q = 1.0 - pow(1.0 - q, 3.0); p = mix(aScat * uView, p, q); }
+          if (uRepel > 0.5) { vec2 d = p - uMouse; float L = length(d); if (L < 120.0 && L > 0.1) { float f = 1.0 - L / 120.0; p += d / L * f * f * 38.0; } }
+          float size = uNameD; vSq = 0.0;
+          if (uFly > 0.0) {
+            float pr = uFly >= 1.0 ? 1.0 : sm((uFly - delay * 0.5) / 0.5);
+            vec2 g = mix(aA, aB, uAb); g.y += uOff; g = mix(g, aD, uCd);
+            p = mix(p, uFrame + g * uCell + uGs * 0.5, pr);
+            size = mix(uNameD, uGs, pr); vSq = step(0.6, pr);
+          }
+          if (size < 2.6) vSq = 1.0;
+          float aGrid = (isDef > 0.5 ? 1.0 : 0.5) * (isFlag > 0.5 ? 1.0 : 1.0 - 0.7 * uHi);
+          float alpha = 1.0 + (aGrid - 1.0) * clamp(uFly * 1.4, 0.0, 1.0);
+          vCol = vec4((isDef > 0.5 ? uOrange : vec3(0.0)) * alpha, alpha);
+          gl_Position = vec4(p.x / uView.x * 2.0 - 1.0, 1.0 - p.y / uView.y * 2.0, 0.0, 1.0);
+          float px = max(1.0, size * uDpr); vHalf = px * 0.5; vQ = px + 2.0; // one spare pixel all round for a soft edge
+          gl_PointSize = vQ;
+        }`;
+      const FS = `precision mediump float;
+        varying vec4 vCol; varying float vSq, vHalf, vQ;
+        void main() {
+          vec2 d = abs(gl_PointCoord - 0.5) * vQ; // distance from the dot's centre, in device pixels
+          float a = vSq < 0.5 ? clamp(vHalf - length(d) + 0.5, 0.0, 1.0) : clamp(vHalf - d.x + 0.5, 0.0, 1.0) * clamp(vHalf - d.y + 0.5, 0.0, 1.0);
+          if (a <= 0.0) discard;
+          gl_FragColor = vCol * a;
+        }`;
+      const loc = {}, tmp = new Float32Array(n * 2);
+      let bName, bD;
+      const shader = (type, src) => { const sh = gl.createShader(type); gl.shaderSource(sh, src); gl.compileShader(sh); if (!gl.getShaderParameter(sh, gl.COMPILE_STATUS)) throw new Error(gl.getShaderInfoLog(sh)); return sh; };
+      function init() {
+        const prog = gl.createProgram();
+        gl.attachShader(prog, shader(gl.VERTEX_SHADER, VS)); gl.attachShader(prog, shader(gl.FRAGMENT_SHADER, FS)); gl.linkProgram(prog);
+        if (!gl.getProgramParameter(prog, gl.LINK_STATUS)) throw new Error(gl.getProgramInfoLog(prog));
+        gl.useProgram(prog);
+        ["uView", "uHero", "uFrame", "uMouse", "uDpr", "uCell", "uOff", "uFly", "uIntro", "uAb", "uHi", "uCd", "uNameD", "uGs", "uAmp", "uRepel", "uOrange"].forEach((u) => (loc[u] = gl.getUniformLocation(prog, u)));
+        const at = (name, stride, off) => { const l = gl.getAttribLocation(prog, name); if (l < 0) return; gl.enableVertexAttribArray(l); gl.vertexAttribPointer(l, 2, gl.FLOAT, false, stride, off); };
+        // Per-dot data that never changes: scatter, jitter, shuffled slot, ranked slot, (delay, group)
+        const S = new Float32Array(n * 10);
+        order.forEach((i, v) => { const o = v * 10, a = slotA[i], b = slotB[i];
+          S[o] = scat[2 * i]; S[o + 1] = scat[2 * i + 1]; S[o + 2] = jit[2 * i]; S[o + 3] = jit[2 * i + 1];
+          S[o + 4] = a % COLS; S[o + 5] = (a / COLS) | 0; S[o + 6] = b % COLS; S[o + 7] = (b / COLS) | 0;
+          S[o + 8] = delay[i]; S[o + 9] = (ys[i] ? 2 : 0) + (flagged[i] ? 1 : 0); });
+        gl.bindBuffer(gl.ARRAY_BUFFER, gl.createBuffer()); gl.bufferData(gl.ARRAY_BUFFER, S, gl.STATIC_DRAW);
+        at("aScat", 40, 0); at("aJit", 40, 8); at("aA", 40, 16); at("aB", 40, 24); at("aMisc", 40, 32);
+        bName = gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER, bName); gl.bufferData(gl.ARRAY_BUFFER, n * 8, gl.DYNAMIC_DRAW); at("aName", 0, 0);
+        bD = gl.createBuffer(); gl.bindBuffer(gl.ARRAY_BUFFER, bD); gl.bufferData(gl.ARRAY_BUFFER, n * 8, gl.DYNAMIC_DRAW); at("aD", 0, 0);
+        gl.disable(gl.DEPTH_TEST); gl.enable(gl.BLEND); gl.blendFunc(gl.ONE, gl.ONE_MINUS_SRC_ALPHA); gl.clearColor(0, 0, 0, 0);
+        gl.viewport(0, 0, canvas.width, canvas.height);
+        nameDirty = frameDirty = true;
+      }
+      const upload = (buf, src) => { order.forEach((i, v) => { tmp[2 * v] = src[2 * i]; tmp[2 * v + 1] = src[2 * i + 1]; }); gl.bindBuffer(gl.ARRAY_BUFFER, buf); gl.bufferSubData(gl.ARRAY_BUFFER, 0, tmp); };
+      function pass(hr, fr, fly, intro, t) {
+        if (nameDirty) { upload(bName, namePos); nameDirty = false; }
+        if (frameDirty) { upload(bD, posD); frameDirty = false; }
+        const c = d3.color(orange) || { r: 255, g: 90, b: 31 };
+        gl.uniform2f(loc.uView, VW, VH); gl.uniform2f(loc.uHero, hr.left, hr.top); gl.uniform2f(loc.uFrame, fr.left, fr.top);
+        gl.uniform2f(loc.uMouse, st.mx, st.my); gl.uniform1f(loc.uRepel, fly <= 0 && intro >= 1 && st.mx > -999 ? 1 : 0);
+        gl.uniform1f(loc.uDpr, dpr); gl.uniform1f(loc.uCell, cell); gl.uniform1f(loc.uOff, offAB); gl.uniform1f(loc.uFly, fly); gl.uniform1f(loc.uIntro, intro);
+        gl.uniform1f(loc.uAb, smooth(seg(t, 0.3, 0.8))); gl.uniform1f(loc.uHi, smooth(seg(t, 1.2, 1.6))); gl.uniform1f(loc.uCd, smooth(seg(t, 2.15, 2.65)));
+        gl.uniform1f(loc.uNameD, nameD); gl.uniform1f(loc.uGs, Math.max(1.6, cell * 0.74)); gl.uniform1f(loc.uAmp, Math.min(1.1, nameD * 0.16));
+        gl.uniform3f(loc.uOrange, c.r / 255, c.g / 255, c.b / 255);
+        gl.drawArrays(gl.POINTS, 0, n);
+      }
+      try { init(); } catch (e) { console.warn("WebGL dots unavailable, falling back to a 2D canvas.", e); return null; }
+      canvas.addEventListener("webglcontextlost", (e) => e.preventDefault());
+      canvas.addEventListener("webglcontextrestored", () => { try { init(); lastSig = ""; dirty = true; } catch (_) {} });
+      return { pass };
+    })() : null;
+    if (gl && !GLR) { // the context was created but could not be used: swap in a fresh canvas for 2D drawing
+      const fresh = canvas.cloneNode(false); canvas.replaceWith(fresh); canvas = fresh; gl = null; ctx = canvas.getContext("2d");
+    }
+    const clear = () => { if (gl) gl.clear(gl.COLOR_BUFFER_BIT); else ctx.clearRect(0, 0, VW, VH); };
+
+    /* 2D fallback: one pass draws every dot, lerping from the headline to its place in the chart. */
+    function pass2d(hr, fr, fly, intro, t) {
       const ab = smooth(seg(t, 0.3, 0.8)), hi = smooth(seg(t, 1.2, 1.6)), cd = smooth(seg(t, 2.15, 2.65));
       const gs = Math.max(1.6, cell * 0.74), kb = st.boil, amp = Math.min(1.1, nameD * 0.16);
       const repel = fly <= 0 && intro >= 1 && st.mx > -999, R = 120, R2 = R * R;
@@ -227,20 +324,13 @@
       }
       ctx.globalAlpha = 1;
     }
-    function overlays(fr, t) {
+    const pass = GLR ? GLR.pass : pass2d;
+    let lastBox = -1, lastBand = -1;
+    function overlays(t) {
       const hi = smooth(seg(t, 1.2, 1.6)), cd = smooth(seg(t, 2.15, 2.65));
-      const boxA = hi * (1 - cd);
-      if (boxA > 0.01) { // box around the riskiest 20%
-        const rows = Math.ceil(k / COLS), pad = 4;
-        ctx.globalAlpha = boxA; ctx.strokeStyle = "#000"; ctx.lineWidth = 2.5;
-        ctx.strokeRect(fr.left - pad, fr.top + offAB * cell - pad, fr.width + pad * 2 - cell * 0.26, rows * cell + pad * 2 - cell * 0.26);
-      }
-      if (cd > 0.01) { // age band labels
-        ctx.globalAlpha = cd; ctx.fillStyle = "#000";
-        ctx.font = `700 ${fr.width < 480 ? 11.5 : 13}px Anybody, system-ui, sans-serif`; ctx.textBaseline = "bottom";
-        groups.forEach((g, gi) => ctx.fillText(`${g.label}: ${pct(g.flagRate)} flagged`, fr.left, fr.top + bandTops[gi] * cell - 6));
-      }
-      ctx.globalAlpha = 1;
+      const a = +(hi * (1 - cd)).toFixed(2), c = +cd.toFixed(2);
+      if (a !== lastBox) { lastBox = a; box.style.opacity = a; }
+      if (c !== lastBand) { lastBand = c; bands.forEach((el) => { el.style.opacity = c; }); }
     }
     function say() {
       if (!readout) return;
@@ -248,21 +338,31 @@
       const text = motion && st.fly < 1 ? "Printing the test set" : t < 0.55 ? `${fmtInt(defaults)} of ${fmtInt(n)} defaulted` : t < 1.4 ? "Highest score at the top" : t < 2.3 ? `Top 20% holds ${pct(stats.capture, 0)} of defaults` : `Flag-rate ratio by age: ${stats.ageRatio.toFixed(2)}`;
       if (text !== lastSay) { readout.textContent = text; lastSay = text; }
     }
+    let shownNow = true, lastSig = "";
+    const show = (on) => { if (on !== shownNow) { shownNow = on; canvas.style.visibility = on ? "visible" : "hidden"; if (!on) { clear(); lastSig = ""; } } };
+    const r1 = (v) => Math.round(v * 2) / 2;
     function draw() {
-      ctx.clearRect(0, 0, VW, VH);
-      if (!nameReady || !cell) return;
+      if (!nameReady || !cell) return show(false);
       const hr = title.getBoundingClientRect(), fr = frame.getBoundingClientRect();
       const heroOn = hr.bottom > -80 && hr.top < VH + 80, frameOn = fr.bottom > -80 && fr.top < VH + 80;
+      const fly = motion ? st.fly : 0;
+      // Nothing of the dots is on screen: hide the canvas so the rest of the page scrolls without it.
+      if (motion ? (fly <= 0 && !heroOn) || (fly >= 1 && !frameOn) : !heroOn && !frameOn) return show(false);
+      // Skip the frame if it would look exactly like the last one (for example while a step's text scrolls past the pinned chart).
+      const sig = motion
+        ? (fly >= 1 ? `f|${r1(fr.left)}|${r1(fr.top)}|${st.t.toFixed(3)}` : `h|${r1(hr.left)}|${r1(hr.top)}|${fly > 0 ? r1(fr.left) + "|" + r1(fr.top) : ""}|${fly.toFixed(4)}|${st.intro.toFixed(3)}|${st.t.toFixed(3)}|${st.mx > -999 ? r1(st.mx) + "|" + r1(st.my) : ""}`)
+        : `s|${r1(hr.top)}|${r1(fr.top)}|${r1(fr.left)}`;
+      if (sig === lastSig) return;
+      lastSig = sig; show(true);
+      clear();
       if (!motion) { // static: the headline and the ranked chart are two separate prints
         if (heroOn) pass(hr, fr, 0, 1, 0);
-        if (frameOn) { pass(hr, fr, 1, 1, 2); overlays(fr, 2); }
+        if (frameOn) pass(hr, fr, 1, 1, 2);
+        overlays(2);
         return;
       }
-      const fly = st.fly;
-      if (fly <= 0 && !heroOn) return;
-      if (fly >= 1 && !frameOn) return;
       pass(hr, fr, fly, st.intro, st.t);
-      if (fly >= 1) overlays(fr, st.t);
+      overlays(fly >= 1 ? st.t : 0);
     }
     function tick() {
       if (st.tx > -999) {
@@ -279,7 +379,6 @@
     if (hasGsap) gsap.ticker.add(tick); else (function loop() { tick(); requestAnimationFrame(loop); })();
 
     if (motion) {
-      setInterval(() => { if (document.hidden || st.fly >= 1) return; if (title.getBoundingClientRect().bottom > 0) { st.boil++; dirty = true; } }, 150);
       if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
         window.addEventListener("pointermove", (e) => { st.tx = e.clientX; st.ty = e.clientY; }, { passive: true });
         document.addEventListener("pointerleave", () => { st.tx = st.mx = -9999; dirty = true; });
@@ -287,7 +386,7 @@
       const stickyTop = () => (parseFloat(getComputedStyle(visual).top) || 0) + (parseFloat(getComputedStyle(visual).paddingTop) || 0);
       ScrollTrigger.create({ trigger: frame, start: "top bottom", end: () => "top " + Math.round(stickyTop()) + "px", scrub: true, invalidateOnRefresh: true,
         onUpdate: (s) => { st.fly = s.progress; dirty = true; say(); } });
-      ScrollTrigger.create({ trigger: ".steps", start: () => (window.innerWidth <= 900 ? "top top" : "top 55%"), end: () => (window.innerWidth <= 900 ? "bottom bottom" : "bottom 75%"), scrub: 0.4, invalidateOnRefresh: true,
+      ScrollTrigger.create({ trigger: ".steps", start: () => (window.innerWidth <= 900 ? "top top" : "top 55%"), end: () => (window.innerWidth <= 900 ? "bottom bottom" : "bottom 75%"), scrub: 0.7, invalidateOnRefresh: true,
         // Timed so each arrangement is settled while its step's text is on screen (steps are centred on wide screens, bottom-aligned on narrow ones).
         onUpdate: (s) => { st.t = window.innerWidth <= 900 ? 2.493 * s.progress + 0.225 : Math.max(0, 3.285 * s.progress - 0.412); dirty = true; say(); } });
       $$(".step").forEach((step) => ScrollTrigger.create({ trigger: step, start: "top 60%", end: "bottom 40%", toggleClass: { targets: step, className: "is-active" } }));
@@ -316,7 +415,6 @@
   }
 
   /* ---------- Chart helpers (D3) ---------- */
-  const stepEase = (k) => (t) => Math.ceil(d3.easeCubicOut(t) * k) / k; // bars grow in a few hard frames, like an edit
   function svgFor(el, w, h) {
     el.innerHTML = "";
     return d3.select(el).append("svg").attr("viewBox", `0 0 ${w} ${h}`).attr("role", "img");
@@ -328,8 +426,8 @@
   function playBars(sel, horizontal) {
     sel.each(function (d, i) {
       const b = d3.select(this);
-      if (horizontal) { const w = +b.attr("data-w"); b.attr("width", 0).transition().duration(650).delay(i * 80).ease(stepEase(7)).attr("width", w); }
-      else { const h = +b.attr("data-h"), y = +b.attr("data-y"); b.attr("height", 0).attr("y", y + h).transition().duration(650).delay(i * 55).ease(stepEase(7)).attr("height", h).attr("y", y); }
+      if (horizontal) { const w = +b.attr("data-w"); b.attr("width", 0).transition().duration(950).delay(i * 80).ease(d3.easeCubicOut).attr("width", w); }
+      else { const h = +b.attr("data-h"), y = +b.attr("data-y"); b.attr("height", 0).attr("y", y + h).transition().duration(950).delay(i * 55).ease(d3.easeCubicOut).attr("height", h).attr("y", y); }
     });
   }
   function playLine(path) {
@@ -387,7 +485,7 @@
         onUpdate: (self) => {
           paths.forEach((p, i) => p.attr("stroke-dashoffset", lens[i] * (1 - self.progress)));
           const show = self.progress > 0.35;
-          if (show !== shown) { shown = show; capDot.style("opacity", show ? 1 : 0); capText.style("opacity", show ? 1 : 0); if (show) gsap.fromTo(capDot.node(), { attr: { r: 18 } }, { attr: { r: 6 }, duration: 0.3, ease: "steps(4)" }); }
+          if (show !== shown) { shown = show; capDot.style("opacity", show ? 1 : 0); capText.style("opacity", show ? 1 : 0); if (show) gsap.fromTo(capDot.node(), { attr: { r: 16 } }, { attr: { r: 6 }, duration: 0.5, ease: "power3.out" }); }
         },
       });
     }
@@ -405,7 +503,7 @@
     const cpts = cs.append("path").attr("class", "ln-model").attr("d", d3.line().x((d) => cx(d.predicted)).y((d) => cy(d.actual))(credit.calibration));
     const cdots = cs.append("g").selectAll("circle").data(credit.calibration).join("circle").attr("class", "dot").attr("r", 5.5).attr("cx", (d) => cx(d.predicted)).attr("cy", (d) => cy(d.actual));
     cdots.append("title").text((d) => `Predicted ${pct(d.predicted)}, actual ${pct(d.actual)}`);
-    onEnter(ce, () => { playLine(cpts); cdots.attr("r", 0).transition().delay((d, i) => 200 + i * 90).duration(260).ease(stepEase(3)).attr("r", 5.5); });
+    onEnter(ce, () => { playLine(cpts); cdots.attr("r", 0).transition().delay((d, i) => 200 + i * 90).duration(450).ease(d3.easeBackOut.overshoot(2.2)).attr("r", 5.5); });
 
     // SHAP importance
     const shapPlay = hbars($("#c-shap"), credit.shap_top.slice(0, 6).map((d, i) => ({ label: d.feature.replace(" (months)", ""), v: d.importance, cls: i < 3 ? "bar" : "bar-mute" })),
@@ -461,7 +559,7 @@
       const ci = g.append("line").style("stroke", col).attr("stroke-width", 4).attr("x1", (d) => x(d.ci_low_pct)).attr("x2", (d) => x(d.ci_high_pct));
       g.append("circle").attr("r", 7).attr("cx", (d) => x(d.rate_pct)).style("fill", col);
       g.append("text").attr("class", "val").attr("x", (d) => x(d.ci_high_pct) + 9).attr("dy", "0.35em").text((d) => d.rate_pct.toFixed(1) + "%");
-      return () => ci.attr("x2", (d) => x(d.rate_pct)).attr("x1", (d) => x(d.rate_pct)).transition().duration(700).ease(stepEase(6)).attr("x1", (d) => x(d.ci_low_pct)).attr("x2", (d) => x(d.ci_high_pct));
+      return () => ci.attr("x2", (d) => x(d.rate_pct)).attr("x1", (d) => x(d.rate_pct)).transition().duration(950).ease(d3.easeCubicOut).attr("x1", (d) => x(d.ci_low_pct)).attr("x2", (d) => x(d.ci_high_pct));
     },
     deliveries(el) {
       return hbars(el, S.deliveries.by_band.map((r, i) => ({ label: r.band, v: r.avg_review, cls: i === 0 ? "bar" : "bar-risk" })),
@@ -501,7 +599,7 @@
   });
   function countUp(el) {
     const v = +el.dataset.count, dec = +el.dataset.dec || 0, pre = el.dataset.prefix || "", suf = el.dataset.suffix || "", o = { x: 0 };
-    gsap.to(o, { x: v, duration: 0.85, ease: "steps(12)", onUpdate: () => { el.textContent = pre + o.x.toFixed(dec) + suf; }, onComplete: () => { el.textContent = pre + v.toFixed(dec) + suf; } });
+    gsap.to(o, { x: v, duration: 1.2, ease: "power2.out", onUpdate: () => { el.textContent = pre + o.x.toFixed(dec) + suf; }, onComplete: () => { el.textContent = pre + v.toFixed(dec) + suf; } });
   }
   function activate(f) {
     if (f.done || !motion) return; f.done = true;
@@ -530,7 +628,7 @@
         b.style.transform = `translate(${ux * 7 * slip + W * 0.05 * open}px, ${uy * 7 * slip + H * 0.7 * open}px) rotate(${2 * open}deg)`;
         lines.forEach((l, i) => setStretch(l, smooth(c01(open * 1.3 - i * 0.18))));
         sub.style.opacity = seg(p, 0.6, 0.85);
-        if (p >= 0.22 && !fired) { fired = true; if (self.direction > 0) { gsap.fromTo(flash, { opacity: 0.9 }, { opacity: 0, duration: 0.24, ease: "steps(3)" }); hit(stage, 1.5); } }
+        if (p >= 0.22 && !fired) { fired = true; if (self.direction > 0) { gsap.fromTo(flash, { opacity: 0.75 }, { opacity: 0, duration: 0.45, ease: "power2.out" }); hit(stage, 1.2); } }
         if (p < 0.12) fired = false;
       },
     });
@@ -595,12 +693,12 @@
     $$(".rule").forEach((rule, i) => {
       const stamp = $(".stamp", rule), rot = i % 2 ? 5 : -7;
       gsap.set(stamp, { opacity: 0 });
-      ScrollTrigger.create({ trigger: rule, start: "top 76%", once: true, onEnter: () => gsap.fromTo(stamp, { opacity: 1, scale: 2.6, rotate: rot - 16 }, { scale: 1, rotate: rot, duration: 0.22, ease: "power4.in", onComplete: () => hit(rule, 0.7) }) });
+      ScrollTrigger.create({ trigger: rule, start: "top 76%", once: true, onEnter: () => gsap.fromTo(stamp, { opacity: 1, scale: 2.6, rotate: rot - 16 }, { scale: 1, rotate: rot, duration: 0.36, ease: "power3.in", onComplete: () => hit(rule, 0.5) }) });
     });
     $$(".mark path").forEach((p) => {
       const L = p.getTotalLength(); p.style.strokeDasharray = L; p.style.strokeDashoffset = L;
-      if (p.closest(".hero-note")) { gsap.to(p, { strokeDashoffset: 0, duration: 0.55, ease: "steps(9)", delay: 2.1 }); return; }
-      ScrollTrigger.create({ trigger: p.closest(".step") || p, start: "top 62%", once: true, onEnter: () => gsap.to(p, { strokeDashoffset: 0, duration: 0.55, ease: "steps(9)", delay: 0.15 }) });
+      if (p.closest(".hero-note")) { gsap.to(p, { strokeDashoffset: 0, duration: 0.7, ease: "power2.inOut", delay: 2.1 }); return; }
+      ScrollTrigger.create({ trigger: p.closest(".step") || p, start: "top 62%", once: true, onEnter: () => gsap.to(p, { strokeDashoffset: 0, duration: 0.7, ease: "power2.inOut", delay: 0.15 }) });
     });
   }
   (function () {
@@ -613,7 +711,10 @@
       return { run, unit, dir: +run.dataset.speed || 1, x: 0 };
     });
     if (!motion) return;
+    let onScreen = false;
+    ScrollTrigger.create({ trigger: ".tapes", start: "top bottom", end: "bottom top", onToggle: (self) => { onScreen = self.isActive; } });
     gsap.ticker.add(() => {
+      if (!onScreen) return;
       const v = lenis ? lenis.velocity || 0 : 0;
       items.forEach((it) => {
         it.x -= it.dir * (0.7 + v * 0.35);
@@ -639,7 +740,7 @@
   /* ---------- Header: steps out of the way while reading down, comes back on the way up ---------- */
   (function () {
     const top = $(".top"); if (!top || !hasGsap) return;
-    ScrollTrigger.create({ start: 0, end: "max", onUpdate: (self) => top.classList.toggle("is-away", self.direction > 0 && self.scroll() > window.innerHeight * 0.5) });
+    ScrollTrigger.create({ start: 0, end: "max", onUpdate: (self) => { const y = self.scroll(); top.classList.toggle("is-away", self.direction > 0 && y > window.innerHeight * 0.5); top.classList.toggle("is-solid", y > 24); } });
   })();
 
   /* ---------- Registration-mark cursor ---------- */
@@ -674,6 +775,11 @@
     setupKinetic();
     if (hasGsap) ScrollTrigger.refresh();
     const deep = goHash(location.hash, true);
+    if (deep) { // the browser re-applies its own jump to the #anchor until the page has finished loading, so ours goes last
+      const again = () => requestAnimationFrame(() => goHash(location.hash, true));
+      if (document.readyState === "complete") again(); else window.addEventListener("load", again, { once: true });
+      setTimeout(again, 350);
+    }
     const scan = $("#scan");
     let seen = false; try { seen = sessionStorage.getItem("scan") === "1"; sessionStorage.setItem("scan", "1"); } catch (_) {}
     if (!motion || deep || window.scrollY > 40) { if (scan) scan.classList.add("is-done"); if (Dots) Dots.request(); return; }
