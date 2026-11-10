@@ -24,16 +24,6 @@
     <pattern id="ht2" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><circle cx="3.5" cy="3.5" r="2.05" fill="#000"/></pattern>
     <pattern id="ht3" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><circle cx="3.5" cy="3.5" r="2.95" fill="#000"/></pattern>
     <pattern id="htw" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><circle cx="3.5" cy="3.5" r="1.5" fill="#eeede8"/></pattern>
-    <filter id="diecut" x="-25%" y="-25%" width="150%" height="150%">
-      <feMorphology in="SourceAlpha" operator="dilate" radius="7" result="fat"/>
-      <feFlood flood-color="#eeede8"/><feComposite in2="fat" operator="in" result="edge"/>
-      <feOffset in="fat" dx="6" dy="7" result="off"/><feFlood flood-color="#000"/><feComposite in2="off" operator="in" result="shadow"/>
-      <feMerge><feMergeNode in="shadow"/><feMergeNode in="edge"/><feMergeNode in="SourceGraphic"/></feMerge>
-    </filter>
-    <filter id="rough" x="-5%" y="-10%" width="110%" height="120%">
-      <feTurbulence type="fractalNoise" baseFrequency="0.035" numOctaves="2" seed="4" result="n"/>
-      <feDisplacementMap in="SourceGraphic" in2="n" scale="5"/>
-    </filter>
 
     <symbol id="st-card" viewBox="0 0 200 200">
       <g transform="rotate(-14 100 100)">
