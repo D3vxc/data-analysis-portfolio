@@ -37,7 +37,7 @@
         </svg>
         <h2 id="peek-title" class="peek-title" data-text="I SEE YOU.">I SEE YOU.</h2>
         <pre class="peek-term" aria-hidden="true"></pre>
-        <p class="peek-copy">Opening the inspector on a data scientist's portfolio? Bold. Everything here is © Dev Mistri, so look all you like, but please don't copy it.</p>
+        <p class="peek-copy">Opening the inspector on a data analyst's portfolio? Bold. Everything here is © Dev Mistri, so look all you like, but please don't copy it.</p>
         <p class="peek-copy peek-small">Your curiosity has been logged. (It hasn't. But it could have been.)</p>
         <div class="peek-actions">
           <button type="button" class="peek-btn" id="peek-close">I was only looking</button>
