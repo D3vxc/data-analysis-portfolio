@@ -115,15 +115,17 @@
     const KW = ["ultra-condensed", "extra-condensed", "condensed", "semi-condensed", "normal", "semi-expanded", "expanded", "extra-expanded"];
     const LINES = ["DATA", "ANALYST"];
     const mcv = document.createElement("canvas"), mctx = mcv.getContext("2d", { willReadFrequently: true });
-    const setFont = (c, size, kw) => { c.font = `900 ${size}px Anybody, "Arial Black", sans-serif`; if ("fontStretch" in c) c.fontStretch = kw; };
+    const setFont = (c, size, kw) => { c.font = `900 ${kw} ${size}px Anybody, "Arial Black", sans-serif`; if ("fontStretch" in c) c.fontStretch = kw; };
+    // Not every browser lets a canvas choose a font width. Where it can't, the same shapes are made by scaling the normal width sideways.
+    const SQUEEZE = [0.56, 0.66, 0.76, 0.88, 1, 1.14, 1.3, 1.5];
+    const measure = (txt, kw, sx) => { setFont(mctx, 200, kw); const m = mctx.measureText(txt);
+      return { kw, sx, w: ((m.actualBoundingBoxLeft + m.actualBoundingBoxRight) / 200) * sx, l: (m.actualBoundingBoxLeft / 200) * sx, a: m.actualBoundingBoxAscent / 200, d: m.actualBoundingBoxDescent / 200 }; };
     function layoutName() {
       const W = title.clientWidth; if (!W) return;
       nameW = W;
       const target = Math.max(150, Math.min(560, window.innerHeight * (W < 620 ? 0.38 : 0.47)));
-      const meas = LINES.map((txt) => KW.map((kw) => {
-        setFont(mctx, 200, kw); const m = mctx.measureText(txt);
-        return { kw, w: (m.actualBoundingBoxLeft + m.actualBoundingBoxRight) / 200, l: m.actualBoundingBoxLeft / 200, a: m.actualBoundingBoxAscent / 200, d: m.actualBoundingBoxDescent / 200 };
-      }));
+      const widthAxis = Math.abs(measure("DATA", KW[0], 1).w - measure("DATA", KW[KW.length - 1], 1).w) > 0.05;
+      const meas = LINES.map((txt) => (widthAxis ? KW.map((kw) => measure(txt, kw, 1)) : SQUEEZE.map((sx) => measure(txt, "normal", sx))));
       let best = null;
       meas[0].forEach((a) => meas[1].forEach((b) => {
         const s1 = W / a.w, s2 = W / b.w, h = s1 * (a.a + a.d) + s2 * (b.a + b.d), gap = h * 0.055;
@@ -135,7 +137,9 @@
       mctx.setTransform(ms, 0, 0, ms, 0, 0); mctx.clearRect(0, 0, W, H); mctx.fillStyle = "#000"; mctx.textBaseline = "alphabetic";
       let y = 0;
       [[LINES[0], best.a, best.s1], [LINES[1], best.b, best.s2]].forEach(([txt, m, s], li) => {
-        setFont(mctx, s, m.kw); y += m.a * s; mctx.fillText(txt, m.l * s, y); y += m.d * s + (li === 0 ? best.gap : 0);
+        setFont(mctx, s, m.kw); y += m.a * s;
+        mctx.save(); mctx.scale(m.sx, 1); mctx.fillText(txt, (m.l * s) / m.sx, y); mctx.restore();
+        y += m.d * s + (li === 0 ? best.gap : 0);
       });
       const img = mctx.getImageData(0, 0, mcv.width, mcv.height).data, mw = mcv.width, mh = mcv.height;
       const inked = (x, yy) => { const px = Math.round(x * ms), py = Math.round(yy * ms); return px >= 0 && py >= 0 && px < mw && py < mh && img[(py * mw + px) * 4 + 3] > 110; };
