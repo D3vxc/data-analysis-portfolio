@@ -1,10 +1,10 @@
-# Dev Mistri: Data Science Portfolio
+# Dev Mistri: Data Analysis Portfolio
 
-Graduate data scientist with an MSc in Data and Artificial Intelligence (UWTSD Birmingham) and two years of backend development spent cleaning, validating and querying production data. I build models in Python and SQL and test them for accuracy, calibration, explainability and fairness. Based in Birmingham, UK.
+Data analyst with an MSc in Data and Artificial Intelligence (UWTSD Birmingham) and two years of backend development spent cleaning, validating and querying production data. I work in Python and SQL, and every claim comes with its proof: a notebook you can rerun. Based in Birmingham, UK.
 
 **🌐 Website:** [devmistri.co.uk](https://devmistri.co.uk/) · **📄 Resume:** [online resume](https://devmistri.co.uk/resume.html) · [LinkedIn](https://www.linkedin.com/in/dev-mistri-) · [GitHub](https://github.com/D3vxc)
 
-![Portfolio website](screenshots/website-hero.png)
+![Portfolio website](screenshots/website-hero.jpg)
 
 ## Contents
 
@@ -141,33 +141,47 @@ Every project starts from a question a manager would ask, uses real public data,
 
 ## The website
 
-The site lives in [`docs/`](docs) and is served by GitHub Pages at [devmistri.co.uk](https://devmistri.co.uk/). It is plain HTML, CSS and JavaScript with no build step, using [GSAP ScrollTrigger](https://gsap.com/docs/v3/Plugins/ScrollTrigger/) for scroll-driven animation, [Lenis](https://github.com/darkroomengineering/lenis) for smooth scrolling and [D3](https://d3js.org/) for charts. Library files are vendored in `docs/assets/vendor`.
+The site lives in [`docs/`](docs) and is served by GitHub Pages at [devmistri.co.uk](https://devmistri.co.uk/). It is designed like a press proof that you scroll through like a film edit: paper, black toner and two inks (blue for the model, orange for the risk). It is plain HTML, CSS and JavaScript with no build step, and no stock or generated images: all the artwork is drawn in code.
 
-**A scroll-driven model walkthrough.** The 6,000 test customers are drawn as dots. As you scroll they are ranked by the model, the riskiest 20% are boxed, and then they split by age band to show who gets flagged.
+**The headline is made of the data.** "Data analyst" is printed as a halftone of the credit model's 6,000 real test customers; the orange dots are the ones who defaulted. As you scroll, the same dots fly out of the headline into a chart.
 
-| Ranked, top 20% marked | Split by age band |
+![Dots leaving the headline](screenshots/website-dots-flying.jpg)
+
+**Then the model sorts them.** The dots are ranked by score, the riskiest 20% are boxed, and they split by age band to show who gets flagged.
+
+| Ranked, top 20% boxed | Split by age band |
 |---|---|
-| ![Ranked](screenshots/website-credit-ranked.png) | ![Fairness](screenshots/website-credit-fairness.png) |
+| ![Ranked](screenshots/website-credit-ranked.jpg) | ![Fairness](screenshots/website-credit-fairness.jpg) |
 
 **The evidence underneath:** gains curve (drawn as you scroll), model comparison, calibration, SHAP and a reason-code card.
 
-![Evidence](screenshots/website-credit-evidence.png)
+![Evidence](screenshots/website-credit-evidence.jpg)
 
-**Six more analyses**, each with a small chart drawn from the notebook's results.
+**A blade cut, then a film strip.** The page is sliced open along a diagonal, and the other six analyses scroll sideways as frames of film, each with its headline number, a chart from the notebook and a hand-drawn sticker.
 
-![Other work](screenshots/website-work.png)
+| The slice | The film strip |
+|---|---|
+| ![Slice](screenshots/website-slice.jpg) | ![Film strip](screenshots/website-film-strip.jpg) |
+
+**Kinetic type, stamps and tape.** Section titles are fitted to the page with the display font's width axis and stretch into place as you scroll; each working rule gets a rubber stamp; the toolkit runs on two strips of tape.
+
+| How I check my own work | Toolkit and about |
+|---|---|
+| ![Method](screenshots/website-method.jpg) | ![About](screenshots/website-about.jpg) |
 
 **A contact form written as an SQL query.** A Google Apps Script saves each message to a Google Sheet and emails me ([setup guide](contact-backend/SETUP.md)).
 
-![Contact form](screenshots/website-contact.png)
+![Contact form](screenshots/website-contact.jpg)
 
 **An online resume** with tap-to-call, email links and a *Save as PDF* button that prints a two-page A4 resume.
 
-![Resume page](screenshots/resume-page.png)
+![Resume page](screenshots/resume-page.jpg)
 
-**Phones and dark mode**, and with reduced motion turned on, every animation is replaced by its final state.
+**Phones too.** On narrow screens the film strip becomes a stack, and with reduced motion turned on every animation is replaced by its final state.
 
-![Mobile, dark mode](screenshots/website-mobile-dark.png)
+![Phone views](screenshots/website-mobile.jpg)
+
+Built with [GSAP ScrollTrigger](https://gsap.com/docs/v3/Plugins/ScrollTrigger/) (scroll timing), [Lenis](https://github.com/darkroomengineering/lenis) (smooth scrolling) and [D3](https://d3js.org/) (charts), set in Anybody and Newsreader. Libraries and fonts are vendored in `docs/assets/vendor`.
 
 ## Repository layout
 

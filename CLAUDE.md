@@ -1,17 +1,21 @@
 # Project notes for Claude Code
 
-Dev Mistri's data science portfolio: seven analyses of real public data plus a static website at https://devmistri.co.uk (GitHub Pages, `main` branch, `/docs` folder; `docs/CNAME` holds the domain, DNS is at GoDaddy).
+Dev Mistri's data analysis portfolio: seven analyses of real public data plus a static website at https://devmistri.co.uk (GitHub Pages, `main` branch, `/docs` folder; `docs/CNAME` holds the domain, DNS is at GoDaddy).
 
 ## Layout
 
 - `01-…07-*/`: one folder per project with `analysis.ipynb` (executed), `README.md`, `images/`, `results/summary.json`. Raw data goes in each project's `data/` folder (gitignored); every notebook downloads its own data on first run.
 - `07-credit-default-risk/` is the flagship: XGBoost vs logistic regression, calibration, SHAP reason codes, fairness by sex and age. `results/test_scores.csv` feeds the website's dot animation.
-- `docs/`: the website. Plain HTML/CSS/JS, no build step.
-  - `index.html`, `resume.html`, `assets/css/style.css`, `assets/css/resume.css`
-  - `assets/js/app.js`: Lenis smooth scroll, GSAP ScrollTrigger animations, D3 charts, canvas dot field
+- `docs/`: the website. Plain HTML/CSS/JS, no build step, no image files (all artwork is SVG, CSS or canvas).
+  - `index.html`, `resume.html`, `assets/css/style.css`, `assets/css/resume.css`, `assets/css/peek.css`
+  - `assets/js/app.js`: everything on the homepage. Lenis smooth scroll, GSAP ScrollTrigger timing, D3 charts, and:
+    - the fixed `#dots` canvas: the "DATA ANALYST" headline is a halftone of the 6,000 test customers, and the same dots fly into `#dots-frame` and are ranked, boxed and split by age as the `.steps` scroll;
+    - kinetic banners (`[data-banner]` lines fitted to full width with the font's width axis);
+    - the slice (`#cut`) and the sideways film strip (`#strip-pin`, wide screens with motion only; stacked otherwise);
+    - stamps, tape marquees, marker strokes, the slate (scene name and timecode) and the registration-mark cursor.
   - `assets/js/contact.js` + `assets/js/config.js`: SQL-style contact form posting to a Google Apps Script (`contact-backend/`)
-  - `assets/js/peek.js`: the "I see you" pop-up when developer tools are opened (kept at the owner's request)
-  - `assets/vendor/`: vendored gsap 3.12.5, lenis 1.1.13, d3 7.9.0 and fonts (see its README)
+  - `assets/js/peek.js` + `assets/css/peek.css`: the "I see you" pop-up when developer tools are opened (kept at the owner's request)
+  - `assets/vendor/`: vendored gsap 3.12.5, lenis 1.1.13, d3 7.9.0 and the Anybody and Newsreader variable fonts (see its README)
   - `data/site-data.js` and `data/credit-test.js` are generated; do not edit by hand
 - `scripts/build_site_data.py`: rebuilds `docs/data/*.js` from every `results/summary.json` (and the credit test scores). Run it after re-running any notebook.
 - `screenshots/`: images used in the README.
@@ -19,9 +23,11 @@ Dev Mistri's data science portfolio: seven analyses of real public data plus a s
 ## Conventions
 
 - Every number on the site, README and resume must come from a notebook's `results/summary.json`. If a notebook changes, rerun `python scripts/build_site_data.py` and check the copy in `docs/index.html`, `docs/resume.html` and the READMEs.
-- Copy style: plain English, sentence case, no em dashes, no ALL-CAPS labels.
-- Charts use blue (`--model`) for the model or the highlighted series and amber (`--risk`) for defaults or bad outcomes; everything else grey.
-- Check the site on desktop and at 390px wide, in light and dark mode, and with reduced motion. No horizontal scrolling on phones.
+- Positioning: the site and resume say "data analyst" (the owner's choice); the credit model stays the flagship.
+- Copy style: plain English, sentence case in running text, no em dashes. Display banners are uppercase by design.
+- Design: a press proof you scroll through like an edit. One light theme only (no dark mode): paper `--paper`, black, blue `--blue` for the model or highlighted series, orange `--orange` for defaults and bad outcomes. Display type is Anybody, text is Newsreader. Motion is stepped and hard-cut (`steps()` eases), not soft fades.
+- No generated or stock images and no paid tools: the owner wants the artwork to be original and made in code. Stickers are hand-drawn SVG symbols in `index.html`.
+- Check the site on desktop (including 1366x650) and at 390px and 360px wide, with reduced motion, and with JavaScript off. No horizontal scrolling on phones. Deep links such as `index.html#housing` must land on the right film frame.
 - Work on a branch and merge through a pull request.
 
 ## Open items

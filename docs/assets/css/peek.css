@@ -1,0 +1,31 @@
+/* The "I see you" pop-up when someone opens the developer tools */
+.peek-open, .peek-open body { overflow: hidden; }
+#peek { position: fixed; inset: 0; z-index: 1000; display: grid; place-items: center; padding: 20px; background: rgba(6, 9, 9, 0.975); backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px); color: #f1ece4; animation: peek-in .35s ease-out both; }
+#peek::before { content: ""; position: absolute; inset: 0; pointer-events: none; background: repeating-linear-gradient(0deg, rgba(255,255,255,.035) 0 1px, transparent 1px 3px); animation: peek-flicker 3.5s steps(1) infinite; }
+#peek.peek-leaving { animation: peek-out .26s ease-in both; }
+.peek-box { position: relative; width: min(620px, 100%); display: grid; gap: 16px; justify-items: start; }
+.peek-eye { width: 110px; color: #e0412b; animation: peek-throb 2.4s ease-in-out infinite; }
+.peek-pupil { fill: #060909; }
+.peek-lid { fill: #060909; }
+.peek-title { position: relative; font: 800 clamp(48px, 11vw, 104px)/0.9 var(--f-display); letter-spacing: -0.04em; color: #f1ece4; max-width: none; animation: peek-shake 4s infinite; }
+.peek-title::before, .peek-title::after { content: attr(data-text); position: absolute; inset: 0; pointer-events: none; }
+.peek-title::before { color: #e0412b; transform: translate(3px, 0); clip-path: inset(0 0 62% 0); animation: peek-glitch 2.2s infinite steps(2); mix-blend-mode: screen; }
+.peek-title::after { color: #3dd6c6; transform: translate(-3px, 0); clip-path: inset(58% 0 0 0); animation: peek-glitch 1.7s infinite reverse steps(2); mix-blend-mode: screen; }
+.peek-term { margin: 0; min-height: 8.6em; width: 100%; white-space: pre; overflow-x: auto; font: 13.5px/1.55 var(--f-code); color: #9fe0a5; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.12); border-radius: 4px; padding: 12px 14px; }
+.peek-copy { font-size: 17px; line-height: 1.55; color: #d6d0c6; max-width: 52ch; }
+.peek-small { font-size: 14.5px; color: #9b958c; font-style: italic; }
+.peek-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 22px; margin-top: 6px; }
+.peek-btn { font: 600 16px/1 var(--f-body); color: #060909; background: #f1ece4; border: 0; border-radius: 4px; padding: 14px 20px; cursor: pointer; }
+.peek-btn:hover { background: #e0412b; color: #fff; }
+.peek-btn:focus-visible, .peek-link:focus-visible { outline: 2px solid #3dd6c6; outline-offset: 3px; }
+.peek-link { color: #f1ece4; font-weight: 500; }
+@keyframes peek-in { from { opacity: 0; transform: scale(1.04); } to { opacity: 1; transform: none; } }
+@keyframes peek-out { to { opacity: 0; transform: scale(.98); } }
+@keyframes peek-flicker { 0%, 100% { opacity: 1; } 47% { opacity: .55; } 48% { opacity: 1; } 82% { opacity: .75; } }
+@keyframes peek-throb { 0%, 100% { transform: scale(1); } 50% { transform: scale(1.06); } }
+@keyframes peek-shake { 0%, 92%, 100% { transform: none; } 93% { transform: translate(-2px, 1px); } 95% { transform: translate(2px, -1px); } 97% { transform: translate(-1px, 0); } }
+@keyframes peek-glitch { 0% { transform: translate(3px, 0); } 50% { transform: translate(-4px, 1px); } 100% { transform: translate(2px, -1px); } }
+@media (prefers-reduced-motion: reduce) {
+  #peek, #peek::before, .peek-eye, .peek-title, .peek-title::before, .peek-title::after { animation: none; }
+}
+@media (max-width: 560px) { .peek-term { font-size: 11px; padding: 10px; } .peek-copy { font-size: 16px; } }
