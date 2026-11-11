@@ -9,7 +9,8 @@ Data analyst with an MSc in Data and Artificial Intelligence (UWTSD Birmingham) 
 ## Contents
 
 - [Projects at a glance](#projects-at-a-glance)
-- [Flagship: credit default risk](#flagship-credit-card-default-risk)
+- [Flagship: the MSc dissertation](#flagship-the-msc-dissertation)
+- [Credit default risk](#credit-card-default-risk)
 - [The analyses, with charts](#the-analyses-with-charts)
 - [The website](#the-website)
 - [Repository layout](#repository-layout)
@@ -19,7 +20,8 @@ Data analyst with an MSc in Data and Artificial Intelligence (UWTSD Birmingham) 
 
 | # | Business problem | Data | Skills | Headline result |
 |---|---|---|---|---|
-| ★ | [Who will miss next month's credit card payment?](07-credit-default-risk) | UCI credit card default · 30,000 customers | XGBoost, SHAP, calibration, fairness testing | Calling the riskiest 20% reaches **51%** of defaults (ROC AUC 0.781 vs 0.746 baseline) |
+| ★ | [Can a detector catch an attack nobody has labelled yet?](08-hybrid-intrusion-detection) **(MSc dissertation)** | UNSW-NB15 · 257,673 network flows | Autoencoder, Isolation Forest, XGBoost, SHAP, holdout design | The hybrid adds **+0.020** ROC AUC at 50 labels and **-0.0002** at full scale |
+| ☆ | [Who will miss next month's credit card payment?](07-credit-default-risk) | UCI credit card default · 30,000 customers | XGBoost, SHAP, calibration, fairness testing | Calling the riskiest 20% reaches **51%** of defaults (ROC AUC 0.781 vs 0.746 baseline) |
 | 01 | [Who is about to cancel, and who to call first](04-telecom-customer-churn) | IBM Telco churn · 7,043 customers | Python, logistic regression, segmentation | The riskiest 20% of customers by model score contain **49.9%** of actual churners |
 | 02 | [Did moving the paywall gate hurt retention?](05-mobile-game-ab-test) | Cookie Cats A/B test · 90,189 players | A/B testing, z-test, bootstrap, SRM check | 7-day retention fell **0.82 points** (p = 0.002): don't ship |
 | 03 | [What late deliveries cost in customer reviews](06-ecommerce-late-deliveries) | Olist marketplace · 99,441 orders | SQL joins, CTEs, window functions | Late orders are 6.8% of deliveries but **36.7%** of one-star reviews |
@@ -29,7 +31,21 @@ Data analyst with an MSc in Data and Artificial Intelligence (UWTSD Birmingham) 
 
 Every project starts from a question a manager would ask, uses real public data, checks data quality before drawing conclusions, and ends with a recommendation and its limitations.
 
-## Flagship: credit card default risk
+## Flagship: the MSc dissertation
+
+> **Designing and evaluating an AI-powered hybrid intrusion detection system integrating anomaly detection and supervised learning, applying statistical analysis, feature engineering, and model evaluation techniques to network security datasets.**
+>
+> A detector trained on known attacks is good at known attacks. What does it do when something arrives that nobody has labelled?
+
+- An autoencoder trained on **normal traffic only** reaches ROC AUC **0.9015** without seeing a single attack label, catching 76.3% of attacks at 9.8% false alarms.
+- The **hybrid does not beat the supervised model**: 0.9836 against 0.9837. Deleting whole attack families from training does not change that, across eight holdout runs.
+- It helps at the **cold start only**: **+0.020** AUC with 50 labelled flows, nothing past 250.
+- The supervised model catches unseen families better than expected (Backdoor and Worms at 100%), except **Fuzzers at 21.9%** when held out, where the anomaly detector is no better.
+- `recon_error` ranks **2** of 44 by SHAP: the model leans on the anomaly score and still gains nothing, which is redundancy rather than irrelevance.
+
+Full write-up and limitations: [`08-hybrid-intrusion-detection/`](08-hybrid-intrusion-detection).
+
+## Credit card default risk
 
 > A card issuer wants to contact customers before they miss a payment, but can only call one in five. Which customers, why, and is the model fair?
 

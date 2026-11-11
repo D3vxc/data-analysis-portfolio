@@ -4,9 +4,9 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Dev Mistri, data analyst</title>
-<meta name="description" content="Dev Mistri, data analyst in Birmingham, UK. Seven analyses of real data in Python and SQL, each with its proof: an explainable credit default model, A/B testing, churn, SQL and more.">
+<meta name="description" content="Dev Mistri, data analyst in Birmingham, UK. My MSc dissertation builds a hybrid intrusion detection system and tests whether it really works, plus seven more analyses of real data in Python and SQL.">
 <meta property="og:title" content="Dev Mistri, data analyst">
-<meta property="og:description" content="Every claim on this site comes with its proof.">
+<meta property="og:description" content="Can a detector catch an attack nobody has labelled yet? My MSc dissertation, and seven more analyses with their proof.">
 <meta name="theme-color" content="#eeede8">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preload" href="assets/vendor/fonts/anybody-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -105,7 +105,7 @@
 <header class="top">
   <a class="name" href="#top">Dev Mistri</a>
   <nav aria-label="Sections">
-    <a href="#credit" class="hide-sm">Flagship</a>
+    <a href="#dissertation" class="hide-sm">Dissertation</a>
     <a href="#work">Cases</a>
     <a href="#about" class="hide-sm">About</a>
     <a href="resume.html">Resume</a>
@@ -115,18 +115,19 @@
 
 <main id="main">
 
-  <!-- Title: the headline is printed with the model's 6,000 test customers -->
+  <!-- Title: a dissertation cover page. The headline is printed with 6,000 real network flows. -->
   <section class="hero" id="top" data-scene="Title">
+    <p class="hero-kicker">MSc dissertation &middot; final year project &middot; 2026</p>
     <h1 class="hero-title" id="hero-title">
-      <span class="sr-only">Dev Mistri, data analyst</span>
-      <span class="hl" aria-hidden="true">Data</span>
-      <span class="hl" aria-hidden="true">Analyst</span>
+      <span class="sr-only">Dev Mistri, data analyst. MSc dissertation: an AI-powered hybrid intrusion detection system.</span>
+      <span class="hl" aria-hidden="true">Unseen</span>
+      <span class="hl" aria-hidden="true">Attack</span>
     </h1>
     <div class="hero-foot">
-      <p class="hero-claim">Every claim on this site comes with its proof.</p>
+      <p class="hero-claim">Can a detector catch an attack nobody has labelled yet?</p>
       <p class="hero-note">
         <svg class="mark mark-arrow" viewBox="0 0 90 70" aria-hidden="true"><path d="M82 64C70 30 44 12 10 14M10 14l16-9M10 14l12 14"/></svg>
-        This headline is printed with <strong>6,000 real credit card customers</strong>. The orange ones missed their next payment. Scroll, and a model I built finds them.
+        This headline is printed with <strong>6,000 real network flows</strong>. The orange ones are attacks. Scroll, and the system I built for my dissertation goes looking for them.
       </p>
       <dl class="hero-facts">
         <div><dt>Who</dt><dd>Dev Mistri, MSc Data and Artificial Intelligence</dd></div>
@@ -144,50 +145,60 @@
     </div>
   </section>
 
-  <!-- Flagship: credit default -->
-  <section class="story" id="credit" data-scene="Credit risk" aria-labelledby="credit-title">
+  <!-- Flagship: the MSc dissertation. The hero dots fly into this chart. -->
+  <section class="story" id="dissertation" data-scene="Dissertation" aria-labelledby="diss-title">
+    <div class="wrap diss-cover">
+      <p class="tag">Final year project &middot; MSc dissertation</p>
+      <h2 class="diss-formal" id="diss-formal-title">Designing and evaluating an AI-powered hybrid intrusion detection system integrating anomaly detection and supervised learning, applying statistical analysis, feature engineering, and model evaluation techniques to network security datasets</h2>
+      <dl class="diss-meta">
+        <div><dt>Degree</dt><dd>MSc Data and Artificial Intelligence</dd></div>
+        <div><dt>University</dt><dd>University of Wales Trinity Saint David</dd></div>
+        <div><dt>Data</dt><dd>UNSW-NB15, <span data-bind="idsRows">257,673</span> labelled network flows</dd></div>
+        <div><dt>Verdict</dt><dd>The hybrid helps only when labels are scarce</dd></div>
+      </dl>
+    </div>
+
     <div class="wrap story-grid">
       <figure class="story-visual" aria-describedby="dots-desc">
-        <div class="dots-frame" id="dots-frame" role="img" aria-label="6,000 test customers drawn as dots, coloured by whether they defaulted"><i></i><i></i><i></i><i></i></div>
+        <div class="dots-frame" id="dots-frame" role="img" aria-label="6,000 network flows drawn as dots, coloured by whether they are attack traffic"><i></i><i></i><i></i><i></i></div>
         <figcaption>
-          <span class="legend"><i class="sw sw-default"></i>Defaulted next month</span>
-          <span class="legend"><i class="sw sw-paid"></i>Paid</span>
+          <span class="legend"><i class="sw sw-default"></i>Attack traffic</span>
+          <span class="legend"><i class="sw sw-paid"></i>Normal traffic</span>
           <span class="dots-readout" id="dots-readout" aria-live="polite"></span>
         </figcaption>
-        <p id="dots-desc" class="sr-only">Each dot is one of the 6,000 customers held back for testing. The steps beside the chart describe each arrangement.</p>
+        <p id="dots-desc" class="sr-only">Each dot is one of 6,000 network flows sampled from the held-out test half. The steps beside the chart describe each arrangement.</p>
       </figure>
 
       <div class="story-col">
         <header class="story-head">
-          <svg class="sticker-art head-sticker" viewBox="0 0 200 200" aria-hidden="true"><use href="#st-card"/></svg>
-          <p class="tag">Flagship project</p>
-          <h2 class="banner" id="credit-title" data-banner data-cap="0.13" aria-label="Who misses next month's payment?">
-            <span class="bl" aria-hidden="true">Who misses</span>
-            <span class="bl" aria-hidden="true">next month's</span>
-            <span class="bl" aria-hidden="true">payment?</span>
+          <svg class="sticker-art head-sticker" viewBox="0 0 200 200" aria-hidden="true"><use href="#st-lock"/></svg>
+          <h2 class="banner" id="diss-title" data-banner data-cap="0.13" aria-label="What happens when the attack is new?">
+            <span class="bl" aria-hidden="true">What happens</span>
+            <span class="bl" aria-hidden="true">when the attack</span>
+            <span class="bl" aria-hidden="true">is new?</span>
           </h2>
-          <p class="story-intro">A card issuer wants to reach customers before they default, but its team can only call one in five. The model has to rank well, give a reason for every flag, and treat groups fairly. Built on 30,000 real customer records with XGBoost and SHAP.</p>
+          <p class="story-intro">A detector trained on known attacks is good at known attacks. The question my dissertation asks is what it does when something arrives that nobody has labelled. The proposed answer is a hybrid: pair the trained model with an anomaly detector that has only ever seen normal traffic. I built it, and then I tried to break it.</p>
         </header>
         <ol class="steps">
           <li class="step" data-step="0">
             <span class="step-n" aria-hidden="true">01</span>
-            <h3>6,000 customers the model never saw</h3>
-            <p>Each dot is one person from the held-out test set. The orange ones defaulted the following month: <strong data-bind="base">22.1%</strong> of them, shuffled at random.</p>
+            <h3>6,000 flows the system never saw</h3>
+            <p>Each dot is one connection from the held-out test half of UNSW-NB15. The orange ones are attacks: <strong data-bind="idsBase">55.1%</strong> of them, shuffled at random.</p>
           </li>
           <li class="step" data-step="1">
             <span class="step-n" aria-hidden="true">02</span>
-            <h3>Ranked by the model</h3>
-            <p>XGBoost scores everyone from six months of repayments, bills and payments. Sex, age and marital status were deliberately left out. Keep scrolling and the defaulters rise to the top.</p>
+            <h3>Ranked by how suspicious they look</h3>
+            <p>An autoencoder is trained on normal traffic alone and scores every flow by how badly it reconstructs it. It never sees a single attack label and still reaches <strong data-bind="anomAuc">0.90</strong> ROC AUC. The labelled model then ranks everything. Keep scrolling and the attacks rise.</p>
           </li>
           <li class="step" data-step="2">
             <span class="step-n" aria-hidden="true">03</span>
-            <h3>Call the riskiest 20%</h3>
-            <p>One call in five reaches <strong class="circled"><span data-bind="capture">51%</span><svg class="mark mark-circle" viewBox="0 0 200 100" preserveAspectRatio="none" aria-hidden="true"><path d="M14 54C8 22 62 6 112 8c50 2 80 18 76 46-4 30-58 42-104 38C40 88 6 78 16 42"/></svg></strong> of next month's defaults, and <strong data-bind="precision">56.5%</strong> of the people called do default: <span data-bind="lift">2.6</span> times the average.</p>
+            <h3>Everything above the line gets flagged</h3>
+            <p>At the usual threshold the hybrid catches <strong class="circled"><span data-bind="idsRecall">98.3%</span><svg class="mark mark-circle" viewBox="0 0 200 100" preserveAspectRatio="none" aria-hidden="true"><path d="M14 54C8 22 62 6 112 8c50 2 80 18 76 46-4 30-58 42-104 38C40 88 6 78 16 42"/></svg></strong> of the attacks. Taken alone that number means very little, which is what the rest of this page is about.</p>
           </li>
           <li class="step" data-step="3">
             <span class="step-n" aria-hidden="true">04</span>
-            <h3>Then check who gets called</h3>
-            <p>Leaving age out did not make outcomes equal. Under-30s are flagged most and 30 to 39s least, a ratio of <strong data-bind="ageRatio">0.80</strong>: right on the four-fifths screening line. Fine for a supportive phone call; it would need fixing before the score could limit anyone's credit.</p>
+            <h3>Now split it by what the traffic actually was</h3>
+            <p>Nearly every attack is caught. The cost sits in the top band: <strong data-bind="idsFalseAlarm">26.4%</strong> of perfectly normal traffic is flagged too. On a network carrying millions of connections a day that is an unusable number of false alarms, and no ROC AUC of 0.98 will tell you so.</p>
           </li>
         </ol>
       </div>
@@ -195,10 +206,66 @@
 
     <div class="wrap evidence">
       <div class="proof proof-wide">
+        <h3>The hybrid only wins before the labels arrive</h3>
+        <p>ROC AUC against the number of labelled flows the supervised half was trained on, five draws each. The anomaly detector needs no labels at all, so its score is a flat line.</p>
+        <div class="chart" id="c-labels"></div>
+        <p class="proof-note">With 50 labelled flows the hybrid gains <strong data-bind="gain50">0.020</strong> AUC. By 250 the gap is noise, and on the full training set it is <strong data-bind="gainFull">-0.0002</strong>. This is the dissertation's real finding, and it is not the one the title hoped for.</p>
+      </div>
+      <div class="proof">
+        <h3>Who gets caught, family by family</h3>
+        <p>Share of each attack family flagged on the test half.</p>
+        <div class="chart" id="c-family"></div>
+      </div>
+      <div class="proof">
+        <h3>What the model leans on</h3>
+        <p>Mean absolute SHAP value for the hybrid. The two anomaly scores are in orange.</p>
+        <div class="chart" id="c-ids-shap"></div>
+      </div>
+      <div class="proof proof-wide">
+        <h3>Taking a whole attack family out of training</h3>
+        <p>Each row retrains all three models with that family deleted, then tests on it. If the hybrid were going to earn its keep anywhere, it would be here. It does not: every row is within 0.002 of the supervised model. The interesting row is Fuzzers, caught just <strong data-bind="fuzzUnseen">21.9%</strong> of the time when held out, because fuzzing looks like ordinary traffic at the flow level and the anomaly detector is no better at it.</p>
+        <table class="mtable mtable-unseen">
+          <caption class="sr-only">Detection of attack families held out of training entirely</caption>
+          <thead><tr><th scope="col">Family held out</th><th scope="col">Flows</th><th scope="col">Supervised</th><th scope="col">Hybrid</th><th scope="col">Anomaly only</th></tr></thead>
+          <tbody id="unseen-rows"></tbody>
+        </table>
+      </div>
+      <div class="proof proof-wide">
+        <h3>All four models on the standard split</h3>
+        <table class="mtable mtable-ids">
+          <caption class="sr-only">Model comparison on the held-out test half</caption>
+          <thead><tr><th scope="col">Model</th><th scope="col">ROC AUC</th><th scope="col">PR AUC</th><th scope="col">Attacks caught</th><th scope="col">False alarms</th></tr></thead>
+          <tbody id="ids-rows"></tbody>
+        </table>
+        <p class="proof-note">The false alarm rates are far worse than the cross-validation figures usually quoted for this dataset, because the published split has a real distribution shift between its halves. That is the point of using it.</p>
+      </div>
+      <p class="proof-links">
+        <a class="btn" href="https://github.com/D3vxc/data-analysis-portfolio/blob/main/08-hybrid-intrusion-detection/analysis.ipynb" target="_blank" rel="noopener">Read the notebook</a>
+        <a class="btn btn-ghost" href="https://github.com/D3vxc/data-analysis-portfolio/tree/main/08-hybrid-intrusion-detection" target="_blank" rel="noopener">Write-up and limitations</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Second case: credit default risk -->
+  <section class="story" id="credit" data-scene="Credit risk" aria-labelledby="credit-title">
+    <div class="wrap story-head story-head-solo">
+      <svg class="sticker-art head-sticker" viewBox="0 0 200 200" aria-hidden="true"><use href="#st-card"/></svg>
+      <p class="tag">Second case &middot; built alongside it</p>
+      <h2 class="banner" id="credit-title" data-banner data-cap="0.13" aria-label="Who misses next month's payment?">
+        <span class="bl" aria-hidden="true">Who misses</span>
+        <span class="bl" aria-hidden="true">next month's</span>
+        <span class="bl" aria-hidden="true">payment?</span>
+      </h2>
+      <p class="story-intro">A card issuer wants to reach customers before they default, but its team can only call one in five. The model has to rank well, give a reason for every flag, and treat groups fairly. Built on 30,000 real customer records with XGBoost and SHAP. Calling the riskiest 20% reaches <strong data-bind="capture">51%</strong> of next month's defaults, and <strong data-bind="precision">56.5%</strong> of those called do default, <span data-bind="lift">2.6</span> times the average rate.</p>
+      <p class="story-intro">Leaving age out of the model did not make its outcomes equal. Under-30s are flagged most and 30 to 39s least, a ratio of <strong data-bind="ageRatio">0.80</strong>, right on the four-fifths screening line. Fine for a supportive phone call; it would need fixing before the score could limit anyone's credit.</p>
+    </div>
+
+    <div class="wrap evidence">
+      <div class="proof proof-wide">
         <h3>Better than the baseline, but only modestly</h3>
         <p>Share of defaults reached as more customers are called, on the test set.</p>
         <div class="chart" id="c-gains"></div>
-        <table class="mtable">
+        <table class="mtable mtable-credit">
           <caption class="sr-only">Model comparison on the held-out test set</caption>
           <thead><tr><th scope="col">Model</th><th scope="col">ROC AUC (test)</th><th scope="col">ROC AUC (5-fold CV)</th><th scope="col">KS</th><th scope="col">Brier</th></tr></thead>
           <tbody id="model-rows"></tbody>
@@ -470,7 +537,7 @@
 <div class="slate-bar" aria-hidden="true"><i id="slate-bar"></i></div>
 
 <script src="data/site-data.js"></script>
-<script src="data/credit-test.js"></script>
+<script src="data/ids-test.js"></script>
 <script src="assets/js/config.js"></script>
 <script src="assets/vendor/gsap.min.js"></script>
 <script src="assets/vendor/ScrollTrigger.min.js"></script>
