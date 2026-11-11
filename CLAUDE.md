@@ -18,8 +18,8 @@ Dev Mistri's data analysis portfolio: the MSc dissertation plus seven analyses o
   - `assets/js/contact.js` + `assets/js/config.js`: SQL-style contact form posting to a Google Apps Script (`contact-backend/`)
   - `assets/js/peek.js` + `assets/css/peek.css`: the "I see you" pop-up when developer tools are opened (kept at the owner's request)
   - `assets/vendor/`: vendored gsap 3.12.5, lenis 1.1.13, d3 7.9.0 and the Anybody and Newsreader variable fonts (see its README)
-  - `data/site-data.js`, `data/credit-test.js` and `data/ids-test.js` are generated; do not edit by hand
-- `scripts/build_site_data.py`: rebuilds `docs/data/*.js` from every `results/summary.json` (and the credit test scores). Run it after re-running any notebook.
+  - `data/site-data.js` and `data/ids-test.js` are generated; do not edit by hand
+- `scripts/build_site_data.py`: rebuilds `docs/data/*.js` from every `results/summary.json` (and the dissertation's per-flow test scores). Run it after re-running any notebook.
 - `screenshots/`: images used in the README.
 
 ## Conventions
