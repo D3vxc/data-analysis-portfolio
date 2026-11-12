@@ -124,7 +124,7 @@
 
     /* Headline: two lines, each scaled to the full width; the width keywords are chosen so the block has the right height. */
     const KW = ["ultra-condensed", "extra-condensed", "condensed", "semi-condensed", "normal", "semi-expanded", "expanded", "extra-expanded"];
-    const LINES = ["UNSEEN", "ATTACK"];
+    const LINES = ["DATA", "ANALYST"];
     const mcv = document.createElement("canvas"), mctx = mcv.getContext("2d", { willReadFrequently: true });
     const setFont = (c, size, kw) => { c.font = `900 ${kw} ${size}px Anybody, "Arial Black", sans-serif`; if ("fontStretch" in c) c.fontStretch = kw; };
     // Not every browser lets a canvas choose a font width. Where it can't, the same shapes are made by scaling the normal width sideways.
@@ -328,7 +328,7 @@
       }
       ctx.globalAlpha = 1;
     }
-    const pass = GLR ? GLR.pass : pass2d;
+    let pass = GLR ? GLR.pass : pass2d;
     let lastBox = -1, lastBand = -1;
     function overlays(t) {
       const hi = smooth(seg(t, 1.2, 1.6)), cd = smooth(seg(t, 2.15, 2.65));
@@ -346,6 +346,45 @@
         : `False alarms on normal traffic: ${pct(stats.falseAlarm, 0)}`;
       if (text !== lastSay) { readout.textContent = text; lastSay = text; }
     }
+    /* The headline is hidden the moment the canvas takes over, so a canvas that silently
+       renders nothing leaves the page blank. Rather than trust the context, check that the
+       first paint actually put pixels on screen, and step down if it did not: WebGL to the
+       2D canvas, and 2D to the plain CSS headline. Costs one readback, once. */
+    let painted = false, triedFlat = false;
+    function verifyPaint() {
+      if (painted) return;
+      let lit = 0;
+      try {
+        if (gl) {
+          const px = new Uint8Array(4 * 64 * 64);
+          gl.readPixels(0, 0, 64, 64, gl.RGBA, gl.UNSIGNED_BYTE, px);
+          for (let i = 3; i < px.length; i += 4) if (px[i] > 8) { lit = 1; break; }
+          if (!lit) { // sample the middle too: the corner can legitimately be empty
+            const cx = Math.max(0, (canvas.width >> 1) - 96), cy = Math.max(0, (canvas.height >> 1) - 96);
+            const mid = new Uint8Array(4 * 192 * 192);
+            gl.readPixels(cx, cy, 192, 192, gl.RGBA, gl.UNSIGNED_BYTE, mid);
+            for (let i = 3; i < mid.length; i += 4) if (mid[i] > 8) { lit = 1; break; }
+          }
+        } else if (ctx) {
+          const d = ctx.getImageData(0, 0, canvas.width, Math.min(canvas.height, 400)).data;
+          for (let i = 3; i < d.length; i += 4) if (d[i] > 8) { lit = 1; break; }
+        }
+      } catch (_) { lit = -1; } // a readback that throws tells us nothing, so assume it worked
+      if (lit !== 0) { painted = true; return; }
+      if (gl && !triedFlat) {              // WebGL produced nothing: hand over to the 2D canvas
+        triedFlat = true;
+        const fresh = canvas.cloneNode(false);
+        canvas.replaceWith(fresh); canvas = fresh;
+        gl = null; ctx = canvas.getContext("2d");
+        pass = pass2d; nameDirty = true; frameDirty = true; lastSig = ""; dirty = true;
+        return;
+      }
+      // Neither path drew anything: give the readable CSS headline back and stop.
+      painted = true;
+      root.classList.remove("dots-on");
+      canvas.style.display = "none";
+    }
+
     let shownNow = true, lastSig = "";
     const show = (on) => { if (on !== shownNow) { shownNow = on; canvas.style.visibility = on ? "visible" : "hidden"; if (!on) { clear(); lastSig = ""; } } };
     const r1 = (v) => Math.round(v * 2) / 2;
@@ -367,9 +406,11 @@
         if (heroOn) pass(hr, fr, 0, 1, 0);
         if (frameOn) pass(hr, fr, 1, 1, 2);
         overlays(2);
+        if (!painted) verifyPaint();
         return;
       }
       pass(hr, fr, fly, st.intro, st.t);
+      if (!painted) verifyPaint();
       overlays(fly >= 1 ? st.t : 0);
     }
     function tick() {

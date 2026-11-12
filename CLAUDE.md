@@ -12,7 +12,7 @@ Dev Mistri's data analysis portfolio: the MSc dissertation plus seven analyses o
   The one binary is `docs/media/`, which holds the dissertation explainer film and its captions.
   - `index.html`, `resume.html`, `assets/css/style.css`, `assets/css/resume.css`, `assets/css/peek.css`
   - `assets/js/app.js`: everything on the homepage. Lenis smooth scroll, GSAP ScrollTrigger timing, D3 charts, and:
-    - the fixed `#dots` canvas (WebGL point sprites, with a 2D fallback): the "UNSEEN ATTACK" headline is a halftone of 6,000 network flows from the dissertation's test half, and the same dots fly into `#dots-frame` and are ranked, boxed and split by what the traffic was as the `.steps` scroll. The data contract is `score[] / y / grp / grps` in `docs/data/ids-test.js`; the four display groups are fixed in `scripts/build_site_data.py`, and the dot timing assumes exactly four `.step`s, so adding one means re-tuning `st.t` in `app.js`;
+    - the fixed `#dots` canvas (WebGL point sprites, with a 2D fallback): the "DATA ANALYST" headline is a halftone of 6,000 network flows from the dissertation's test half, and the same dots fly into `#dots-frame` and are ranked, boxed and split by what the traffic was as the `.steps` scroll. The data contract is `score[] / y / grp / grps` in `docs/data/ids-test.js`; the four display groups are fixed in `scripts/build_site_data.py`, and the dot timing assumes exactly four `.step`s, so adding one means re-tuning `st.t` in `app.js`;
     - kinetic banners (`[data-banner]` lines fitted to full width with the font's width axis);
     - the slice (`#cut`) and the sideways film strip (`#strip-pin`, wide screens with motion only; stacked otherwise);
     - stamps, tape marquees, marker strokes, the slate (scene name and timecode) and the registration-mark cursor.
@@ -33,12 +33,20 @@ Dev Mistri's data analysis portfolio: the MSc dissertation plus seven analyses o
 ## Conventions
 
 - Every number on the site, README and resume must come from a notebook's `results/summary.json`. If a notebook changes, rerun `python scripts/build_site_data.py` and check the copy in `docs/index.html`, `docs/resume.html` and the READMEs.
-- Positioning: the site and resume say "data analyst" (the owner's choice). The dissertation is the flagship and the hero is framed as a dissertation cover page; the full academic title appears in `.diss-cover` and must stay verbatim.
+- Positioning: the site and resume say "data analyst" (the owner's choice), and **the hero headline is "DATA
+  ANALYST"** — it was briefly changed to the dissertation title and the owner asked for it back, so do not make
+  the hero about a project again. The dissertation is still the flagship: its cover, full academic title
+  (verbatim, in `.diss-cover`) and the dot scroll-story all sit in `#dissertation`, directly below the hero.
 - Copy style: plain English, sentence case in running text, no em dashes. Display banners are uppercase by design.
 - Design: a press proof you scroll through like an edit. One light theme only (no dark mode): paper `--paper`, black, blue `--blue` for the model or highlighted series, orange `--orange` for defaults and bad outcomes. Display type is Anybody, text is Newsreader.
 - Motion must be smooth (the owner asked for this after a stepped, hard-cut version felt laggy): eased transitions, no `steps()` easing, no jitter loops.
 - Performance rules, learned the hard way: no `mix-blend-mode` and no SVG `filter: url()` on anything large or fixed; animate only `transform` and `opacity` while scrolling (banners are fitted once with `font-stretch`, then moved with `scaleX`); the dots are drawn with WebGL (2D canvas fallback) and the canvas is hidden when no dots are on screen. `perf`-style checks: scroll the page on a throttled CPU and compare frame times before and after a change.
 - No generated or stock images and no paid tools: the owner wants the artwork to be original and made in code. Stickers are hand-drawn SVG symbols in `index.html`.
+- The dots verify their own first paint (`verifyPaint` in `app.js`) and step down if nothing was drawn: WebGL to
+  the 2D canvas, then 2D to the plain CSS headline by removing `dots-on`. This exists because `dots-on` hides
+  `.hl` the moment glyph sampling succeeds, so a canvas that silently renders nothing used to leave the hero
+  blank on the owner's machine. Keep the check if you touch the renderer, and test it by stubbing out
+  `WebGLRenderingContext.prototype.drawArrays` and `CanvasRenderingContext2D.prototype.fill`.
 - The explainer film must stay lazy: check that no request for the mp4 happens before the cover is clicked, and
   that `html.no-js` hides `.film-cover` so the `<noscript>` player is not covered by a dead button.
 - Check the site on desktop (including 1366x650, 1024x768 and 1280) and at 390px and 360px wide, with reduced motion, and with JavaScript off. No horizontal scrolling at any of them. The `.hl` no-JS fallback sizes are tuned to the exact headline words, so changing the headline means re-measuring them; `html.no-js` gets `overflow-x: hidden` and must not when JS is on, or ScrollTrigger cannot pin. Deep links such as `index.html#housing` must land on the right film frame.
