@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Dev Mistri, resume</title>
-<meta name="description" content="Resume of Dev Mistri, data analyst in Birmingham, UK.">
+<meta name="description" content="Resume of Dev Mistri, data analyst in Birmingham, UK. MSc Data and Artificial Intelligence, dissertation on hybrid intrusion detection.">
 <meta name="theme-color" content="#eeede8">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="stylesheet" href="assets/css/style.css">
@@ -41,7 +41,7 @@
 
     <section class="cv-section">
       <h2>Profile</h2>
-      <p>Data analyst with an MSc in Data and Artificial Intelligence from the University of Wales Trinity Saint David and two years of professional software development spent cleaning, validating and querying production data. I work in Python and SQL and back every finding with its evidence. Seven published analyses cover customer churn, A/B testing, delivery performance, customer segmentation, model evaluation, time series and an explainable, fairness-checked credit default model. Clear communicator who turns analysis into recommendations for non-technical colleagues.</p>
+      <p>Data analyst with an MSc in Data and Artificial Intelligence from the University of Wales Trinity Saint David and two years of professional software development spent cleaning, validating and querying production data. I work in Python and SQL and back every finding with its evidence. My MSc dissertation builds a hybrid intrusion detection system on 257,673 network flows and tests its central claim to destruction, reporting where it fails. Eight published analyses also cover customer churn, A/B testing, delivery performance, customer segmentation, time series and an explainable, fairness-checked credit default model. Clear communicator who turns analysis into recommendations for non-technical colleagues.</p>
     </section>
 
     <section class="cv-section">
@@ -49,7 +49,7 @@
       <dl class="cv-skills">
         <dt>Analysis</dt><dd>Python (pandas, NumPy, SciPy), SQL (joins, CTEs, window functions), data cleaning and validation, exploratory analysis</dd>
         <dt>Statistics</dt><dd>Hypothesis testing, A/B testing, bootstrap, statistical modelling, time series</dd>
-        <dt>Machine learning</dt><dd>scikit-learn, XGBoost, logistic regression, random forests, cross-validation, model evaluation and calibration</dd>
+        <dt>Machine learning</dt><dd>scikit-learn, XGBoost, logistic regression, random forests, autoencoders and anomaly detection, cross-validation, model evaluation and calibration</dd>
         <dt>Explainability</dt><dd>SHAP reason codes, fairness testing by group, documenting limitations</dd>
         <dt>Visualisation</dt><dd>Power BI, Tableau, matplotlib, D3</dd>
         <dt>Engineering</dt><dd>Git and GitHub, REST APIs, Node.js, Express.js, MongoDB, Jupyter, Postman</dd>
@@ -92,6 +92,7 @@
       <h2>Selected projects</h2>
       <p class="cv-note">Full write-ups, charts and code: <a href="https://devmistri.co.uk/" target="_blank" rel="noopener">devmistri.co.uk</a></p>
       <ul class="cv-projects">
+        <li><a href="index.html#dissertation">Hybrid intrusion detection (MSc dissertation)</a><span>Autoencoder on normal traffic plus a supervised ensemble, on 257,673 UNSW-NB15 flows. Tested the hybrid against attack families held out of training and found it adds +0.020 ROC AUC at 50 labels and nothing at full scale.</span></li>
         <li><a href="index.html#credit">Credit card default risk</a><span>XGBoost on 30,000 customers (ROC AUC 0.781 vs 0.746 baseline); calibrated, explained with SHAP reason codes and tested for fairness by sex and age.</span></li>
         <li><a href="index.html#churn">Telecom customer churn</a><span>Logistic regression ranks 7,043 customers by risk; the riskiest 20% contains 49.9% of those who left.</span></li>
         <li><a href="index.html#abtest">Mobile game A/B test</a><span>Showed a later paywall gate cut 7-day retention by 0.82 points (p = 0.002) and flagged a sample ratio mismatch.</span></li>
@@ -109,7 +110,7 @@
         <p class="where">University of Wales Trinity Saint David, Birmingham</p>
         <ul>
           <li>Modules: Machine Learning, Artificial Intelligence, Advanced Statistical Programming, Data Mining and Visualisation, Data Security Governance and Compliance.</li>
-          <li>Dissertation: an AI-powered hybrid intrusion detection system combining anomaly detection with supervised learning.</li>
+          <li>Dissertation: &ldquo;Designing and evaluating an AI-powered hybrid intrusion detection system integrating anomaly detection and supervised learning, applying statistical analysis, feature engineering, and model evaluation techniques to network security datasets.&rdquo;</li>
         </ul>
       </div>
       <div class="cv-item">

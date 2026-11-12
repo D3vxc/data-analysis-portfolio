@@ -1,0 +1,191 @@
+WEBVTT
+Kind: captions
+Language: en-GB
+
+1
+00:00:00.000 --> 00:00:03.862
+Can a security system catch an attack that
+nobody has ever labelled?
+
+2
+00:00:03.862 --> 00:00:08.348
+Not a variant of something it's seen. Not
+a near miss. Something genuinely new.
+
+3
+00:00:08.348 --> 00:00:12.650
+That one question is my entire
+dissertation. And I'll be honest with you:
+I
+
+4
+00:00:12.650 --> 00:00:14.026
+did not like the answer.
+
+5
+00:00:14.427 --> 00:00:15.705
+Here's why it matters.
+
+6
+00:00:15.705 --> 00:00:20.162
+Every second, thousands of connections hit
+a network. Almost all of them are
+
+7
+00:00:20.162 --> 00:00:22.390
+ordinary. A few of them are an attack.
+
+8
+00:00:22.650 --> 00:00:26.762
+The way we normally find them is to show a
+model millions of labelled attacks,
+
+9
+00:00:26.762 --> 00:00:28.449
+and let it learn the difference.
+
+10
+00:00:28.449 --> 00:00:31.270
+And it works. Ninety eight percent of
+attacks, caught.
+
+11
+00:00:31.570 --> 00:00:36.023
+But every single one of those was labelled
+by a human first. Someone had already
+
+12
+00:00:36.023 --> 00:00:38.138
+seen that attack, and written it down.
+
+13
+00:00:38.398 --> 00:00:42.946
+So what happens on the day something
+arrives that nobody has written down yet?
+
+14
+00:00:43.406 --> 00:00:47.034
+That's the gap my dissertation goes after.
+And here's the idea.
+
+15
+00:00:47.034 --> 00:00:51.519
+What if you pair that trained model with a
+second one that has only ever seen
+
+16
+00:00:51.519 --> 00:00:55.946
+normal traffic? It has no idea what an
+attack looks like. It only knows what
+
+17
+00:00:55.946 --> 00:00:56.995
+normal looks like.
+
+18
+00:00:56.995 --> 00:01:01.524
+It's called an autoencoder. Train it on
+nothing but ordinary connections, then
+
+19
+00:01:01.524 --> 00:01:03.789
+ask it to rebuild each one from memory.
+
+20
+00:01:03.789 --> 00:01:08.338
+Normal traffic? It rebuilds it almost
+perfectly. Something strange? It fumbles.
+
+21
+00:01:08.338 --> 00:01:11.101
+And that fumble is your alarm. No labels
+needed.
+
+22
+00:01:11.501 --> 00:01:14.917
+So does it actually work? I tested it as
+harshly as I could.
+
+23
+00:01:14.917 --> 00:01:19.330
+I deleted entire families of attack from
+the training data. Worms. Backdoors.
+
+24
+00:01:19.330 --> 00:01:23.456
+Fuzzers. The model had never seen a single
+one. Then I threw them at it.
+
+25
+00:01:23.796 --> 00:01:25.035
+And the answer was no.
+
+26
+00:01:25.035 --> 00:01:29.522
+The hybrid scored zero point nine eight
+three six. The plain model, on its own,
+
+27
+00:01:29.522 --> 00:01:31.850
+scored zero point nine eight three seven.
+
+28
+00:01:31.850 --> 00:01:35.398
+Identical. Eight experiments. Not one of
+them moved the needle.
+
+29
+00:01:35.398 --> 00:01:38.327
+Which is not what I wanted to find, three
+months in.
+
+30
+00:01:38.747 --> 00:01:40.644
+But then I found where it does win.
+
+31
+00:01:40.644 --> 00:01:44.966
+Starve it of labels. Give the trained
+model fifty examples instead of a hundred
+
+32
+00:01:44.966 --> 00:01:46.389
+and seventy five thousand.
+
+33
+00:01:46.389 --> 00:01:50.701
+Suddenly the hybrid is two full points of
+AUC ahead. And with no labels at all,
+
+34
+00:01:50.701 --> 00:01:54.031
+the anomaly detector on its own still
+reaches ninety percent.
+
+35
+00:01:54.031 --> 00:01:58.042
+By two hundred and fifty examples, that
+advantage has completely vanished.
+
+36
+00:01:58.402 --> 00:02:02.455
+So the real answer isn't that hybrids are
+better. It's sharper than that.
+
+37
+00:02:02.455 --> 00:02:06.714
+Hybrids matter on day one. In the weeks
+before anyone has labelled anything.
+
+38
+00:02:06.714 --> 00:02:08.563
+After that, just use your labels.
+
+39
+00:02:08.563 --> 00:02:12.823
+That's not the answer I went looking for.
+But it's the one the data gave me,
+
+40
+00:02:12.823 --> 00:02:14.504
+and it's the one I can defend.

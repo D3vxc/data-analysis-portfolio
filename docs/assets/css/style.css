@@ -110,7 +110,7 @@ strong { font-weight: 650; }
 /* ---------- Title ---------- */
 .hero { position: relative; min-height: 100svh; padding: clamp(74px, 11vh, 104px) var(--gut) 36px; display: flex; flex-direction: column; justify-content: space-between; gap: 26px; }
 .hero-title { margin: 0; height: var(--name-h, auto); }
-.hl { display: block; font: 900 30vw/.8 var(--f-display); font-stretch: 100%; text-transform: uppercase; white-space: nowrap; letter-spacing: -0.01em; }
+.hl { display: block; font: 900 21vw/.8 var(--f-display); font-stretch: 100%; text-transform: uppercase; white-space: nowrap; letter-spacing: -0.01em; }
 .hl + .hl { font-size: 18.4vw; }
 .dots-on .hl { display: none; }
 /* The sticker is stuck over the right end of the rule under the headline, in its own column, so it never covers text. */
@@ -346,7 +346,14 @@ strong { font-weight: 650; }
   .top nav { gap: 13px; font-size: 13.5px; }
   .hero-foot { grid-template-columns: minmax(0, 1fr); }
   .crop, .slate { display: none; }
-  .mtable th:nth-child(3), .mtable td:nth-child(3), .mtable th:nth-child(5), .mtable td:nth-child(5) { display: none; }
+  /* On narrow screens each table drops the two columns it can best afford to lose, which is not
+     the same pair in each: the comparison only works if both models being compared stay. */
+  .mtable-credit th:nth-child(3), .mtable-credit td:nth-child(3),
+  .mtable-credit th:nth-child(5), .mtable-credit td:nth-child(5) { display: none; }
+  .mtable-unseen th:nth-child(2), .mtable-unseen td:nth-child(2),
+  .mtable-unseen th:nth-child(5), .mtable-unseen td:nth-child(5) { display: none; }
+  .mtable-ids th:nth-child(3), .mtable-ids td:nth-child(3),
+  .mtable-ids th:nth-child(4), .mtable-ids td:nth-child(4) { display: none; }
   .frame .chart text { font-size: 14px; }
   .frame .chart .lbl { font-size: 14.5px; }
   .toolkit div { grid-template-columns: minmax(0, 1fr); gap: 2px; }
@@ -369,3 +376,71 @@ strong { font-weight: 650; }
   .story-head { min-height: 0; }
   .btn, .top { transition: none; }
 }
+
+/* ---------- Dissertation flagship ---------- */
+.hero-kicker { font: 700 13.5px/1 var(--f-display); font-stretch: 112%; text-transform: uppercase;
+  letter-spacing: .1em; color: var(--blue); margin-bottom: 16px; }
+
+.diss-cover { border-top: 4px solid #000; border-bottom: 1.5px solid var(--rule);
+  padding: 20px 0 26px; margin-bottom: clamp(40px, 8vh, 90px); display: grid; gap: 18px; }
+.diss-formal { font: 500 clamp(17px, 2.1vw, 25px)/1.32 var(--f-text); font-style: italic;
+  color: var(--ink-2); max-width: 62ch; text-wrap: pretty; }
+.diss-meta { margin: 0; display: grid; gap: 10px 36px; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  font: 500 14.5px/1.35 var(--f-display); }
+.diss-meta div { display: grid; gap: 2px; border-top: 1.5px solid var(--rule); padding-top: 8px; }
+.diss-meta dt { color: var(--ink-3); font-size: 13px; }
+.diss-meta dd { margin: 0; font-weight: 700; }
+
+.story-head-solo { min-height: 0; padding-bottom: clamp(30px, 6vh, 70px); }
+.story-head-solo .story-intro + .story-intro { margin-top: 14px; }
+
+.proof-note { font-size: 16.5px; line-height: 1.5; color: var(--ink-2); margin-top: 12px; max-width: 62ch; }
+.mtable td.win { color: var(--orange); }
+
+/* Chart furniture used by the dissertation charts */
+.chart .ax path, .chart .ax line { stroke: var(--rule); }
+.chart .ax text { font: 500 12px/1 var(--f-display); fill: var(--ink-3); }
+.chart .ref { stroke: #000; stroke-width: 1.8; stroke-dasharray: 6 5; opacity: .62; }
+.chart .bar-hi { fill: var(--orange); }
+.chart-key { display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 4px 0 2px;
+  font: 600 13.5px/1 var(--f-display); color: var(--ink-2); }
+.chart-key span { display: flex; align-items: center; gap: 7px; }
+.chart-key .key { width: 18px; height: 10px; display: inline-block; }
+.chart-key .key-bar { background: var(--blue); }
+.chart-key .key-mute { background: #c9c8c3; }
+/* The credit header is now a full-width block, so its sticker sits inside the gutter. */
+.story-head-solo .head-sticker { right: 14px; top: -78px; }
+/* With JavaScript off nothing pins or scrolls sideways, so the decorative marquees can simply be
+   clipped at the page edge. (With JS on this must stay unset or ScrollTrigger cannot pin.) */
+html.no-js, html.no-js body { overflow-x: hidden; }
+/* The badge's artwork fits its viewBox exactly, so it does not need to bleed; while it spins a
+   visible overflow box pushed a few pixels past the right edge on narrow phones. */
+.sticker svg { overflow: hidden; }
+
+/* ---------- The explainer film ----------
+   A cover drawn in CSS rather than a poster image, so the page keeps its no-image-files rule
+   and the 14MB video is only fetched when somebody actually presses play. */
+.film { position: relative; margin-top: 14px; border: 3px solid #000; background: var(--paper); }
+.film::before { content: ""; display: block; padding-top: 56.25%; }
+.film-cover, .film-vid, .film noscript { position: absolute; inset: 0; width: 100%; height: 100%; }
+.film-vid { display: block; background: #000; object-fit: contain; }
+.film-cover { display: grid; align-content: center; justify-items: start; gap: 16px; padding: clamp(20px, 4.2vw, 52px);
+  border: 0; cursor: pointer; text-align: left; font: inherit; color: inherit;
+  background:
+    repeating-linear-gradient(90deg, rgba(43,43,40,.085) 0 2px, transparent 2px 13px),
+    repeating-linear-gradient(0deg, rgba(43,43,40,.085) 0 2px, transparent 2px 13px),
+    var(--paper); }
+.film-kick { font: 700 clamp(11px, 1.15vw, 14px)/1 var(--f-display); font-stretch: 112%; text-transform: uppercase;
+  letter-spacing: .14em; color: var(--blue); }
+.film-title { font: 900 clamp(22px, 3.5vw, 52px)/.98 var(--f-display); font-stretch: 86%; text-transform: uppercase;
+  letter-spacing: -.012em; max-width: 17ch; }
+.film-title em { font-style: normal; color: var(--orange); }
+.film-go { display: inline-flex; align-items: center; gap: 10px; margin-top: 4px; padding: 12px 20px 11px;
+  background: #000; color: var(--paper); font: 800 clamp(14px, 1.5vw, 18px)/1 var(--f-display); }
+.film-go svg { width: 1.15em; height: 1.15em; fill: currentColor; }
+.film-len { margin-left: 8px; opacity: .62; font-variant-numeric: tabular-nums; }
+.film-cover:hover .film-go, .film-cover:focus-visible .film-go { background: var(--blue); }
+.film-cover:focus-visible { outline: 3px solid var(--orange); outline-offset: -3px; }
+@media (prefers-reduced-motion: no-preference) { .film-go { transition: background .22s ease; } }
+/* With JavaScript off the cover cannot do anything, so the <noscript> player stands alone. */
+html.no-js .film-cover { display: none; }

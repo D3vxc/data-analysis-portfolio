@@ -1,13 +1,14 @@
 /* Dev Mistri portfolio. The page behaves like an edit you scrub by scrolling:
-   - the headline is a halftone printed with the credit model's 6,000 test customers (canvas),
-     and those same dots fly into the chart and get ranked, boxed and split by age;
+   - the headline is a halftone printed with 6,000 real network flows from the dissertation's
+     test set (canvas), and those same dots fly into the chart, get ranked, boxed and split by
+     what the traffic actually was;
    - banner lines are fitted to the full width with the display font's width axis (kinetic type);
    - the page is sliced open into a film strip of the other six cases.
    Libraries: GSAP + ScrollTrigger (scroll timing), Lenis (smooth scroll), D3 (charts). No images. */
 (function () {
   "use strict";
   const S = window.SITE_DATA || {};
-  const T = window.CREDIT_TEST;
+  const T = window.IDS_TEST;
   const root = document.documentElement;
   const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const hasGsap = !!(window.gsap && window.ScrollTrigger);
@@ -77,8 +78,9 @@
     line.style.transform = `scaleX(${(0.5 + 0.5 * p).toFixed(4)})`;
   }
 
-  /* ---------- The dots: 6,000 real test customers ---------- */
+  /* ---------- The dots: 6,000 real network flows ---------- */
   const credit = S.credit || {};
+  const ids = S.ids || {};
   const Dots = (function () {
     let canvas = $("#dots");
     const title = $("#hero-title"), frame = $("#dots-frame"), readout = $("#dots-readout"), visual = $(".story-visual");
@@ -90,16 +92,18 @@
     const n = T.score.length, COLS = 100, TAU = Math.PI * 2;
     const idx = d3.range(n);
     const ranked = idx.slice().sort((a, b) => T.score[b] - T.score[a]);
-    const k = Math.round(n * 0.2);
-    const flagged = new Uint8Array(n); ranked.slice(0, k).forEach((i) => (flagged[i] = 1));
+    // A flow is flagged when the model's probability passes the usual half-way threshold.
+    const flagged = Uint8Array.from(T.score, (v) => (v >= 500 ? 1 : 0));
+    const k = d3.sum(flagged);
     const ys = Uint8Array.from(T.y, Number);
-    const defaults = d3.sum(ys), caught = d3.sum(ranked.slice(0, k), (i) => ys[i]);
-    const groups = T.ages.map((label, g) => {
-      const members = idx.filter((i) => +T.age[i] === g);
+    const attacks = d3.sum(ys), caught = d3.sum(idx, (i) => (flagged[i] && ys[i] ? 1 : 0));
+    const groups = T.grps.map((label, g) => {
+      const members = idx.filter((i) => +T.grp[i] === g);
       return { label, members, flagRate: d3.mean(members, (i) => flagged[i]) };
     });
-    const rates = groups.map((g) => g.flagRate);
-    const stats = { n, defaults, base: defaults / n, capture: caught / defaults, precision: caught / k, ageRatio: d3.min(rates) / d3.max(rates) };
+    const normal = groups[0] || { flagRate: 0 }, fuzz = groups[1] || { flagRate: 0 };
+    const stats = { n, attacks, base: attacks / n, recall: caught / attacks,
+                    precision: k ? caught / k : 0, falseAlarm: normal.flagRate, fuzzRate: fuzz.flagRate };
 
     const rng = d3.randomLcg(7);
     const shuffled = d3.shuffler(rng)(d3.range(n));
@@ -108,7 +112,7 @@
     const posD = new Float32Array(n * 2), namePos = new Float32Array(n * 2);
     const delay = new Float32Array(n), jit = new Float32Array(n * 2), scat = new Float32Array(n * 2);
     for (let i = 0; i < n; i++) { delay[i] = rng(); jit[2 * i] = rng() * 2 - 1; jit[2 * i + 1] = rng() * 2 - 1; scat[2 * i] = rng() * 1.3 - 0.15; scat[2 * i + 1] = rng() * 1.3 - 0.15; }
-    const bucket = [[], [], [], []]; // paid, paid + flagged, defaulted, defaulted + flagged
+    const bucket = [[], [], [], []]; // normal, normal + flagged, attack, attack + flagged
     for (let i = 0; i < n; i++) bucket[(ys[i] ? 2 : 0) + (flagged[i] ? 1 : 0)].push(i);
 
     const st = { intro: 1, fly: 0, t: 0, boil: 0, mx: -9999, my: -9999, tx: -9999, ty: -9999 };
@@ -120,7 +124,7 @@
 
     /* Headline: two lines, each scaled to the full width; the width keywords are chosen so the block has the right height. */
     const KW = ["ultra-condensed", "extra-condensed", "condensed", "semi-condensed", "normal", "semi-expanded", "expanded", "extra-expanded"];
-    const LINES = ["DATA", "ANALYST"];
+    const LINES = ["UNSEEN", "ATTACK"];
     const mcv = document.createElement("canvas"), mctx = mcv.getContext("2d", { willReadFrequently: true });
     const setFont = (c, size, kw) => { c.font = `900 ${kw} ${size}px Anybody, "Arial Black", sans-serif`; if ("fontStretch" in c) c.fontStretch = kw; };
     // Not every browser lets a canvas choose a font width. Where it can't, the same shapes are made by scaling the normal width sideways.
@@ -335,7 +339,11 @@
     function say() {
       if (!readout) return;
       const t = motion ? st.t : 2;
-      const text = motion && st.fly < 1 ? "Printing the test set" : t < 0.55 ? `${fmtInt(defaults)} of ${fmtInt(n)} defaulted` : t < 1.4 ? "Highest score at the top" : t < 2.3 ? `Top 20% holds ${pct(stats.capture, 0)} of defaults` : `Flag-rate ratio by age: ${stats.ageRatio.toFixed(2)}`;
+      const text = motion && st.fly < 1 ? "Printing the test set"
+        : t < 0.55 ? `${fmtInt(attacks)} of ${fmtInt(n)} flows are attacks`
+        : t < 1.4 ? "Most suspicious at the top"
+        : t < 2.3 ? `Flagged: ${pct(stats.recall, 0)} of the attacks`
+        : `False alarms on normal traffic: ${pct(stats.falseAlarm, 0)}`;
       if (text !== lastSay) { readout.textContent = text; lastSay = text; }
     }
     let shownNow = true, lastSig = "";
@@ -400,18 +408,153 @@
     };
   })();
 
-  /* Numbers in the copy come from the same data the dots are drawn from. */
-  if (Dots) {
-    const st = Dots.stats, xgb = credit.models && credit.models.XGBoost;
+  /* Every number in the copy comes from a notebook's results/summary.json, or from the same
+     scores the dots are drawn from. Nothing here is typed in by hand. */
+  {
+    const st = Dots ? Dots.stats : null;
+    const xgb = credit.models && credit.models.XGBoost;
+    const H = ids.headline || {};
+    const hyb = (ids.models || []).find((m) => m.model === "Hybrid");
+    const fuzz = (ids.unseen_family || []).find((u) => u.held_out === "Fuzzers");
+    const fair = credit.fairness_age || {};
+    const num = (v, d) => (v === undefined || v === null ? null : (+v).toFixed(d));
     const bind = {
-      base: pct(st.base),
-      capture: pct(xgb ? xgb.top20_capture : st.capture, 0),
-      precision: pct(xgb ? xgb.top20_precision : st.precision, 1),
-      lift: ((xgb ? xgb.top20_precision : st.precision) / st.base).toFixed(1),
-      ageRatio: st.ageRatio.toFixed(2),
+      // the dissertation
+      idsRows: ids.train_rows && ids.test_rows ? fmtInt(ids.train_rows + ids.test_rows) : null,
+      idsBase: ids.attack_rate_test_pct != null ? ids.attack_rate_test_pct.toFixed(1) + "%"
+               : st ? pct(st.base) : null,
+      idsRecall: hyb ? pct(hyb.recall, 1) : st ? pct(st.recall, 1) : null,
+      idsFalseAlarm: hyb ? pct(hyb.false_alarm, 1) : st ? pct(st.falseAlarm, 1) : null,
+      fuzzUnseen: fuzz ? pct(fuzz.supervised_caught, 1) : null,
+      anomAuc: num(ids.anomaly_only_auc, 2),
+      gain50: num(H.gain_50_labels, 3),
+      gainFull: num(H.gain_full_labels, 4),
+      // the credit case
+      base: credit.base_default_rate_pct != null ? credit.base_default_rate_pct.toFixed(1) + "%" : null,
+      capture: xgb ? pct(xgb.top20_capture, 0) : null,
+      precision: xgb ? pct(xgb.top20_precision, 1) : null,
+      lift: xgb && credit.base_default_rate_pct
+            ? (xgb.top20_precision / (credit.base_default_rate_pct / 100)).toFixed(1) : null,
+      ageRatio: num(fair.ratio, 2),
       shap3: credit.shap_top3_share_pct ? Math.round(credit.shap_top3_share_pct) + "%" : null,
     };
     $$("[data-bind]").forEach((el) => { const v = bind[el.dataset.bind]; if (v) el.textContent = v; });
+  }
+
+  /* ---------- The dissertation's evidence ---------- */
+  if (ids.label_curve && window.d3) {
+    // 1. Where the hybrid helps. Plotting both AUC curves hides the story: they differ by 0.02 at
+    //    the left and by nothing at the right, so on a shared axis they sit on top of each other.
+    //    What matters is the gap itself, so that is what gets drawn.
+    const el = $("#c-labels");
+    if (el) {
+      const C = ids.label_curve, small = el.clientWidth < 520;
+      const w = small ? Math.max(330, el.clientWidth) : 760, h = small ? 290 : 330;
+      const m = { t: 22, r: small ? 18 : 30, b: 46, l: 58 };
+      const top = Math.max(0.025, d3.max(C, (d) => d.gain) * 1.25);
+      const x = d3.scaleLog().domain(d3.extent(C, (d) => d.labels)).range([m.l, w - m.r]);
+      const y = d3.scaleLinear().domain([Math.min(0, d3.min(C, (d) => d.gain) * 1.6), top]).range([h - m.b, m.t]);
+      const svg = svgFor(el, w, h).attr("aria-label",
+        `How much ROC AUC the hybrid adds over the supervised model. With 50 labelled flows it adds ${(+ids.headline.gain_50_labels).toFixed(3)}; by 250 labels the advantage has gone, and on the full training set it is ${(+ids.headline.gain_full_labels).toFixed(3)}.`);
+      svg.append("g").attr("class", "ax").attr("transform", `translate(0,${y(0)})`)
+        .call(d3.axisBottom(x).ticks(5, "~s").tickSizeOuter(0));
+      svg.append("g").attr("class", "ax").attr("transform", `translate(${m.l},0)`)
+        .call(d3.axisLeft(y).ticks(5).tickFormat(d3.format("+.3f")).tickSizeOuter(0));
+      svg.append("text").attr("class", "lbl").attr("x", (m.l + w - m.r) / 2).attr("y", h - 6)
+        .attr("text-anchor", "middle").text("labelled flows the supervised half was trained on");
+      svg.append("text").attr("class", "lbl").attr("x", m.l).attr("y", m.t - 7)
+        .style("font-weight", 800).text("ROC AUC the hybrid adds");
+      const pts = C.map((d) => ({ x: d.labels, v: d.gain }));
+      svg.append("path").attr("fill", "var(--orange)").attr("opacity", .18)
+        .attr("d", d3.area().x((d) => x(d.x)).y0(y(0)).y1((d) => y(d.v))(pts));
+      const path = svg.append("path").attr("class", "ln-model").attr("d",
+        d3.line().x((d) => x(d.x)).y((d) => y(d.v))(pts));
+      // the two ends of the story
+      const first = C[0], last = C[C.length - 1];
+      svg.append("circle").attr("class", "dot").attr("r", 5.5).attr("cx", x(first.labels)).attr("cy", y(first.gain));
+      svg.append("text").attr("class", "val").attr("x", x(first.labels) + 11).attr("y", y(first.gain) + 5)
+        .text(`${first.labels} labels: ${d3.format("+.3f")(first.gain)}`);
+      svg.append("text").attr("class", "val").attr("x", w - m.r).attr("y", y(last.gain) - 13)
+        .attr("text-anchor", "end").text(`all ${fmtInt(last.labels)}: nothing`);
+      onEnter(el, () => playLine(path));
+    }
+
+    // 2. Detection by attack family, trained model against the anomaly detector alone.
+    const fe = $("#c-family");
+    if (fe && ids.by_family) {
+      const rows = [];
+      ids.by_family.slice(0, 6).forEach((d) => {
+        rows.push({ label: d.family, v: d.hybrid * 100, cls: "bar" });
+        rows.push({ label: "", v: d.autoencoder * 100, cls: "bar-mute" });
+      });
+      const play = hbars(fe, rows, {
+        max: 100, rowH: 23, labelW: 118, w: 430, fmt: (v) => v.toFixed(0) + "%",
+        aria: "Share of each attack family flagged, by the hybrid model and by the anomaly detector alone.",
+      });
+      const key = document.createElement("p");
+      key.className = "chart-key";
+      key.innerHTML = '<span><i class="key key-bar"></i>Hybrid</span><span><i class="key key-mute"></i>Anomaly detector alone</span>';
+      fe.parentNode.insertBefore(key, fe);
+      onEnter(fe, play);
+    }
+
+    // 3. SHAP for the hybrid: are the anomaly scores used at all?
+    const se = $("#c-ids-shap");
+    if (se && ids.shap_top) {
+      const play = hbars(se, ids.shap_top.slice(0, 7).map((d) => ({
+        label: d.feature, v: d.value,
+        cls: d.feature === "recon_error" || d.feature === "iso_score" ? "bar-hi" : "bar",
+      })), { rowH: 30, labelW: 118, w: 430, fmt: (v) => v.toFixed(2),
+             aria: "Mean absolute SHAP value for the hybrid model's top features." });
+      onEnter(se, play);
+    }
+
+    // 4. The two tables.
+    const ur = $("#unseen-rows");
+    if (ur && ids.unseen_family) {
+      ur.innerHTML = ids.unseen_family.map((d) => {
+        const best = d.hybrid_caught > d.supervised_caught + 0.005;
+        return `<tr><td>${d.held_out}</td><td>${fmtInt(d.unseen_flows)}</td>` +
+          `<td>${pct(d.supervised_caught, 1)}</td>` +
+          `<td${best ? ' class="win"' : ""}>${pct(d.hybrid_caught, 1)}</td>` +
+          `<td>${pct(d.autoencoder_caught, 1)}</td></tr>`;
+      }).join("");
+    }
+    const mr = $("#ids-rows");
+    if (mr && ids.models) {
+      mr.innerHTML = ids.models.map((m) => {
+        const hi = m.model === "Hybrid";
+        return `<tr><td><i class="key" style="background:${hi ? "var(--orange)" : m.model === "Supervised" ? "var(--blue)" : "#8a8984"}"></i>${m.model}</td>` +
+          `<td>${m.auc.toFixed(3)}</td><td>${m.pr_auc.toFixed(3)}</td>` +
+          `<td>${pct(m.recall, 1)}</td><td>${pct(m.false_alarm, 1)}</td></tr>`;
+      }).join("");
+    }
+  }
+
+  /* ---------- The explainer film ----------
+     The video element is only created on the first press, so nothing is fetched until then.
+     Captions are a real <track>, which gives the browser's own CC button, so they can be
+     switched off and they stay selectable. */
+  {
+    const wrap = $("#film"), btn = $("#film-play");
+    if (wrap && btn) {
+      btn.addEventListener("click", () => {
+        const v = document.createElement("video");
+        v.className = "film-vid";
+        v.controls = true; v.playsInline = true; v.preload = "auto";
+        v.setAttribute("crossorigin", "anonymous");
+        v.innerHTML =
+          '<source src="media/dissertation-explainer.mp4" type="video/mp4">' +
+          '<track kind="captions" src="media/dissertation-explainer.vtt" srclang="en" label="English" default>';
+        btn.remove();
+        wrap.appendChild(v);
+        // Lenis swallows wheel events, so let the player's own controls work normally.
+        ["wheel", "touchmove", "pointerdown"].forEach((e) =>
+          v.addEventListener(e, (ev) => ev.stopPropagation()));
+        const go = v.play();
+        if (go && go.catch) go.catch(() => {});
+      });
+    }
   }
 
   /* ---------- Chart helpers (D3) ---------- */

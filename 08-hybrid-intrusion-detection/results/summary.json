@@ -1,0 +1,388 @@
+{
+ "title": "Designing and evaluating an AI-powered hybrid intrusion detection system integrating anomaly detection and supervised learning, applying statistical analysis, feature engineering, and model evaluation techniques to network security datasets",
+ "dataset": "UNSW-NB15 (Moustafa & Slay, 2015), partitioned set",
+ "checks": {
+  "train rows": "175,341",
+  "test rows": "82,332",
+  "features": "42",
+  "missing values": "0",
+  "duplicate rows (train)": "67601",
+  "constant columns": "none",
+  "categories in test not in train": "state: ['ACC', 'CLO']"
+ },
+ "train_rows": 175341,
+ "test_rows": 82332,
+ "features": 42,
+ "attack_rate_train_pct": 68.1,
+ "attack_rate_test_pct": 55.1,
+ "families": {
+  "Normal": 93000,
+  "Generic": 58871,
+  "Exploits": 44525,
+  "Fuzzers": 24246,
+  "DoS": 16353,
+  "Reconnaissance": 13987,
+  "Analysis": 2677,
+  "Backdoor": 2329,
+  "Shellcode": 1511,
+  "Worms": 174
+ },
+ "features_above_median": 21,
+ "importance_top": [
+  {
+   "feature": "ct_state_ttl",
+   "importance": 0.1448
+  },
+  {
+   "feature": "sttl",
+   "importance": 0.1228
+  },
+  {
+   "feature": "dload",
+   "importance": 0.0697
+  },
+  {
+   "feature": "dttl",
+   "importance": 0.0586
+  },
+  {
+   "feature": "rate",
+   "importance": 0.0546
+  },
+  {
+   "feature": "sload",
+   "importance": 0.0521
+  },
+  {
+   "feature": "dmean",
+   "importance": 0.0465
+  },
+  {
+   "feature": "ackdat",
+   "importance": 0.0343
+  },
+  {
+   "feature": "synack",
+   "importance": 0.0302
+  },
+  {
+   "feature": "smean",
+   "importance": 0.0274
+  },
+  {
+   "feature": "sbytes",
+   "importance": 0.0262
+  },
+  {
+   "feature": "ct_srv_dst",
+   "importance": 0.026
+  }
+ ],
+ "threshold_percentile": 95,
+ "models": [
+  {
+   "model": "Autoencoder only",
+   "auc": 0.9015,
+   "pr_auc": 0.9085,
+   "accuracy": 0.8254,
+   "recall": 0.763,
+   "precision": 0.905,
+   "false_alarm": 0.0982
+  },
+  {
+   "model": "Isolation Forest only",
+   "auc": 0.8198,
+   "pr_auc": 0.771,
+   "accuracy": 0.5403,
+   "recall": 0.2198,
+   "precision": 0.8005,
+   "false_alarm": 0.0671
+  },
+  {
+   "model": "Supervised",
+   "auc": 0.9837,
+   "pr_auc": 0.9881,
+   "accuracy": 0.8725,
+   "recall": 0.9835,
+   "precision": 0.8206,
+   "false_alarm": 0.2635
+  },
+  {
+   "model": "Hybrid",
+   "auc": 0.9836,
+   "pr_auc": 0.9881,
+   "accuracy": 0.8713,
+   "recall": 0.9826,
+   "precision": 0.8195,
+   "false_alarm": 0.2651
+  }
+ ],
+ "by_family": [
+  {
+   "family": "Generic",
+   "flows": 18871,
+   "supervised": 0.9999,
+   "hybrid": 0.9999,
+   "autoencoder": 0.9825
+  },
+  {
+   "family": "Exploits",
+   "flows": 11132,
+   "supervised": 0.9949,
+   "hybrid": 0.9938,
+   "autoencoder": 0.7181
+  },
+  {
+   "family": "Fuzzers",
+   "flows": 6062,
+   "supervised": 0.8901,
+   "hybrid": 0.8883,
+   "autoencoder": 0.3593
+  },
+  {
+   "family": "DoS",
+   "flows": 4089,
+   "supervised": 0.9993,
+   "hybrid": 0.9985,
+   "autoencoder": 0.8271
+  },
+  {
+   "family": "Reconnaissance",
+   "flows": 3496,
+   "supervised": 0.9997,
+   "hybrid": 0.9991,
+   "autoencoder": 0.3355
+  },
+  {
+   "family": "Analysis",
+   "flows": 677,
+   "supervised": 0.9734,
+   "hybrid": 0.9572,
+   "autoencoder": 0.9793
+  },
+  {
+   "family": "Backdoor",
+   "flows": 583,
+   "supervised": 1.0,
+   "hybrid": 0.9983,
+   "autoencoder": 0.9177
+  },
+  {
+   "family": "Shellcode",
+   "flows": 378,
+   "supervised": 0.9894,
+   "hybrid": 0.9868,
+   "autoencoder": 0.3016
+  },
+  {
+   "family": "Worms",
+   "flows": 44,
+   "supervised": 1.0,
+   "hybrid": 1.0,
+   "autoencoder": 0.25
+  }
+ ],
+ "unseen_family": [
+  {
+   "held_out": "Worms",
+   "unseen_flows": 174,
+   "supervised_auc": 0.9988,
+   "supervised_caught": 1.0,
+   "hybrid_auc": 0.9987,
+   "hybrid_caught": 1.0,
+   "autoencoder_auc": 0.8931,
+   "autoencoder_caught": 0.2759
+  },
+  {
+   "held_out": "Shellcode",
+   "unseen_flows": 1511,
+   "supervised_auc": 0.9876,
+   "supervised_caught": 0.9722,
+   "hybrid_auc": 0.988,
+   "hybrid_caught": 0.9742,
+   "autoencoder_auc": 0.7621,
+   "autoencoder_caught": 0.0457
+  },
+  {
+   "held_out": "Backdoor",
+   "unseen_flows": 2329,
+   "supervised_auc": 0.9995,
+   "supervised_caught": 1.0,
+   "hybrid_auc": 0.9996,
+   "hybrid_caught": 1.0,
+   "autoencoder_auc": 0.9558,
+   "autoencoder_caught": 0.8811
+  },
+  {
+   "held_out": "Analysis",
+   "unseen_flows": 2677,
+   "supervised_auc": 0.9522,
+   "supervised_caught": 0.8147,
+   "hybrid_auc": 0.9521,
+   "hybrid_caught": 0.8114,
+   "autoencoder_auc": 0.9678,
+   "autoencoder_caught": 0.8446
+  },
+  {
+   "held_out": "DoS",
+   "unseen_flows": 16353,
+   "supervised_auc": 0.9987,
+   "supervised_caught": 0.9964,
+   "hybrid_auc": 0.9987,
+   "hybrid_caught": 0.9967,
+   "autoencoder_auc": 0.9602,
+   "autoencoder_caught": 0.8525
+  },
+  {
+   "held_out": "Reconnaissance",
+   "unseen_flows": 13987,
+   "supervised_auc": 0.9889,
+   "supervised_caught": 0.9846,
+   "hybrid_auc": 0.9891,
+   "hybrid_caught": 0.986,
+   "autoencoder_auc": 0.782,
+   "autoencoder_caught": 0.2141
+  },
+  {
+   "held_out": "Fuzzers",
+   "unseen_flows": 24246,
+   "supervised_auc": 0.8919,
+   "supervised_caught": 0.2191,
+   "hybrid_auc": 0.89,
+   "hybrid_caught": 0.2212,
+   "autoencoder_auc": 0.6967,
+   "autoencoder_caught": 0.2207
+  },
+  {
+   "held_out": "Worms, Shellcode, Backdoor",
+   "unseen_flows": 4014,
+   "supervised_auc": 0.9946,
+   "supervised_caught": 0.988,
+   "hybrid_auc": 0.9947,
+   "hybrid_caught": 0.9895,
+   "autoencoder_auc": 0.8997,
+   "autoencoder_caught": 0.5877
+  }
+ ],
+ "label_curve": [
+  {
+   "labels": 50,
+   "supervised": 0.8804,
+   "hybrid": 0.9004,
+   "gain": 0.02
+  },
+  {
+   "labels": 100,
+   "supervised": 0.9173,
+   "hybrid": 0.9287,
+   "gain": 0.0113
+  },
+  {
+   "labels": 250,
+   "supervised": 0.949,
+   "hybrid": 0.9511,
+   "gain": 0.0021
+  },
+  {
+   "labels": 500,
+   "supervised": 0.9607,
+   "hybrid": 0.965,
+   "gain": 0.0043
+  },
+  {
+   "labels": 1000,
+   "supervised": 0.9681,
+   "hybrid": 0.9704,
+   "gain": 0.0022
+  },
+  {
+   "labels": 2500,
+   "supervised": 0.9722,
+   "hybrid": 0.973,
+   "gain": 0.0009
+  },
+  {
+   "labels": 5000,
+   "supervised": 0.9771,
+   "hybrid": 0.9783,
+   "gain": 0.0012
+  },
+  {
+   "labels": 20000,
+   "supervised": 0.9827,
+   "hybrid": 0.9831,
+   "gain": 0.0004
+  },
+  {
+   "labels": 175341,
+   "supervised": 0.9846,
+   "hybrid": 0.9843,
+   "gain": -0.0002
+  }
+ ],
+ "anomaly_only_auc": 0.9015,
+ "iso_only_auc": 0.8198,
+ "shap_top": [
+  {
+   "feature": "sttl",
+   "value": 2.7908
+  },
+  {
+   "feature": "recon_error",
+   "value": 1.2393
+  },
+  {
+   "feature": "ct_state_ttl",
+   "value": 0.756
+  },
+  {
+   "feature": "ct_dst_sport_ltm",
+   "value": 0.4787
+  },
+  {
+   "feature": "sbytes",
+   "value": 0.4073
+  },
+  {
+   "feature": "smean",
+   "value": 0.3594
+  },
+  {
+   "feature": "ct_srv_src",
+   "value": 0.2675
+  },
+  {
+   "feature": "ct_dst_src_ltm",
+   "value": 0.2575
+  },
+  {
+   "feature": "ct_srv_dst",
+   "value": 0.2367
+  },
+  {
+   "feature": "swin",
+   "value": 0.2355
+  },
+  {
+   "feature": "proto",
+   "value": 0.2286
+  },
+  {
+   "feature": "dbytes",
+   "value": 0.2249
+  }
+ ],
+ "shap_rank_recon_error": 2,
+ "shap_rank_iso_score": 14,
+ "headline": {
+  "hybrid_auc": 0.9836,
+  "supervised_auc": 0.9837,
+  "gain_full_labels": -0.0002,
+  "gain_50_labels": 0.02,
+  "labels_where_gain_ends": 250,
+  "worst_family": "Fuzzers",
+  "worst_family_caught_pct": 89.0,
+  "ae_caught_pct": 76.3,
+  "ae_false_alarm_pct": 9.8
+ }
+}
