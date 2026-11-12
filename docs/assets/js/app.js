@@ -531,6 +531,32 @@
     }
   }
 
+  /* ---------- The explainer film ----------
+     The video element is only created on the first press, so nothing is fetched until then.
+     Captions are a real <track>, which gives the browser's own CC button, so they can be
+     switched off and they stay selectable. */
+  {
+    const wrap = $("#film"), btn = $("#film-play");
+    if (wrap && btn) {
+      btn.addEventListener("click", () => {
+        const v = document.createElement("video");
+        v.className = "film-vid";
+        v.controls = true; v.playsInline = true; v.preload = "auto";
+        v.setAttribute("crossorigin", "anonymous");
+        v.innerHTML =
+          '<source src="media/dissertation-explainer.mp4" type="video/mp4">' +
+          '<track kind="captions" src="media/dissertation-explainer.vtt" srclang="en" label="English" default>';
+        btn.remove();
+        wrap.appendChild(v);
+        // Lenis swallows wheel events, so let the player's own controls work normally.
+        ["wheel", "touchmove", "pointerdown"].forEach((e) =>
+          v.addEventListener(e, (ev) => ev.stopPropagation()));
+        const go = v.play();
+        if (go && go.catch) go.catch(() => {});
+      });
+    }
+  }
+
   /* ---------- Chart helpers (D3) ---------- */
   function svgFor(el, w, h) {
     el.innerHTML = "";

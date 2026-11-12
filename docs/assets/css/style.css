@@ -416,3 +416,31 @@ html.no-js, html.no-js body { overflow-x: hidden; }
 /* The badge's artwork fits its viewBox exactly, so it does not need to bleed; while it spins a
    visible overflow box pushed a few pixels past the right edge on narrow phones. */
 .sticker svg { overflow: hidden; }
+
+/* ---------- The explainer film ----------
+   A cover drawn in CSS rather than a poster image, so the page keeps its no-image-files rule
+   and the 14MB video is only fetched when somebody actually presses play. */
+.film { position: relative; margin-top: 14px; border: 3px solid #000; background: var(--paper); }
+.film::before { content: ""; display: block; padding-top: 56.25%; }
+.film-cover, .film-vid, .film noscript { position: absolute; inset: 0; width: 100%; height: 100%; }
+.film-vid { display: block; background: #000; object-fit: contain; }
+.film-cover { display: grid; align-content: center; justify-items: start; gap: 16px; padding: clamp(20px, 4.2vw, 52px);
+  border: 0; cursor: pointer; text-align: left; font: inherit; color: inherit;
+  background:
+    repeating-linear-gradient(90deg, rgba(43,43,40,.085) 0 2px, transparent 2px 13px),
+    repeating-linear-gradient(0deg, rgba(43,43,40,.085) 0 2px, transparent 2px 13px),
+    var(--paper); }
+.film-kick { font: 700 clamp(11px, 1.15vw, 14px)/1 var(--f-display); font-stretch: 112%; text-transform: uppercase;
+  letter-spacing: .14em; color: var(--blue); }
+.film-title { font: 900 clamp(22px, 3.5vw, 52px)/.98 var(--f-display); font-stretch: 86%; text-transform: uppercase;
+  letter-spacing: -.012em; max-width: 17ch; }
+.film-title em { font-style: normal; color: var(--orange); }
+.film-go { display: inline-flex; align-items: center; gap: 10px; margin-top: 4px; padding: 12px 20px 11px;
+  background: #000; color: var(--paper); font: 800 clamp(14px, 1.5vw, 18px)/1 var(--f-display); }
+.film-go svg { width: 1.15em; height: 1.15em; fill: currentColor; }
+.film-len { margin-left: 8px; opacity: .62; font-variant-numeric: tabular-nums; }
+.film-cover:hover .film-go, .film-cover:focus-visible .film-go { background: var(--blue); }
+.film-cover:focus-visible { outline: 3px solid var(--orange); outline-offset: -3px; }
+@media (prefers-reduced-motion: no-preference) { .film-go { transition: background .22s ease; } }
+/* With JavaScript off the cover cannot do anything, so the <noscript> player stands alone. */
+html.no-js .film-cover { display: none; }
