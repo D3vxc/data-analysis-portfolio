@@ -1,568 +1,266 @@
 <!doctype html>
-<html lang="en-GB" class="no-js">
+<html lang="en" data-type="service" data-radius="soft" data-buttons="arrow" data-motion>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Dev Mistri, data analyst</title>
-<meta name="description" content="Dev Mistri, data analyst in Birmingham, UK. My MSc dissertation builds a hybrid intrusion detection system and tests whether it really works, plus seven more analyses of real data in Python and SQL.">
-<meta property="og:title" content="Dev Mistri, data analyst">
-<meta property="og:description" content="Can a detector catch an attack nobody has labelled yet? My MSc dissertation, and seven more analyses with their proof.">
-<meta name="theme-color" content="#eeede8">
-<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
-<link rel="preload" href="assets/vendor/fonts/anybody-latin-wdth-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="stylesheet" href="assets/css/style.css">
-<link rel="stylesheet" href="assets/css/peek.css">
-<script>document.documentElement.className = "js";</script>
+<title>Dev Mistri: data analysis for teams that check the answer</title>
+<meta name="description" content="Dev Mistri is a data analyst in Birmingham. Eight published analyses in Python and SQL, each shipped with the notebook that produced it, including the results that went against him.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Dev Mistri: data analysis for teams that check the answer">
+<meta property="og:description" content="Eight analyses in Python and SQL, each with the notebook behind it.">
+<meta property="og:image" content="share.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#cbe4f2">
+<link rel="canonical" href="https://devmistri.co.uk/">
+<meta name="site-kind" content="other">
+<meta name="page-type" content="service">
+<link rel="stylesheet" href="assets/fonts/fonts.css">
+<link rel="stylesheet" href="assets/system.css">
+<link rel="stylesheet" href="assets/ui/cards.css">
+<link rel="stylesheet" href="assets/motion/motion.css">
+<link rel="stylesheet" href="assets/backgrounds/backgrounds.css">
+<link rel="stylesheet" href="assets/layout/layout.css">
+<link rel="stylesheet" href="assets/icons/icon.css">
+<style>
+:root {
+  --p-bg: #cbe4f2; --p-surface: #bcdcee; --p-ink: #0a0a0a; --p-muted: #44606e;
+  --p-accent: #b0298f; --p-accent-ink: #ffffff; --p-action: #b0298f; --p-action-ink: #ffffff;
+  --p-inv-bg: #0a0a0a; --p-inv-surface: #151616; --p-inv-ink: #cbe4f2; --p-inv-muted: #79878f;
+  --p-inv-accent: #b0298f; --p-inv-accent-ink: #ffffff; --p-inv-action: #b0298f; --p-inv-action-ink: #ffffff;
+  --font-display: "Schibsted Grotesk", system-ui, sans-serif;
+  --font-text: "Schibsted Grotesk", system-ui, sans-serif;
+  --display-weight: 400;
+  --display-tracking: -0.035em;
+  --display-tracking-xl: -0.042em;
+  --ly-scale: 0.98;
+}
+</style>
+<link rel="stylesheet" href="assets/ui/base.css">
+<link rel="stylesheet" href="assets/ui/code/fragment.css">
+<link rel="stylesheet" href="assets/ui/stat/fragment.css">
+<script>document.documentElement.classList.add('m-enter');setTimeout(()=>document.documentElement.classList.add('m-enter-done'),700)</script>
+<script src="assets/backgrounds/backgrounds.js"></script>
+<script>document.documentElement.classList.add('mo-js');setTimeout(()=>document.documentElement.classList.add('mo-safe'),2500)</script>
+<link rel="modulepreload" href="assets/moments/moments.js">
+<link rel="modulepreload" href="assets/moments/lib.js">
+<link rel="modulepreload" href="assets/moments/word-highlight/moment.js">
+<style>
+  /* the work list: eight rows beside the result panel, so the panel sets the column height */
+  .cases { margin: 0; padding: 0; list-style: none; }
+  .cases li { display: grid; grid-template-columns: 1fr auto; gap: 2px 20px; align-items: baseline;
+    padding: 13px 0; border-top: 1px solid color-mix(in oklab, var(--ink) 14%, transparent); }
+  .cases li:last-child { border-bottom: 1px solid color-mix(in oklab, var(--ink) 14%, transparent); }
+  .cases b { font-weight: 500; }
+  .cases span { color: var(--muted); font-variant-numeric: tabular-nums; text-align: right; }
+  .cases small { grid-column: 1 / -1; color: var(--muted); font-size: var(--t-small); }
+  /* the kit's muted token under-reads on the mock's own ground: the lang chip needs 4.5:1 */
+  #work .ui-code__lang { color: #22333c; }
+  /* kind other is flat colour: the panels take the page's own surface, not a lit ground */
+  /* kind other is flat colour: the panels take the page's own surface, not a lit ground */
+  #work .panel, #how .panel { background: var(--p-surface); display: grid; place-items: center; }
+  #work .panel { --p-h: 600px; padding: var(--s-5); }
+  #work .panel > .ui, #how .panel > .ui { width: 100%; }
+  #how .panel { --p-h: 520px; padding: var(--s-5); }
+  .cases { margin-top: var(--s-7); display: grid; grid-template-columns: 1fr 1fr; gap: 0 var(--s-8); }
+  @media (max-width: 1023px) { #work .panel { --p-h: 420px; } .cases { grid-template-columns: 1fr; } }
+  /* at 390 the fragment is narrower than its own chip, which then runs past its edge */
+  @media (max-width: 639px) {
+    #work .ui-code__chip, #how .ui-stat__range, #how .ui-stat__sub { display: none; }
+    #how .ui-stat__delta { white-space: normal; }
+  }
+  /* the hero drops its four facts below 1024, which left a hole above the next section */
+  @media (max-width: 1023px) { #work { --padt: var(--s-6); } #work .section-head { margin-top: 0; } }
+  /* the kit hides this hero's four facts below 640, so its words sat high and left a hole above
+     the next section; centring them in the screen the hero must fill closes it */
+  @media (max-width: 639px) { .hero--statement .hero__in { align-content: center; } }
+
+</style>
 </head>
 <body>
-<a class="skip" href="#main">Skip to content</a>
+<!-- type: service
+     deal: hero statement, nav nav-mega, close close-type, footer footer-dark, rhythm space,
+     buttons arrow, mark dots, grounds none, effects none, scenes none, photographs none
+     moments: word-highlight in #finding -->
 
-<!-- Shared artwork: halftone screens, sticker shapes and marker strokes. All drawn by hand in SVG. -->
-<svg class="defs" width="0" height="0" aria-hidden="true" focusable="false">
-  <defs>
-    <pattern id="ht1" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><circle cx="3.5" cy="3.5" r="1.15" fill="#000"/></pattern>
-    <pattern id="ht2" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><circle cx="3.5" cy="3.5" r="2.05" fill="#000"/></pattern>
-    <pattern id="ht3" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><circle cx="3.5" cy="3.5" r="2.95" fill="#000"/></pattern>
-    <pattern id="htw" width="7" height="7" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><circle cx="3.5" cy="3.5" r="1.5" fill="#eeede8"/></pattern>
-
-    <symbol id="st-card" viewBox="0 0 200 200">
-      <g transform="rotate(-14 100 100)">
-        <rect x="20" y="50" width="160" height="102" rx="11" fill="#eeede8"/>
-        <rect x="20" y="50" width="160" height="102" rx="11" fill="url(#ht1)"/>
-        <path d="M112 152 180 96v45a11 11 0 0 1-11 11Z" fill="url(#ht3)"/>
-        <rect x="20" y="50" width="160" height="102" rx="11" fill="none" stroke="#000" stroke-width="5"/>
-        <rect x="20" y="68" width="160" height="21" fill="#000"/>
-        <rect x="36" y="101" width="32" height="24" rx="4" fill="#eeede8" stroke="#000" stroke-width="3.5"/>
-        <path d="M36 113h32M52 101v24" stroke="#000" stroke-width="2.5"/>
-        <g fill="#000"><circle cx="38" cy="139" r="3.2"/><circle cx="48" cy="139" r="3.2"/><circle cx="58" cy="139" r="3.2"/><circle cx="68" cy="139" r="3.2"/><circle cx="86" cy="139" r="3.2"/><circle cx="96" cy="139" r="3.2"/><circle cx="106" cy="139" r="3.2"/></g>
-      </g>
-    </symbol>
-    <symbol id="st-phone" viewBox="0 0 200 200">
-      <g transform="rotate(-32 100 100)">
-        <path d="M26 74C62 46 138 46 174 74l-8 30C132 82 68 82 34 104Z" fill="#000" stroke="#000" stroke-width="6" stroke-linejoin="round"/>
-        <path d="M52 68c30-12 66-12 96 0" fill="none" stroke="url(#htw)" stroke-width="12"/>
-        <rect x="14" y="76" width="50" height="50" rx="12" fill="#eeede8" stroke="#000" stroke-width="6"/>
-        <rect x="14" y="76" width="50" height="50" rx="12" fill="url(#ht2)"/>
-        <rect x="136" y="76" width="50" height="50" rx="12" fill="#eeede8" stroke="#000" stroke-width="6"/>
-        <rect x="136" y="76" width="50" height="50" rx="12" fill="url(#ht2)"/>
-        <g fill="#000"><circle cx="30" cy="112" r="3"/><circle cx="40" cy="112" r="3"/><circle cx="50" cy="112" r="3"/><circle cx="152" cy="112" r="3"/><circle cx="162" cy="112" r="3"/><circle cx="172" cy="112" r="3"/></g>
-        <path d="M161 126c0 12-12 10-12 20s12 8 12 18-12 8-12 18" fill="none" stroke="#000" stroke-width="6" stroke-linecap="round"/>
-      </g>
-    </symbol>
-    <symbol id="st-lock" viewBox="0 0 200 200">
-      <path d="M62 94V64a38 38 0 0 1 76 0v30" fill="none" stroke="#000" stroke-width="17"/>
-      <rect x="38" y="90" width="124" height="94" rx="13" fill="#eeede8"/>
-      <rect x="38" y="90" width="124" height="94" rx="13" fill="url(#ht2)"/>
-      <path d="M100 90h49a13 13 0 0 1 13 13v68a13 13 0 0 1-13 13h-49Z" fill="url(#ht3)"/>
-      <rect x="38" y="90" width="124" height="94" rx="13" fill="none" stroke="#000" stroke-width="5"/>
-      <circle cx="100" cy="128" r="13" fill="#000"/><path d="M93 132h14l5 30H88Z" fill="#000"/>
-    </symbol>
-    <symbol id="st-box" viewBox="0 0 200 200">
-      <path d="M100 26 176 60 100 96 24 60Z" fill="#eeede8"/><path d="M100 26 176 60 100 96 24 60Z" fill="url(#ht1)"/>
-      <path d="M24 60 100 96v84L24 144Z" fill="#eeede8"/><path d="M24 60 100 96v84L24 144Z" fill="url(#ht2)"/>
-      <path d="M176 60 100 96v84l76-36Z" fill="#000"/>
-      <path d="M54 46.6 130 81v30l-14-6.5V87.5L40 53Z" fill="#eeede8" stroke="#000" stroke-width="3" stroke-linejoin="round"/>
-      <path d="M100 26 176 60v84l-76 36-76-36V60Z M24 60l76 36 76-36M100 96v84" fill="none" stroke="#000" stroke-width="5" stroke-linejoin="round"/>
-      <path d="M36 112l34 16v22l-34-16Z" fill="#eeede8" stroke="#000" stroke-width="3" stroke-linejoin="round"/>
-      <path d="M42 124l22 10M42 132l14 6.5" stroke="#000" stroke-width="2.5"/>
-    </symbol>
-    <symbol id="st-receipt" viewBox="0 0 200 200">
-      <g transform="rotate(7 100 100)">
-        <path d="M52 14h96v166l-12-10-12 10-12-10-12 10-12-10-12 10-12-10-12 10Z" fill="#eeede8" stroke="#000" stroke-width="5" stroke-linejoin="round"/>
-        <rect x="68" y="30" width="64" height="12" fill="#000"/>
-        <g fill="#000"><rect x="66" y="56" width="40" height="5"/><rect x="118" y="56" width="16" height="5"/><rect x="66" y="69" width="30" height="5"/><rect x="122" y="69" width="12" height="5"/><rect x="66" y="82" width="46" height="5"/><rect x="116" y="82" width="18" height="5"/><rect x="66" y="95" width="26" height="5"/><rect x="120" y="95" width="14" height="5"/></g>
-        <rect x="66" y="110" width="68" height="18" fill="url(#ht3)"/>
-        <g fill="#000"><rect x="66" y="138" width="4" height="22"/><rect x="73" y="138" width="2" height="22"/><rect x="78" y="138" width="6" height="22"/><rect x="87" y="138" width="2" height="22"/><rect x="92" y="138" width="4" height="22"/><rect x="99" y="138" width="7" height="22"/><rect x="109" y="138" width="2" height="22"/><rect x="114" y="138" width="5" height="22"/><rect x="122" y="138" width="3" height="22"/><rect x="128" y="138" width="6" height="22"/></g>
-      </g>
-    </symbol>
-    <symbol id="st-eye" viewBox="0 0 200 200">
-      <path d="M10 100C48 44 152 44 190 100 152 156 48 156 10 100Z" fill="#eeede8"/>
-      <path d="M10 100C48 44 152 44 190 100 152 156 48 156 10 100Z" fill="url(#ht1)"/>
-      <path d="M10 100C48 44 152 44 190 100 152 156 48 156 10 100Z" fill="none" stroke="#000" stroke-width="6" stroke-linejoin="round"/>
-      <circle cx="100" cy="100" r="38" fill="#000"/><circle cx="100" cy="100" r="30" fill="url(#htw)"/><circle cx="100" cy="100" r="17" fill="#000"/>
-      <circle cx="112" cy="88" r="7" fill="#eeede8"/>
-      <path d="M40 62 30 44M70 46 64 26M100 40V18M130 46l6-20M160 62l10-18" stroke="#000" stroke-width="6" stroke-linecap="round"/>
-    </symbol>
-    <symbol id="st-house" viewBox="0 0 200 200">
-      <rect x="128" y="38" width="20" height="40" fill="#000"/>
-      <path d="M38 94h124v88H38Z" fill="#eeede8"/><path d="M38 94h124v88H38Z" fill="url(#ht1)"/>
-      <path d="M100 94h62v88h-62Z" fill="url(#ht2)"/>
-      <path d="M38 94h124v88H38Z" fill="none" stroke="#000" stroke-width="5" stroke-linejoin="round"/>
-      <path d="M18 100 100 28l82 72Z" fill="#000" stroke="#000" stroke-width="5" stroke-linejoin="round"/>
-      <rect x="86" y="128" width="28" height="54" fill="#000"/>
-      <rect x="50" y="112" width="24" height="26" fill="#eeede8" stroke="#000" stroke-width="4"/><path d="M62 112v26M50 125h24" stroke="#000" stroke-width="3"/>
-      <rect x="126" y="112" width="24" height="26" fill="#eeede8" stroke="#000" stroke-width="4"/><path d="M138 112v26M126 125h24" stroke="#000" stroke-width="3"/>
-    </symbol>
-  </defs>
-</svg>
-
-<div id="scan" aria-hidden="true"><b></b><i></i></div>
-<canvas id="dots" aria-hidden="true"></canvas>
-<div id="grain" aria-hidden="true"></div>
-<div class="crop" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
-<div class="cursor" aria-hidden="true"></div>
-
-<header class="top">
-  <a class="name" href="#top">Dev Mistri</a>
-  <nav aria-label="Sections">
-    <a href="#dissertation" class="hide-sm">Dissertation</a>
-    <a href="#work">Cases</a>
-    <a href="#about" class="hide-sm">About</a>
-    <a href="resume.html">Resume</a>
-    <a href="#contact">Contact</a>
-  </nav>
+<header class="nav">
+  <div class="wrap nav__bar">
+    <a class="skip-link" href="#top">Skip to content</a>
+    <a class="nav__logo" href="#top"><span class="mark" data-mark="dots" aria-hidden="true"></span>Dev Mistri</a>
+    <nav class="nav__links" aria-label="Main">
+      <div class="nav__item">
+        <a class="nav__link" href="#work">Analyses <svg class="chev" viewBox="0 0 12 12" aria-hidden="true"><path d="M3 4.5l3 3 3-3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        <div class="nav__menu">
+          <div class="wrap grid">
+            <div class="menu-col span-3">
+              <p class="t-label">Modelling</p>
+              <a href="#work">Intrusion detection<span>The MSc dissertation</span></a>
+              <a href="#work">Credit default risk<span>30,000 card customers</span></a>
+              <a href="#work">Customer churn<span>Who leaves, and when</span></a>
+            </div>
+            <div class="menu-col span-3">
+              <p class="t-label">Measurement</p>
+              <a href="#work">Mobile game A/B test<span>A paywall moved too late</span></a>
+              <a href="#work">Late deliveries<span>99,441 orders in SQL</span></a>
+              <a href="#work">House prices since 1953<span>Three downturns measured</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="nav__item"><a class="nav__link" href="#how">Method</a></div>
+      <div class="nav__item"><a class="nav__link" href="#finding">A result that failed</a></div>
+    </nav>
+    <div class="nav__actions">
+      <a class="nav__link" href="resume.html">Resume</a>
+      <a class="btn btn--primary" href="#contact">Email Dev<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+    </div>
+    <button class="nav__toggle" type="button" aria-expanded="false" aria-label="Menu"><svg width="18" height="18" viewBox="0 0 18 18" aria-hidden="true"><path d="M2 5h14M2 13h14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></button>
+  </div>
 </header>
 
-<main id="main">
+<main id="top">
 
-  <!-- Title: a dissertation cover page. The headline is printed with 6,000 real network flows. -->
-  <section class="hero" id="top" data-scene="Title">
-    <p class="hero-kicker">MSc dissertation &middot; final year project &middot; 2026</p>
-    <h1 class="hero-title" id="hero-title">
-      <span class="sr-only">Dev Mistri, data analyst. MSc dissertation: an AI-powered hybrid intrusion detection system.</span>
-      <span class="hl" aria-hidden="true">Unseen</span>
-      <span class="hl" aria-hidden="true">Attack</span>
-    </h1>
-    <div class="hero-foot">
-      <p class="hero-claim">Can a detector catch an attack nobody has labelled yet?</p>
-      <p class="hero-note">
-        <svg class="mark mark-arrow" viewBox="0 0 90 70" aria-hidden="true"><path d="M82 64C70 30 44 12 10 14M10 14l16-9M10 14l12 14"/></svg>
-        This headline is printed with <strong>6,000 real network flows</strong>. The orange ones are attacks. Scroll, and the system I built for my dissertation goes looking for them.
-      </p>
-      <dl class="hero-facts">
-        <div><dt>Who</dt><dd>Dev Mistri, MSc Data and Artificial Intelligence</dd></div>
-        <div><dt>Where</dt><dd>Birmingham, UK</dd></div>
-        <div><dt>Open to</dt><dd>Data analyst and graduate data roles</dd></div>
-      </dl>
-      <div class="sticker" aria-hidden="true">
-        <svg viewBox="0 0 200 200">
-          <circle cx="100" cy="100" r="98" fill="var(--orange)"/>
-          <path id="sticker-path" d="M100 100m-74 0a74 74 0 1 1 148 0a74 74 0 1 1-148 0" fill="none"/>
-          <text class="sticker-text"><textPath href="#sticker-path" startOffset="0" textLength="458" lengthAdjust="spacing">Open to work * Birmingham UK * Data analyst * </textPath></text>
-          <path d="M100 62l9 26 27-5-18 20 18 20-27-5-9 26-9-26-27 5 18-20-18-20 27 5Z" fill="#000"/>
-        </svg>
+  <section class="hero hero--statement" data-enter aria-labelledby="hero-h">
+    <div class="wrap"><div class="hero-text hero__in">
+      <div>
+        <h1 id="hero-h">Data analysis for teams that check the answer</h1>
+        <p class="hero__lead">Dev Mistri, a data analyst in Birmingham. Eight published analyses in Python and SQL, each one shipped with the notebook that produced it, including the result that went against me.</p>
+        <div class="btn-row">
+          <a class="btn btn--primary" href="#contact">Email Dev<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+          <a class="btn btn--secondary" href="#work">Read the analyses</a>
+        </div>
       </div>
-    </div>
-  </section>
-
-  <!-- Flagship: the MSc dissertation. The hero dots fly into this chart. -->
-  <section class="story" id="dissertation" data-scene="Dissertation" aria-labelledby="diss-title">
-    <div class="wrap diss-cover">
-      <p class="tag">Final year project &middot; MSc dissertation</p>
-      <h2 class="diss-formal" id="diss-formal-title">Designing and evaluating an AI-powered hybrid intrusion detection system integrating anomaly detection and supervised learning, applying statistical analysis, feature engineering, and model evaluation techniques to network security datasets</h2>
-      <dl class="diss-meta">
+      <dl class="hero__facts">
+        <div><dt>Published analyses</dt><dd>Eight, all reproducible</dd></div>
         <div><dt>Degree</dt><dd>MSc Data and Artificial Intelligence</dd></div>
-        <div><dt>University</dt><dd>University of Wales Trinity Saint David</dd></div>
-        <div><dt>Data</dt><dd>UNSW-NB15, <span data-bind="idsRows">257,673</span> labelled network flows</dd></div>
-        <div><dt>Verdict</dt><dd>The hybrid helps only when labels are scarce</dd></div>
+        <div><dt>Tools</dt><dd>Python, SQL, Power BI</dd></div>
+        <div><dt>Based</dt><dd>Birmingham, open to work</dd></div>
       </dl>
-    </div>
-
-    <div class="wrap story-grid">
-      <figure class="story-visual" aria-describedby="dots-desc">
-        <div class="dots-frame" id="dots-frame" role="img" aria-label="6,000 network flows drawn as dots, coloured by whether they are attack traffic"><i></i><i></i><i></i><i></i></div>
-        <figcaption>
-          <span class="legend"><i class="sw sw-default"></i>Attack traffic</span>
-          <span class="legend"><i class="sw sw-paid"></i>Normal traffic</span>
-          <span class="dots-readout" id="dots-readout" aria-live="polite"></span>
-        </figcaption>
-        <p id="dots-desc" class="sr-only">Each dot is one of 6,000 network flows sampled from the held-out test half. The steps beside the chart describe each arrangement.</p>
-      </figure>
-
-      <div class="story-col">
-        <header class="story-head">
-          <svg class="sticker-art head-sticker" viewBox="0 0 200 200" aria-hidden="true"><use href="#st-lock"/></svg>
-          <h2 class="banner" id="diss-title" data-banner data-cap="0.13" aria-label="What happens when the attack is new?">
-            <span class="bl" aria-hidden="true">What happens</span>
-            <span class="bl" aria-hidden="true">when the attack</span>
-            <span class="bl" aria-hidden="true">is new?</span>
-          </h2>
-          <p class="story-intro">A detector trained on known attacks is good at known attacks. The question my dissertation asks is what it does when something arrives that nobody has labelled. The proposed answer is a hybrid: pair the trained model with an anomaly detector that has only ever seen normal traffic. I built it, and then I tried to break it.</p>
-        </header>
-        <ol class="steps">
-          <li class="step" data-step="0">
-            <span class="step-n" aria-hidden="true">01</span>
-            <h3>6,000 flows the system never saw</h3>
-            <p>Each dot is one connection from the held-out test half of UNSW-NB15. The orange ones are attacks: <strong data-bind="idsBase">55.1%</strong> of them, shuffled at random.</p>
-          </li>
-          <li class="step" data-step="1">
-            <span class="step-n" aria-hidden="true">02</span>
-            <h3>Ranked by how suspicious they look</h3>
-            <p>An autoencoder is trained on normal traffic alone and scores every flow by how badly it reconstructs it. It never sees a single attack label and still reaches <strong data-bind="anomAuc">0.90</strong> ROC AUC. The labelled model then ranks everything. Keep scrolling and the attacks rise.</p>
-          </li>
-          <li class="step" data-step="2">
-            <span class="step-n" aria-hidden="true">03</span>
-            <h3>Everything above the line gets flagged</h3>
-            <p>At the usual threshold the hybrid catches <strong class="circled"><span data-bind="idsRecall">98.3%</span><svg class="mark mark-circle" viewBox="0 0 200 100" preserveAspectRatio="none" aria-hidden="true"><path d="M14 54C8 22 62 6 112 8c50 2 80 18 76 46-4 30-58 42-104 38C40 88 6 78 16 42"/></svg></strong> of the attacks. Taken alone that number means very little, which is what the rest of this page is about.</p>
-          </li>
-          <li class="step" data-step="3">
-            <span class="step-n" aria-hidden="true">04</span>
-            <h3>Now split it by what the traffic actually was</h3>
-            <p>Nearly every attack is caught. The cost sits in the top band: <strong data-bind="idsFalseAlarm">26.4%</strong> of perfectly normal traffic is flagged too. On a network carrying millions of connections a day that is an unusable number of false alarms, and no ROC AUC of 0.98 will tell you so.</p>
-          </li>
-        </ol>
-      </div>
-    </div>
-
-    <div class="wrap evidence">
-      <div class="proof proof-wide">
-        <h3>Two minutes, if you would rather watch it</h3>
-        <p>The same argument as this page, narrated: the question, the idea, the test, and what it actually found. Captions are on by default and can be switched off in the player's own controls.</p>
-        <div class="film" id="film">
-          <button class="film-cover" type="button" id="film-play" aria-label="Play the explainer, 2 minutes 14 seconds">
-            <span class="film-kick">MSc dissertation &middot; explainer</span>
-            <span class="film-title">Can a system catch an attack <em>nobody has ever labelled?</em></span>
-            <span class="film-go"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z"/></svg>Play<span class="film-len">2:14</span></span>
-          </button>
-          <noscript>
-            <video class="film-vid" controls preload="none" width="1920" height="1080">
-              <source src="media/dissertation-explainer.mp4" type="video/mp4">
-              <track kind="captions" src="media/dissertation-explainer.vtt" srclang="en" label="English" default>
-            </video>
-          </noscript>
-        </div>
-        <p class="proof-note">Everything in it is drawn in code from the notebook's own figures, and the narration is a transcript you can read in <a href="https://github.com/D3vxc/data-analysis-portfolio/blob/main/08-hybrid-intrusion-detection/explainer-transcript.md" target="_blank" rel="noopener">explainer-transcript.md</a>.</p>
-      </div>
-      <div class="proof proof-wide">
-        <h3>The hybrid only wins before the labels arrive</h3>
-        <p>ROC AUC against the number of labelled flows the supervised half was trained on, five draws each. The anomaly detector needs no labels at all, so its score is a flat line.</p>
-        <div class="chart" id="c-labels"></div>
-        <p class="proof-note">With 50 labelled flows the hybrid gains <strong data-bind="gain50">0.020</strong> AUC. By 250 the gap is noise, and on the full training set it is <strong data-bind="gainFull">-0.0002</strong>. This is the dissertation's real finding, and it is not the one the title hoped for.</p>
-      </div>
-      <div class="proof">
-        <h3>Who gets caught, family by family</h3>
-        <p>Share of each attack family flagged on the test half.</p>
-        <div class="chart" id="c-family"></div>
-      </div>
-      <div class="proof">
-        <h3>What the model leans on</h3>
-        <p>Mean absolute SHAP value for the hybrid. The two anomaly scores are in orange.</p>
-        <div class="chart" id="c-ids-shap"></div>
-      </div>
-      <div class="proof proof-wide">
-        <h3>Taking a whole attack family out of training</h3>
-        <p>Each row retrains all three models with that family deleted, then tests on it. If the hybrid were going to earn its keep anywhere, it would be here. It does not: every row is within 0.002 of the supervised model. The interesting row is Fuzzers, caught just <strong data-bind="fuzzUnseen">21.9%</strong> of the time when held out, because fuzzing looks like ordinary traffic at the flow level and the anomaly detector is no better at it.</p>
-        <table class="mtable mtable-unseen">
-          <caption class="sr-only">Detection of attack families held out of training entirely</caption>
-          <thead><tr><th scope="col">Family held out</th><th scope="col">Flows</th><th scope="col">Supervised</th><th scope="col">Hybrid</th><th scope="col">Anomaly only</th></tr></thead>
-          <tbody id="unseen-rows"></tbody>
-        </table>
-      </div>
-      <div class="proof proof-wide">
-        <h3>All four models on the standard split</h3>
-        <table class="mtable mtable-ids">
-          <caption class="sr-only">Model comparison on the held-out test half</caption>
-          <thead><tr><th scope="col">Model</th><th scope="col">ROC AUC</th><th scope="col">PR AUC</th><th scope="col">Attacks caught</th><th scope="col">False alarms</th></tr></thead>
-          <tbody id="ids-rows"></tbody>
-        </table>
-        <p class="proof-note">The false alarm rates are far worse than the cross-validation figures usually quoted for this dataset, because the published split has a real distribution shift between its halves. That is the point of using it.</p>
-      </div>
-      <p class="proof-links">
-        <a class="btn" href="https://github.com/D3vxc/data-analysis-portfolio/blob/main/08-hybrid-intrusion-detection/analysis.ipynb" target="_blank" rel="noopener">Read the notebook</a>
-        <a class="btn btn-ghost" href="https://github.com/D3vxc/data-analysis-portfolio/tree/main/08-hybrid-intrusion-detection" target="_blank" rel="noopener">Write-up and limitations</a>
-      </p>
-    </div>
+    </div></div>
   </section>
 
-  <!-- Second case: credit default risk -->
-  <section class="story" id="credit" data-scene="Credit risk" aria-labelledby="credit-title">
-    <div class="wrap story-head story-head-solo">
-      <svg class="sticker-art head-sticker" viewBox="0 0 200 200" aria-hidden="true"><use href="#st-card"/></svg>
-      <p class="tag">Second case &middot; built alongside it</p>
-      <h2 class="banner" id="credit-title" data-banner data-cap="0.13" aria-label="Who misses next month's payment?">
-        <span class="bl" aria-hidden="true">Who misses</span>
-        <span class="bl" aria-hidden="true">next month's</span>
-        <span class="bl" aria-hidden="true">payment?</span>
-      </h2>
-      <p class="story-intro">A card issuer wants to reach customers before they default, but its team can only call one in five. The model has to rank well, give a reason for every flag, and treat groups fairly. Built on 30,000 real customer records with XGBoost and SHAP. Calling the riskiest 20% reaches <strong data-bind="capture">51%</strong> of next month's defaults, and <strong data-bind="precision">56.5%</strong> of those called do default, <span data-bind="lift">2.6</span> times the average rate.</p>
-      <p class="story-intro">Leaving age out of the model did not make its outcomes equal. Under-30s are flagged most and 30 to 39s least, a ratio of <strong data-bind="ageRatio">0.80</strong>, right on the four-fifths screening line. Fine for a supportive phone call; it would need fixing before the score could limit anyone's credit.</p>
-    </div>
-
-    <div class="wrap evidence">
-      <div class="proof proof-wide">
-        <h3>Better than the baseline, but only modestly</h3>
-        <p>Share of defaults reached as more customers are called, on the test set.</p>
-        <div class="chart" id="c-gains"></div>
-        <table class="mtable mtable-credit">
-          <caption class="sr-only">Model comparison on the held-out test set</caption>
-          <thead><tr><th scope="col">Model</th><th scope="col">ROC AUC (test)</th><th scope="col">ROC AUC (5-fold CV)</th><th scope="col">KS</th><th scope="col">Brier</th></tr></thead>
-          <tbody id="model-rows"></tbody>
-        </table>
-      </div>
-      <div class="proof">
-        <h3>A 30% score means a 30% risk</h3>
-        <p>Predicted against actual default rate in ten equal bands.</p>
-        <div class="chart chart-square" id="c-calib"></div>
-      </div>
-      <div class="proof">
-        <h3>What drives the score</h3>
-        <p>Mean absolute SHAP value. Repayment history carries <span data-bind="shap3">42%</span> of the attribution.</p>
-        <div class="chart" id="c-shap"></div>
-      </div>
-      <div class="proof proof-wide">
-        <h3>Every flag comes with reasons</h3>
-        <p>What an agent would see for one flagged customer, generated from SHAP values.</p>
-        <div class="reason-card" id="reason-card"></div>
-      </div>
-      <p class="proof-links">
-        <a class="btn" href="https://github.com/D3vxc/data-analysis-portfolio/blob/main/07-credit-default-risk/analysis.ipynb" target="_blank" rel="noopener">Read the notebook</a>
-        <a class="btn btn-ghost" href="https://github.com/D3vxc/data-analysis-portfolio/tree/main/07-credit-default-risk" target="_blank" rel="noopener">Write-up and limitations</a>
-      </p>
-    </div>
-  </section>
-
-  <!-- Six more cases: the page is sliced open, then a film strip scrolls sideways -->
-  <section class="work" id="work" data-scene="Six cases" aria-labelledby="work-title">
-    <div class="cut" id="cut">
-      <div class="cut-stage">
-        <div class="cut-base">
-          <h2 class="cut-title" id="work-title"><span>Six more</span><span>cases</span></h2>
-          <p class="cut-sub">Each one starts from a question a manager would ask and ends with a recommendation and its limits.</p>
+  <section class="section" id="work" aria-labelledby="work-h">
+    <div class="wrap grid grid--middle">
+      <div class="span-5">
+        <div class="section-head">
+          <h2 id="work-h">The notebook ships with the number. <span class="muted">Every figure on this page is read from the output of a notebook you can run yourself.</span></h2>
         </div>
-        <div class="cut-half cut-a" aria-hidden="true"><span class="cut-word">Cut to</span></div>
-        <div class="cut-half cut-b" aria-hidden="true"><span class="cut-word">Cut to</span></div>
-        <i class="cut-blade" aria-hidden="true"></i>
-        <i class="cut-flash" aria-hidden="true"></i>
+        <ul class="checks">
+          <li>Public data, cited, fetched by the notebook on its first run</li>
+          <li>Each model measured against a plain baseline, never against nothing</li>
+          <li>The write-ups keep the results that argue against the model</li>
+        </ul>
       </div>
-    </div>
-
-    <div class="strip-pin" id="strip-pin">
-      <div class="strip-view" id="strip-view">
-        <div class="strip" id="strip">
-
-          <article class="frame" id="churn">
-            <p class="rebate" aria-hidden="true"><b>01</b><span>Python</span><span>scikit-learn</span><span>7,043 customers</span></p>
-            <div class="frame-fig">
-              <div class="chart" data-mini="churn"></div>
-              <p class="frame-cap">Actual churn by predicted risk decile</p>
-              <svg class="sticker-art" viewBox="0 0 200 200" aria-hidden="true"><use href="#st-phone"/></svg>
+      <div class="span-7 start-6">
+        <div class="panel">
+          <div class="ui ui-panel ui-code" data-ui="code">
+            <div class="ui-code__tabs">
+              <span class="ui-code__tab is-on"><i class="ui-code__lang">PY</i>analysis.ipynb</span>
+              <span class="ui-spacer"></span>
+              <span class="ui-chip ui-chip--plain ui-code__chip" data-code-chip>8 holdouts</span>
             </div>
-            <div class="frame-text">
-              <p class="big-num" data-count="49.9" data-dec="1" data-suffix="%">49.9%</p>
-              <p class="big-label">of the customers who left sat in the riskiest fifth</p>
-              <h3>Which telecom customers are about to leave?</h3>
-              <p>A logistic regression (ROC AUC 0.844) ranks every customer by churn risk. Month-to-month customers in their first six months are the problem.</p>
-              <p class="frame-links"><a href="https://github.com/D3vxc/data-analysis-portfolio/blob/main/04-telecom-customer-churn/analysis.ipynb" target="_blank" rel="noopener">Notebook</a></p>
-            </div>
-          </article>
-
-          <article class="frame" id="abtest">
-            <p class="rebate" aria-hidden="true"><b>02</b><span>A/B testing</span><span>z-test, bootstrap</span><span>90,189 players</span></p>
-            <div class="frame-fig">
-              <div class="chart" data-mini="ab"></div>
-              <p class="frame-cap">7-day retention with 95% confidence intervals</p>
-              <svg class="sticker-art" viewBox="0 0 200 200" aria-hidden="true"><use href="#st-lock"/></svg>
-            </div>
-            <div class="frame-text">
-              <p class="big-num" data-count="0.82" data-dec="2" data-prefix="−">−0.82</p>
-              <p class="big-label">points of 7-day retention lost (p = 0.002)</p>
-              <h3>Should a mobile game move its paywall?</h3>
-              <p>No. The later gate hurt retention, and the test also had a sample ratio mismatch (p = 0.009) that needed investigating before anyone trusted the result.</p>
-              <p class="frame-links"><a href="https://github.com/D3vxc/data-analysis-portfolio/blob/main/05-mobile-game-ab-test/analysis.ipynb" target="_blank" rel="noopener">Notebook</a></p>
-            </div>
-          </article>
-
-          <article class="frame" id="deliveries">
-            <p class="rebate" aria-hidden="true"><b>03</b><span>SQL</span><span>CTEs, window functions</span><span>99,441 orders</span></p>
-            <div class="frame-fig">
-              <div class="chart" data-mini="deliveries"></div>
-              <p class="frame-cap">Average review score by days late</p>
-              <svg class="sticker-art" viewBox="0 0 200 200" aria-hidden="true"><use href="#st-box"/></svg>
-            </div>
-            <div class="frame-text">
-              <p class="big-num" data-count="36.7" data-dec="1" data-suffix="%">36.7%</p>
-              <p class="big-label">of one-star reviews come from late orders</p>
-              <h3>What do late deliveries cost in reviews?</h3>
-              <p>Late orders are only 6.8% of deliveries. The average rating drops from 4.29 to 1.70 stars once an order is eight days late.</p>
-              <p class="frame-links"><a href="https://github.com/D3vxc/data-analysis-portfolio/blob/main/06-ecommerce-late-deliveries/queries.sql" target="_blank" rel="noopener">SQL</a><a href="https://github.com/D3vxc/data-analysis-portfolio/blob/main/06-ecommerce-late-deliveries/analysis.ipynb" target="_blank" rel="noopener">Notebook</a></p>
-            </div>
-          </article>
-
-          <article class="frame" id="retail">
-            <p class="rebate" aria-hidden="true"><b>04</b><span>SQL</span><span>RFM, cohorts</span><span>541,909 transactions</span></p>
-            <div class="frame-fig">
-              <div class="chart" data-mini="retail"></div>
-              <p class="frame-cap">Share of revenue by RFM customer segment</p>
-              <svg class="sticker-art" viewBox="0 0 200 200" aria-hidden="true"><use href="#st-receipt"/></svg>
-            </div>
-            <div class="frame-text">
-              <p class="big-num" data-count="14" data-dec="0" data-suffix="%">14%</p>
-              <p class="big-label">of customers bring in 45% of the revenue</p>
-              <h3>Where does a UK retailer's revenue come from?</h3>
-              <p>After cleaning 541,909 transactions, the £9.63m of revenue leans on a small group of champions, and 602 at-risk customers worth £625k are a win-back target.</p>
-              <p class="frame-links"><a href="https://github.com/D3vxc/data-analysis-portfolio/blob/main/01-uk-online-retail/queries.sql" target="_blank" rel="noopener">SQL</a><a href="https://github.com/D3vxc/data-analysis-portfolio/blob/main/01-uk-online-retail/analysis.ipynb" target="_blank" rel="noopener">Notebook</a></p>
-            </div>
-          </article>
-
-          <article class="frame" id="security">
-            <p class="rebate" aria-hidden="true"><b>05</b><span>Evaluation design</span><span>random forest</span><span>148,517 connections</span></p>
-            <div class="frame-fig">
-              <div class="chart" data-mini="nsl"></div>
-              <p class="frame-cap">Share of attacks detected, by attack type</p>
-              <svg class="sticker-art" viewBox="0 0 200 200" aria-hidden="true"><use href="#st-eye"/></svg>
-            </div>
-            <div class="frame-text">
-              <p class="big-num" data-count="76.5" data-dec="1" data-suffix="%">76.5%</p>
-              <p class="big-label">real accuracy behind a 99.88% score</p>
-              <h3>What is a 99.9% accurate model hiding?</h3>
-              <p>An intrusion detector that looks perfect in cross-validation catches only 22% of the attack types it never saw in training.</p>
-              <p class="frame-links"><a href="https://github.com/D3vxc/data-analysis-portfolio/blob/main/03-network-traffic-eda/analysis.ipynb" target="_blank" rel="noopener">Notebook</a></p>
-            </div>
-          </article>
-
-          <article class="frame" id="housing">
-            <p class="rebate" aria-hidden="true"><b>06</b><span>Time series</span><span>data validation</span><span>290 quarters</span></p>
-            <div class="frame-fig">
-              <div class="chart" data-mini="house"></div>
-              <p class="frame-cap">Average UK house price since 1953, log scale. Shaded: from each peak until prices recovered.</p>
-              <svg class="sticker-art" viewBox="0 0 200 200" aria-hidden="true"><use href="#st-house"/></svg>
-            </div>
-            <div class="frame-text">
-              <p class="big-num" data-count="8.5" data-dec="1" data-suffix=" yrs">8.5 yrs</p>
-              <p class="big-label">for prices to recover from the 1989 peak</p>
-              <h3>How long do UK house price crashes last?</h3>
-              <p>After validating 72 years of data against a recalculation, three downturns stand out. The 2007 fall took 6.8 years to recover.</p>
-              <p class="frame-links"><a href="https://github.com/D3vxc/data-analysis-portfolio/blob/main/02-uk-house-prices/analysis.ipynb" target="_blank" rel="noopener">Notebook</a></p>
-            </div>
-          </article>
-
+            <pre class="ui-code__pre"><code><span class="ui-code__ln" data-n="41"><span class="c"># one attack family deleted</span></span>
+<span class="ui-code__ln" data-n="42">keep = (fam != <span class="n">"Fuzzers"</span>)</span>
+<span class="ui-code__ln" data-n="43">sup = <span class="f">fit</span>(X[keep], y[keep])</span>
+<span class="ui-code__ln is-mark" data-n="44" data-note="The anomaly score adds nothing.">hyb = <span class="f">fit</span>(H[keep], y[keep])</span>
+<span class="ui-code__ln" data-n="45"><span class="f">auc</span>(y_new, sup) <span class="c"># 0.9837</span></span>
+<span class="ui-code__ln" data-n="46"><span class="f">auc</span>(y_new, hyb) <span class="c"># 0.9836</span></span></code></pre>
+            <div class="ui-code__hint" data-code-hint><span class="ui-dot"></span><span data-code-text>Eight holdout runs. The hybrid never pulled ahead.</span></div>
+          </div>
         </div>
-        <p class="strip-count" aria-hidden="true"><b id="strip-n">01</b> / 06</p>
       </div>
     </div>
   </section>
 
-  <!-- Method -->
-  <section class="method" id="method" data-scene="Method" aria-labelledby="method-title">
+  <section class="section" id="cases" aria-labelledby="cases-h">
     <div class="wrap">
-      <h2 class="banner" id="method-title" data-banner data-cap="0.17" aria-label="How I check my own work">
-        <span class="bl" aria-hidden="true">How I check</span>
-        <span class="bl" aria-hidden="true">my own work</span>
-      </h2>
-      <ul class="rules">
-        <li class="rule">
-          <span class="stamp" aria-hidden="true">Validated</span>
-          <div><h3>Validate the data before modelling it</h3>
-          <p>Every analysis opens with a data-quality table. The retail data lost nearly 3% of its rows to duplicates and cancellations before any number was reported.</p></div>
-        </li>
-        <li class="rule">
-          <span class="stamp" aria-hidden="true">Measured</span>
-          <div><h3>Choose the metric that matches the decision</h3>
-          <p>Accuracy hid a failing intrusion detector. For credit I report capture at a fixed call capacity, because that is what the team actually controls.</p></div>
-        </li>
-        <li class="rule">
-          <span class="stamp" aria-hidden="true">Tested</span>
-          <div><h3>Test the experiment, not just the result</h3>
-          <p>The A/B test result was significant, and the split between groups was also off. Both went into the recommendation.</p></div>
-        </li>
-        <li class="rule">
-          <span class="stamp" aria-hidden="true">Explained</span>
-          <div><h3>Explain it and look for unequal outcomes</h3>
-          <p>Reason codes for every prediction, calibration by score band, and error rates by sex and age before a model is called finished.</p></div>
-        </li>
+      <div class="section-head">
+        <h2 id="cases-h">Eight analyses</h2>
+      </div>
+      <ul class="cases">
+        <li><b>Hybrid intrusion detection</b><span>0.9836 vs 0.9837</span><small>MSc dissertation. The hybrid tied its own baseline.</small></li>
+        <li><b>Credit card default risk</b><span>51% caught</span><small>30,000 customers ranked, explained, checked for fairness.</small></li>
+        <li><b>Telecom customer churn</b><span>49.9%</span><small>The riskiest fifth holds half of everyone who left.</small></li>
+        <li><b>Mobile game A/B test</b><span>p = 0.002</span><small>A later paywall cut seven-day retention.</small></li>
+        <li><b>E-commerce late deliveries</b><span>36.7% of 1-star</span><small>99,441 orders in SQL, lateness against reviews.</small></li>
+        <li><b>UK online retail</b><span>14% drive 45%</span><small>RFM segmentation over 541,909 transactions.</small></li>
+        <li><b>Network intrusion data</b><span>22% on new</span><small>Why 99.88% cross-validation accuracy misleads.</small></li>
+        <li><b>UK house prices</b><span>72 years</span><small>Three downturns and how long recovery took.</small></li>
       </ul>
+      <p class="t-lead"><a class="link" href="work.html">Open the full write-ups, with every chart</a></p>
     </div>
   </section>
 
-  <div class="tapes" aria-hidden="true">
-    <div class="tape tape-a"><div class="tape-run" data-speed="1">Python + SQL + pandas + scikit-learn + XGBoost + SHAP + SciPy + matplotlib + D3 + Power BI + Tableau + Git + </div></div>
-    <div class="tape tape-b"><div class="tape-run" data-speed="-1">A/B testing + hypothesis tests + bootstrap + calibration + cohorts + RFM + window functions + time series + data validation + </div></div>
-  </div>
-
-  <!-- About -->
-  <section class="about" id="about" data-scene="About" aria-labelledby="about-title">
-    <div class="wrap">
-      <h2 class="banner" id="about-title" data-banner data-cap="0.2" aria-label="About Dev">
-        <span class="bl" aria-hidden="true">About Dev</span>
-      </h2>
-      <div class="about-grid">
-        <div class="about-text">
-          <p>I spent two years as a backend developer, building APIs and data pipelines in Node.js, MongoDB and SQL for live client applications. Most of that work was getting data clean, correct and to the people who needed it.</p>
-          <p>My MSc in Data and Artificial Intelligence at the University of Wales Trinity Saint David added statistics and machine learning. My dissertation built a hybrid intrusion detection system that combines anomaly detection with supervised learning.</p>
-          <p><a class="btn btn-paper" href="resume.html">Read my resume</a></p>
+  <section class="section" id="how" aria-labelledby="how-h">
+    <div class="wrap grid grid--middle">
+      <div class="span-5">
+        <div class="section-head">
+          <h2 id="how-h">The method, in four steps. <span class="muted">Raw rows go in; what comes out is a write-up somebody can argue with.</span></h2>
         </div>
-        <dl class="toolkit">
-          <div><dt>Analysis</dt><dd>Python (pandas, NumPy, SciPy), SQL (joins, CTEs, window functions), data validation</dd></div>
-          <div><dt>Statistics</dt><dd>Hypothesis testing, bootstrap, A/B testing, calibration, time series</dd></div>
-          <div><dt>Modelling</dt><dd>scikit-learn, XGBoost, logistic regression, random forests, SHAP, cross-validation</dd></div>
-          <div><dt>Visualisation</dt><dd>Power BI, Tableau, matplotlib, D3</dd></div>
-          <div><dt>Engineering</dt><dd>Git and GitHub, REST APIs, Node.js, MongoDB, Jupyter</dd></div>
-        </dl>
+        <p class="t-lead">The dissertation is the clearest case. A detector that had seen every attack family caught almost all of them. Delete one family from its training and that family walks straight past, which is the number worth knowing before anyone deploys it.</p>
+      </div>
+      <div class="span-7 start-6">
+        <div class="panel">
+          <div class="ui ui-panel ui-stat" data-ui="stat" data-from="0" data-to="22" data-suffix="%">
+            <div class="ui-stat__head">
+              <div class="ui-stat__top">
+                <span class="ui-stat__label">Fuzzers caught, never seen in training</span>
+                <span class="ui-stat__range">Eight holdout runs</span>
+              </div>
+              <div class="ui-stat__line">
+                <span class="ui-stat__num" data-stat-num>22%</span>
+                <span class="ui-chip ui-chip--plain ui-stat__delta">vs 98% when it had seen them</span>
+              </div>
+            </div>
+            <div class="ui-stat__chart">
+              <svg class="ui-stat__svg" viewBox="0 0 400 120" preserveAspectRatio="none" aria-hidden="true">
+                <path class="ui-stat__grid" d="M0 30.5H400M0 60.5H400M0 90.5H400"/>
+                <g class="ui-stat__bars"><rect rx="3" x="0" y="6" width="42" height="114"/><rect rx="3" x="51" y="4" width="42" height="116"/><rect rx="3" x="102" y="9" width="42" height="111"/><rect rx="3" x="153" y="7" width="42" height="113"/><rect rx="3" x="204" y="12" width="42" height="108"/><rect rx="3" x="255" y="5" width="42" height="115"/><rect rx="3" x="306" y="8" width="42" height="112"/><rect rx="3" x="357" y="94" width="42" height="26"/></g>
+              </svg>
+              <div class="ui-stat__axis" aria-hidden="true"><span>Worms</span><span>Backdoor</span><span>Fuzzers</span></div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Contact -->
-  <section class="contact" id="contact" data-scene="Contact" aria-labelledby="contact-title">
+  <section class="section statement" id="finding" data-moment="word-highlight" aria-label="A result that went against me">
     <div class="wrap">
-      <h2 class="banner" id="contact-title" data-banner data-cap="0.17" aria-label="Send me a message">
-        <span class="bl" aria-hidden="true">Send me</span>
-        <span class="bl" aria-hidden="true">a message</span>
-      </h2>
-      <p class="section-lede">Fill in the blanks and run the query. It is saved to my inbox and I get an email straight away. I reply within two days.</p>
-      <form class="console" id="contact-form" novalidate>
-        <div class="console-body">
-          <div class="line"><span class="kw">INSERT INTO</span> inbox (name, email, topic, message)</div>
-          <div class="line"><span class="kw">VALUES</span> (</div>
-          <div class="line in">
-            <label class="sr-only" for="f-name">Your name</label>
-            <span class="q">'</span><input id="f-name" name="name" type="text" autocomplete="name" placeholder="your name" maxlength="100" required><span class="q">'</span>,
-          </div>
-          <div class="line in">
-            <label class="sr-only" for="f-email">Your email address</label>
-            <span class="q">'</span><input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" placeholder="you@company.com" maxlength="200" required><span class="q">'</span>,
-          </div>
-          <div class="line in">
-            <label class="sr-only" for="f-topic">Topic</label>
-            <span class="q">'</span><select id="f-topic" name="topic">
-              <option>Job opportunity</option>
-              <option>Graduate role</option>
-              <option>Question about a project</option>
-              <option>Freelance data work</option>
-              <option>Just saying hello</option>
-            </select><span class="q">'</span>,
-          </div>
-          <div class="line in"><span class="q">'</span><span class="cm">-- your message</span></div>
-          <div class="msg-wrap">
-            <label class="sr-only" for="f-message">Your message</label>
-            <textarea id="f-message" name="message" rows="4" maxlength="5000" placeholder="Hi Dev, I saw your credit default model and..." required></textarea>
-          </div>
-          <div class="line in"><span class="q">'</span></div>
-          <div class="line">);</div>
-          <div class="hp" aria-hidden="true"><label for="f-website">Leave this empty</label><input id="f-website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
-        </div>
-        <div class="console-actions">
-          <button class="run" type="submit" id="run-btn">▶ Run query</button>
-          <span class="hint">or press Ctrl or ⌘ + Enter</span>
-        </div>
-        <div class="output" id="output" role="status" aria-live="polite">-- Waiting for your query.</div>
-      </form>
-      <p class="contact-alt">Prefer something else? <a href="https://www.linkedin.com/in/dev-mistri-" target="_blank" rel="noopener">Message me on LinkedIn</a> or see my code on <a href="https://github.com/D3vxc" target="_blank" rel="noopener">GitHub</a>. I only use your details to reply.</p>
+      <p class="t-label">A result that went against me</p>
+      <p class="mo-wh__text">My dissertation asked whether pairing an anomaly detector with a trained model catches attacks nobody has labelled. Across eight holdout runs it did not: the hybrid scored 0.9836 against the plain model's 0.9837. It helps in one narrow case, with almost no labels, and <strong>the write-up says so</strong>.</p>
     </div>
   </section>
+
 </main>
 
-<footer class="foot">
-  <p class="banner foot-mark" data-banner data-cap="0.36" aria-hidden="true"><span class="bl">Dev Mistri</span></p>
-  <div class="wrap foot-row">
-    <p>© <span id="year">2026</span> Dev Mistri, Birmingham</p>
-    <p>Set in Anybody and Newsreader. Every figure on this page comes from a notebook. No stock images: the artwork is drawn in code.</p>
-    <p>Data from UCI, IBM, Tactile Entertainment, Olist, the Canadian Institute for Cybersecurity and Nationwide.</p>
+<footer class="footer closing footer--dark ground-inverse" id="contact" aria-labelledby="close-h">
+  <div class="wrap">
+    <div class="closing__cta close--type">
+      <div class="section-head">
+        <h2 id="close-h">Hiring an analyst this quarter?</h2>
+        <p>I read email the same day and can start at a week's notice.</p>
+      </div>
+      <a class="btn btn--primary btn--xl btn--wide" href="mailto:2424033@student.uwtsd.ac.uk">Email Dev<svg class="m-arrow" viewBox="0 0 12 12" aria-hidden="true"><path class="m-arrow__stem" d="M1 6h8"/><path class="m-arrow__head" d="M4.5 2.5 8 6l-3.5 3.5"/></svg></a>
+    </div>
+    <div class="closing__links">
+      <div class="grid">
+        <div class="span-4 stack-4">
+          <a class="nav__logo" href="#top"><span class="mark" data-mark="dots" aria-hidden="true"></span>Dev Mistri</a>
+          <p class="footer__lede">A data analyst in Birmingham who publishes the working behind every number.</p>
+        </div>
+        <div class="span-2 footer__col"><h3>Analyses</h3><ul><li><a href="#work">All eight</a></li><li><a href="#finding">A result that failed</a></li></ul></div>
+        <div class="span-2 footer__col"><h3>Method</h3><ul><li><a href="#how">How a study runs</a></li><li><a href="work.html">Full write-ups</a></li></ul></div>
+        <div class="span-2 footer__col"><h3>Elsewhere</h3><ul><li><a href="https://github.com/D3vxc/data-analysis-portfolio">GitHub</a></li><li><a href="https://www.linkedin.com/in/dev-mistri-">LinkedIn</a></li></ul></div>
+        <div class="span-2 footer__col"><h3>More</h3><ul><li><a href="resume.html">Resume</a></li><li><a href="#contact">Contact</a></li></ul></div>
+      </div>
+      <div class="footer__legal">
+        <span>&copy; 2026 Dev Mistri</span>
+      </div>
+    </div>
   </div>
 </footer>
 
-<div class="slate" aria-hidden="true"><i class="slate-rec"></i><span id="slate-scene">01 Title</span><span id="slate-tc">00:00:00</span></div>
-<div class="slate-bar" aria-hidden="true"><i id="slate-bar"></i></div>
-
-<script src="data/site-data.js"></script>
-<script src="data/ids-test.js"></script>
-<script src="assets/js/config.js"></script>
-<script src="assets/vendor/gsap.min.js"></script>
-<script src="assets/vendor/ScrollTrigger.min.js"></script>
-<script src="assets/vendor/lenis.min.js"></script>
-<script src="assets/vendor/d3.min.js"></script>
-<script src="assets/js/app.js"></script>
-<script src="assets/js/contact.js"></script>
-<script src="assets/js/peek.js"></script>
+<script type="module" src="assets/system.js"></script>
 </body>
 </html>

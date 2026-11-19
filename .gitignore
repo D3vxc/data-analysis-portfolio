@@ -3,3 +3,6 @@
 */data/*.txt
 .ipynb_checkpoints/
 __pycache__/
+
+# the taste skill's local checker state (Chrome profiles, crops, gate rounds)
+docs/.taste-skill/

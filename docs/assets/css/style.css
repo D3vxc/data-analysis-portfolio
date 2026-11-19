@@ -110,7 +110,7 @@ strong { font-weight: 650; }
 /* ---------- Title ---------- */
 .hero { position: relative; min-height: 100svh; padding: clamp(74px, 11vh, 104px) var(--gut) 36px; display: flex; flex-direction: column; justify-content: space-between; gap: 26px; }
 .hero-title { margin: 0; height: var(--name-h, auto); }
-.hl { display: block; font: 900 21vw/.8 var(--f-display); font-stretch: 100%; text-transform: uppercase; white-space: nowrap; letter-spacing: -0.01em; }
+.hl { display: block; font: 900 30vw/.8 var(--f-display); font-stretch: 100%; text-transform: uppercase; white-space: nowrap; letter-spacing: -0.01em; }
 .hl + .hl { font-size: 18.4vw; }
 .dots-on .hl { display: none; }
 /* The sticker is stuck over the right end of the rule under the headline, in its own column, so it never covers text. */
