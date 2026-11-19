@@ -1,0 +1,7 @@
+/* Vendored locally: this site ships no external stylesheet, and the build sandbox cannot reach
+   Google Fonts, so the checker would otherwise measure a system fallback. */
+@font-face {
+  font-family: "Schibsted Grotesk";
+  src: url("schibsted-grotesk-latin-wght-normal.woff2") format("woff2-variations");
+  font-weight: 100 900; font-style: normal; font-display: swap;
+}
