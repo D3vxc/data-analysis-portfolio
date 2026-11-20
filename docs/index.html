@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" data-type="service" data-radius="soft" data-buttons="arrow" data-motion>
+<html lang="en" data-type="service" data-radius="sharp" data-buttons="arrow" data-motion>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -11,7 +11,7 @@
 <meta property="og:image" content="share.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
-<meta name="theme-color" content="#cbe4f2">
+<meta name="theme-color" content="#f7f7f5">
 <link rel="canonical" href="https://devmistri.co.uk/">
 <meta name="site-kind" content="other">
 <meta name="page-type" content="service">
@@ -24,16 +24,16 @@
 <link rel="stylesheet" href="assets/icons/icon.css">
 <style>
 :root {
-  --p-bg: #cbe4f2; --p-surface: #bcdcee; --p-ink: #0a0a0a; --p-muted: #44606e;
-  --p-accent: #b0298f; --p-accent-ink: #ffffff; --p-action: #b0298f; --p-action-ink: #ffffff;
-  --p-inv-bg: #0a0a0a; --p-inv-surface: #151616; --p-inv-ink: #cbe4f2; --p-inv-muted: #79878f;
-  --p-inv-accent: #b0298f; --p-inv-accent-ink: #ffffff; --p-inv-action: #b0298f; --p-inv-action-ink: #ffffff;
-  --font-display: "Schibsted Grotesk", system-ui, sans-serif;
-  --font-text: "Schibsted Grotesk", system-ui, sans-serif;
+  --p-bg: #f7f7f5; --p-surface: #eeeeec; --p-ink: #000000; --p-muted: #5f5f5a;
+  --p-accent: #111111; --p-accent-ink: #f7f7f5; --p-action: #111111; --p-action-ink: #f7f7f5;
+  --p-inv-bg: #000000; --p-inv-surface: #010101; --p-inv-ink: #f7f7f5; --p-inv-muted: #828280;
+  --p-inv-accent: #f7f7f5; --p-inv-accent-ink: #000000; --p-inv-action: #f7f7f5; --p-inv-action-ink: #000000;
+  --font-display: "Instrument Serif", Georgia, serif;
+  --font-text: "Instrument Sans", system-ui, sans-serif;
   --display-weight: 400;
-  --display-tracking: -0.035em;
-  --display-tracking-xl: -0.042em;
-  --ly-scale: 0.98;
+  --display-tracking: -0.012em;
+  --display-tracking-xl: -0.016em;
+  --ly-scale: 1.12;
 }
 </style>
 <link rel="stylesheet" href="assets/ui/base.css">
@@ -55,7 +55,6 @@
   .cases span { color: var(--muted); font-variant-numeric: tabular-nums; text-align: right; }
   .cases small { grid-column: 1 / -1; color: var(--muted); font-size: var(--t-small); }
   /* the kit's muted token under-reads on the mock's own ground: the lang chip needs 4.5:1 */
-  #work .ui-code__lang { color: #22333c; }
   /* kind other is flat colour: the panels take the page's own surface, not a lit ground */
   /* kind other is flat colour: the panels take the page's own surface, not a lit ground */
   #work .panel, #how .panel { background: var(--p-surface); display: grid; place-items: center; }
@@ -195,7 +194,7 @@
     <div class="wrap grid grid--middle">
       <div class="span-5">
         <div class="section-head">
-          <h2 id="how-h">The method, in four steps. <span class="muted">Raw rows go in; what comes out is a write-up somebody can argue with.</span></h2>
+          <h2 id="how-h">How a study runs <span class="muted">from raw rows to a write-up somebody can argue with.</span></h2>
         </div>
         <p class="t-lead">The dissertation is the clearest case. A detector that had seen every attack family caught almost all of them. Delete one family from its training and that family walks straight past, which is the number worth knowing before anyone deploys it.</p>
       </div>
